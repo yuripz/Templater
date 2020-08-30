@@ -10,6 +10,7 @@ import ru.hermes.msgbus.model.MessageTemplateVO;
 import ru.hermes.msgbus.model.MessageTemplate;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -174,7 +175,7 @@ public class PerformTemplates {
 
             writeUsingOutputStream( messageTemplateVO.getMessageAnswerXSD(), preFileName + "MessageAnswerXSD.xslt", time  );
 
-            writeUsingOutputStream( messageTemplateVO.getMessageAnswMsgXSLT(), preFileName + "MessageAnswMsgXSLT.xslt", time  );
+            writeUsingOutputStream( messageTemplateVO.getAckAnswXSLT(), preFileName + "AckAnswXSLT.xslt", time  );
 
             writeUsingOutputStream( messageTemplateVO.getErrTransXSLT(), preFileName + "ErrTransXSLT.xslt", time  );
             writeUsingOutputStream( messageTemplateVO.getErrTransXSD(), preFileName + "ErrTransXSD.xsd", time  );
@@ -239,20 +240,32 @@ public class PerformTemplates {
 
     private static void writeUsingOutputStream(String data, String fullFilePath, FileTime time) {
         OutputStream os = null;
+        OutputStreamWriter writer = null;
         if ( data == null ) return;
         try {
             os = new FileOutputStream(new File(fullFilePath));
+            writer = new OutputStreamWriter( os, StandardCharsets.UTF_8 );
+            writer.write(data, 0, data.length() );
+            /*
             byte RowBytes[] =  data.getBytes("UTF-8");
             os.write(RowBytes , 0, RowBytes.length);
+            */
         } catch (IOException e) {
             PerformTemplates_Log.error( "write to " + fullFilePath + " failed:" + e.getMessage());
             e.printStackTrace();
         }finally{
             try {
-                if ( os != null ) {
+                if ( writer != null )
+                {
+                 {  writer.flush();
+                    writer.close();
+                 }
+            /*    if ( os != null ) {
                     {   os.flush();
                         os.close();
                     }
+
+             */
                     setFileTime(fullFilePath, time);
                 }
             } catch (IOException e) {

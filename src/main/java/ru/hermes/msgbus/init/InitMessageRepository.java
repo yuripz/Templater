@@ -509,7 +509,7 @@ public class InitMessageRepository {
                         "from ARTX_PROJ.MESSAGE_TemplateS t " +
                         "where (1=1) " + //and t.template_dir like '%OUT%'\n" +
                          // "and t.operation_id =0 " +
-                                //      " and t.interface_id =28 " +
+                                 //     " and t.interface_id =26 " +
                                 "order by t.interface_id, t.operation_id, t.destin_id, t.dst_subcod");
 
             } catch (Exception e) {
@@ -545,8 +545,26 @@ public class InitMessageRepository {
                 );
                 //messageTypeVO.LogMessageDirections( log );
                 //log.info(" MessageTemplateVO :", MessageTemplateVO. );
-
-
+                //log.error( rs.getInt("template_id") + ": " + "getString(\"Template_Dir\"): " + rs.getString("Template_Dir") );
+                String Str = new String(
+                "INSERT INTO ARTX_PROJ.MESSAGE_TEMPLATES (TEMPLATE_ID, INTERFACE_ID, OPERATION_ID, MSG_TYPE, MSG_TYPE_OWN, TEMPLATE_NAME, TEMPLATE_DIR, SOURCE_ID,  SRC_SUBCOD, DESTIN_ID, DST_SUBCOD, LASTMAKER, LASTDATE)" +
+                        "VALUES (" +
+                        rs.getInt("template_id") + ", " +
+                        rs.getInt("Interface_Id") + ", " +
+                        rs.getInt("Operation_Id") + ", '" +
+                        rs.getString("Msg_Type") + "', '" +
+                        rs.getString("Msg_Type_own")  + "', '" +
+                        rs.getString("Template_name") + "', '" +
+                        rs.getString("Template_Dir")  + "', " +
+                        rs.getInt("Source_Id") + ", '"  +
+                        rs.getString("Src_SubCod") + "', " +
+                        rs.getInt("Destin_Id") + ", '" +
+                        rs.getString("Dst_SubCod") + "', '" +
+                        rs.getString("LastMaker") + "', TO_DATE('" +
+                        rs.getString("LastDate")  + "', 'YYYY-MM-DD HH24:MI:SS') );"
+                );
+                // log.warn(Str);
+                log.warn(Str.replaceAll("'null'", "NULL"));
                 // log.info(" Directions.size :" +  MessageTemplate.AllMessageTemplate.size() );
 
                 parseResult = ConfigMsgTemplates.performConfig(messageTemplateVO, log);

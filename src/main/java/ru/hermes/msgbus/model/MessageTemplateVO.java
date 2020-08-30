@@ -37,7 +37,7 @@ public class MessageTemplateVO {
     private String MessageAnswHdXSLT;
     private String AckXSD;
     private String AckXSLT;
-    private String AnswAckXSLT;
+    private String AckAnswXSLT;
     private String AnswAckHdXSLT;
     private String ErrTransXSLT;
     private String ErrTransXSD;
@@ -227,8 +227,8 @@ public class MessageTemplateVO {
     public void setAckXSLT (String AckXSLT) { this.AckXSLT = AckXSLT ; }
     public String getAckXSLT () { return this.AckXSLT; }
 
-    public void setAnswAckXSLT (String AnswAckXSLT) { this.AnswAckXSLT = AnswAckXSLT ; }
-    public String getAnswAckXSLT () { return this.AnswAckXSLT; }
+    public void setAckAnswXSLT (String AckAnswXSLT) { this.AckAnswXSLT = AckAnswXSLT ; }
+    public String getAckAnswXSLT () { return this.AckAnswXSLT; }
 
     public void setAnswAckHdXSLT (String AnswAckHdXSLT) { this.AnswAckHdXSLT = AnswAckHdXSLT ; }
     public String getAnswAckHdXSLT () { return this.AnswAckHdXSLT; }

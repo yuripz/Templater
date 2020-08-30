@@ -54,8 +54,7 @@ public class ConfigMsgTemplates {
                 String configEntry = TemplateElmnt.getName();
                 String configContent = TemplateElmnt.getText();
 
-                AppThead_log.info( "configEntry:" + configEntry // + "\n configContent:" + configContent
-                );
+                // AppThead_log.info( "configEntry:" + configEntry // + "\n configContent:" + configContent);
                 switch ( configEntry) {
                     case "EnvelopeInXSLT":
                         messageTemplateVO.setEnvelopeInXSLT(configContent);
@@ -154,14 +153,11 @@ public class ConfigMsgTemplates {
                     case "MessageAnswMsgXSLT":
                         messageTemplateVO.setMessageAnswMsgXSLT ( configContent);
                         break;
-                    case "setMessageAnswMsgXSLT":
-                        messageTemplateVO.setMessageAnswMsgXSLT( configContent);
-                        break;
                     case "AckXSD":
                         messageTemplateVO.setAckXSD( configContent);
                         break;
-                    case "AnswAckXSLT":
-                        messageTemplateVO.setAnswAckXSLT( configContent);
+                    case "AckAnswXSLT":
+                        messageTemplateVO.setAckAnswXSLT( configContent);
                         break;
                     case "HeaderXSD":
                         messageTemplateVO.setHeaderXSD( configContent);
