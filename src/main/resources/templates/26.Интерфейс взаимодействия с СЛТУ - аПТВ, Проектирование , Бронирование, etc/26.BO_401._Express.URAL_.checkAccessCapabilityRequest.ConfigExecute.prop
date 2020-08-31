@@ -1,0 +1,10 @@
+url=/rt-gate/NetworkCapabilityWebService/NetworkCapabilityWebService
+host=http://URAL.ARGUS:80
+shortRetryCount=3
+shortRetryInterval=5
+longRetryCount=0
+longRetryInterval=0
+MsgStream=44
+timeout_read=360
+timeout_conn=2
+debug=on

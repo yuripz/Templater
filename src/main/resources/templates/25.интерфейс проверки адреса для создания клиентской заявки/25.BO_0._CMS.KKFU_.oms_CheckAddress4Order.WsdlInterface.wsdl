@@ -1,0 +1,69 @@
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:cnt="urn:ru:rt:hrms:context" xmlns:scc="urn:ru:rt:hrms:successresponse" xmlns:flt="urn:ru:rt:hrms:fault" xmlns:mes="urn:ru:rt:hrms:crmcheckaddressmessage" xmlns:tns="urn:ru:rt:hrms:crmcheckaddressservice" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:ns="urn:ru:rt:hrms:common" targetNamespace="urn:ru:rt:hrms:crmcheckaddressservice">
+	<wsdl:types>
+		<xs:schema targetNamespace="urn:ru:rt:hrms:crmcheckaddressservice" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+			<xs:import namespace="urn:ru:rt:hrms:crmcheckaddressmessage" schemaLocation="http://10.32.245.8:7001/HermesSOAPService/SOAPServlet/CheckAddress4OrderRequest?xsd=1"/>
+			<xs:import namespace="urn:ru:rt:hrms:successresponse" schemaLocation="http://10.32.245.8:7001/HermesSOAPService/SOAPServlet/CheckAddress4OrderRequest?xsd=2"/>
+			<xs:import namespace="urn:ru:rt:hrms:fault" schemaLocation="http://10.32.245.8:7001/HermesSOAPService/SOAPServlet/CheckAddress4OrderRequest?xsd=4"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="Fault">
+		<wsdl:part name="message" element="flt:Fault"/>
+	</wsdl:message>
+	<wsdl:message name="SuccessResponse">
+		<wsdl:part name="message" element="scc:SuccessResponse"/>
+	</wsdl:message>
+	<wsdl:message name="CheckAddress4OrderRequest">
+		<wsdl:part name="message" element="mes:CheckAddress4OrderRequest"/>
+	</wsdl:message>
+	<wsdl:message name="GetDate4OrderRequest">
+		<wsdl:part name="message" element="mes:GetDate4OrderRequest"/>
+	</wsdl:message>
+	<wsdl:portType name="HRMSPortType">
+		<wsdl:operation name="CheckAddress4Order">
+			<wsdl:input name="CheckAddress4OrderIn" message="tns:CheckAddress4OrderRequest"/>
+			<wsdl:output message="tns:SuccessResponse"/>
+			<wsdl:fault name="Fault" message="tns:Fault"/>
+		</wsdl:operation>
+		<wsdl:operation name="GetDate4Order">
+			<wsdl:input name="GetDate4OrderIn" message="tns:GetDate4OrderRequest"/>
+			<wsdl:output message="tns:SuccessResponse"/>
+			<wsdl:fault name="Fault" message="tns:Fault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="CheckAddress4Order">
+			<wsdl:documentation>Проверка адреса для создания клиентской заявки</wsdl:documentation>
+			<soap:operation soapAction="urn:ru:rt:hrms:crmcheckaddressservice:CheckAddress4Order"/>
+			<wsdl:input name="CheckAddress4OrderIn">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="GetDate4Order">
+			<wsdl:documentation>Получение контрольных дат проработки клиентской заявки</wsdl:documentation>
+			<soap:operation soapAction="urn:ru:rt:hrms:crmcheckaddressservice:CheckAddress4Order"/>
+			<wsdl:input name="GetDate4OrderIn">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="Fault">
+				<soap:fault name="Fault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="HRMSService">
+		<wsdl:port name="HRMSInterface" binding="tns:HRMSBinding">
+			<soap:address location="http://10.32.245.8:7001/HermesSOAPService/SOAPServlet/CheckAddress4OrderRequest"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

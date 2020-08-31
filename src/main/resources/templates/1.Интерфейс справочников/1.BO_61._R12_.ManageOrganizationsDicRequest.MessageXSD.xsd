@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+	<xs:element name="ManageOrganizationsDicRequest" type="tManageOrganizationsDicRequest"/>
+	<xs:complexType name="tManageOrganizationsDicRequest">
+		<xs:annotation>
+			<xs:documentation>Запрос синхронизации справочника Организаций</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OrganizationsList" type="tOrganizationsList">
+				<xs:annotation>
+					<xs:documentation>Список справочников Организации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!--СПРАВОЧНИК ОРГАНИЗАЦИИ РАСПОЛОЖЕНИЙ-->
+	<xs:complexType name="tOrganizationsList">
+		<xs:annotation>
+			<xs:documentation>Описание списка  справочников Организации расположений</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Organizations" type="tOrganizations" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Справочник Организации расположений</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="nillableDate">
+		<xs:union memberTypes="xs:dateTime emptyString"/>
+	</xs:simpleType>
+	<xs:simpleType name="emptyString">
+		<xs:restriction base="xs:string">
+			<xs:length value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="tOrganizations">
+		<xs:annotation>
+			<xs:documentation>Описание справочника Организации расположений</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OrgId" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Идентификатор операционной единицы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OrganizationId" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Код организации активов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OrganizationName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Наименование организации активов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateFrom" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Дата действия с</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateTo" type="nillableDate" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата действия по</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeletedFlag" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Флаг удаления организации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Status" type="tStatus">
+				<xs:annotation>
+					<xs:documentation>Статус события</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="tStatus">
+		<xs:annotation>
+			<xs:documentation>Статус события</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A">
+				<xs:annotation>
+					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D">
+				<xs:annotation>
+					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

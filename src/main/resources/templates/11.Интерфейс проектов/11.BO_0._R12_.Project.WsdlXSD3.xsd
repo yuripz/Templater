@@ -1,0 +1,20 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ru:rt:hrms:fault"  targetNamespace="urn:ru:rt:hrms:fault">
+  <xs:element name="Fault" type="tns:tFault"/>
+  <xs:complexType name="tFault">
+    <xs:annotation>
+      <xs:documentation>Общее описание ошибки</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ResultCode" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Код ошибки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Message" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Описание ошибки</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -1,0 +1,133 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ru:rt:hrms:contractaccounting"  targetNamespace="urn:ru:rt:hrms:contractaccounting">
+  <!-- РАМОЧНЫЙ ДОГОВОР-->
+  <xs:complexType name="tFrameContract">
+    <xs:annotation>
+      <xs:documentation>Описание рамочного договора</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="FrameContractId" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Идентификатор договора</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExtFrameContractNum" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Внешний номер договора</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="VendorId" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Идентификатор контрагента</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="VendorSiteId" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Идентификатор отделения контрагента</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CreationDate" type="xs:dateTime">
+        <xs:annotation>
+          <xs:documentation>Дата договора</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OrgId" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Идентификатор операционной единицы (например, идентификатор филиала)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IntFrameContractNum" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Внутренний номер договора</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- СТАТУС ЗАКАЗА-->
+  <xs:complexType name="tOrderStatus">
+    <xs:annotation>
+      <xs:documentation>Описание статуса заказа</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="OrderId" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Идентификатор заказа</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExtOrderId" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Внешний идентификатор заказа</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Version" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>Версия заказа</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Stage" type="xs:decimal">
+        <xs:annotation>
+          <xs:documentation>Версия утверждения</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ContractStatus" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Статус утверждения документа</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="OrgId" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Идентификатор операционной единицы (например, идентификатор филиала)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApproverList" type="tns:tApproverList">
+        <xs:annotation>
+          <xs:documentation>Список утверждающих</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <!-- СПИСОК УТВЕРЖДАЮЩИХ-->
+  <xs:complexType name="tApproverList">
+    <xs:annotation>
+      <xs:documentation>Список утверждающих</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Approver" type="tns:tApprover" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Описание списка утверждающих</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tApprover">
+    <xs:annotation>
+      <xs:documentation>Утверждающий</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Iteration" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Шаг</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Response" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Действие</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApproverRole" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Роль</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApproverName" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Утверждающий</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ApproverComments" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Комментарий согласующего</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

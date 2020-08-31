@@ -1,0 +1,6 @@
+ExecMode=synchron
+MsgStream=3
+ExeMetod=java-class
+ExeProfile=queue
+class=ru.artx.common.bus.dao.SpecialExecuteDAO
+jndi_conn=jdbc/HermesMainVirt

@@ -1,0 +1,2 @@
+timeout_read=900
+timeout_conn=15

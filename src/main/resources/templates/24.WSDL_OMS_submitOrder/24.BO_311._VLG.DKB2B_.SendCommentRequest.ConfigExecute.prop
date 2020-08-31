@@ -1,0 +1,7 @@
+url=/xml-interface
+oldhost=http://10.75.19.25:8780
+host=http://VLG.DKB2B:80
+MsgStream=5
+timeout_read=30
+timeout_conn=5
+debug=on

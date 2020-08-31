@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 2 (http://www.altova.com) by TeaM DJiNN (TeaM DJiNN) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ru:rt:hrms:successresponse" xmlns:com="urn:ru:rt:hrms:common" targetNamespace="urn:ru:rt:hrms:successresponse">
+	<xs:element name="Confirmation" type="tns:tConfirmation"/>
+	<xs:complexType name="tConfirmation">
+		<xs:annotation>
+			<xs:documentation>Детализированное подтверждение</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ResultCode" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Код результата (0 - успех, иначе код
+						ошибки)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Message" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Описание результата вызова</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DetailList" type="tns:tDetailList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Детализация результатов вызова</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tDetailList">
+		<xs:annotation>
+			<xs:documentation>Детализация результата вызова</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Detail" type="tns:tDetail" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Описание детализации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="tDetail">
+		<xs:sequence>
+			<xs:element name="ResultCode" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код результата (0 - успех, иначе код	ошибки)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Message" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дополнительное описание</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SUSOrderNum" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>Номер заказа в СУС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LTC" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование ЛТЦ присвоенный на стороне Гермес</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SUSOrderURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ссылка ( HTTP ) на Клиентскую заявку СУС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SUSProjectURL" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ссылка ( HTTP ) на Клиентскую проект</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+
+	<xs:element name="SuccessResponseBatch" type="tns:tSuccessResponseBatch"/>
+	<xs:complexType name="tSuccessResponseBatch">
+		<xs:annotation>
+			<xs:documentation>Успешный вызов инициации пакетной загрузки</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SuccessResponse" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Успех</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:element name="SuccessResponseGetStage" type="tns:tSuccessResponseGetStage"/>
+	<xs:complexType name="tSuccessResponseGetStage">
+		<xs:annotation>
+			<xs:documentation>Успешный вызов</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SuccessResponse" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Успех</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SYSOrderNum" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Существующий номер заявки внутри СУС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SYSOrderURL" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Ссылка ( HTTP ) на Клиентскую заявку СУС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StageName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Наименование текущего этапа бизнес-процесса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HermesStageList" type="tns:tHermesStageList" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Список переходов для последующего перехода на требуемый шаг процесса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="SuccessResponseSetStage" type="tns:tSuccessResponseSetStage"/>
+	<xs:complexType name="tSuccessResponseSetStage">
+		<xs:annotation>
+			<xs:documentation>Успешный вызов</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="SuccessResponse" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Успех</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SYSOrderNum" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Существующий номер заявки внутри СУС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SYSOrderURL" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Существующий номер заявки внутри СУС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StageName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Наименование текущего этапа бизнес-процесса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tHermesStageList">
+		<xs:annotation>
+			<xs:documentation>Список переходов для последующего перехода на требуемый шаг процесса</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="HermesStage" type="tns:tHermesStage" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Описание перехода на требуемый шаг процесса</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tHermesStage">
+		<xs:sequence>
+				<xs:element name="GoToNumber" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Внутренний номер перехода, по которому может быть произведен переход заявки по процессу</xs:documentation>
+				</xs:annotation>
+			</xs:element>		
+			<xs:element name="GoToName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Наименование перехода, которое  может быть показано пользователю на экране</xs:documentation>
+				</xs:annotation>
+			</xs:element>			
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,10 @@
+ExecMode=synchron
+MsgStream=4
+MsgDirect=RESOUT
+ExeMetod=web-rest
+ExeProfile=queue
+oldhost=10.32.245.7:8080
+host=http://hermes:8080
+user=dbilling
+pswd=Sda73XzpVd
+url=/express_ptv/check_connectivity_result/success

@@ -1,0 +1,7 @@
+url=/RT.FFAPI.FSOMWebService/OMSOrderNotificationWebService
+oldhost=10.28.97.67:8080
+host=com.b2b:80
+timeout_read=35
+timeout_conn=5
+debug=full
+MsgStream=19

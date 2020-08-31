@@ -1,0 +1,9 @@
+ExecMode=synchron
+MsgStream=4
+MsgDirect=INSYN
+ExeMetod=web-rest
+ExeProfile=queue
+host=https://hermes-test.rt.ru:443
+user=dbilling
+pswd=Sda73XzpVd
+url=/integrationApi/get_deadline

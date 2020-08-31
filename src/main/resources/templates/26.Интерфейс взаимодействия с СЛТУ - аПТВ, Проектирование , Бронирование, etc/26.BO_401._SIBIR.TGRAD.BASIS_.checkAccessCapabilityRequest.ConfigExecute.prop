@@ -1,0 +1,6 @@
+url=/DatumNode/DatumNode.svc/a?action=http://nri.rt.ru/NetworkCapability/NetworkCapabilityApi/checkAccessCapability 
+host=http://10.143.80.149:80
+MsgStream=4
+timeout_read=300
+timeout_conn=15
+debug=on

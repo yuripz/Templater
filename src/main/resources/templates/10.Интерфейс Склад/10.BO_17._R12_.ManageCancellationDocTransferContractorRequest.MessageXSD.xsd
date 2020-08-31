@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
+
+	<xs:element name="ManageCancellationDocTransferContractorRequest" type="tManageCancellationDocTransferContractorRequest"/>
+	<xs:complexType name="tManageCancellationDocTransferContractorRequest">
+		<xs:annotation>
+			<xs:documentation>Запрос передачи операций "Передача (выдача) подрядчику» (процесс NC)"</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CancellationDocList" type="tCancellationDocList">
+				<xs:annotation>
+					<xs:documentation>Список актов на списание</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<!-- АКТ НА СПИСАНИЕ-->
+	<xs:complexType name="tCancellationDocList">
+		<xs:annotation>
+			<xs:documentation>Список актов на списание</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CancellationDoc" type="tCancellationDoc" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Акт на списание</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="tCancellationDoc">
+		<xs:annotation>
+			<xs:documentation>Описание списка актов на списание</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TransId" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Идентификатор транзакции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InvLayerId" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Идентификатор уровня стоимости</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OrderId" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Идентификатор заказа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ShipmentHeaderId" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Идентификатор первичного документа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReasonDocNum" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Номер первичного документа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReasonDocDate" type="xs:dateTime">
+				<xs:annotation>
+					<xs:documentation>Дата первичного документа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InventoryItemId" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Номенклатура ТМЦ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SourceProjectId" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Выводится значение проекта получателя</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SourceTaskId" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Выводится значение задачи получателя</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SourceSubInventoryCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Склад-получатель</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SourceMOL" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>МОЛ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ProjectId" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Проект-источник</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TaskId" type="xs:integer" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Выводится значение задачи-источника</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SubInventoryCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Источник – склад</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MOL" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>МОЛ-источник</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TransUnit" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ЕИ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TransQuantity" type="xs:decimal">
+				<xs:annotation>
+					<xs:documentation>Количество</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TransCost" type="xs:decimal">
+				<xs:annotation>
+					<xs:documentation>Цена</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TransValue" type="xs:decimal">
+				<xs:annotation>
+					<xs:documentation>Стоимость</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OrgId" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Идентификатор операционной единицы  (например, идентификатор филиала)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HeaderNum" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер документа R12</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SourceContractorId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Идентификатор контрагента получателя</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ContractorId" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Идентификатор контрагента Источник</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+</xs:schema>

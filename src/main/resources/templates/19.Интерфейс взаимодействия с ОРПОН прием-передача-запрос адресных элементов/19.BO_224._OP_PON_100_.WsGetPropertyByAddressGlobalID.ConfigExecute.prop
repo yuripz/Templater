@@ -1,0 +1,3 @@
+host=http://10.42.78.140:18080
+url=/PONWebServices/WsGetPropertyByAddressGlobalID
+debug=on

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" >
+
+  <xs:simpleType name="tStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="D"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+    <xs:complexType name="tVendor">
+        <xs:annotation>
+            <xs:documentation>Описание справочника Контрагенты</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="OrgId" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор операционной единицы  (например, идентификатор филиала)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="VendorId" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор контрагента</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="VendorSiteId" type="xs:integer">
+                <xs:annotation>
+                    <xs:documentation>Идентификатор отделения контрагента</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="VendorName" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Имя контрагента</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="AltNameVendorSite" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Альтернативное имя отделения поставщика</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="EndDateActive" type="xs:dateTime">
+                <xs:annotation>
+                    <xs:documentation>Дата действия по</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="INN" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>ИНН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="KPP" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>КПП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="Status" type="tStatus">
+                <xs:annotation>
+                    <xs:documentation>Статус события</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+  
+    <xs:complexType name="tVendorList">
+        <xs:annotation>
+            <xs:documentation>Описание списка справочников контрагентов</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="Vendor" type="tVendor" maxOccurs="unbounded">
+                <xs:annotation>
+                    <xs:documentation>Справочник Контрагенты</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+<xs:complexType name="tManageVendorDicRequest">
+        <xs:annotation>
+            <xs:documentation>Запрос синхронизации справочника Контрагенты</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="VendorList" type="tVendorList">
+                <xs:annotation>
+                    <xs:documentation>Список справочников Контрагенты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+</xs:complexType>
+
+   <xs:element name="ManageVendorDicRequest" type="tManageVendorDicRequest"/>  
+
+
+</xs:schema>

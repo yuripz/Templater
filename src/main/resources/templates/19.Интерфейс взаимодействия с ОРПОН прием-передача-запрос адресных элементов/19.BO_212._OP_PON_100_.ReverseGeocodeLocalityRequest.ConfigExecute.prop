@@ -1,0 +1,10 @@
+url=/PONWebServices/WsGetLocalityByCoordinatesSync
+oldhost=http://10.42.78.140:18080
+host=http://10.42.78.140:18080
+timeout_read=80
+timeout_conn=3
+shortRetryCount=0
+shortRetryInterval=0
+longRetryCount=0
+longRetryInterval=0
+debug=on

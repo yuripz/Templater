@@ -1,0 +1,45 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ru:rt:hrms:context"
+           targetNamespace="urn:ru:rt:hrms:context">
+  <xs:element name="Context" type="tns:tContext">
+    <xs:annotation>
+      <xs:documentation>Контекст вызова запроса (общий заголовок)</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  <xs:complexType name="tContext">
+    <xs:annotation>
+      <xs:documentation>Описание контекста запроса</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="EventInitiator" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код системы инициатора (система, породившая событие)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EventKey" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Идентификатор события</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Source" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код системы-источника</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Destination" type="xs:string">
+        <xs:annotation>
+          <xs:documentation>Код системы-получателя</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BusOperationId" type="xs:integer">
+        <xs:annotation>
+          <xs:documentation>Идентификатор типа бизнес-операции</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RequestId" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Идентификатор запроса (определяется на уровне одного из сегментов шины)</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

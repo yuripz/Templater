@@ -1,0 +1,5 @@
+encoding_out=UTF-8
+encoding_in=UTF-8
+WebMetod=get
+host=89.108.73.219:80
+url=/scan_wordstat

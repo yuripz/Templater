@@ -1,0 +1,3 @@
+timeout_read=300
+timeout_conn=15
+debug=off

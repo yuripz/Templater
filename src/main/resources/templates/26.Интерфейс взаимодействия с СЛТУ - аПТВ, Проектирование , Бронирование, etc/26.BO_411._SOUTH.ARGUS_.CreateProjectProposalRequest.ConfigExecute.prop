@@ -1,0 +1,3 @@
+url=/rt-gate/NetkDevProjectWebService/NetDevProjectWebService
+host=http://south.argus:80
+MsgStream=1

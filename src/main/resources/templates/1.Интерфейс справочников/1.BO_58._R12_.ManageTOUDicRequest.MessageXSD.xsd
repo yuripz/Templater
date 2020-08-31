@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" >
+
+<xs:element name="ManageTOUDicRequest" type="tManageTOUDicRequest"/>  
+
+<xs:complexType name="tManageTOUDicRequest">
+		<xs:annotation>
+			<xs:documentation>Запрос синхронизации справочника Коды ТОУ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TOUList" type="tTOUList">
+				<xs:annotation>
+					<xs:documentation>Список справочников Коды ТОУ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+</xs:complexType>
+
+
+
+<xs:complexType name="tTOUList">
+		<xs:annotation>
+			<xs:documentation>Описание списка  справочников кодов ТОУ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TOU" type="tTOU" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Справочник Коды ТОУ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+</xs:complexType>
+
+
+
+<xs:complexType name="tTOU">
+		<xs:annotation>
+			<xs:documentation>Описание справочника Коды ТОУ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TOUId" type="xs:integer">
+				<xs:annotation>
+					<xs:documentation>Идентификатор кода ТОУ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TOUCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Код ТОУ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TOUCodeName" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Описание кода ТОУ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OKOFCode" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Код ОКОФ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StartActive" type="nillableDate" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Период начала действия</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EndActive" type="nillableDate" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Период окончания действия</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Status" type="tStatus">
+				<xs:annotation>
+					<xs:documentation>Статус события</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+</xs:complexType>
+
+
+<xs:simpleType name="tStatus">
+		<xs:annotation>
+			<xs:documentation>Статус события</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A">
+				<xs:annotation>
+					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="D">
+				<xs:annotation>
+					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+</xs:simpleType>
+
+
+	<xs:simpleType name="nillableDate">
+		<xs:union memberTypes="xs:dateTime emptyString"/>
+	</xs:simpleType>
+	<xs:simpleType name="emptyString">
+		<xs:restriction base="xs:string">
+			<xs:length value="0"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

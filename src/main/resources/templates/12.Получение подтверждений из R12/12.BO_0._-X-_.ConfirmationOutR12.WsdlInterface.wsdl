@@ -1,0 +1,464 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:cnt="urn:ru:rt:hrms:context"
+                  xmlns:scc="urn:ru:rt:hrms:successresponse" xmlns:flt="urn:ru:rt:hrms:fault"
+                  xmlns:mes="urn:ru:rt:hrms:confirmationmessageoutr12"
+                  xmlns:tns="urn:ru:rt:hrms:confirmationserviceoutr12"
+                  targetNamespace="urn:ru:rt:hrms:confirmationserviceoutr12">
+  <wsdl:types>
+    <xs:schema targetNamespace="urn:ru:rt:hrms:confirmationserviceoutr12" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="urn:ru:rt:hrms:confirmationmessageoutr12" schemaLocation="https://10.32.245.8:7002/HermesSOAPService/SOAPServlet/ConfirmationOutR12Request?xsd=1"/>
+      <xs:import namespace="urn:ru:rt:hrms:successresponse" schemaLocation="https://10.32.245.8:7002/HermesSOAPService/SOAPServlet/ConfirmationOutR12Request?xsd=2"/>
+      <xs:import namespace="urn:ru:rt:hrms:fault" schemaLocation="https://10.32.245.8:7002/HermesSOAPService/SOAPServlet/ConfirmationOutR12Request?xsd=3"/>
+      <xs:import namespace="urn:ru:rt:hrms:context" schemaLocation="https://10.32.245.8:7002/HermesSOAPService/SOAPServlet/ConfirmationOutR12Request?xsd=4"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="Fault">
+    <wsdl:part name="message" element="flt:Fault"/>
+  </wsdl:message>
+  <wsdl:message name="Context">
+    <wsdl:part name="context" element="cnt:Context"/>
+  </wsdl:message>
+  <wsdl:message name="SuccessResponse">
+    <wsdl:part name="message" element="scc:SuccessResponse"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageArrivalOnProductRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageArrivalOnProductRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageArrivalByPersonRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageArrivalByPersonRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageOrderRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageOrderRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageInvoiceRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageInvoiceRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageCancellationRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageCancellationRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageExtCancellationDocMOLRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageExtCancellationDocMOLRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageMaterialExtCancellationDocRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageMaterialExtCancellationDocRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageDispositionExtCancellationDocRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageDispositionExtCancellationDocRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageExtCancellationDocProjectRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageExtCancellationDocProjectRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageExtCancellationDocTransferAgentRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageExtCancellationDocTransferAgentRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageExtCancellationDocReturnFromAgentRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageExtCancellationDocReturnFromAgentRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageExtCancellationDocReturnFromContractorRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageExtCancellationDocReturnFromContractorRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmCPEManageExtCancellationDocDeliveryInProjectRequest">
+    <wsdl:part name="message" element="mes:ConfirmCPEManageExtCancellationDocDeliveryInProjectRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmNCManageExtCancellationDocDeliveryInProjectRequest">
+    <wsdl:part name="message" element="mes:ConfirmNCManageExtCancellationDocDeliveryInProjectRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageExtCancellationDocSaleRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageExtCancellationDocSaleRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageExtCancellationDocDeliveryInOnMFPRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageExtCancellationDocDeliveryInOnMFPRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageProjectTaskRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageProjectTaskRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageInputOrderRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageInputOrderRequest"/>
+  </wsdl:message>
+  <wsdl:message name="ConfirmManageProjectAssetsRequest">
+    <wsdl:part name="message" element="mes:ConfirmManageProjectAssetsRequest"/>
+  </wsdl:message>
+  <wsdl:portType name="HRMSPortType">
+    <wsdl:operation name="ConfirmManageArrivalOnProduct">
+      <wsdl:input name="ConfirmManageArrivalOnProductIn" message="tns:ConfirmManageArrivalOnProductRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageArrivalByPerson">
+      <wsdl:input name="ConfirmManageArrivalByPersonIn" message="tns:ConfirmManageArrivalByPersonRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageOrder">
+      <wsdl:input name="ConfirmManageOrderIn" message="tns:ConfirmManageOrderRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageInvoice">
+      <wsdl:input name="ConfirmManageInvoiceIn" message="tns:ConfirmManageInvoiceRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageCancellation">
+      <wsdl:input name="ConfirmManageCancellationIn" message="tns:ConfirmManageCancellationRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocMOL">
+      <wsdl:input name="ConfirmManageExtCancellationDocMOLIn" message="tns:ConfirmManageExtCancellationDocMOLRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageMaterialExtCancellationDoc">
+      <wsdl:input name="ConfirmManageMaterialExtCancellationDocIn"
+                  message="tns:ConfirmManageMaterialExtCancellationDocRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageDispositionExtCancellationDoc">
+      <wsdl:input name="ConfirmManageDispositionExtCancellationDocIn"
+                  message="tns:ConfirmManageDispositionExtCancellationDocRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocProject">
+      <wsdl:input name="ConfirmManageExtCancellationDocProjectIn"
+                  message="tns:ConfirmManageExtCancellationDocProjectRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocTransferAgent">
+      <wsdl:input name="ConfirmManageExtCancellationDocTransferAgentIn"
+                  message="tns:ConfirmManageExtCancellationDocTransferAgentRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocReturnFromAgent">
+      <wsdl:input name="ConfirmManageExtCancellationDocReturnFromAgentIn"
+                  message="tns:ConfirmManageExtCancellationDocReturnFromAgentRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocReturnFromContractor">
+      <wsdl:input name="ConfirmManageExtCancellationDocReturnFromContractorIn"
+                  message="tns:ConfirmManageExtCancellationDocReturnFromContractorRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCPEManageExtCancellationDocDeliveryInProject">
+      <wsdl:input name="ConfirmCPEManageExtCancellationDocDeliveryInProjectIn"
+                  message="tns:ConfirmCPEManageExtCancellationDocDeliveryInProjectRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmNCManageExtCancellationDocDeliveryInProject">
+      <wsdl:input name="ConfirmNCManageExtCancellationDocDeliveryInProjectIn"
+                  message="tns:ConfirmNCManageExtCancellationDocDeliveryInProjectRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocSale">
+      <wsdl:input name="ConfirmManageExtCancellationDocSaleIn"
+                  message="tns:ConfirmManageExtCancellationDocSaleRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocDeliveryInOnMFP">
+      <wsdl:input name="ConfirmManageExtCancellationDocDeliveryInOnMFPIn"
+                  message="tns:ConfirmManageExtCancellationDocDeliveryInOnMFPRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageProjectTask">
+      <wsdl:input name="ConfirmManageProjectTaskIn" message="tns:ConfirmManageProjectTaskRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageInputOrder">
+      <wsdl:input name="ConfirmManageInputOrderIn" message="tns:ConfirmManageInputOrderRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageProjectAssets">
+      <wsdl:input name="ConfirmManageProjectAssetsIn" message="tns:ConfirmManageProjectAssetsRequest"/>
+      <wsdl:output message="tns:SuccessResponse"/>
+      <wsdl:fault name="Fault" message="tns:Fault"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ConfirmManageArrivalOnProduct">
+      <wsdl:documentation>Подтверждение передачи операций Операция оприходования готовой продукции</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageArrivalOnProduct"/>
+      <wsdl:input name="ConfirmManageArrivalOnProductIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageArrivalByPerson">
+      <wsdl:documentation>Потверждение передачи операций Возврат от физ. лица</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageArrivalByPerson"/>
+      <wsdl:input name="ConfirmManageArrivalByPersonIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageOrder">
+      <wsdl:documentation>Подтверждение передачи создания/корректировки заказа (ДС ОФУ)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageOrder"/>
+      <wsdl:input name="ConfirmManageOrderIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageInvoice">
+      <wsdl:documentation>Подтверждение передачи актов на выполнение работ</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageInvoice"/>
+      <wsdl:input name="ConfirmManageInvoiceIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageCancellation">
+      <wsdl:documentation>Подтверждение полного/частичного списания ОС для операций возврата из аренды оконечного
+                          оборудования</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageCancellation"/>
+      <wsdl:input name="ConfirmManageCancellationIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocMOL">
+      <wsdl:documentation>Подтверждение передачи операций «Перемещения между Складскими подразделениями/МОЛами» (процесс
+                          CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocMOL"/>
+      <wsdl:input name="ConfirmManageExtCancellationDocMOLIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageMaterialExtCancellationDoc">
+      <wsdl:documentation>Подтверждение передачи операций «Списания материалов в производство» (процесс CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageMaterialExtCancellationDoc"/>
+      <wsdl:input name="ConfirmManageMaterialExtCancellationDocIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageDispositionExtCancellationDoc">
+      <wsdl:documentation>Подтверждение передачи операций «Утилизация» (процесс CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageDispositionExtCancellationDoc"/>
+      <wsdl:input name="ConfirmManageDispositionExtCancellationDocIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocProject">
+      <wsdl:documentation>Подтверждение передачи операций «Перемещения между проектами» (процесс CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocProject"/>
+      <wsdl:input name="ConfirmManageExtCancellationDocProjectIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocTransferAgent">
+      <wsdl:documentation>Подтверждение передачи операций «Передача агенту» (процесс CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocTransferAgent"/>
+      <wsdl:input name="ConfirmManageExtCancellationDocTransferAgentIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocReturnFromAgent">
+      <wsdl:documentation>Подтверждение передачи операций «Возврат оборудования от агента» (процесс CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocReturnFromAgent"/>
+      <wsdl:input name="ConfirmManageExtCancellationDocReturnFromAgentIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocReturnFromContractor">
+      <wsdl:documentation>Подтверждение передачи операций «Возврат от подрядчика» (процесс NC)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocReturnFromContractor"/>
+      <wsdl:input name="ConfirmManageExtCancellationDocReturnFromContractorIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmCPEManageExtCancellationDocDeliveryInProject">
+      <wsdl:documentation>Подтверждение передачи операций «Выдача оборудования в проекты» (процесс CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmCPEManageExtCancellationDocDeliveryInProject"/>
+      <wsdl:input name="ConfirmCPEManageExtCancellationDocDeliveryInProjectIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmNCManageExtCancellationDocDeliveryInProject">
+      <wsdl:documentation>Подтверждение передачи операций «Выдача оборудования в проекты» (процесс NC)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmNCManageExtCancellationDocDeliveryInProject"/>
+      <wsdl:input name="ConfirmNCManageExtCancellationDocDeliveryInProjectIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocSale">
+      <wsdl:documentation>Подтверждение передачи операций «Продажа абоненту» (процесс CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocSale"/>
+      <wsdl:input name="ConfirmManageExtCancellationDocSaleIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageExtCancellationDocDeliveryInOnMFP">
+      <wsdl:documentation>Подтверждение передачи операций «Выдача по МФП» (процесс CPE)</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocDeliveryInOnMFP"/>
+      <wsdl:input name="ConfirmManageExtCancellationDocDeliveryInOnMFPIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageProjectTask">
+      <wsdl:documentation>Подтверждение передачи задач с типом Актив</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageProjectTask"/>
+      <wsdl:input name="ConfirmManageProjectTaskIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageInputOrder">
+      <wsdl:documentation>Подтверждение передачи операции Создание карточек приказов о вводе</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageInputOrder"/>
+      <wsdl:input name="ConfirmManageInputOrderIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmManageProjectAssets">
+      <wsdl:documentation>Подтверждение передачи операции Создание карточек проектных активов</wsdl:documentation>
+      <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageProjectAssets"/>
+      <wsdl:input name="ConfirmManageProjectAssetsIn">
+        <soap:header message="tns:Context" part="context" use="literal"/>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Fault">
+        <soap:fault name="Fault" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="HRMSService">
+    <wsdl:port name="HRMSInterface" binding="tns:HRMSBinding">
+      <soap:address location="https://10.32.245.8:7002/HermesSOAPService/SOAPServlet/ConfirmationOutR12Request"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

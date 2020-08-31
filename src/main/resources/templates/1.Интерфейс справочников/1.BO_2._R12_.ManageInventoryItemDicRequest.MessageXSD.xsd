@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" >
+
+  <xs:simpleType name="tStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="A"/>
+      <xs:enumeration value="D"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="tInventoryItem">
+    <xs:sequence>
+      <xs:element name="InventoryItemId" type="xs:integer"/>
+      <xs:element name="InventoryItemCode" type="xs:string"/>
+      <xs:element name="Description" type="xs:string"/>
+      <xs:element name="StatusActive" type="xs:string"/>
+      <xs:element name="PrimaryUnit" type="xs:string"/>
+      <xs:element name="OKEICode" type="xs:string"/>
+      <xs:element name="Status" type="tStatus"/>
+    </xs:sequence>
+  </xs:complexType> 
+  
+  <xs:complexType name="tInventoryItemList">
+    <xs:sequence>
+      <xs:element name="InventoryItem" type="tInventoryItem" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="tManageInventoryItemDicRequest">
+    <xs:sequence>
+      <xs:element name="InventoryItemList" type="tInventoryItemList"/>
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:element name="ManageInventoryItemDicRequest" type="tManageInventoryItemDicRequest"/>  
+</xs:schema>

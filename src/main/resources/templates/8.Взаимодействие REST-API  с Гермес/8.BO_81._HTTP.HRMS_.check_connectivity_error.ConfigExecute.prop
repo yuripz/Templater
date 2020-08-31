@@ -1,0 +1,8 @@
+encoding_out=UTF-8
+encoding_in=UTF-8
+WebMetod=get
+host=https://hermes-test.rt.ru:443
+oldhost=10.32.245.7:8080
+user=dbilling
+pswd=Sda73XzpVd
+url=/express_ptv/check_connectivity_result/error_orpon
