@@ -58,9 +58,11 @@
 						<attribute name="ServiceBillingSystem">
 							<xsl:value-of select="OrderOMSParam/ServiceBillingSystem"/>
 						</attribute>
-						<attribute name="LastMileRTC_CMS">
-							<xsl:value-of select="/submitOrderRequest/CRMOrderId"/>
-						</attribute>
+						<xsl:if test="/submitOrderRequest/MsgDirection_Cod= 'CMS.KKFU'">
+							<attribute name="LastMileRTC_CMS">
+								<xsl:value-of select="/submitOrderRequest/CRMOrderId"/>
+							</attribute>
+						</xsl:if>
 						<attribute name="OrderCSRFilial">
 							<xsl:value-of select="/submitOrderRequest/OrderOMSParam/CRMOriginatorLevelR12"/>
 						</attribute>

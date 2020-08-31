@@ -56,9 +56,11 @@
 						<attribute name="ServiceBillingSystem">
 							<xsl:value-of select="OrderOMSParam/ServiceBillingSystem"/>
 						</attribute>
-						<attribute name="LastMileRTC_CMS">
-							<xsl:value-of select="/submitOrderRequest/CRMOrderId"/>
-						</attribute>
+						<xsl:if test="/submitOrderRequest/MsgDirection_Cod= 'CMS.KKFU'">
+							<attribute name="LastMileRTC_CMS">
+								<xsl:value-of select="/submitOrderRequest/CRMOrderId"/>
+							</attribute>
+						</xsl:if>
 						<attribute name="OrderCSRFilial">
 							<xsl:value-of select="/submitOrderRequest/OrderOMSParam/CRMOriginatorLevelR12"/>
 						</attribute>
@@ -388,7 +390,7 @@
 											<attribute name="vpn_node_name">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_NAME"/>
 											</attribute>
-                                                                                        <xsl:if test="(not(SrvOMSParam/SRV_VPN_NODE_TYPE)) or SrvOMSParam/SRV_VPN_NODE_TYPE=''">
+											<xsl:if test="(not(SrvOMSParam/SRV_VPN_NODE_TYPE)) or SrvOMSParam/SRV_VPN_NODE_TYPE=''">
 												<attribute name="vpn_node_type">P2P</attribute>
 											</xsl:if>
 											<xsl:if test="SrvOMSParam/SRV_VPN_NODE_TYPE!=''">
