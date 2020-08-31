@@ -53,7 +53,7 @@
 			<xsl:otherwise>
 							<Confirmation>
 								<ResultCode>60006</ResultCode>
-								<Message>неизвестный корневой тег, см.DetailList</Message>
+								<Message>РЅРµРёР·РІРµСЃС‚РЅС‹Р№ РєРѕСЂРЅРµРІРѕР№ С‚РµРі, СЃРј.DetailList</Message>
 								<DetailList>
 						<xsl:copy-of select="/*"/>
 					        </DetailList>

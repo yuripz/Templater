@@ -13,7 +13,7 @@ url=/csp/gts_train/GTS.espo.cls
    <xsl:choose>
 <xsl:when test="FIELDS/ER!=''">
     <ResultCode><xsl:value-of select="FIELDS/ER"/></ResultCode>
-    <Message>Ответ из Лиры в массиве</Message>
+    <Message>РћС‚РІРµС‚ РёР· Р›РёСЂС‹ РІ РјР°СЃСЃРёРІРµ</Message>
        <DetailList>
 	<xsl:copy-of select="FIELDS"/>
        </DetailList> 
@@ -21,7 +21,7 @@ url=/csp/gts_train/GTS.espo.cls
 </xsl:when>    
   <xsl:otherwise>
   <ResultCode>-1020304</ResultCode>
-    <Message>Пришло пустое сообщение о сервисах</Message>
+    <Message>РџСЂРёС€Р»Рѕ РїСѓСЃС‚РѕРµ СЃРѕРѕР±С‰РµРЅРёРµ Рѕ СЃРµСЂРІРёСЃР°С…</Message>
   </xsl:otherwise>
  </xsl:choose>
      <Next>RESOUT</Next>

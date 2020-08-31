@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--C:\_HERMES_\R12_integration\wsdl ФЕИП - СУС v.3.8.7 - 09.12.2019\WLS_XSD\DictionaryMessage.MessageXSD.HE-5718.xsd -->
+<!--C:\_HERMES_\R12_integration\wsdl Р¤Р•РРџ - РЎРЈРЎ v.3.8.7 - 09.12.2019\WLS_XSD\DictionaryMessage.MessageXSD.HE-5718.xsd -->
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
 	<xs:simpleType name="tStatus">
 		<xs:restriction base="xs:string">
@@ -10,294 +10,294 @@
 	<xs:element name="ManageContractDicRequest" type="tManageContractDicRequest"/>
 	<xs:complexType name="tManageContractDicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Расходные рамочные договоры</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЂР°РјРѕС‡РЅС‹Рµ РґРѕРіРѕРІРѕСЂС‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ContractList" type="tContractList">
 				<xs:annotation>
-					<xs:documentation>Список расходных рамочных договоров</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЂР°СЃС…РѕРґРЅС‹С… СЂР°РјРѕС‡РЅС‹С… РґРѕРіРѕРІРѕСЂРѕРІ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК РАСХОДНЫЕ РАМОЧНЫЕ ДОГОВОРЫ-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р РђРЎРҐРћР”РќР«Р• Р РђРњРћР§РќР«Р• Р”РћР“РћР’РћР Р«-->
 	<xs:complexType name="tContractList">
 		<xs:annotation>
-			<xs:documentation>Список расходных рамочных договоров</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЂР°СЃС…РѕРґРЅС‹С… СЂР°РјРѕС‡РЅС‹С… РґРѕРіРѕРІРѕСЂРѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Contract" type="tContract" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание расходного рамочного договора</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЂР°СЃС…РѕРґРЅРѕРіРѕ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tContract">
 		<xs:annotation>
-			<xs:documentation>Описание расходного рамочного договора</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЂР°СЃС…РѕРґРЅРѕРіРѕ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="FrameContractId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор договора</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IntNumber" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Внутренний номер договора</xs:documentation>
+					<xs:documentation>Р’РЅСѓС‚СЂРµРЅРЅРёР№ РЅРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtFrameContractNum" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Внешний номер договора</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РЅРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorSiteId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор отделения контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕС‚РґРµР»РµРЅРёСЏ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CreationDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата Договора</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р”РѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Операционная единица</xs:documentation>
+					<xs:documentation>РћРїРµСЂР°С†РёРѕРЅРЅР°СЏ РµРґРёРЅРёС†Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GlobalContract" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Глобальный договор</xs:documentation>
+					<xs:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ РґРѕРіРѕРІРѕСЂ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AssigmentsList" type="tAssigmentsList" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Список участников договора</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СѓС‡Р°СЃС‚РЅРёРєРѕРІ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Region" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Код региона ФЕИП действия рамочного договора (для двойных филиалов)</xs:documentation>
+					<xs:documentation>РљРѕРґ СЂРµРіРёРѕРЅР° Р¤Р•РРџ РґРµР№СЃС‚РІРёСЏ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР° (РґР»СЏ РґРІРѕР№РЅС‹С… С„РёР»РёР°Р»РѕРІ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Limit" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Лимит договора – стоимость работ, заложенная в рамочный договор</xs:documentation>
+					<xs:documentation>Р›РёРјРёС‚ РґРѕРіРѕРІРѕСЂР° вЂ“ СЃС‚РѕРёРјРѕСЃС‚СЊ СЂР°Р±РѕС‚, Р·Р°Р»РѕР¶РµРЅРЅР°СЏ РІ СЂР°РјРѕС‡РЅС‹Р№ РґРѕРіРѕРІРѕСЂ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BeginDate" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Дата начала действия договора</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Срок действия ПО рамочного договора</xs:documentation>
+					<xs:documentation>РЎСЂРѕРє РґРµР№СЃС‚РІРёСЏ РџРћ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="isECM" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Признак работы с ЭДО</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє СЂР°Р±РѕС‚С‹ СЃ Р­Р”Рћ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Balance" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Остаток средств на рамочном договоре в рублях без НДС</xs:documentation>
+					<xs:documentation>РћСЃС‚Р°С‚РѕРє СЃСЂРµРґСЃС‚РІ РЅР° СЂР°РјРѕС‡РЅРѕРј РґРѕРіРѕРІРѕСЂРµ РІ СЂСѓР±Р»СЏС… Р±РµР· РќР”РЎ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContractSpecificsList" type="tContractSpecificsList" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Список Спецификация договора</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Список участников договора-->
+	<!-- РЎРїРёСЃРѕРє СѓС‡Р°СЃС‚РЅРёРєРѕРІ РґРѕРіРѕРІРѕСЂР°-->
 	<xs:complexType name="tAssigmentsList">
 		<xs:annotation>
-			<xs:documentation>Список участников договора</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СѓС‡Р°СЃС‚РЅРёРєРѕРІ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Assigments" type="tAssigments" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Участники договора</xs:documentation>
+					<xs:documentation>РЈС‡Р°СЃС‚РЅРёРєРё РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tAssigments">
 		<xs:annotation>
-			<xs:documentation>Участники договора</xs:documentation>
+			<xs:documentation>РЈС‡Р°СЃС‚РЅРёРєРё РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PurchasingOrgId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Закупочная организация</xs:documentation>
+					<xs:documentation>Р—Р°РєСѓРїРѕС‡РЅР°СЏ РѕСЂРіР°РЅРёР·Р°С†РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PurchaseId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Для закупок / оплат</xs:documentation>
+					<xs:documentation>Р”Р»СЏ Р·Р°РєСѓРїРѕРє / РѕРїР»Р°С‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-		<!-- Список Спецификация договора-->
+		<!-- РЎРїРёСЃРѕРє РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРіРѕРІРѕСЂР°-->
 	<xs:complexType name="tContractSpecificsList">
 		<xs:annotation>
-			<xs:documentation>Список Спецификация договора</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ContractSpecifics" type="tContractSpecifics" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Строка спецификации</xs:documentation>
+					<xs:documentation>РЎС‚СЂРѕРєР° СЃРїРµС†РёС„РёРєР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tContractSpecifics">
 		<xs:annotation>
-			<xs:documentation>Описание Строки спецификации</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РЎС‚СЂРѕРєРё СЃРїРµС†РёС„РёРєР°С†РёРё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ExtLineId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Внешний идентификатор строки</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃС‚СЂРѕРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineNum" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Номер строки Код НП (номенклатурной позиции)</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РљРѕРґ РќРџ (РЅРѕРјРµРЅРєР»Р°С‚СѓСЂРЅРѕР№ РїРѕР·РёС†РёРё)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Code" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код НП (номенклатурной позиции)</xs:documentation>
+					<xs:documentation>РљРѕРґ РќРџ (РЅРѕРјРµРЅРєР»Р°С‚СѓСЂРЅРѕР№ РїРѕР·РёС†РёРё)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Cost" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Цена за единицу</xs:documentation>
+					<xs:documentation>Р¦РµРЅР° Р·Р° РµРґРёРЅРёС†Сѓ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Count" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Кол-во по строке</xs:documentation>
+					<xs:documentation>РљРѕР»-РІРѕ РїРѕ СЃС‚СЂРѕРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Rate" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Ставка НДС</xs:documentation>
+					<xs:documentation>РЎС‚Р°РІРєР° РќР”РЎ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineAmount" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Сумма строки (с НДС)</xs:documentation>
+					<xs:documentation>РЎСѓРјРјР° СЃС‚СЂРѕРєРё (СЃ РќР”РЎ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvProject" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Инвест. проект</xs:documentation>
+					<xs:documentation>РРЅРІРµСЃС‚. РїСЂРѕРµРєС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Task" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Задача</xs:documentation>
+					<xs:documentation>Р—Р°РґР°С‡Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExpenditureType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип расходов</xs:documentation>
+					<xs:documentation>РўРёРї СЂР°СЃС…РѕРґРѕРІ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NewEquipment" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Новое оборудование</xs:documentation>
+					<xs:documentation>РќРѕРІРѕРµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ImpEquipment" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Импортное оборудование</xs:documentation>
+					<xs:documentation>РРјРїРѕСЂС‚РЅРѕРµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="isMark" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Признак ЗИП</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє Р—РРџ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorPosition" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Позиция поставщика</xs:documentation>
+					<xs:documentation>РџРѕР·РёС†РёСЏ РїРѕСЃС‚Р°РІС‰РёРєР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PackageUnit" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ЕИ комплекта</xs:documentation>
+					<xs:documentation>Р•Р РєРѕРјРїР»РµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Article" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Артикул</xs:documentation>
+					<xs:documentation>РђСЂС‚РёРєСѓР»</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SpecificsReserve" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Резервное поле Спецификации-1</xs:documentation>
+					<xs:documentation>Р РµР·РµСЂРІРЅРѕРµ РїРѕР»Рµ РЎРїРµС†РёС„РёРєР°С†РёРё-1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OriginCountry" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Страна происхождения</xs:documentation>
+					<xs:documentation>РЎС‚СЂР°РЅР° РїСЂРѕРёСЃС…РѕР¶РґРµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RegCountry" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Страна регистрации производителя</xs:documentation>
+					<xs:documentation>РЎС‚СЂР°РЅР° СЂРµРіРёСЃС‚СЂР°С†РёРё РїСЂРѕРёР·РІРѕРґРёС‚РµР»СЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RegionsList" type="tRegionsList" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Перечень географических регионов (уровня субъекта РФ или района или города), на территории которых действует цена для вида работы</xs:documentation>
+					<xs:documentation>РџРµСЂРµС‡РµРЅСЊ РіРµРѕРіСЂР°С„РёС‡РµСЃРєРёС… СЂРµРіРёРѕРЅРѕРІ (СѓСЂРѕРІРЅСЏ СЃСѓР±СЉРµРєС‚Р° Р Р¤ РёР»Рё СЂР°Р№РѕРЅР° РёР»Рё РіРѕСЂРѕРґР°), РЅР° С‚РµСЂСЂРёС‚РѕСЂРёРё РєРѕС‚РѕСЂС‹С… РґРµР№СЃС‚РІСѓРµС‚ С†РµРЅР° РґР»СЏ РІРёРґР° СЂР°Р±РѕС‚С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Список регионов-->
+	<!-- РЎРїРёСЃРѕРє СЂРµРіРёРѕРЅРѕРІ-->
 	<xs:complexType name="tRegionsList">
 		<xs:annotation>
-			<xs:documentation>Перечень географических регионов (уровня субъекта РФ или района или города), на территории которых действует цена для вида работы</xs:documentation>
+			<xs:documentation>РџРµСЂРµС‡РµРЅСЊ РіРµРѕРіСЂР°С„РёС‡РµСЃРєРёС… СЂРµРіРёРѕРЅРѕРІ (СѓСЂРѕРІРЅСЏ СЃСѓР±СЉРµРєС‚Р° Р Р¤ РёР»Рё СЂР°Р№РѕРЅР° РёР»Рё РіРѕСЂРѕРґР°), РЅР° С‚РµСЂСЂРёС‚РѕСЂРёРё РєРѕС‚РѕСЂС‹С… РґРµР№СЃС‚РІСѓРµС‚ С†РµРЅР° РґР»СЏ РІРёРґР° СЂР°Р±РѕС‚С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Region" type="tRegion" minOccurs="1" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Регион (уровня субъекта РФ или района или города)</xs:documentation>
+					<xs:documentation>Р РµРіРёРѕРЅ (СѓСЂРѕРІРЅСЏ СЃСѓР±СЉРµРєС‚Р° Р Р¤ РёР»Рё СЂР°Р№РѕРЅР° РёР»Рё РіРѕСЂРѕРґР°)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Регион-->
+	<!-- Р РµРіРёРѕРЅ-->
 	<xs:complexType name="tRegion">
 		<xs:annotation>
-			<xs:documentation>Регион (уровня субъекта РФ или района или города)</xs:documentation>
+			<xs:documentation>Р РµРіРёРѕРЅ (СѓСЂРѕРІРЅСЏ СЃСѓР±СЉРµРєС‚Р° Р Р¤ РёР»Рё СЂР°Р№РѕРЅР° РёР»Рё РіРѕСЂРѕРґР°)</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="GUID" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификационный код адресообразующего элемента согласно ФЕИП - GUID (Globally Unique Identifier) - шестнадцатибайтовый (128-битный) глобальный уникальный идентификатор </xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С†РёРѕРЅРЅС‹Р№ РєРѕРґ Р°РґСЂРµСЃРѕРѕР±СЂР°Р·СѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° СЃРѕРіР»Р°СЃРЅРѕ Р¤Р•РРџ - GUID (Globally Unique Identifier) - С€РµСЃС‚РЅР°РґС†Р°С‚РёР±Р°Р№С‚РѕРІС‹Р№ (128-Р±РёС‚РЅС‹Р№) РіР»РѕР±Р°Р»СЊРЅС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

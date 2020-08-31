@@ -6,10 +6,10 @@
   <receiver>HRMS</receiver>
   <orderResult>
   <orderResultCode>0</orderResultCode>
-    <orderResultText>Симулятор отработал=0</orderResultText>
+    <orderResultText>РЎРёРјСѓР»СЏС‚РѕСЂ РѕС‚СЂР°Р±РѕС‚Р°Р»=0</orderResultText>
 	  <payload>
   <orderResultCode>0</orderResultCode>
-    <orderResultText>Симулятор отработал=0</orderResultText>
+    <orderResultText>РЎРёРјСѓР»СЏС‚РѕСЂ РѕС‚СЂР°Р±РѕС‚Р°Р»=0</orderResultText>
   </payload>
   </orderResult>
 </tns:CancelResourcesBookingResponse>

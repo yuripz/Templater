@@ -9,7 +9,7 @@
         <Message>
           <xsl:value-of select="orderResult/orderResultText"/>
         </Message>
-        <!-- TGraa as АРГУС  : HE-3989  -->
+        <!-- TGraa as РђР Р“РЈРЎ  : HE-3989  -->
         <DetailList>
           <xsl:if test="orderResult/orderResultCode!=0">
             <ResultCode>
@@ -189,7 +189,7 @@
             </Message>
             <DetailList>
               <ResultCode>20206</ResultCode>
-              <Message>системный сбой</Message>
+              <Message>СЃРёСЃС‚РµРјРЅС‹Р№ СЃР±РѕР№</Message>
             </DetailList>
             <Next>RESOUT</Next>
           </Confirmation>
@@ -202,7 +202,7 @@
             </Message>
             <DetailList>
               <ResultCode>20206</ResultCode>
-              <Message>системный сбой</Message>
+              <Message>СЃРёСЃС‚РµРјРЅС‹Р№ СЃР±РѕР№</Message>
             </DetailList>
             <Next>RESOUT</Next>
           </Confirmation>

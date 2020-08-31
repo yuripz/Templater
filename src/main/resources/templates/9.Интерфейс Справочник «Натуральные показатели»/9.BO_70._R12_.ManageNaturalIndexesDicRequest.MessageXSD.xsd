@@ -3,89 +3,89 @@
 	<xs:element name="ManageNaturalIndexesDicRequest" type="tManageNaturalIndexesDicRequest"/>
 	<xs:complexType name="tManageNaturalIndexesDicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Натуральные показатели</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РќР°С‚СѓСЂР°Р»СЊРЅС‹Рµ РїРѕРєР°Р·Р°С‚РµР»Рё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="NaturalIndexesList" type="tNaturalIndexesList">
 				<xs:annotation>
-					<xs:documentation>Описание списка натуральных показателей</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… РїРѕРєР°Р·Р°С‚РµР»РµР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Справочник - Натуральные показатели -->
+	<!-- РЎРїСЂР°РІРѕС‡РЅРёРє - РќР°С‚СѓСЂР°Р»СЊРЅС‹Рµ РїРѕРєР°Р·Р°С‚РµР»Рё -->
 	<xs:complexType name="tNaturalIndexesList">
 		<xs:annotation>
-			<xs:documentation>Описание списка натуральных показателей</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… РїРѕРєР°Р·Р°С‚РµР»РµР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="NaturalIndexes" type="tNaturalIndexes" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Натуральные показатели</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РќР°С‚СѓСЂР°Р»СЊРЅС‹Рµ РїРѕРєР°Р·Р°С‚РµР»Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tNaturalIndexes">
 		<xs:annotation>
-			<xs:documentation>Описание натуральных показателей</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… РїРѕРєР°Р·Р°С‚РµР»РµР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="NaturalIndexId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор классификатора НП</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР»Р°СЃСЃРёС„РёРєР°С‚РѕСЂР° РќРџ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ClassCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Класс проекта (код)</xs:documentation>
+					<xs:documentation>РљР»Р°СЃСЃ РїСЂРѕРµРєС‚Р° (РєРѕРґ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Наименование класса проекта</xs:documentation>
+					<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РєР»Р°СЃСЃР° РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ResourceId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор НП</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РќРџ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NaturalIndexName" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Наименование НП</xs:documentation>
+					<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РќРџ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Период действия в рамках класса с</xs:documentation>
+					<xs:documentation>РџРµСЂРёРѕРґ РґРµР№СЃС‚РІРёСЏ РІ СЂР°РјРєР°С… РєР»Р°СЃСЃР° СЃ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Период действия в рамках класса по</xs:documentation>
+					<xs:documentation>РџРµСЂРёРѕРґ РґРµР№СЃС‚РІРёСЏ РІ СЂР°РјРєР°С… РєР»Р°СЃСЃР° РїРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="tStatus">
 		<xs:annotation>
-			<xs:documentation>Статус события</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="A">
 				<xs:annotation>
-					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

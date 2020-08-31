@@ -5,7 +5,7 @@
 			<xsl:if test="SuccessResponse=0">
 				<Confirmation>
 					<ResultCode>0</ResultCode>
-					<Message>Ответ HermesSOAPService/GetHttpRequest в массиве</Message>
+					<Message>РћС‚РІРµС‚ HermesSOAPService/GetHttpRequest РІ РјР°СЃСЃРёРІРµ</Message>
 					<DetailList>
 						<xsl:copy-of select="."/>
 						<Result>

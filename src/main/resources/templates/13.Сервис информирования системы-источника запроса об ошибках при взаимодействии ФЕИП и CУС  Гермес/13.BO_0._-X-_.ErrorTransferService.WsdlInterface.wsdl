@@ -30,7 +30,7 @@
   <wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="TransferFault">
-      <wsdl:documentation>Сервис информирования системы-источника запроса об ошибках при взаимодействии ФЕИП и CУС "Гермес"</wsdl:documentation>
+      <wsdl:documentation>РЎРµСЂРІРёСЃ РёРЅС„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ СЃРёСЃС‚РµРјС‹-РёСЃС‚РѕС‡РЅРёРєР° Р·Р°РїСЂРѕСЃР° РѕР± РѕС€РёР±РєР°С… РїСЂРё РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёРё Р¤Р•РРџ Рё CРЈРЎ "Р“РµСЂРјРµСЃ"</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:ruip:errortransferservice:TransferFault"/>
       <wsdl:input name="TransferFaultIn">
         <soap:header message="tns:Context" part="context" use="literal"/>

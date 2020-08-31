@@ -97,21 +97,21 @@ xmlns:urn="urn:DefaultNamespace"
 				<item>            
 					<FIELDNAME>fldPoint2LMOrgMethod</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="ConnectTechnologyID"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="ConnectTechnologyID"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
             	</item>
 
 				<item>            
 					<FIELDNAME>fldNetworkPath</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="NetworkPath"/></item> <!-- “Â„ ËÁ ¡Œ-96 (Á‡‰ÂÈÒÚ‚Ó‚‡ÌÌ˚Â Û˜‡ÒÚÍË ÒÂÚË) -->
+							<item><xsl:value-of select="NetworkPath"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 (–∑–∞–¥–µ–π—Å—Ç–≤–æ–≤–∞–Ω–Ω—ã–µ —É—á–∞—Å—Ç–∫–∏ —Å–µ—Ç–∏) -->
 						</FIELDVALUE>            		
             	</item>
 				
 				<item>            
 					<FIELDNAME>fldRegionalFilial</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="RegionalFilial"/></item> <!-- “Â„ ËÁ ¡Œ-96 (Â„ËÓÌ‡Î¸Ì˚È ÙËÎË‡Î) -->
+							<item><xsl:value-of select="RegionalFilial"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 (—Ä–µ–≥–∏–æ–Ω–∞–ª—å–Ω—ã–π —Ñ–∏–ª–∏–∞–ª) -->
 						</FIELDVALUE>            		
             	</item>
 
@@ -121,7 +121,7 @@ xmlns:urn="urn:DefaultNamespace"
 							<item> 
 			<xsl:if test="TVready=''">Off net</xsl:if>			
 			<xsl:if test="TVready!=''">On net</xsl:if>						
-							</item> <!-- "On net" ÂÒÎË CRMRequestStatus = COMPLETE, "Off net" ‰Îˇ ÓÒÚ‡Î¸Ì˚ı ÁÌ‡˜ÂÌËÈ CRMRequestStatus ÍÓÌÒÚ‡ÌÚ‡ ‚ Á‡‚ËÒËÏÓÒÚË ÓÚ ÚÂ„‡ ¡Œ-96-->
+							</item> <!-- "On net" –µ—Å–ª–∏ CRMRequestStatus = COMPLETE, "Off net" –¥–ª—è –æ—Å—Ç–∞–ª—å–Ω—ã—Ö –∑–Ω–∞—á–µ–Ω–∏–π CRMRequestStatus –∫–æ–Ω—Å—Ç–∞–Ω—Ç–∞ –≤ –∑–∞–≤–∏—Å–∏–º–æ—Å—Ç–∏ –æ—Ç —Ç–µ–≥–∞ –ë–û-96-->
 						</FIELDVALUE>            		
             	</item>
 
@@ -129,9 +129,9 @@ xmlns:urn="urn:DefaultNamespace"
 					<FIELDNAME>fldNotReady</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 							<item> 
-								<xsl:if test="SYSOrderStage=' ÎËÂÌÚ ÌÂ „ÓÚÓ‚'">1</xsl:if>			
-								<xsl:if test="SYSOrderStage!=' ÎËÂÌÚ ÌÂ „ÓÚÓ‚'"></xsl:if>						
-							</item> <!-- ÔËÁÌ‡Í ÍÎËÂÌÚ ÌÂ „ÓÚÓ‚ -->
+								<xsl:if test="SYSOrderStage='–ö–ª–∏–µ–Ω—Ç –Ω–µ –≥–æ—Ç–æ–≤'">1</xsl:if>			
+								<xsl:if test="SYSOrderStage!='–ö–ª–∏–µ–Ω—Ç –Ω–µ –≥–æ—Ç–æ–≤'"></xsl:if>						
+							</item> <!-- –ø—Ä–∏–∑–Ω–∞–∫ –∫–ª–∏–µ–Ω—Ç –Ω–µ –≥–æ—Ç–æ–≤ -->
 						</FIELDVALUE>            		
             	</item>
 				
@@ -147,7 +147,7 @@ xmlns:urn="urn:DefaultNamespace"
 				<item> 
 					<FIELDNAME>fldChannelIdSLTU</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="LastMileID"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="LastMileID"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
             	</item>
                 <item>
@@ -166,56 +166,56 @@ xmlns:urn="urn:DefaultNamespace"
 				<item>
                 	<FIELDNAME>fldUE</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item>RUR</item> <!-- ÍÓÌÒÚ‡ÌÚ‡ -->
+							<item>RUR</item> <!-- –∫–æ–Ω—Å—Ç–∞–Ω—Ç–∞ -->
 						</FIELDVALUE>            		
             	</item>
 			
 				<item>
 					<FIELDNAME>fldInstallFee</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="SMRCost"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="SMRCost"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
 					</item>
 
 				<item>
                		<FIELDNAME>fldMonthlyFee</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="ProjectCost"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="ProjectCost"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
 				</item>
 
 				<item>
 					<FIELDNAME>fldOtherFee</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="OtherCost"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="OtherCost"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
                		</FIELDVALUE>            		
             	</item>
 
 				<item>
                 	<FIELDNAME>fldEquipmentFee</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="EquipmentCost"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="EquipmentCost"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
             	</item>
 
 				<item>
                		<FIELDNAME>fldEquipmentName</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="EquipmentName"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="EquipmentName"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
             	</item>
 
 				<item>
                		<FIELDNAME>fldVAT</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item>·ÂÁ Õƒ—</item> <!-- ÍÓÌÒÚ‡ÌÚ‡ -->
+							<item>–±–µ–∑ –ù–î–°</item> <!-- –∫–æ–Ω—Å—Ç–∞–Ω—Ç–∞ -->
 						</FIELDVALUE>            		
             	</item>
 
 				<item>
                 	<FIELDNAME>fldHrmsCRMOrderOperation</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="SYSOrderStage"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="SYSOrderStage"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
             	</item>
 				
@@ -223,7 +223,7 @@ xmlns:urn="urn:DefaultNamespace"
 				<item>
                 	<FIELDNAME>fldHrmsCRMBuildOperation</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="SYSBuildStage"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="SYSBuildStage"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
             	</item>
 			</xsl:if>				
@@ -231,7 +231,7 @@ xmlns:urn="urn:DefaultNamespace"
 				<item>
                 	<FIELDNAME>fldHrmsSYSOrderComment</FIELDNAME>
 						<FIELDVALUE xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-							<item><xsl:value-of select="GoToCommentOrder"/></item> <!-- “Â„ ËÁ ¡Œ-96 -->
+							<item><xsl:value-of select="GoToCommentOrder"/></item> <!-- –¢–µ–≥ –∏–∑ –ë–û-96 -->
 						</FIELDVALUE>            		
             	</item>
 		
@@ -243,80 +243,80 @@ xmlns:urn="urn:DefaultNamespace"
 			</item>
 
 <item>
-<FIELDNAME>fldPoint1Name </FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ Point1Name ËÁ ¡Œ-96 -->
+<FIELDNAME>fldPoint1Name </FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ Point1Name –∏–∑ –ë–û-96 -->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point1Name"/></item>
 				</FIELDVALUE>
 </item>
 <item>
-<FIELDNAME>fldPoint1Address</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ Point3AddressËÁ ¡Œ-96 -->
+<FIELDNAME>fldPoint1Address</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ Point3Address–∏–∑ –ë–û-96 -->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point1Address"/></item>
 				</FIELDVALUE>
 </item>
 <item>
-<FIELDNAME>fldPoint1Interface</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ Point1Interface ËÁ ¡Œ-96 -->
+<FIELDNAME>fldPoint1Interface</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ Point1Interface –∏–∑ –ë–û-96 -->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point1Interface"/></item>
 				</FIELDVALUE>
 </item>
 <item>
-<FIELDNAME>fldPoint1Equipment</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ Point1Equipment ËÁ ¡Œ-96    -->
+<FIELDNAME>fldPoint1Equipment</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ Point1Equipment –∏–∑ –ë–û-96    -->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point1Equipment"/></item>
 				</FIELDVALUE>
 </item>
 <item>
-<FIELDNAME>fldPoint3Name</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ Point3Name ËÁ ¡Œ-96                 -->
+<FIELDNAME>fldPoint3Name</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ Point3Name –∏–∑ –ë–û-96                 -->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point3Name"/></item>
 				</FIELDVALUE>
 </item>
 <item>
-<FIELDNAME>fldPoint3Address</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ Point3Address ËÁ ¡Œ-96 -->
+<FIELDNAME>fldPoint3Address</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ Point3Address –∏–∑ –ë–û-96 -->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point3Address"/></item>
 				</FIELDVALUE>
 </item>
 <item>
-<FIELDNAME>fldPoint3Interface</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ Point3Interface ËÁ ¡Œ-96-->
+<FIELDNAME>fldPoint3Interface</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ Point3Interface –∏–∑ –ë–û-96-->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point3Interface"/></item>
 				</FIELDVALUE>
 </item>
 <item>
-<FIELDNAME>fldPoint3Equipment</FIELDNAME> <!-- ÁÌ‡˜ÂÌËÂ Point3Equipment ËÁ ¡Œ-96 -->
+<FIELDNAME>fldPoint3Equipment</FIELDNAME> <!-- –∑–Ω–∞—á–µ–Ω–∏–µ Point3Equipment –∏–∑ –ë–û-96 -->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point3Equipment"/></item>
 				</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>fldPoint1Name </FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ Point1Name ËÁ ¡Œ-96 -->
+<FIELDNAME>fldPoint1Name </FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ Point1Name –∏–∑ –ë–û-96 -->
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 					<item><xsl:value-of select="Point1Name"/></item>
 				</FIELDVALUE>
 </item>
 	
 <item>
-<FIELDNAME>fldApprovalRequired</FIELDNAME> <!--- œËÁÌ‡Í ÌÂÔÛÒÚÓ„Ó ÁÌ‡˜ÂÌËˇ ApprovalDetailing ËÁ ¡Œ-96 -->
+<FIELDNAME>fldApprovalRequired</FIELDNAME> <!--- –ü—Ä–∏–∑–Ω–∞–∫ –Ω–µ–ø—É—Å—Ç–æ–≥–æ –∑–Ω–∞—á–µ–Ω–∏—è ApprovalDetailing –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item>
-				<xsl:if test="ApprovalDetailing=''">ÕÂÚ</xsl:if>			
-				<xsl:if test="ApprovalDetailing!=''">ƒ‡</xsl:if>	
+				<xsl:if test="ApprovalDetailing=''">–ù–µ—Ç</xsl:if>			
+				<xsl:if test="ApprovalDetailing!=''">–î–∞</xsl:if>	
 			</item>
 		</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>fldApprovalDetailing</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldApprovalDetailing</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="ApprovalDetailing"/></item>
 		</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>fldTechSolLifetime</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldTechSolLifetime</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="TechSolLifetime"/></item>
 		</FIELDVALUE>
@@ -324,21 +324,21 @@ xmlns:urn="urn:DefaultNamespace"
 
 	
 <item>
-<FIELDNAME>fldImplPeriod</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldImplPeriod</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="ImplPeriod"/></item>
 		</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>fldPoint2LInchOrgMethod</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldPoint2LInchOrgMethod</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="Point2LInchOrgMethod"/></item>
 		</FIELDVALUE>
 </item>
 	
 <item>
-<FIELDNAME>fldSolutionPicture</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldSolutionPicture</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="SolutionPicture"/></item>
 		</FIELDVALUE>
@@ -346,7 +346,7 @@ xmlns:urn="urn:DefaultNamespace"
 	
 
 <item>
-<FIELDNAME>fldInCanalization</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldInCanalization</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="InCanalization"/></item>
 		</FIELDVALUE>
@@ -354,17 +354,17 @@ xmlns:urn="urn:DefaultNamespace"
 	
 
 <item>
-<FIELDNAME>fldNeedHole</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldNeedHole</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item>
-                            <xsl:if test="BuildCanalization='0'">ÕÂÚ</xsl:if>
-                            <xsl:if test="BuildCanalization!='0'">ƒ‡</xsl:if>
+                            <xsl:if test="BuildCanalization='0'">–ù–µ—Ç</xsl:if>
+                            <xsl:if test="BuildCanalization!='0'">–î–∞</xsl:if>
                         </item>
 		</FIELDVALUE>
 </item>
 	
 <item>
-<FIELDNAME>fldAirCable</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldAirCable</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="AirCable"/></item>
 		</FIELDVALUE>
@@ -372,14 +372,14 @@ xmlns:urn="urn:DefaultNamespace"
 	
 
 <item>
-<FIELDNAME>fldHrmsExtraPaysExecutor</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldHrmsExtraPaysExecutor</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="Contractor"/></item>
 		</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>fldGroundCable</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldGroundCable</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="GroundCable"/></item>
 		</FIELDVALUE>
@@ -387,7 +387,7 @@ xmlns:urn="urn:DefaultNamespace"
 	
 
 <item>
-<FIELDNAME>fldHrmsExtraPaysMethod</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldHrmsExtraPaysMethod</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="WorkMethod"/></item>
 		</FIELDVALUE>
@@ -395,7 +395,7 @@ xmlns:urn="urn:DefaultNamespace"
 	
 
 <item>
-<FIELDNAME>fldBuildCanalization</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>fldBuildCanalization</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="BuildCanalization"/></item>
 		</FIELDVALUE>
@@ -403,7 +403,7 @@ xmlns:urn="urn:DefaultNamespace"
 
 	
 <item>
-<FIELDNAME>ReturnReason</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96 -->
+<FIELDNAME>ReturnReason</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96 -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item>
 				<xsl:if test="CRMRequestStatus!='COMPLETE'"><xsl:value-of select="CancelReason"/></xsl:if>
@@ -412,7 +412,7 @@ xmlns:urn="urn:DefaultNamespace"
 </item>
 
 <item>
-<FIELDNAME>fldSpecialNotes</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96(ÓÒÓ·˚Â ÛÒÎÓ‚Ëˇ) -->
+<FIELDNAME>fldSpecialNotes</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96(–æ—Å–æ–±—ã–µ —É—Å–ª–æ–≤–∏—è) -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="SpecialNotes"/></item>
 		</FIELDVALUE>
@@ -420,41 +420,41 @@ xmlns:urn="urn:DefaultNamespace"
 
 
 <item>
-<FIELDNAME>fldLMCrossing</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96(ÍÓÒÒËÓ‚Í‡ Ì‡ ”ƒ) -->
+<FIELDNAME>fldLMCrossing</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96(–∫—Ä–æ—Å—Å–∏—Ä–æ–≤–∫–∞ –Ω–∞ –£–î) -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="LMCrossing"/></item>
 		</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>Solution</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96(‡Î¸·ÓÏ ÚËÔÓ‚˚ı Â¯ÂÌËÈ) -->
+<FIELDNAME>Solution</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96(–∞–ª—å–±–æ–º —Ç–∏–ø–æ–≤—ã—Ö —Ä–µ—à–µ–Ω–∏–π) -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="ProjectSolution"/></item>
 		</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>fldRespPersNumber</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96(Ú‡·ÂÎ¸Ì˚È ÌÓÏÂ ÃÂÌÂ‰ÊÂ‡ ¡“») -->
+<FIELDNAME>fldRespPersNumber</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96(—Ç–∞–±–µ–ª—å–Ω—ã–π –Ω–æ–º–µ—Ä –ú–µ–Ω–µ–¥–∂–µ—Ä–∞ –ë–¢–ò) -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="RespPersNumber"/></item>
 		</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>fldLMOrgLevel</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96(ÛÓ‚ÂÌ¸ Ó„‡ÌËÁ‡ˆËË LastMile) -->
+<FIELDNAME>fldLMOrgLevel</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96(—É—Ä–æ–≤–µ–Ω—å –æ—Ä–≥–∞–Ω–∏–∑–∞—Ü–∏–∏ LastMile) -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="LMOrgLevel"/></item>
 		</FIELDVALUE>
 </item>
 
 <item>
-<FIELDNAME>fldHrmsWorkMethod</FIELDNAME> <!--- ÁÌ‡˜ÂÌËÂ ËÁ ¡Œ-96(—ÔÓÒÓ· Ó„‡ÌËÁ‡ˆËË ‡·ÓÚ) -->
+<FIELDNAME>fldHrmsWorkMethod</FIELDNAME> <!--- –∑–Ω–∞—á–µ–Ω–∏–µ –∏–∑ –ë–û-96(–°–ø–æ—Å–æ–± –æ—Ä–≥–∞–Ω–∏–∑–∞—Ü–∏–∏ —Ä–∞–±–æ—Ç) -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="WorkMethod"/></item>
 		</FIELDVALUE>
 </item>
 <item>
-<FIELDNAME>SMRDone</FIELDNAME> <!--- œËÁÌ‡Í Á‡‚Â¯ÂÌËˇ —Ã– -->
+<FIELDNAME>SMRDone</FIELDNAME> <!--- –ü—Ä–∏–∑–Ω–∞–∫ –∑–∞–≤–µ—Ä—à–µ–Ω–∏—è –°–ú–† -->
 		<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
 			<item><xsl:value-of select="SMRDone"/></item>
 		</FIELDVALUE>
@@ -477,7 +477,7 @@ xmlns:urn="urn:DefaultNamespace"
 	
 			<xsl:apply-templates select="RequestAttachmentList"/>
 				
-	<xsl:if test="SYSOrderStage='ŒÊË‰‡ÌËÂ ÒÓ„Î‡ÒÓ‚‡ÌËˇ Ó„‡ÌËÁ‡ˆËË ‰Îˇ ÎÓÍ‡Î¸ÌÓ„Ó ÔÓÂÍÚ‡ CRM'">
+	<xsl:if test="SYSOrderStage='–û–∂–∏–¥–∞–Ω–∏–µ —Å–æ–≥–ª–∞—Å–æ–≤–∞–Ω–∏—è –æ—Ä–≥–∞–Ω–∏–∑–∞—Ü–∏–∏ –¥–ª—è –ª–æ–∫–∞–ª—å–Ω–æ–≥–æ –ø—Ä–æ–µ–∫—Ç–∞ CRM'">
 			<item>
 			<FIELDNAME>fldFinanceSource</FIELDNAME>
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
@@ -487,7 +487,7 @@ xmlns:urn="urn:DefaultNamespace"
 			<item>
 			<FIELDNAME>InvestResult</FIELDNAME>
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-					<item>ƒ‡</item>
+					<item>–î–∞</item>
 				</FIELDVALUE>
 			</item>
 			<item>
@@ -498,7 +498,7 @@ xmlns:urn="urn:DefaultNamespace"
 			</item>
 	</xsl:if>
 	
-		<xsl:if test="SYSOrderStage='»Ì‚ÂÒÚËˆËË ÌÂ ‚˚‰ÂÎÂÌ˚ (‰Îˇ ÔÓÂÍÚ‡ CRM)'">
+		<xsl:if test="SYSOrderStage='–ò–Ω–≤–µ—Å—Ç–∏—Ü–∏–∏ –Ω–µ –≤—ã–¥–µ–ª–µ–Ω—ã (–¥–ª—è –ø—Ä–æ–µ–∫—Ç–∞ CRM)'">
 			<item>
 			<FIELDNAME>fldFinanceSource</FIELDNAME>
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
@@ -508,7 +508,7 @@ xmlns:urn="urn:DefaultNamespace"
 			<item>
 			<FIELDNAME>InvestResult</FIELDNAME>
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">
-					<item>ÕÂÚ</item>
+					<item>–ù–µ—Ç</item>
 				</FIELDVALUE>
 			</item>
 			<item>
@@ -519,7 +519,7 @@ xmlns:urn="urn:DefaultNamespace"
 			</item>
 	</xsl:if>
 	
-	<xsl:if test="SYSOrderStage='”ÚÓ˜ÌÂÌËÂ ‚ √—œ ‰Îˇ ÒÚÓËÚÂÎ¸ÒÚ‚‡'">
+	<xsl:if test="SYSOrderStage='–£—Ç–æ—á–Ω–µ–Ω–∏–µ –≤ –ì–°–ü –¥–ª—è —Å—Ç—Ä–æ–∏—Ç–µ–ª—å—Å—Ç–≤–∞'">
 			<item>
 			<FIELDNAME>ReTechSolution</FIELDNAME>
 				<FIELDVALUE  xsi:type="soapenc:Array" soapenc:arrayType="xsd:string[1]">

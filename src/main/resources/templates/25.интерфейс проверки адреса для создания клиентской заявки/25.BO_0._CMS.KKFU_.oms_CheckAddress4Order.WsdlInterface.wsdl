@@ -34,7 +34,7 @@
 	<wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 		<wsdl:operation name="CheckAddress4Order">
-			<wsdl:documentation>Проверка адреса для создания клиентской заявки</wsdl:documentation>
+			<wsdl:documentation>РџСЂРѕРІРµСЂРєР° Р°РґСЂРµСЃР° РґР»СЏ СЃРѕР·РґР°РЅРёСЏ РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё</wsdl:documentation>
 			<soap:operation soapAction="urn:ru:rt:hrms:crmcheckaddressservice:CheckAddress4Order"/>
 			<wsdl:input name="CheckAddress4OrderIn">
 				<soap:body use="literal"/>
@@ -47,7 +47,7 @@
 			</wsdl:fault>
 		</wsdl:operation>
 		<wsdl:operation name="GetDate4Order">
-			<wsdl:documentation>Получение контрольных дат проработки клиентской заявки</wsdl:documentation>
+			<wsdl:documentation>РџРѕР»СѓС‡РµРЅРёРµ РєРѕРЅС‚СЂРѕР»СЊРЅС‹С… РґР°С‚ РїСЂРѕСЂР°Р±РѕС‚РєРё РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё</wsdl:documentation>
 			<soap:operation soapAction="urn:ru:rt:hrms:crmcheckaddressservice:CheckAddress4Order"/>
 			<wsdl:input name="GetDate4OrderIn">
 				<soap:body use="literal"/>

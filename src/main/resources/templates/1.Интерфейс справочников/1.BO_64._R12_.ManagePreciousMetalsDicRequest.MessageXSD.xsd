@@ -12,47 +12,47 @@
 
 	<xs:complexType name="tManagePreciousMetalsDicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Драгоценные металлы</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PreciousMetalsList" type="tPreciousMetalsList">
 				<xs:annotation>
-					<xs:documentation>Список справочников Драгоценные металлы</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 </xs:complexType>
-	<!--СПРАВОЧНИК ДРАГОЦЕННЫЕ МЕТАЛЛЫ-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р”Р РђР“РћР¦Р•РќРќР«Р• РњР•РўРђР›Р›Р«-->
 	<xs:complexType name="tPreciousMetalsList">
 		<xs:annotation>
-			<xs:documentation>Описание списка  справочников Драгоценные металлы</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР°  СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PreciousMetal" type="tPreciousMetal" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Драгоценные металлы</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tPreciousMetal">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Драгоценные металлы</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PreciousMaterialId" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код драгоценного металла</xs:documentation>
+					<xs:documentation>РљРѕРґ РґСЂР°РіРѕС†РµРЅРЅРѕРіРѕ РјРµС‚Р°Р»Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание драгоценного металла</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РґСЂР°РіРѕС†РµРЅРЅРѕРіРѕ РјРµС‚Р°Р»Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

@@ -3,17 +3,17 @@
 
 <xs:simpleType name="tStatus">
         <xs:annotation>
-            <xs:documentation>Статус события</xs:documentation>
+            <xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
         </xs:annotation>
         <xs:restriction base="xs:string">
             <xs:enumeration value="A">
                 <xs:annotation>
-                    <xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+                    <xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
                 </xs:annotation>
             </xs:enumeration>
             <xs:enumeration value="D">
         		<xs:annotation>
-					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -21,12 +21,12 @@
 
 <xs:complexType name="tTaskList">
 		<xs:annotation>
-			<xs:documentation>Описание списка  справочников задач</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР°  СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р·Р°РґР°С‡</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Task" type="tTask" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Задачи</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє Р—Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -35,47 +35,47 @@
 
 <xs:complexType name="tTask">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Задачи</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р—Р°РґР°С‡Рё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы  (например, идентификатор филиала)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹  (РЅР°РїСЂРёРјРµСЂ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»РёР°Р»Р°)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор проекта</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TaskId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор задачи</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TaskCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код задачи</xs:documentation>
+					<xs:documentation>РљРѕРґ Р·Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание задачи</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ Р·Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartDate" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата начала транзакций</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РЅР°С‡Р°Р»Р° С‚СЂР°РЅР·Р°РєС†РёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompletionDate" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата  окончания транзакции</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р°  РѕРєРѕРЅС‡Р°РЅРёСЏ С‚СЂР°РЅР·Р°РєС†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -83,12 +83,12 @@
 
 <xs:complexType name="tManageTaskDicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Задачи</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р—Р°РґР°С‡Рё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TaskList" type="tTaskList">
 				<xs:annotation>
-					<xs:documentation>Список справочников Задачи</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р—Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

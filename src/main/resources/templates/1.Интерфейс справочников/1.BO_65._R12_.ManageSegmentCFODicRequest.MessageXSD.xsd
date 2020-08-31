@@ -4,47 +4,47 @@
 	<xs:element name="ManageSegmentCFODicRequest" type="tManageSegmentCFODicRequest"/>
 	<xs:complexType name="tManageSegmentCFODicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Расходные счета – сегмент ЦФО</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SegmentCFOList" type="tSegmentCFOList">
 				<xs:annotation>
-					<xs:documentation>Список справочников Расходные счета – сегмент ЦФО</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
         </xs:complexType>  
-	<!--СПРАВОЧНИК РАСХОДНЫЕ СЧЕТА – сегмент ЦФО-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р РђРЎРҐРћР”РќР«Р• РЎР§Р•РўРђ вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ-->
 	<xs:complexType name="tSegmentCFOList">
 		<xs:annotation>
-			<xs:documentation>Описание списка  справочников Расходные счета – сегмент ЦФО</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР°  СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SegmentCFO" type="tSegmentCFO" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Расходные счета – сегмент ЦФО</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tSegmentCFO">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Расходные счета – сегмент ЦФО</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Account" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Счет</xs:documentation>
+					<xs:documentation>РЎС‡РµС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание счета</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃС‡РµС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -52,17 +52,17 @@
 
 <xs:simpleType name="tStatus">
 		<xs:annotation>
-			<xs:documentation>Статус события</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="A">
 				<xs:annotation>
-					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

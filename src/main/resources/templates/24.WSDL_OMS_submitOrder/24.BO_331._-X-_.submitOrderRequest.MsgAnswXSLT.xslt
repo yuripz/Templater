@@ -3,7 +3,7 @@
  <xsl:template match="/">
 <tns:Fault xmlns:tns="http://oms.rt.ru/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ResultCode>-20202</ResultCode>
-  <Message>submitOrderRequest не содержит тег 'originator' , в котором прописан код вызывающей системы ( Лира , ККФУ, etc ) </Message>
+  <Message>submitOrderRequest РЅРµ СЃРѕРґРµСЂР¶РёС‚ С‚РµРі 'originator' , РІ РєРѕС‚РѕСЂРѕРј РїСЂРѕРїРёСЃР°РЅ РєРѕРґ РІС‹Р·С‹РІР°СЋС‰РµР№ СЃРёСЃС‚РµРјС‹ ( Р›РёСЂР° , РљРљР¤РЈ, etc ) </Message>
 
 </tns:Fault>
 

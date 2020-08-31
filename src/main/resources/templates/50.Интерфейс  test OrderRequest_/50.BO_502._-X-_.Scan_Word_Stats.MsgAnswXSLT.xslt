@@ -3,7 +3,7 @@
   <xsl:template match="/">
    <Confirmation>
     <ResultCode>0</ResultCode>
-    <Message>Ответ megaindex в массиве</Message>
+    <Message>РћС‚РІРµС‚ megaindex РІ РјР°СЃСЃРёРІРµ</Message>
        <DetailList>
   <xsl:copy-of select="MsgData"/>
        </DetailList> 

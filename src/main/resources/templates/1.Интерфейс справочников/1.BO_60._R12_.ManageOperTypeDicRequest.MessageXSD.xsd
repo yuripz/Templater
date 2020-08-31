@@ -6,12 +6,12 @@
 
 <xs:complexType name="tManageOperTypeDicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Типы операций</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperTypeList" type="tOperTypeList">
 				<xs:annotation>
-					<xs:documentation>Список справочников Типы операций</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -21,12 +21,12 @@
 
 <xs:complexType name="tOperTypeList">
 		<xs:annotation>
-			<xs:documentation>Описание списка  справочников Типы операций</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР°  СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperType" type="tOperType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Типы операций</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -36,27 +36,27 @@
 
 <xs:complexType name="tOperType">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Типы операций</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperTypeId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор  типа  операции</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ  С‚РёРїР°  РѕРїРµСЂР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperationType" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Тип операции</xs:documentation>
+					<xs:documentation>РўРёРї РѕРїРµСЂР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Описание типа операции</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ С‚РёРїР° РѕРїРµСЂР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -65,17 +65,17 @@
 
 <xs:simpleType name="tStatus">
 		<xs:annotation>
-			<xs:documentation>Статус события</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="A">
 				<xs:annotation>
-					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

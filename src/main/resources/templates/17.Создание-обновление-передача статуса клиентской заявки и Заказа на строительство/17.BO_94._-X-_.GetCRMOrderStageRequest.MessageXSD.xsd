@@ -3,17 +3,17 @@
 <xs:element name="GetCRMOrderStageRequest" type="tGetCRMOrderStageRequest" />
 	<xs:complexType name="tGetCRMOrderStageRequest">
 		<xs:annotation>
-			<xs:documentation>Создание /обновление и передача статуса клиентской заявки из CRM</xs:documentation>
+			<xs:documentation>РЎРѕР·РґР°РЅРёРµ /РѕР±РЅРѕРІР»РµРЅРёРµ Рё РїРµСЂРµРґР°С‡Р° СЃС‚Р°С‚СѓСЃР° РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё РёР· CRM</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SYSOrderNum" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Номер Клиентской заявки СУС, присвоенный на стороне СУС </xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ РљР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё РЎРЈРЎ, РїСЂРёСЃРІРѕРµРЅРЅС‹Р№ РЅР° СЃС‚РѕСЂРѕРЅРµ РЎРЈРЎ </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderStageSender" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Логин пользователя (агента), от имени которого будет произведен переход</xs:documentation>
+					<xs:documentation>Р›РѕРіРёРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (Р°РіРµРЅС‚Р°), РѕС‚ РёРјРµРЅРё РєРѕС‚РѕСЂРѕРіРѕ Р±СѓРґРµС‚ РїСЂРѕРёР·РІРµРґРµРЅ РїРµСЂРµС…РѕРґ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

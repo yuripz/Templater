@@ -2,17 +2,17 @@
   <xs:element name="Fault" type="tns:tFault"/>
   <xs:complexType name="tFault">
     <xs:annotation>
-      <xs:documentation>Общее описание ошибки</xs:documentation>
+      <xs:documentation>РћР±С‰РµРµ РѕРїРёСЃР°РЅРёРµ РѕС€РёР±РєРё</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="ResultCode" type="xs:integer">
         <xs:annotation>
-          <xs:documentation>Код ошибки</xs:documentation>
+          <xs:documentation>РљРѕРґ РѕС€РёР±РєРё</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Message" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Описание ошибки</xs:documentation>
+          <xs:documentation>РћРїРёСЃР°РЅРёРµ РѕС€РёР±РєРё</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

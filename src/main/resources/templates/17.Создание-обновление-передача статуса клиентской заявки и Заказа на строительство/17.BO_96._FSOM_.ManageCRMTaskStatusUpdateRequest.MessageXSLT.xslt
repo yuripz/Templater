@@ -15,7 +15,7 @@
 				</orderResultCode>
 				<orderResultText>
 					<xsl:value-of select="/CRMTaskStatusUpdate/GoToCommentOrder"/>
-					<!-- было <xsl:if test="CRMTaskStatusUpdate/CRMRequestStatus!=''"><xsl:value-of select="CRMTaskStatusUpdate/CRMRequestStatus"/></xsl:if>-->
+					<!-- Р±С‹Р»Рѕ <xsl:if test="CRMTaskStatusUpdate/CRMRequestStatus!=''"><xsl:value-of select="CRMTaskStatusUpdate/CRMRequestStatus"/></xsl:if>-->
 				</orderResultText>
 				<xsl:if test="CRMTaskStatusUpdate/CRMRequestStatus=''">
 					<orderResultText>DO UPDATE ORDER</orderResultText>
@@ -211,10 +211,10 @@
 										<xsl:if test="/CRMTaskStatusUpdate/TVready=''">OffNet</xsl:if>
 										<xsl:if test="/CRMTaskStatusUpdate/TVready!=''">OnNet</xsl:if>
 									</attribute>
-									<!-- константа -->
+									<!-- РєРѕРЅСЃС‚Р°РЅС‚Р° -->
 									<attribute name="UE">RUR</attribute>
-									<!-- константа -->
-									<attribute name="VAT">без НДС</attribute>
+									<!-- РєРѕРЅСЃС‚Р°РЅС‚Р° -->
+									<attribute name="VAT">Р±РµР· РќР”РЎ</attribute>
 									<attribute name="MonthlyFee">
 										<xsl:value-of select="ProjectCost"/>
 									</attribute>
@@ -240,8 +240,8 @@
 										<xsl:value-of select="GroundCable"/>
 									</attribute>
 									<attribute name="needHole">
-										<xsl:if test="BuildCanalization='0'">Нет</xsl:if>
-										<xsl:if test="BuildCanalization!='0'">Да</xsl:if>
+										<xsl:if test="BuildCanalization='0'">РќРµС‚</xsl:if>
+										<xsl:if test="BuildCanalization!='0'">Р”Р°</xsl:if>
 									</attribute>
 									<attribute name="buildCanalization">
 										<xsl:value-of select="BuildCanalization"/>

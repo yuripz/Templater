@@ -2,42 +2,42 @@
            targetNamespace="urn:ru:rt:hrms:context">
   <xs:element name="Context" type="tns:tContext">
     <xs:annotation>
-      <xs:documentation>Контекст вызова запроса (общий заголовок)</xs:documentation>
+      <xs:documentation>РљРѕРЅС‚РµРєСЃС‚ РІС‹Р·РѕРІР° Р·Р°РїСЂРѕСЃР° (РѕР±С‰РёР№ Р·Р°РіРѕР»РѕРІРѕРє)</xs:documentation>
     </xs:annotation>
   </xs:element>
   <xs:complexType name="tContext">
     <xs:annotation>
-      <xs:documentation>Описание контекста запроса</xs:documentation>
+      <xs:documentation>РћРїРёСЃР°РЅРёРµ РєРѕРЅС‚РµРєСЃС‚Р° Р·Р°РїСЂРѕСЃР°</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="EventInitiator" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Код системы инициатора (система, породившая событие)</xs:documentation>
+          <xs:documentation>РљРѕРґ СЃРёСЃС‚РµРјС‹ РёРЅРёС†РёР°С‚РѕСЂР° (СЃРёСЃС‚РµРјР°, РїРѕСЂРѕРґРёРІС€Р°СЏ СЃРѕР±С‹С‚РёРµ)</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="EventKey" type="xs:integer">
         <xs:annotation>
-          <xs:documentation>Идентификатор события</xs:documentation>
+          <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Source" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Код системы-источника</xs:documentation>
+          <xs:documentation>РљРѕРґ СЃРёСЃС‚РµРјС‹-РёСЃС‚РѕС‡РЅРёРєР°</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Destination" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Код системы-получателя</xs:documentation>
+          <xs:documentation>РљРѕРґ СЃРёСЃС‚РµРјС‹-РїРѕР»СѓС‡Р°С‚РµР»СЏ</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="BusOperationId" type="xs:integer">
         <xs:annotation>
-          <xs:documentation>Идентификатор типа бизнес-операции</xs:documentation>
+          <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° Р±РёР·РЅРµСЃ-РѕРїРµСЂР°С†РёРё</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="RequestId" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Идентификатор запроса (определяется на уровне одного из сегментов шины)</xs:documentation>
+          <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РїСЂРѕСЃР° (РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ РЅР° СѓСЂРѕРІРЅРµ РѕРґРЅРѕРіРѕ РёР· СЃРµРіРјРµРЅС‚РѕРІ С€РёРЅС‹)</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

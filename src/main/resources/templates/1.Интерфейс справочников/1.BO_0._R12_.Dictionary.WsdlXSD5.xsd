@@ -2,1409 +2,1409 @@
            xmlns:com="urn:ru:rt:hrms:common" targetNamespace="urn:ru:rt:hrms:dictionary">
   <xs:import namespace="urn:ru:rt:hrms:common"
              schemaLocation="http://10.32.245.8:7001/HermesSOAPService/SOAPServlet/DictionaryRequest?xsd=6"/>
-<!-- СПРАВОЧНИК ЕИ -->
+<!-- РЎРџР РђР’РћР§РќРРљ Р•Р -->
 	<xs:complexType name="tUnitsList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников ЕИ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р•Р</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Units" type="tns:tUnits" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Единицы измерения (ЕИ)</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє Р•РґРёРЅРёС†С‹ РёР·РјРµСЂРµРЅРёСЏ (Р•Р)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tUnits">
 		<xs:annotation>
-			<xs:documentation>Описание справочника ЕИ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р•Р</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="UnitCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код ЕИ</xs:documentation>
+					<xs:documentation>РљРѕРґ Р•Р</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание ЕИ</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ Р•Р</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OKEICode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код ОКЕИ</xs:documentation>
+					<xs:documentation>РљРѕРґ РћРљР•Р</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UnitClass" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Класс ЕИ</xs:documentation>
+					<xs:documentation>РљР»Р°СЃСЃ Р•Р</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BaseUnit" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Базовая ЕИ</xs:documentation>
+					<xs:documentation>Р‘Р°Р·РѕРІР°СЏ Р•Р</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DisableDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата отключения</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РѕС‚РєР»СЋС‡РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- СПРАВОЧНИК ПОЗИЦИИ -->
+	<!-- РЎРџР РђР’РћР§РќРРљ РџРћР—РР¦РР -->
 	<xs:complexType name="tInventoryItemList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников позиций</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РїРѕР·РёС†РёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="InventoryItem" type="tns:tInventoryItem" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Позиции</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РџРѕР·РёС†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tInventoryItem">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Позиции</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РџРѕР·РёС†РёРё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="InventoryItemId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор позиции</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРѕР·РёС†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InventoryItemCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код позиции</xs:documentation>
+					<xs:documentation>РљРѕРґ РїРѕР·РёС†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание позиции</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РїРѕР·РёС†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StatusActive" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Статус активности</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ Р°РєС‚РёРІРЅРѕСЃС‚Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PrimaryUnit" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Основная ЕИ</xs:documentation>
+					<xs:documentation>РћСЃРЅРѕРІРЅР°СЏ Р•Р</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OKEICode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код ОКЕИ</xs:documentation>
+					<xs:documentation>РљРѕРґ РћРљР•Р</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- СПРАВОЧНИК КОНТРАГЕНТЫ-->
+	<!-- РЎРџР РђР’РћР§РќРРљ РљРћРќРўР РђР“Р•РќРўР«-->
 	<xs:complexType name="tVendorList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников контрагентов</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Vendor" type="tns:tVendor" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Контрагенты</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tVendor">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Контрагенты</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы (например, идентификатор филиала)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹ (РЅР°РїСЂРёРјРµСЂ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»РёР°Р»Р°)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorSiteId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор отделения контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕС‚РґРµР»РµРЅРёСЏ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorName" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Имя контрагента</xs:documentation>
+					<xs:documentation>РРјСЏ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AltNameVendorSite" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Альтернативное имя отделения поставщика</xs:documentation>
+					<xs:documentation>РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅРѕРµ РёРјСЏ РѕС‚РґРµР»РµРЅРёСЏ РїРѕСЃС‚Р°РІС‰РёРєР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDateActive" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата действия по</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РґРµР№СЃС‚РІРёСЏ РїРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="INN" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>ИНН</xs:documentation>
+					<xs:documentation>РРќРќ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="KPP" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>КПП</xs:documentation>
+					<xs:documentation>РљРџРџ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- СПРАВОЧНИК СОТРУДНИКИ -->
+	<!-- РЎРџР РђР’РћР§РќРРљ РЎРћРўР РЈР”РќРРљР -->
 	<xs:complexType name="tEmployeeList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников сотрудников</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ СЃРѕС‚СЂСѓРґРЅРёРєРѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Employee" type="tns:tEmployee" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Сотрудники</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РЎРѕС‚СЂСѓРґРЅРёРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tEmployee">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Сотрудники</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РЎРѕС‚СЂСѓРґРЅРёРєРё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="com:nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы (например, идентификатор филиала)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹ (РЅР°РїСЂРёРјРµСЂ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»РёР°Р»Р°)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EmployeeId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор работника</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂР°Р±РѕС‚РЅРёРєР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EmployeeNum" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Табельный номер</xs:documentation>
+					<xs:documentation>РўР°Р±РµР»СЊРЅС‹Р№ РЅРѕРјРµСЂ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Name" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>ФИО</xs:documentation>
+					<xs:documentation>Р¤РРћ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата окончания назначения в подразделение интеграции</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РЅР°Р·РЅР°С‡РµРЅРёСЏ РІ РїРѕРґСЂР°Р·РґРµР»РµРЅРёРµ РёРЅС‚РµРіСЂР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MOLAttribute" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Признак, что сотрудник является МОЛ</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє, С‡С‚Рѕ СЃРѕС‚СЂСѓРґРЅРёРє СЏРІР»СЏРµС‚СЃСЏ РњРћР›</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК ПРОЕКТЫ-->
+	<!--РЎРџР РђР’РћР§РќРРљ РџР РћР•РљРўР«-->
 	<xs:complexType name="tProjectList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников проектов</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РїСЂРѕРµРєС‚РѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Project" type="tns:tProject" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Проекты</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РџСЂРѕРµРєС‚С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tProject">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Проекты</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РџСЂРѕРµРєС‚С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы (например, идентификатор филиала)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹ (РЅР°РїСЂРёРјРµСЂ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»РёР°Р»Р°)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор проекта</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ShortProjectCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Краткий код проекта</xs:documentation>
+					<xs:documentation>РљСЂР°С‚РєРёР№ РєРѕРґ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код проекта</xs:documentation>
+					<xs:documentation>РљРѕРґ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание проекта</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompletionDate" type="com:nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата окончания транзакции</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ С‚СЂР°РЅР·Р°РєС†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectStatus" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Статус проекта</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CFO" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>ЦФО</xs:documentation>
+					<xs:documentation>Р¦Р¤Рћ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CentralProject" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Признак централизованного проекта</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє С†РµРЅС‚СЂР°Р»РёР·РѕРІР°РЅРЅРѕРіРѕ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ClassCode" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Класс проекта</xs:documentation>
+					<xs:documentation>РљР»Р°СЃСЃ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК ЗАДАЧИ-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р—РђР”РђР§Р-->
 	<xs:complexType name="tTaskList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников задач</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р·Р°РґР°С‡</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Task" type="tns:tTask" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Задачи</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє Р—Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tTask">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Задачи</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р—Р°РґР°С‡Рё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы (например, идентификатор филиала)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹ (РЅР°РїСЂРёРјРµСЂ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»РёР°Р»Р°)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор проекта</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TaskId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор задачи</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TaskCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код задачи</xs:documentation>
+					<xs:documentation>РљРѕРґ Р·Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание задачи</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ Р·Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartDate" type="com:nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата начала транзакций</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РЅР°С‡Р°Р»Р° С‚СЂР°РЅР·Р°РєС†РёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompletionDate" type="com:nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата окончания транзакции</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ С‚СЂР°РЅР·Р°РєС†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК ПУСКОВЫЕ ОЧЕРЕДИ-->
+	<!--РЎРџР РђР’РћР§РќРРљ РџРЈРЎРљРћР’Р«Р• РћР§Р•Р Р•Р”Р-->
 	<xs:complexType name="tLauncherList">
 		<xs:annotation>
-			<xs:documentation>Список справочников пусковая очередь</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РїСѓСЃРєРѕРІР°СЏ РѕС‡РµСЂРµРґСЊ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Launcher" type="tns:tLauncher" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Пусковые очереди</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РџСѓСЃРєРѕРІС‹Рµ РѕС‡РµСЂРµРґРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tLauncher">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Пусковые очереди</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РџСѓСЃРєРѕРІС‹Рµ РѕС‡РµСЂРµРґРё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ProjectId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор проекта</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ClassCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код класса</xs:documentation>
+					<xs:documentation>РљРѕРґ РєР»Р°СЃСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание пусковой очереди</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РїСѓСЃРєРѕРІРѕР№ РѕС‡РµСЂРµРґРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК КОДЫ ТОУ-->
+	<!--РЎРџР РђР’РћР§РќРРљ РљРћР”Р« РўРћРЈ-->
 	<xs:complexType name="tTOUList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников кодов ТОУ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РєРѕРґРѕРІ РўРћРЈ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TOU" type="tns:tTOU" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Коды ТОУ</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РљРѕРґС‹ РўРћРЈ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tTOU">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Коды ТОУ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРґС‹ РўРћРЈ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="TOUId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор кода ТОУ</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРґР° РўРћРЈ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TOUCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код ТОУ</xs:documentation>
+					<xs:documentation>РљРѕРґ РўРћРЈ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TOUCodeName" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание кода ТОУ</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РєРѕРґР° РўРћРЈ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OKOFCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код ОКОФ</xs:documentation>
+					<xs:documentation>РљРѕРґ РћРљРћР¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartActive" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Период начала действия</xs:documentation>
+					<xs:documentation>РџРµСЂРёРѕРґ РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndActive" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Период окончания действия</xs:documentation>
+					<xs:documentation>РџРµСЂРёРѕРґ РѕРєРѕРЅС‡Р°РЅРёСЏ РґРµР№СЃС‚РІРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК ОПЕРАЦИОННЫЕ ЕДИНИЦЫ-->
+	<!--РЎРџР РђР’РћР§РќРРљ РћРџР•Р РђР¦РРћРќРќР«Р• Р•Р”РРќРР¦Р«-->
 	<xs:complexType name="tOperUnitList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников ОЕ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РћР•</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperUnit" type="tns:tOperUnit" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник ОЕ</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РћР•</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tOperUnit">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Коды ТОУ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРґС‹ РўРћРЈ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="com:nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор Операционной единицы</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РћРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FilialCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код филиала</xs:documentation>
+					<xs:documentation>РљРѕРґ С„РёР»РёР°Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FilialDesc" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Имя филиала</xs:documentation>
+					<xs:documentation>РРјСЏ С„РёР»РёР°Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgType" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Тип операционной единицы</xs:documentation>
+					<xs:documentation>РўРёРї РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgTypeDesc" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Имя типа ОЕ</xs:documentation>
+					<xs:documentation>РРјСЏ С‚РёРїР° РћР•</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MRCode" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Код МакроРегиона</xs:documentation>
+					<xs:documentation>РљРѕРґ РњР°РєСЂРѕР РµРіРёРѕРЅР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MRDesc" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Имя МакроРегиона</xs:documentation>
+					<xs:documentation>РРјСЏ РњР°РєСЂРѕР РµРіРёРѕРЅР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код Компании</xs:documentation>
+					<xs:documentation>РљРѕРґ РљРѕРјРїР°РЅРёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyDesc" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Имя Компании</xs:documentation>
+					<xs:documentation>РРјСЏ РљРѕРјРїР°РЅРёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartDateActive" type="com:nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата активности с</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё СЃ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDateActive" type="com:nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата активности по</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё РїРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК ТИПЫ ОПЕРАЦИЙ-->
+	<!--РЎРџР РђР’РћР§РќРРљ РўРРџР« РћРџР•Р РђР¦РР™-->
 	<xs:complexType name="tOperTypeList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников Типы операций</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperType" type="tns:tOperType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Типы операций</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tOperType">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Типы операций</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperTypeId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор типа операции</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РѕРїРµСЂР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OperationType" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Тип операции</xs:documentation>
+					<xs:documentation>РўРёРї РѕРїРµСЂР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Описание типа операции</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ С‚РёРїР° РѕРїРµСЂР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК ОРГАНИЗАЦИИ РАСПОЛОЖЕНИЙ-->
+	<!--РЎРџР РђР’РћР§РќРРљ РћР Р“РђРќРР—РђР¦РР Р РђРЎРџРћР›РћР–Р•РќРР™-->
 	<xs:complexType name="tOrganizationsList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников Организации расположений</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РћСЂРіР°РЅРёР·Р°С†РёРё СЂР°СЃРїРѕР»РѕР¶РµРЅРёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Organizations" type="tns:tOrganizations" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Организации расположений</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РћСЂРіР°РЅРёР·Р°С†РёРё СЂР°СЃРїРѕР»РѕР¶РµРЅРёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tOrganizations">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Организации расположений</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РћСЂРіР°РЅРёР·Р°С†РёРё СЂР°СЃРїРѕР»РѕР¶РµРЅРёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="com:nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganizationId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Код организации активов</xs:documentation>
+					<xs:documentation>РљРѕРґ РѕСЂРіР°РЅРёР·Р°С†РёРё Р°РєС‚РёРІРѕРІ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrganizationName" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Наименование организации активов</xs:documentation>
+					<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РѕСЂРіР°РЅРёР·Р°С†РёРё Р°РєС‚РёРІРѕРІ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DateFrom" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата действия с</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РґРµР№СЃС‚РІРёСЏ СЃ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DateTo" type="com:nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата действия по</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РґРµР№СЃС‚РІРёСЏ РїРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DeletedFlag" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Флаг удаления организации</xs:documentation>
+					<xs:documentation>Р¤Р»Р°Рі СѓРґР°Р»РµРЅРёСЏ РѕСЂРіР°РЅРёР·Р°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК РАСХОДНЫЕ СЧЕТА – сегмент счет-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р РђРЎРҐРћР”РќР«Р• РЎР§Р•РўРђ вЂ“ СЃРµРіРјРµРЅС‚ СЃС‡РµС‚-->
 	<xs:complexType name="tSegmentAccountList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников Расходные счета – сегмент счет</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ СЃС‡РµС‚</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SegmentAccount" type="tns:tSegmentAccount" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Расходные счета – сегмент счет</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ СЃС‡РµС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tSegmentAccount">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Расходные счета – сегмент счет</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ СЃС‡РµС‚</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Account" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Счет</xs:documentation>
+					<xs:documentation>РЎС‡РµС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание счета</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃС‡РµС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК РАСХОДНЫЕ СЧЕТА – сегмент ЦФО-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р РђРЎРҐРћР”РќР«Р• РЎР§Р•РўРђ вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ-->
 	<xs:complexType name="tSegmentCFOList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников Расходные счета – сегмент ЦФО</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SegmentCFO" type="tns:tSegmentCFO" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Расходные счета – сегмент ЦФО</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tSegmentCFO">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Расходные счета – сегмент ЦФО</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Account" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Счет</xs:documentation>
+					<xs:documentation>РЎС‡РµС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание счета</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃС‡РµС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК ДРАГОЦЕННЫЕ МЕТАЛЛЫ-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р”Р РђР“РћР¦Р•РќРќР«Р• РњР•РўРђР›Р›Р«-->
 	<xs:complexType name="tPreciousMetalsList">
 		<xs:annotation>
-			<xs:documentation>Описание списка справочников Драгоценные металлы</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PreciousMetal" type="tns:tPreciousMetal" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник Драгоценные металлы</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tPreciousMetal">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Драгоценные металлы</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PreciousMaterialId" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код драгоценного металла</xs:documentation>
+					<xs:documentation>РљРѕРґ РґСЂР°РіРѕС†РµРЅРЅРѕРіРѕ РјРµС‚Р°Р»Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание драгоценного металла</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РґСЂР°РіРѕС†РµРЅРЅРѕРіРѕ РјРµС‚Р°Р»Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИКИ ВИДОВ ЗАТРАТ И ПОСТУПЛЕНИЙ-->
+	<!--РЎРџР РђР’РћР§РќРРљР Р’РР”РћР’ Р—РђРўР РђРў Р РџРћРЎРўРЈРџР›Р•РќРР™-->
 	<xs:complexType name="tCostsArrivalTypeList">
 		<xs:annotation>
-			<xs:documentation>Список видов затрат</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РІРёРґРѕРІ Р·Р°С‚СЂР°С‚</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="CostsArrivalType" type="tns:tCostsArrivalType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание видов затрат и поступлений</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РІРёРґРѕРІ Р·Р°С‚СЂР°С‚ Рё РїРѕСЃС‚СѓРїР»РµРЅРёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tCostsArrivalType">
 		<xs:annotation>
-			<xs:documentation>Описание видов затрат и поступлений</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РІРёРґРѕРІ Р·Р°С‚СЂР°С‚ Рё РїРѕСЃС‚СѓРїР»РµРЅРёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Cost" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Вид затрат</xs:documentation>
+					<xs:documentation>Р’РёРґ Р·Р°С‚СЂР°С‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание вида затрат</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РІРёРґР° Р·Р°С‚СЂР°С‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК РАСХОДНЫЕ РАМОЧНЫЕ ДОГОВОРЫ-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р РђРЎРҐРћР”РќР«Р• Р РђРњРћР§РќР«Р• Р”РћР“РћР’РћР Р«-->
 	<xs:complexType name="tContractList">
 		<xs:annotation>
-			<xs:documentation>Список расходных рамочных договоров</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЂР°СЃС…РѕРґРЅС‹С… СЂР°РјРѕС‡РЅС‹С… РґРѕРіРѕРІРѕСЂРѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Contract" type="tns:tContract" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание расходного рамочного договора</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЂР°СЃС…РѕРґРЅРѕРіРѕ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tContract">
 		<xs:annotation>
-			<xs:documentation>Описание расходного рамочного договора</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЂР°СЃС…РѕРґРЅРѕРіРѕ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="FrameContractId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор договора</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IntNumber" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Внутренний номер договора</xs:documentation>
+					<xs:documentation>Р’РЅСѓС‚СЂРµРЅРЅРёР№ РЅРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtFrameContractNum" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Внешний номер договора</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РЅРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorSiteId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор отделения контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕС‚РґРµР»РµРЅРёСЏ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CreationDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата Договора</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р”РѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Операционная единица</xs:documentation>
+					<xs:documentation>РћРїРµСЂР°С†РёРѕРЅРЅР°СЏ РµРґРёРЅРёС†Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GlobalContract" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Глобальный договор</xs:documentation>
+					<xs:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ РґРѕРіРѕРІРѕСЂ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AssigmentsList" type="tns:tAssigmentsList" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Список участников договора</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СѓС‡Р°СЃС‚РЅРёРєРѕРІ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Список участников договора-->
+	<!-- РЎРїРёСЃРѕРє СѓС‡Р°СЃС‚РЅРёРєРѕРІ РґРѕРіРѕРІРѕСЂР°-->
 	<xs:complexType name="tAssigmentsList">
 		<xs:annotation>
-			<xs:documentation>Список участников договора</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СѓС‡Р°СЃС‚РЅРёРєРѕРІ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Assigments" type="tns:tAssigments" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Участники договора</xs:documentation>
+					<xs:documentation>РЈС‡Р°СЃС‚РЅРёРєРё РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tAssigments">
 		<xs:annotation>
-			<xs:documentation>Участники договора</xs:documentation>
+			<xs:documentation>РЈС‡Р°СЃС‚РЅРёРєРё РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PurchasingOrgId" type="com:nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Закупочная организация</xs:documentation>
+					<xs:documentation>Р—Р°РєСѓРїРѕС‡РЅР°СЏ РѕСЂРіР°РЅРёР·Р°С†РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PurchaseId" type="com:nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Для закупок / оплат</xs:documentation>
+					<xs:documentation>Р”Р»СЏ Р·Р°РєСѓРїРѕРє / РѕРїР»Р°С‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК КОНТАКТЫ КОНТРАГЕНТОВ-->
+	<!--РЎРџР РђР’РћР§РќРРљ РљРћРќРўРђРљРўР« РљРћРќРўР РђР“Р•РќРўРћР’-->
 	<xs:complexType name="tContactsList">
 		<xs:annotation>
-			<xs:documentation>Список контактов контрагента</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РєРѕРЅС‚Р°РєС‚РѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Contact" type="tns:tContact" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание контакта контрагента</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tContact">
 		<xs:annotation>
-			<xs:documentation>Описание контакта контрагента</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContactId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контакта контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorId" type="com:nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Name" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Имя контакта контрагента</xs:documentation>
+					<xs:documentation>РРјСЏ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MiddleName" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Фамилия контакта контрагента</xs:documentation>
+					<xs:documentation>Р¤Р°РјРёР»РёСЏ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastName" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Отчество контакта контрагента</xs:documentation>
+					<xs:documentation>РћС‚С‡РµСЃС‚РІРѕ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Title" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Должность контакта контрагента</xs:documentation>
+					<xs:documentation>Р”РѕР»Р¶РЅРѕСЃС‚СЊ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Email" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Почта контакта контрагента</xs:documentation>
+					<xs:documentation>РџРѕС‡С‚Р° РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Phone" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Телефон контакта контрагента</xs:documentation>
+					<xs:documentation>РўРµР»РµС„РѕРЅ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Fax" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Факс контакта контрагента</xs:documentation>
+					<xs:documentation>Р¤Р°РєСЃ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="com:nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Срок действия контакта контрагента (по)</xs:documentation>
+					<xs:documentation>РЎСЂРѕРє РґРµР№СЃС‚РІРёСЏ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р° (РїРѕ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК ЛИЦЕНЗИИ КОНТРАГЕНТОВ-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р›РР¦Р•РќР—РР РљРћРќРўР РђР“Р•РќРўРћР’-->
 	<xs:complexType name="tLicensesList">
 		<xs:annotation>
-			<xs:documentation>Список лицензий контрагента</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє Р»РёС†РµРЅР·РёР№ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="License" type="tns:tLicense" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание лицензии контрагента</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ Р»РёС†РµРЅР·РёРё РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tLicense">
 		<xs:annotation>
-			<xs:documentation>Описание лицензии контрагента</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ Р»РёС†РµРЅР·РёРё РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LicenseId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор лицензии</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р»РёС†РµРЅР·РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Code" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Код лицензии</xs:documentation>
+					<xs:documentation>РљРѕРґ Р»РёС†РµРЅР·РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Описание</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="com:nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата окончания</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИК РАСХОДНЫЕ НЕ РАМОЧНЫЕ ДОГОВОРЫ и ДС ОФУ-->
+	<!--РЎРџР РђР’РћР§РќРРљ Р РђРЎРҐРћР”РќР«Р• РќР• Р РђРњРћР§РќР«Р• Р”РћР“РћР’РћР Р« Рё Р”РЎ РћР¤РЈ-->
 	<xs:complexType name="tNotFrameContractList">
 		<xs:annotation>
-			<xs:documentation>Список не рамочных договоров</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РЅРµ СЂР°РјРѕС‡РЅС‹С… РґРѕРіРѕРІРѕСЂРѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="NotFrameContract" type="tNotFrameContract" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание не рамочного договора</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РЅРµ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tNotFrameContract">
 		<xs:annotation>
-			<xs:documentation>Описание не рамочного договора</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РЅРµ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="SysContractNum" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Системный номер договора</xs:documentation>
+					<xs:documentation>РЎРёСЃС‚РµРјРЅС‹Р№ РЅРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtSysId" type="com:nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Внешний идентификатор заказа</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtFrameContractNum" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Внешний номер договора</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РЅРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IntNum" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Внутренний номер документа</xs:documentation>
+					<xs:documentation>Р’РЅСѓС‚СЂРµРЅРЅРёР№ РЅРѕРјРµСЂ РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="DocTypeCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Тип договора</xs:documentation>
+					<xs:documentation>РўРёРї РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContractFlag" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Признак глобального договора</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє РіР»РѕР±Р°Р»СЊРЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FrameContractId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Номер рамочного договора</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CreationDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата заключения договора</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р·Р°РєР»СЋС‡РµРЅРёСЏ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="com:tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorSiteId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор отделения контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕС‚РґРµР»РµРЅРёСЏ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Reserve1" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Резервное поле Договора-1</xs:documentation>
+					<xs:documentation>Р РµР·РµСЂРІРЅРѕРµ РїРѕР»Рµ Р”РѕРіРѕРІРѕСЂР°-1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PartiesList" type="tPartiesList" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Список сторон</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЃС‚РѕСЂРѕРЅ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CycleList" type="tCycleList">
 				<xs:annotation>
-					<xs:documentation>Список этапов</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЌС‚Р°РїРѕРІ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Описание</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Срок действия договора – Дата с</xs:documentation>
+					<xs:documentation>РЎСЂРѕРє РґРµР№СЃС‚РІРёСЏ РґРѕРіРѕРІРѕСЂР° вЂ“ Р”Р°С‚Р° СЃ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Срок действия договора – Дата по</xs:documentation>
+					<xs:documentation>РЎСЂРѕРє РґРµР№СЃС‚РІРёСЏ РґРѕРіРѕРІРѕСЂР° вЂ“ Р”Р°С‚Р° РїРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ContractSpecificsList" type="tContractSpecificsList" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Список Спецификация договора</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Список сторон-->
+	<!-- РЎРїРёСЃРѕРє СЃС‚РѕСЂРѕРЅ-->
 	<xs:complexType name="tPartiesList">
 		<xs:annotation>
-			<xs:documentation>Список сторон</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЃС‚РѕСЂРѕРЅ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Parties" type="tParties" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание сторон</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃС‚РѕСЂРѕРЅ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tParties">
 		<xs:annotation>
-			<xs:documentation>Описание сторон</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃС‚РѕСЂРѕРЅ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="PartyName" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Имя стороны</xs:documentation>
+					<xs:documentation>РРјСЏ СЃС‚РѕСЂРѕРЅС‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PartyId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Отделение стороны</xs:documentation>
+					<xs:documentation>РћС‚РґРµР»РµРЅРёРµ СЃС‚РѕСЂРѕРЅС‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Список этапов-->
+	<!-- РЎРїРёСЃРѕРє СЌС‚Р°РїРѕРІ-->
 	<xs:complexType name="tCycleList">
 		<xs:annotation>
-			<xs:documentation>Список этапов</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЌС‚Р°РїРѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Cycle" type="tCycle" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание этапа</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЌС‚Р°РїР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tCycle">
 		<xs:annotation>
-			<xs:documentation>Описание этапа</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЌС‚Р°РїР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="CycleId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор этапа R12</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌС‚Р°РїР° R12</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CycleName" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Название Этапа</xs:documentation>
+					<xs:documentation>РќР°Р·РІР°РЅРёРµ Р­С‚Р°РїР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата начала действия этапа</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РЅР°С‡Р°Р»Р° РґРµР№СЃС‚РІРёСЏ СЌС‚Р°РїР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата окончания действия этапа</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёСЏ РґРµР№СЃС‚РІРёСЏ СЌС‚Р°РїР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TaxRate" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Ставка налога</xs:documentation>
+					<xs:documentation>РЎС‚Р°РІРєР° РЅР°Р»РѕРіР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtCycleId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Внешний идентификатор</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StageList" type="tStageList">
 				<xs:annotation>
-					<xs:documentation>Список действий</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє РґРµР№СЃС‚РІРёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CycleReserve" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Резервное поле Этапа-1</xs:documentation>
+					<xs:documentation>Р РµР·РµСЂРІРЅРѕРµ РїРѕР»Рµ Р­С‚Р°РїР°-1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Список действий-->
+	<!-- РЎРїРёСЃРѕРє РґРµР№СЃС‚РІРёР№-->
 	<xs:complexType name="tStageList">
 		<xs:annotation>
-			<xs:documentation>Список этапов</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЌС‚Р°РїРѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Stage" type="tStage" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание действия</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РґРµР№СЃС‚РІРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tStage">
 		<xs:annotation>
-			<xs:documentation>Описание действия</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РґРµР№СЃС‚РІРёСЏ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ExtStageId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Внешний идентификатор действия</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРµР№СЃС‚РІРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StageId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор действия</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРµР№СЃС‚РІРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SusStageId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор действия поставки</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРµР№СЃС‚РІРёСЏ РїРѕСЃС‚Р°РІРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StageType" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Тип действия</xs:documentation>
+					<xs:documentation>РўРёРї РґРµР№СЃС‚РІРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StageOrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PlanedDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Плановая дата исполнения</xs:documentation>
+					<xs:documentation>РџР»Р°РЅРѕРІР°СЏ РґР°С‚Р° РёСЃРїРѕР»РЅРµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор проекта</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TaskId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор задачи</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AmountNoNds" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Сумма поставки без НДС</xs:documentation>
+					<xs:documentation>РЎСѓРјРјР° РїРѕСЃС‚Р°РІРєРё Р±РµР· РќР”РЎ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AmountNds" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Сумма поставки  с НДС</xs:documentation>
+					<xs:documentation>РЎСѓРјРјР° РїРѕСЃС‚Р°РІРєРё  СЃ РќР”РЎ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExpenditureType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип расходов</xs:documentation>
+					<xs:documentation>РўРёРї СЂР°СЃС…РѕРґРѕРІ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="isIntegration" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Признак: интеграционный</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє: РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅС‹Р№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StageReserve" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Резервное поле Действия-1</xs:documentation>
+					<xs:documentation>Р РµР·РµСЂРІРЅРѕРµ РїРѕР»Рµ Р”РµР№СЃС‚РІРёСЏ-1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Список Спецификация договора-->
+	<!-- РЎРїРёСЃРѕРє РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРіРѕРІРѕСЂР°-->
 	<xs:complexType name="tContractSpecificsList">
 		<xs:annotation>
-			<xs:documentation>Список Спецификация договора</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РЎРїРµС†РёС„РёРєР°С†РёСЏ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ContractSpecifics" type="tContractSpecifics" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Строка спецификации</xs:documentation>
+					<xs:documentation>РЎС‚СЂРѕРєР° СЃРїРµС†РёС„РёРєР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tContractSpecifics">
 		<xs:annotation>
-			<xs:documentation>Описание Строки спецификации</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РЎС‚СЂРѕРєРё СЃРїРµС†РёС„РёРєР°С†РёРё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ExtLineId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Внешний идентификатор строки</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃС‚СЂРѕРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineNum" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Номер строки
-Код НП (номенклатурной позиции)
+					<xs:documentation>РќРѕРјРµСЂ СЃС‚СЂРѕРєРё
+РљРѕРґ РќРџ (РЅРѕРјРµРЅРєР»Р°С‚СѓСЂРЅРѕР№ РїРѕР·РёС†РёРё)
 </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Code" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код НП (номенклатурной позиции)</xs:documentation>
+					<xs:documentation>РљРѕРґ РќРџ (РЅРѕРјРµРЅРєР»Р°С‚СѓСЂРЅРѕР№ РїРѕР·РёС†РёРё)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Cost" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Цена за единицу</xs:documentation>
+					<xs:documentation>Р¦РµРЅР° Р·Р° РµРґРёРЅРёС†Сѓ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Count" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Кол-во по строке</xs:documentation>
+					<xs:documentation>РљРѕР»-РІРѕ РїРѕ СЃС‚СЂРѕРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Rate" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Ставка НДС</xs:documentation>
+					<xs:documentation>РЎС‚Р°РІРєР° РќР”РЎ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LineAmount" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Сумма строки (с НДС)</xs:documentation>
+					<xs:documentation>РЎСѓРјРјР° СЃС‚СЂРѕРєРё (СЃ РќР”РЎ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvProject" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Инвест. проект</xs:documentation>
+					<xs:documentation>РРЅРІРµСЃС‚. РїСЂРѕРµРєС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Task" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Задача</xs:documentation>
+					<xs:documentation>Р—Р°РґР°С‡Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExpenditureType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип расходов</xs:documentation>
+					<xs:documentation>РўРёРї СЂР°СЃС…РѕРґРѕРІ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="NewEquipment" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Новое оборудование</xs:documentation>
+					<xs:documentation>РќРѕРІРѕРµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ImpEquipment" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Импортное оборудование</xs:documentation>
+					<xs:documentation>РРјРїРѕСЂС‚РЅРѕРµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="isMark" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Признак ЗИП</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє Р—РРџ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorPosition" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Позиция поставщика</xs:documentation>
+					<xs:documentation>РџРѕР·РёС†РёСЏ РїРѕСЃС‚Р°РІС‰РёРєР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PackageUnit" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ЕИ комплекта</xs:documentation>
+					<xs:documentation>Р•Р РєРѕРјРїР»РµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Article" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Артикул</xs:documentation>
+					<xs:documentation>РђСЂС‚РёРєСѓР»</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SpecificsReserve" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Резервное поле Спецификации-1</xs:documentation>
+					<xs:documentation>Р РµР·РµСЂРІРЅРѕРµ РїРѕР»Рµ РЎРїРµС†РёС„РёРєР°С†РёРё-1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

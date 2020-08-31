@@ -6,7 +6,7 @@
 				<xsl:when test="ResultCode=0">
       <SuccessResponse type="json">
          <SuccessResponse>0</SuccessResponse>
-          <Message>ВСЁ ХОРОШО</Message>
+          <Message>Р’РЎРЃ РҐРћР РћРЁРћ</Message>
           <xsl:for-each select="DetailList">
           <xsl:copy-of select="../DetailList"/>
           </xsl:for-each>
@@ -21,7 +21,7 @@
 				<xsl:otherwise>
 					<tns:Fault xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:ru:rt:crm:fault">
 						<ResultCode>60606</ResultCode>
-						<Message>Ошибка во входных данных</Message>
+						<Message>РћС€РёР±РєР° РІРѕ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…</Message>
 					</tns:Fault>
 				</xsl:otherwise>
 			</xsl:choose>

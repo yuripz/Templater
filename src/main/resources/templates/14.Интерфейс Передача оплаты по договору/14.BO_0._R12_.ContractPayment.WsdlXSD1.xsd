@@ -5,12 +5,12 @@
 	<xs:element name="ManageContractPaymentRequest" type="tns:ManageContractPaymentRequest"/>
 	<xs:complexType name="ManageContractPaymentRequest">
 		<xs:annotation>
-			<xs:documentation>Передача оплаты по договору</xs:documentation>
+			<xs:documentation>РџРµСЂРµРґР°С‡Р° РѕРїР»Р°С‚С‹ РїРѕ РґРѕРіРѕРІРѕСЂСѓ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StageFactList" type="tStageFactList">
 				<xs:annotation>
-					<xs:documentation>Список действий договора</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє РґРµР№СЃС‚РІРёР№ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

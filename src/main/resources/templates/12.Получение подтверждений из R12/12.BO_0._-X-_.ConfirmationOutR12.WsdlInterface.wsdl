@@ -188,7 +188,7 @@
   <wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="ConfirmManageArrivalOnProduct">
-      <wsdl:documentation>Подтверждение передачи операций Операция оприходования готовой продукции</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ РћРїРµСЂР°С†РёСЏ РѕРїСЂРёС…РѕРґРѕРІР°РЅРёСЏ РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРё</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageArrivalOnProduct"/>
       <wsdl:input name="ConfirmManageArrivalOnProductIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -202,7 +202,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageArrivalByPerson">
-      <wsdl:documentation>Потверждение передачи операций Возврат от физ. лица</wsdl:documentation>
+      <wsdl:documentation>РџРѕС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ Р’РѕР·РІСЂР°С‚ РѕС‚ С„РёР·. Р»РёС†Р°</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageArrivalByPerson"/>
       <wsdl:input name="ConfirmManageArrivalByPersonIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -216,7 +216,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageOrder">
-      <wsdl:documentation>Подтверждение передачи создания/корректировки заказа (ДС ОФУ)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё СЃРѕР·РґР°РЅРёСЏ/РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєРё Р·Р°РєР°Р·Р° (Р”РЎ РћР¤РЈ)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageOrder"/>
       <wsdl:input name="ConfirmManageOrderIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -230,7 +230,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageInvoice">
-      <wsdl:documentation>Подтверждение передачи актов на выполнение работ</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё Р°РєС‚РѕРІ РЅР° РІС‹РїРѕР»РЅРµРЅРёРµ СЂР°Р±РѕС‚</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageInvoice"/>
       <wsdl:input name="ConfirmManageInvoiceIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -244,8 +244,8 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageCancellation">
-      <wsdl:documentation>Подтверждение полного/частичного списания ОС для операций возврата из аренды оконечного
-                          оборудования</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРѕР»РЅРѕРіРѕ/С‡Р°СЃС‚РёС‡РЅРѕРіРѕ СЃРїРёСЃР°РЅРёСЏ РћРЎ РґР»СЏ РѕРїРµСЂР°С†РёР№ РІРѕР·РІСЂР°С‚Р° РёР· Р°СЂРµРЅРґС‹ РѕРєРѕРЅРµС‡РЅРѕРіРѕ
+                          РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageCancellation"/>
       <wsdl:input name="ConfirmManageCancellationIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -259,7 +259,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageExtCancellationDocMOL">
-      <wsdl:documentation>Подтверждение передачи операций «Перемещения между Складскими подразделениями/МОЛами» (процесс
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РџРµСЂРµРјРµС‰РµРЅРёСЏ РјРµР¶РґСѓ РЎРєР»Р°РґСЃРєРёРјРё РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏРјРё/РњРћР›Р°РјРёВ» (РїСЂРѕС†РµСЃСЃ
                           CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocMOL"/>
       <wsdl:input name="ConfirmManageExtCancellationDocMOLIn">
@@ -274,7 +274,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageMaterialExtCancellationDoc">
-      <wsdl:documentation>Подтверждение передачи операций «Списания материалов в производство» (процесс CPE)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РЎРїРёСЃР°РЅРёСЏ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕВ» (РїСЂРѕС†РµСЃСЃ CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageMaterialExtCancellationDoc"/>
       <wsdl:input name="ConfirmManageMaterialExtCancellationDocIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -288,7 +288,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageDispositionExtCancellationDoc">
-      <wsdl:documentation>Подтверждение передачи операций «Утилизация» (процесс CPE)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РЈС‚РёР»РёР·Р°С†РёСЏВ» (РїСЂРѕС†РµСЃСЃ CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageDispositionExtCancellationDoc"/>
       <wsdl:input name="ConfirmManageDispositionExtCancellationDocIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -302,7 +302,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageExtCancellationDocProject">
-      <wsdl:documentation>Подтверждение передачи операций «Перемещения между проектами» (процесс CPE)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РџРµСЂРµРјРµС‰РµРЅРёСЏ РјРµР¶РґСѓ РїСЂРѕРµРєС‚Р°РјРёВ» (РїСЂРѕС†РµСЃСЃ CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocProject"/>
       <wsdl:input name="ConfirmManageExtCancellationDocProjectIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -316,7 +316,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageExtCancellationDocTransferAgent">
-      <wsdl:documentation>Подтверждение передачи операций «Передача агенту» (процесс CPE)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РџРµСЂРµРґР°С‡Р° Р°РіРµРЅС‚СѓВ» (РїСЂРѕС†РµСЃСЃ CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocTransferAgent"/>
       <wsdl:input name="ConfirmManageExtCancellationDocTransferAgentIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -330,7 +330,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageExtCancellationDocReturnFromAgent">
-      <wsdl:documentation>Подтверждение передачи операций «Возврат оборудования от агента» (процесс CPE)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’РѕР·РІСЂР°С‚ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ РѕС‚ Р°РіРµРЅС‚Р°В» (РїСЂРѕС†РµСЃСЃ CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocReturnFromAgent"/>
       <wsdl:input name="ConfirmManageExtCancellationDocReturnFromAgentIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -344,7 +344,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageExtCancellationDocReturnFromContractor">
-      <wsdl:documentation>Подтверждение передачи операций «Возврат от подрядчика» (процесс NC)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’РѕР·РІСЂР°С‚ РѕС‚ РїРѕРґСЂСЏРґС‡РёРєР°В» (РїСЂРѕС†РµСЃСЃ NC)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocReturnFromContractor"/>
       <wsdl:input name="ConfirmManageExtCancellationDocReturnFromContractorIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -358,7 +358,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmCPEManageExtCancellationDocDeliveryInProject">
-      <wsdl:documentation>Подтверждение передачи операций «Выдача оборудования в проекты» (процесс CPE)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’С‹РґР°С‡Р° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ РІ РїСЂРѕРµРєС‚С‹В» (РїСЂРѕС†РµСЃСЃ CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmCPEManageExtCancellationDocDeliveryInProject"/>
       <wsdl:input name="ConfirmCPEManageExtCancellationDocDeliveryInProjectIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -372,7 +372,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmNCManageExtCancellationDocDeliveryInProject">
-      <wsdl:documentation>Подтверждение передачи операций «Выдача оборудования в проекты» (процесс NC)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’С‹РґР°С‡Р° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ РІ РїСЂРѕРµРєС‚С‹В» (РїСЂРѕС†РµСЃСЃ NC)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmNCManageExtCancellationDocDeliveryInProject"/>
       <wsdl:input name="ConfirmNCManageExtCancellationDocDeliveryInProjectIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -386,7 +386,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageExtCancellationDocSale">
-      <wsdl:documentation>Подтверждение передачи операций «Продажа абоненту» (процесс CPE)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РџСЂРѕРґР°Р¶Р° Р°Р±РѕРЅРµРЅС‚СѓВ» (РїСЂРѕС†РµСЃСЃ CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocSale"/>
       <wsdl:input name="ConfirmManageExtCancellationDocSaleIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -400,7 +400,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageExtCancellationDocDeliveryInOnMFP">
-      <wsdl:documentation>Подтверждение передачи операций «Выдача по МФП» (процесс CPE)</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’С‹РґР°С‡Р° РїРѕ РњР¤РџВ» (РїСЂРѕС†РµСЃСЃ CPE)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageExtCancellationDocDeliveryInOnMFP"/>
       <wsdl:input name="ConfirmManageExtCancellationDocDeliveryInOnMFPIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -414,7 +414,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageProjectTask">
-      <wsdl:documentation>Подтверждение передачи задач с типом Актив</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё Р·Р°РґР°С‡ СЃ С‚РёРїРѕРј РђРєС‚РёРІ</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageProjectTask"/>
       <wsdl:input name="ConfirmManageProjectTaskIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -428,7 +428,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageInputOrder">
-      <wsdl:documentation>Подтверждение передачи операции Создание карточек приказов о вводе</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёРё РЎРѕР·РґР°РЅРёРµ РєР°СЂС‚РѕС‡РµРє РїСЂРёРєР°Р·РѕРІ Рѕ РІРІРѕРґРµ</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageInputOrder"/>
       <wsdl:input name="ConfirmManageInputOrderIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -442,7 +442,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ConfirmManageProjectAssets">
-      <wsdl:documentation>Подтверждение передачи операции Создание карточек проектных активов</wsdl:documentation>
+      <wsdl:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёРё РЎРѕР·РґР°РЅРёРµ РєР°СЂС‚РѕС‡РµРє РїСЂРѕРµРєС‚РЅС‹С… Р°РєС‚РёРІРѕРІ</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:confirmationserviceoutr12:ConfirmManageProjectAssets"/>
       <wsdl:input name="ConfirmManageProjectAssetsIn">
         <soap:header message="tns:Context" part="context" use="literal"/>

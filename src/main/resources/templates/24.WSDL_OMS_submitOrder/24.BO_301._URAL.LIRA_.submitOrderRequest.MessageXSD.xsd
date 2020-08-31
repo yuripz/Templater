@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" version="1.15">
 	<xs:element name="submitOrderRequest" type="SubmitOrderRequest"/>
-	<!-- Начать выполнение заказа -->
+	<!-- РќР°С‡Р°С‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ Р·Р°РєР°Р·Р° -->
 	<xs:complexType name="SubmitOrderRequest">
 		<xs:sequence>
 			<xs:element name="originator" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Система - источник заказа -->
+			<!-- РЎРёСЃС‚РµРјР° - РёСЃС‚РѕС‡РЅРёРє Р·Р°РєР°Р·Р° -->
 			<xs:element name="receiver" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Система - адресат заказа -->
+			<!-- РЎРёСЃС‚РµРјР° - Р°РґСЂРµСЃР°С‚ Р·Р°РєР°Р·Р° -->
 			<xs:element name="callbackEndpoint" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- callback URL для отправки нотификации по статусам и результата выполнения -->
+			<!-- callback URL РґР»СЏ РѕС‚РїСЂР°РІРєРё РЅРѕС‚РёС„РёРєР°С†РёРё РїРѕ СЃС‚Р°С‚СѓСЃР°Рј Рё СЂРµР·СѓР»СЊС‚Р°С‚Р° РІС‹РїРѕР»РЅРµРЅРёСЏ -->
 			<xs:element name="mode" type="OrderMode" minOccurs="0" maxOccurs="1"/>
-			<!-- Режим обработки (синхронный, асинхронный) -->
+			<!-- Р РµР¶РёРј РѕР±СЂР°Р±РѕС‚РєРё (СЃРёРЅС…СЂРѕРЅРЅС‹Р№, Р°СЃРёРЅС…СЂРѕРЅРЅС‹Р№) -->
 			<xs:element name="requestId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!--  Идентификатор транзакции на вызывающей стороне -->
+			<!--  РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚СЂР°РЅР·Р°РєС†РёРё РЅР° РІС‹Р·С‹РІР°СЋС‰РµР№ СЃС‚РѕСЂРѕРЅРµ -->
 			<xs:element name="order" type="SubmitRequestOrder" minOccurs="1" maxOccurs="1"/>
 		</xs:sequence>
 	</xs:complexType>
@@ -24,7 +24,7 @@
 			<xs:enumeration value="QUERY"/> 
 		</xs:restriction>
 	</xs:simpleType> -->
-	<!-- 1.10 Удалено -->
+	<!-- 1.10 РЈРґР°Р»РµРЅРѕ -->
 	<xs:simpleType name="OrderType">
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="CHECK"/>
@@ -35,52 +35,52 @@
 			<xs:enumeration value="PROVIDE"/>
 			<xs:enumeration value="ACTIVATE"/>
 			<xs:enumeration value="COMMIT"/>
-			<!-- Проверка технической возможности -->
-			<!-- Проработка технической возможности -->
-			<!-- Пересчет ТЭО по новым доходным параметрам -->
-			<!-- Запрос на выделение инвестиций -->
-			<!-- Организация технической возможности -->
-			<!-- Подключение -->
-			<!-- Активация -->
-			<!-- Завершение подключения -->
+			<!-- РџСЂРѕРІРµСЂРєР° С‚РµС…РЅРёС‡РµСЃРєРѕР№ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё -->
+			<!-- РџСЂРѕСЂР°Р±РѕС‚РєР° С‚РµС…РЅРёС‡РµСЃРєРѕР№ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё -->
+			<!-- РџРµСЂРµСЃС‡РµС‚ РўР­Рћ РїРѕ РЅРѕРІС‹Рј РґРѕС…РѕРґРЅС‹Рј РїР°СЂР°РјРµС‚СЂР°Рј -->
+			<!-- Р—Р°РїСЂРѕСЃ РЅР° РІС‹РґРµР»РµРЅРёРµ РёРЅРІРµСЃС‚РёС†РёР№ -->
+			<!-- РћСЂРіР°РЅРёР·Р°С†РёСЏ С‚РµС…РЅРёС‡РµСЃРєРѕР№ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё -->
+			<!-- РџРѕРґРєР»СЋС‡РµРЅРёРµ -->
+			<!-- РђРєС‚РёРІР°С†РёСЏ -->
+			<!-- Р—Р°РІРµСЂС€РµРЅРёРµ РїРѕРґРєР»СЋС‡РµРЅРёСЏ -->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="SubmitRequestOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderType" type="OrderType" minOccurs="1" maxOccurs="1"/>
-			<!-- Тип заказа согласно шагам бизнес-процессов управления услугами -->
+			<!-- РўРёРї Р·Р°РєР°Р·Р° СЃРѕРіР»Р°СЃРЅРѕ С€Р°РіР°Рј Р±РёР·РЅРµСЃ-РїСЂРѕС†РµСЃСЃРѕРІ СѓРїСЂР°РІР»РµРЅРёСЏ СѓСЃР»СѓРіР°РјРё -->
 			<xs:element name="orderParentId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Ссылка на родительский заказ -->
+			<!-- РЎСЃС‹Р»РєР° РЅР° СЂРѕРґРёС‚РµР»СЊСЃРєРёР№ Р·Р°РєР°Р· -->
 			<xs:element name="orderPriority" type="xs:long" minOccurs="0" maxOccurs="1"/>
-			<!-- Приоритет обработки заказа -->
+			<!-- РџСЂРёРѕСЂРёС‚РµС‚ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderCategory" type="OrderCategory" minOccurs="0" maxOccurs="1"/>
-			<!-- Категория заказа по сегменту рынка -->
+			<!-- РљР°С‚РµРіРѕСЂРёСЏ Р·Р°РєР°Р·Р° РїРѕ СЃРµРіРјРµРЅС‚Сѓ СЂС‹РЅРєР° -->
 			<xs:element name="orderChannel" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Канал продаж -->
+			<!-- РљР°РЅР°Р» РїСЂРѕРґР°Р¶ -->
 			<xs:element name="branch" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Код макрорегионального филиала -->
+			<!-- РљРѕРґ РјР°РєСЂРѕСЂРµРіРёРѕРЅР°Р»СЊРЅРѕРіРѕ С„РёР»РёР°Р»Р° -->
 			<xs:element name="affiliate" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Код регионального филиала -->
+			<!-- РљРѕРґ СЂРµРіРёРѕРЅР°Р»СЊРЅРѕРіРѕ С„РёР»РёР°Р»Р° -->
 			<xs:element name="orderAttributes" type="Attributes" minOccurs="0" maxOccurs="1"/>
-			<!-- Атрибуты заказа -->
+			<!-- РђС‚СЂРёР±СѓС‚С‹ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Дата обращения клиента по коммерческому заказу -->
+			<!-- Р”Р°С‚Р° РѕР±СЂР°С‰РµРЅРёСЏ РєР»РёРµРЅС‚Р° РїРѕ РєРѕРјРјРµСЂС‡РµСЃРєРѕРјСѓ Р·Р°РєР°Р·Сѓ -->
 			<xs:element name="orderRequestedStartDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Желаемая дата начала обработки заказа -->
+			<!-- Р–РµР»Р°РµРјР°СЏ РґР°С‚Р° РЅР°С‡Р°Р»Р° РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderRequiredDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Желаемая дата исполнения заказа. Интерпретация параметра определяется бизнес-требованиями. -->
+			<!-- Р–РµР»Р°РµРјР°СЏ РґР°С‚Р° РёСЃРїРѕР»РЅРµРЅРёСЏ Р·Р°РєР°Р·Р°. РРЅС‚РµСЂРїСЂРµС‚Р°С†РёСЏ РїР°СЂР°РјРµС‚СЂР° РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ Р±РёР·РЅРµСЃ-С‚СЂРµР±РѕРІР°РЅРёСЏРјРё. -->
 			<xs:element name="orderComments" type="Comments" minOccurs="0" maxOccurs="1"/>
-			<!-- Комментарии к заказу -->
+			<!-- РљРѕРјРјРµРЅС‚Р°СЂРёРё Рє Р·Р°РєР°Р·Сѓ -->
 			<xs:element name="orderLocation" type="Location" minOccurs="0" maxOccurs="1"/>
-			<!-- Адресная характеристика заказа -->
+			<!-- РђРґСЂРµСЃРЅР°СЏ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР° Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderParties" type="OrderParties" minOccurs="0" maxOccurs="1"/>
-			<!-- Список объектов заказа -->
+			<!-- РЎРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItems" type="RequestOrderItems" minOccurs="1" maxOccurs="1"/>
-			<!-- Список компонентов заказа -->
+			<!-- РЎРїРёСЃРѕРє РєРѕРјРїРѕРЅРµРЅС‚РѕРІ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderAppointmentId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Идентификатор наряда WFM для визита к клиенту -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РЅР°СЂСЏРґР° WFM РґР»СЏ РІРёР·РёС‚Р° Рє РєР»РёРµРЅС‚Сѓ -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="SubmitResponseOrder">
@@ -92,88 +92,88 @@
 	<xs:complexType name="SyncSubmitResponseOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderOMSId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Уникальный номер заказа сгенерированный в системе управления заказами -->
+			<!-- РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderOMSurl" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- ССылка на заказ в системе управления заказами -->
+			<!-- РЎРЎС‹Р»РєР° РЅР° Р·Р°РєР°Р· РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderAttributes" type="Attributes" minOccurs="0" maxOccurs="1"/>
-			<!-- Атрибуты заказа -->
+			<!-- РђС‚СЂРёР±СѓС‚С‹ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderState" type="OrderState" minOccurs="1" maxOccurs="1"/>
-			<!-- Статус заказа -->
+			<!-- РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderStartDate" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
-			<!-- Фактическая дата начала обработки заказа -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р° РЅР°С‡Р°Р»Р° РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderCompletionDate" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
-			<!-- Фактическая дата завершения обработки заказа -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItems" type="ResponseOrderItems" minOccurs="0" maxOccurs="1"/>
-			<!-- Список компонентов заказа -->
+			<!-- РЎРїРёСЃРѕРє РєРѕРјРїРѕРЅРµРЅС‚РѕРІ Р·Р°РєР°Р·Р° -->
 			<!-- 1.10 optional -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="AsyncSubmitResponseOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderOMSId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Уникальный номер заказа сгенерированный в системе управления заказами -->
+			<!-- РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderOMSurl" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- ССылка на заказ в системе управления заказами -->
+			<!-- РЎРЎС‹Р»РєР° РЅР° Р·Р°РєР°Р· РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderStartDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Фактическая дата начала обработки заказа -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р° РЅР°С‡Р°Р»Р° РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderExpectedCompletionDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Ожидаемая дата завершения обработки заказа -->
+			<!-- РћР¶РёРґР°РµРјР°СЏ РґР°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderState" type="OrderState" minOccurs="1" maxOccurs="1"/>
-			<!-- 1.11 Статус заказа -->
+			<!-- 1.11 РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="CancelRequestOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderOMSId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Уникальный номер заказа сгенерированный в системе управления заказами -->
+			<!-- РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderCategory" type="OrderCategory" minOccurs="0" maxOccurs="1"/>
-			<!-- Категория заказа по сегменту рынка -->
+			<!-- РљР°С‚РµРіРѕСЂРёСЏ Р·Р°РєР°Р·Р° РїРѕ СЃРµРіРјРµРЅС‚Сѓ СЂС‹РЅРєР° -->
 			<xs:element name="branch" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Код макрорегионального филиала -->
+			<!-- РљРѕРґ РјР°РєСЂРѕСЂРµРіРёРѕРЅР°Р»СЊРЅРѕРіРѕ С„РёР»РёР°Р»Р° -->
 			<xs:element name="affiliate" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Код регионального филиала -->
+			<!-- РљРѕРґ СЂРµРіРёРѕРЅР°Р»СЊРЅРѕРіРѕ С„РёР»РёР°Р»Р° -->
 			<xs:element name="orderParties" type="OrderParties" minOccurs="0" maxOccurs="1"/>
-			<!-- Список объектов заказа -->
+			<!-- РЎРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="CancelResponseOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderOMSId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Уникальный номер заказа сгенерированный в системе управления заказами -->
+			<!-- РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderState" type="OrderState" minOccurs="0" maxOccurs="1"/>
-			<!-- Статус заказа -->
+			<!-- РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderStartDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Фактическая дата начала обработки заказа -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р° РЅР°С‡Р°Р»Р° РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderCompletionDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Фактическая дата завершения обработки заказа -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:simpleType name="AmendmentCode">
 		<xs:annotation>
-			<xs:documentation>Тип изменения к исполняемому заказу</xs:documentation>
+			<xs:documentation>РўРёРї РёР·РјРµРЅРµРЅРёСЏ Рє РёСЃРїРѕР»РЅСЏРµРјРѕРјСѓ Р·Р°РєР°Р·Сѓ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ORDERITEMS">
 				<xs:annotation>
-					<xs:documentation>Изменения в составе и параметрах компонентов заказа</xs:documentation>
+					<xs:documentation>РР·РјРµРЅРµРЅРёСЏ РІ СЃРѕСЃС‚Р°РІРµ Рё РїР°СЂР°РјРµС‚СЂР°С… РєРѕРјРїРѕРЅРµРЅС‚РѕРІ Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="ORDERATTRIBUTES">
 				<xs:annotation>
-					<xs:documentation>Изменения в параметрах заказа</xs:documentation>
+					<xs:documentation>РР·РјРµРЅРµРЅРёСЏ РІ РїР°СЂР°РјРµС‚СЂР°С… Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="GATEPASSED">
 				<xs:annotation>
-					<xs:documentation>Внешний процесс прошел точку синхронизации</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РїСЂРѕС†РµСЃСЃ РїСЂРѕС€РµР» С‚РѕС‡РєСѓ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
@@ -181,79 +181,79 @@
 	<xs:complexType name="AmendRequestOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderOMSId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Уникальный номер заказа сгенерированный в системе управления заказами -->
+			<!-- РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderCategory" type="OrderCategory" minOccurs="0" maxOccurs="1"/>
-			<!-- Категория заказа по сегменту рынка -->
+			<!-- РљР°С‚РµРіРѕСЂРёСЏ Р·Р°РєР°Р·Р° РїРѕ СЃРµРіРјРµРЅС‚Сѓ СЂС‹РЅРєР° -->
 			<xs:element name="branch" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Код макрорегионального филиала -->
+			<!-- РљРѕРґ РјР°РєСЂРѕСЂРµРіРёРѕРЅР°Р»СЊРЅРѕРіРѕ С„РёР»РёР°Р»Р° -->
 			<xs:element name="affiliate" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Код регионального филиала -->
+			<!-- РљРѕРґ СЂРµРіРёРѕРЅР°Р»СЊРЅРѕРіРѕ С„РёР»РёР°Р»Р° -->
 			<xs:element name="orderAttributes" type="Attributes" minOccurs="0" maxOccurs="1"/>
-			<!-- Атрибуты заказа -->
+			<!-- РђС‚СЂРёР±СѓС‚С‹ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderComments" type="Comments" minOccurs="0" maxOccurs="1"/>
-			<!-- Комментарии к заказу -->
+			<!-- РљРѕРјРјРµРЅС‚Р°СЂРёРё Рє Р·Р°РєР°Р·Сѓ -->
 			<xs:element name="orderParties" type="OrderParties" minOccurs="0" maxOccurs="1"/>
-			<!-- Список объектов заказа -->
+			<!-- РЎРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ Р·Р°РєР°Р·Р° -->
 			<xs:element name="code" type="AmendmentCode" minOccurs="1" maxOccurs="1"/>
-			<!-- Код типа изменения к заказу -->
+			<!-- РљРѕРґ С‚РёРїР° РёР·РјРµРЅРµРЅРёСЏ Рє Р·Р°РєР°Р·Сѓ -->
 			<xs:element name="gateName" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Кодовое имя пройденной точки синхронизации (в случае code=GATEPASSED) -->
+			<!-- РљРѕРґРѕРІРѕРµ РёРјСЏ РїСЂРѕР№РґРµРЅРЅРѕР№ С‚РѕС‡РєРё СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё (РІ СЃР»СѓС‡Р°Рµ code=GATEPASSED) -->
 			<xs:element name="orderItems" type="RequestOrderItems" minOccurs="0" maxOccurs="1"/>
-			<!-- Список компонентов заказа -->
+			<!-- РЎРїРёСЃРѕРє РєРѕРјРїРѕРЅРµРЅС‚РѕРІ Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="AmendResponseOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderOMSId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Уникальный номер заказа сгенерированный в системе управления заказами -->
+			<!-- РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="QueryRequestOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderOMSId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Уникальный номер заказа сгенерированный в системе управления заказами -->
+			<!-- РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderCategory" type="OrderCategory" minOccurs="0" maxOccurs="1"/>
-			<!-- Категория заказа по сегменту рынка -->
+			<!-- РљР°С‚РµРіРѕСЂРёСЏ Р·Р°РєР°Р·Р° РїРѕ СЃРµРіРјРµРЅС‚Сѓ СЂС‹РЅРєР° -->
 			<xs:element name="branch" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Код макрорегионального филиала -->
+			<!-- РљРѕРґ РјР°РєСЂРѕСЂРµРіРёРѕРЅР°Р»СЊРЅРѕРіРѕ С„РёР»РёР°Р»Р° -->
 			<xs:element name="affiliate" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Код регионального филиала -->
+			<!-- РљРѕРґ СЂРµРіРёРѕРЅР°Р»СЊРЅРѕРіРѕ С„РёР»РёР°Р»Р° -->
 			<xs:element name="orderParties" type="OrderParties" minOccurs="0" maxOccurs="1"/>
-			<!-- Список объектов заказа -->
+			<!-- РЎРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItems" type="QueryOrderItems" minOccurs="0" maxOccurs="1"/>
-			<!-- Список компонентов заказа -->
+			<!-- РЎРїРёСЃРѕРє РєРѕРјРїРѕРЅРµРЅС‚РѕРІ Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="QueryResponseOrder">
 		<xs:all>
 			<xs:element name="orderId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Номер заказа в системе-источнике -->
+			<!-- РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ -->
 			<xs:element name="orderOMSId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Уникальный номер заказа сгенерированный в системе управления заказами -->
+			<!-- РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р° СЃРіРµРЅРµСЂРёСЂРѕРІР°РЅРЅС‹Р№ РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderOMSurl" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- ССылка на заказ в системе управления заказами -->
+			<!-- РЎРЎС‹Р»РєР° РЅР° Р·Р°РєР°Р· РІ СЃРёСЃС‚РµРјРµ СѓРїСЂР°РІР»РµРЅРёСЏ Р·Р°РєР°Р·Р°РјРё -->
 			<xs:element name="orderAttributes" type="Attributes" minOccurs="0" maxOccurs="1"/>
-			<!-- Атрибуты заказа -->
+			<!-- РђС‚СЂРёР±СѓС‚С‹ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderState" type="OrderState" minOccurs="0" maxOccurs="1"/>
-			<!-- Статус заказа -->
+			<!-- РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderStartDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Фактическая дата начала обработки заказа -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р° РЅР°С‡Р°Р»Р° РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderCompletionDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Фактическая дата завершения обработки заказа -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєР°СЏ РґР°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderExpectedCompletionDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Ожидаемая дата завершения обработки заказа -->
+			<!-- РћР¶РёРґР°РµРјР°СЏ РґР°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderNotifications" type="OrderNotifications" minOccurs="0" maxOccurs="1"/>
-			<!-- Оповещения по статусу заказа -->
+			<!-- РћРїРѕРІРµС‰РµРЅРёСЏ РїРѕ СЃС‚Р°С‚СѓСЃСѓ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItems" type="ResponseOrderItems" minOccurs="0" maxOccurs="1"/>
-			<!-- Список компонентов заказа -->
+			<!-- РЎРїРёСЃРѕРє РєРѕРјРїРѕРЅРµРЅС‚РѕРІ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderTasks" type="ResponseOrderTasks" minOccurs="0" maxOccurs="1"/>
-			<!-- Список задач заказа -->
+			<!-- РЎРїРёСЃРѕРє Р·Р°РґР°С‡ Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="RequestOrderItems">
@@ -264,35 +264,35 @@
 	<xs:complexType name="RequestOrderItem">
 		<xs:all>
 			<xs:element name="orderItemId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Идентификатор компонента (услуги) в системе-источнике заказа -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРјРїРѕРЅРµРЅС‚Р° (СѓСЃР»СѓРіРё) РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemInstanceId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Идентификатор, генерируемый системами уровня OSS для регистрации компонента (CFS_ID, RFS_ID) -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ, РіРµРЅРµСЂРёСЂСѓРµРјС‹Р№ СЃРёСЃС‚РµРјР°РјРё СѓСЂРѕРІРЅСЏ OSS РґР»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё РєРѕРјРїРѕРЅРµРЅС‚Р° (CFS_ID, RFS_ID) -->
 			<xs:element name="orderItemAction" type="OrderItemAction" minOccurs="1" maxOccurs="1"/>
-			<!-- Требуемое действие над компонентом в рамках выполнения заказа -->
+			<!-- РўСЂРµР±СѓРµРјРѕРµ РґРµР№СЃС‚РІРёРµ РЅР°Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРј РІ СЂР°РјРєР°С… РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemCategory" type="OrderItemCategory" minOccurs="1" maxOccurs="1"/>
-			<!-- Категория компонента заказа -->
+			<!-- РљР°С‚РµРіРѕСЂРёСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemParentId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Ссылка на orderItemId родительского компонента -->
+			<!-- РЎСЃС‹Р»РєР° РЅР° orderItemId СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р° -->
 			<xs:element name="orderItemParentInstanceId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Ссылка на orderItemInstanceId родительского компонента -->
+			<!-- РЎСЃС‹Р»РєР° РЅР° orderItemInstanceId СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р° -->
 			<xs:element name="orderItemPriority" type="xs:long" minOccurs="0" maxOccurs="1"/>
-			<!-- Приоритет обработки компонента в рамках выполнения заказа -->
+			<!-- РџСЂРёРѕСЂРёС‚РµС‚ РѕР±СЂР°Р±РѕС‚РєРё РєРѕРјРїРѕРЅРµРЅС‚Р° РІ СЂР°РјРєР°С… РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemRequiredDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Желаемая дата исполнения действия над компонентом. Интерпретация параметра определяется бизнес-требованиями. -->
+			<!-- Р–РµР»Р°РµРјР°СЏ РґР°С‚Р° РёСЃРїРѕР»РЅРµРЅРёСЏ РґРµР№СЃС‚РІРёСЏ РЅР°Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРј. РРЅС‚РµСЂРїСЂРµС‚Р°С†РёСЏ РїР°СЂР°РјРµС‚СЂР° РѕРїСЂРµРґРµР»СЏРµС‚СЃСЏ Р±РёР·РЅРµСЃ-С‚СЂРµР±РѕРІР°РЅРёСЏРјРё. -->
 			<xs:element name="orderItemSpecification" type="OrderItemSpecification" minOccurs="0" maxOccurs="1"/>
-			<!-- Спецификация компонента заказа -->
+			<!-- РЎРїРµС†РёС„РёРєР°С†РёСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemLocation" type="Location" minOccurs="0" maxOccurs="1"/>
-			<!-- Адресная характеристика компонента заказа -->
+			<!-- РђРґСЂРµСЃРЅР°СЏ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР° РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemComments" type="Comments" minOccurs="0" maxOccurs="1"/>
-			<!-- Комментарии к компоненту заказа -->
+			<!-- РљРѕРјРјРµРЅС‚Р°СЂРёРё Рє РєРѕРјРїРѕРЅРµРЅС‚Сѓ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemReservationId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Идентификатор брони линейных данных в СЛТУ -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р±СЂРѕРЅРё Р»РёРЅРµР№РЅС‹С… РґР°РЅРЅС‹С… РІ РЎР›РўРЈ -->
 			<xs:element name="orderItemAttributes" type="InheritableAttributes" minOccurs="0" maxOccurs="1"/>
-			<!-- Атрибуты компонента заказа -->
+			<!-- РђС‚СЂРёР±СѓС‚С‹ РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemBillingInfo" type="OrderItemBillingInfo" minOccurs="0" maxOccurs="1"/>
-			<!-- Биллинговая информация по компоненту заказа -->
+			<!-- Р‘РёР»Р»РёРЅРіРѕРІР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ РїРѕ РєРѕРјРїРѕРЅРµРЅС‚Сѓ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemAppointmentId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Идентификатор наряда WFM для визита к клиенту, в рамках которого выполняется инсталляция услуги -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РЅР°СЂСЏРґР° WFM РґР»СЏ РІРёР·РёС‚Р° Рє РєР»РёРµРЅС‚Сѓ, РІ СЂР°РјРєР°С… РєРѕС‚РѕСЂРѕРіРѕ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ РёРЅСЃС‚Р°Р»Р»СЏС†РёСЏ СѓСЃР»СѓРіРё -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="QueryOrderItems">
@@ -303,11 +303,11 @@
 	<xs:complexType name="QueryOrderItem">
 		<xs:all>
 			<xs:element name="orderItemId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Идентификатор компонента (услуги) в системе-источнике заказа -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРјРїРѕРЅРµРЅС‚Р° (СѓСЃР»СѓРіРё) РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemInstanceId" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Идентификатор, генерируемый системами уровня OSS для регистрации компонента (CFS_ID, RFS_ID) -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ, РіРµРЅРµСЂРёСЂСѓРµРјС‹Р№ СЃРёСЃС‚РµРјР°РјРё СѓСЂРѕРІРЅСЏ OSS РґР»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё РєРѕРјРїРѕРЅРµРЅС‚Р° (CFS_ID, RFS_ID) -->
 			<xs:element name="orderItemCategory" type="OrderItemCategory" minOccurs="1" maxOccurs="1"/>
-			<!-- Категория компонента заказа -->
+			<!-- РљР°С‚РµРіРѕСЂРёСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="ResponseOrderItems">
@@ -318,25 +318,25 @@
 	<xs:complexType name="ResponseOrderItem">
 		<xs:all>
 			<xs:element name="orderItemId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Идентификатор компонента (услуги) в системе-источнике заказа - из исходного заказа -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРјРїРѕРЅРµРЅС‚Р° (СѓСЃР»СѓРіРё) РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ Р·Р°РєР°Р·Р° - РёР· РёСЃС…РѕРґРЅРѕРіРѕ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemInstanceId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Идентификатор, генерируемый системами уровня OSS для регистрации компонента (CFS_ID, RFS_ID) -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ, РіРµРЅРµСЂРёСЂСѓРµРјС‹Р№ СЃРёСЃС‚РµРјР°РјРё СѓСЂРѕРІРЅСЏ OSS РґР»СЏ СЂРµРіРёСЃС‚СЂР°С†РёРё РєРѕРјРїРѕРЅРµРЅС‚Р° (CFS_ID, RFS_ID) -->
 			<xs:element name="orderItemState" type="OrderItemState" minOccurs="0" maxOccurs="1"/>
-			<!-- Статус выполнения действия над компонентом заказа -->
+			<!-- РЎС‚Р°С‚СѓСЃ РІС‹РїРѕР»РЅРµРЅРёСЏ РґРµР№СЃС‚РІРёСЏ РЅР°Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРј Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemSpecification" type="OrderItemSpecification" minOccurs="0" maxOccurs="1"/>
-			<!-- Спецификация компонента заказа -->
+			<!-- РЎРїРµС†РёС„РёРєР°С†РёСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemAttributes" type="InheritableAttributes" minOccurs="0" maxOccurs="1"/>
-			<!-- Атрибуты компонента заказа -->
+			<!-- РђС‚СЂРёР±СѓС‚С‹ РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemAction" type="OrderItemAction" minOccurs="0" maxOccurs="1"/>
-			<!-- Требуемое действие над компонентом в рамках выполнения заказа -->
+			<!-- РўСЂРµР±СѓРµРјРѕРµ РґРµР№СЃС‚РІРёРµ РЅР°Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРј РІ СЂР°РјРєР°С… РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderItemResult" type="OrderItemResult" minOccurs="0" maxOccurs="1"/>
-			<!-- Результат выполнения действия над компонентом заказа -->
+			<!-- Р РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ РґРµР№СЃС‚РІРёСЏ РЅР°Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРј Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="OrderItemBillingInfo" mixed="true">
 		<xs:sequence>
 			<xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"/>
-			<!-- Информация для биллинга. Допускается использование сложных типов (xml со своей схемой) -->
+			<!-- РРЅС„РѕСЂРјР°С†РёСЏ РґР»СЏ Р±РёР»Р»РёРЅРіР°. Р”РѕРїСѓСЃРєР°РµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃР»РѕР¶РЅС‹С… С‚РёРїРѕРІ (xml СЃРѕ СЃРІРѕРµР№ СЃС…РµРјРѕР№) -->
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="ResponseOrderTasks">
@@ -352,58 +352,58 @@
 			<xs:enumeration value="COMPLETED"/>
 			<xs:enumeration value="CANCELLED"/>
 			<xs:enumeration value="ONHOLD"/>
-			<!-- Задание создано, но выполнение задания не начато -->
-			<!-- Задание выполняется -->
-			<!-- Задание в ожидании внешнего события -->
-			<!-- Задание выполнено -->
-			<!-- Задание отменено -->
-			<!-- Задание остановлено из-за ошибки и находится в ожидании решения проблемы -->
+			<!-- Р—Р°РґР°РЅРёРµ СЃРѕР·РґР°РЅРѕ, РЅРѕ РІС‹РїРѕР»РЅРµРЅРёРµ Р·Р°РґР°РЅРёСЏ РЅРµ РЅР°С‡Р°С‚Рѕ -->
+			<!-- Р—Р°РґР°РЅРёРµ РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ -->
+			<!-- Р—Р°РґР°РЅРёРµ РІ РѕР¶РёРґР°РЅРёРё РІРЅРµС€РЅРµРіРѕ СЃРѕР±С‹С‚РёСЏ -->
+			<!-- Р—Р°РґР°РЅРёРµ РІС‹РїРѕР»РЅРµРЅРѕ -->
+			<!-- Р—Р°РґР°РЅРёРµ РѕС‚РјРµРЅРµРЅРѕ -->
+			<!-- Р—Р°РґР°РЅРёРµ РѕСЃС‚Р°РЅРѕРІР»РµРЅРѕ РёР·-Р·Р° РѕС€РёР±РєРё Рё РЅР°С…РѕРґРёС‚СЃСЏ РІ РѕР¶РёРґР°РЅРёРё СЂРµС€РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹ -->
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="ResponseOrderTask">
 		<xs:all>
 			<xs:element name="orderTaskId" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Идентификатор задания -->
+			<!-- РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РґР°РЅРёСЏ -->
 			<xs:element name="orderTaskName" type="xs:string" minOccurs="1" maxOccurs="1"/>
-			<!-- Название задания -->
+			<!-- РќР°Р·РІР°РЅРёРµ Р·Р°РґР°РЅРёСЏ -->
 			<xs:element name="orderTaskGroupName" type="xs:string" minOccurs="0" maxOccurs="1"/>
-			<!-- Название группы заданий -->
+			<!-- РќР°Р·РІР°РЅРёРµ РіСЂСѓРїРїС‹ Р·Р°РґР°РЅРёР№ -->
 			<xs:element name="orderTaskStartDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Фактическое время начала выполнения задания -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєРѕРµ РІСЂРµРјСЏ РЅР°С‡Р°Р»Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёСЏ -->
 			<xs:element name="orderTaskCompletionDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Фактическое время завершения выполнения задания -->
+			<!-- Р¤Р°РєС‚РёС‡РµСЃРєРѕРµ РІСЂРµРјСЏ Р·Р°РІРµСЂС€РµРЅРёСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёСЏ -->
 			<xs:element name="orderTaskExpectedStartDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Ожидаемая дата начала выполнения задания -->
+			<!-- РћР¶РёРґР°РµРјР°СЏ РґР°С‚Р° РЅР°С‡Р°Р»Р° РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёСЏ -->
 			<xs:element name="orderTaskExpectedCompletionDate" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
-			<!-- Ожидаемая дата завершения выполнения задания -->
+			<!-- РћР¶РёРґР°РµРјР°СЏ РґР°С‚Р° Р·Р°РІРµСЂС€РµРЅРёСЏ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°РЅРёСЏ -->
 			<xs:element name="orderTaskState" type="OrderTaskState" minOccurs="1" maxOccurs="1"/>
-			<!-- Статус выполнения задачи заказа -->
+			<!-- РЎС‚Р°С‚СѓСЃ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РґР°С‡Рё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderTaskComments" type="Comments" minOccurs="0" maxOccurs="1"/>
-			<!-- Комментарии к выполнению задачи заказа -->
+			<!-- РљРѕРјРјРµРЅС‚Р°СЂРёРё Рє РІС‹РїРѕР»РЅРµРЅРёСЋ Р·Р°РґР°С‡Рё Р·Р°РєР°Р·Р° -->
 			<xs:element name="orderTaskAttributes" type="Attributes" minOccurs="0" maxOccurs="1"/>
-			<!-- Атрибуты задачи заказа -->
+			<!-- РђС‚СЂРёР±СѓС‚С‹ Р·Р°РґР°С‡Рё Р·Р°РєР°Р·Р° -->
 		</xs:all>
 	</xs:complexType>
 	<xs:simpleType name="OrderMode">
 		<xs:annotation>
-			<xs:documentation>Режим взаимодействия с системой-источником запроса</xs:documentation>
+			<xs:documentation>Р РµР¶РёРј РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёСЏ СЃ СЃРёСЃС‚РµРјРѕР№-РёСЃС‚РѕС‡РЅРёРєРѕРј Р·Р°РїСЂРѕСЃР°</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="ASYNC">
 				<xs:annotation>
-					<xs:documentation>Асинхронный режим обработки заказа</xs:documentation>
+					<xs:documentation>РђСЃРёРЅС…СЂРѕРЅРЅС‹Р№ СЂРµР¶РёРј РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="SYNC">
 				<xs:annotation>
-					<xs:documentation>Синхронный режим обработки заказа</xs:documentation>
+					<xs:documentation>РЎРёРЅС…СЂРѕРЅРЅС‹Р№ СЂРµР¶РёРј РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="OrderCategory">
 		<xs:annotation>
-			<xs:documentation>Категория запроса по маркетинговому сегменту</xs:documentation>
+			<xs:documentation>РљР°С‚РµРіРѕСЂРёСЏ Р·Р°РїСЂРѕСЃР° РїРѕ РјР°СЂРєРµС‚РёРЅРіРѕРІРѕРјСѓ СЃРµРіРјРµРЅС‚Сѓ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="B2C"/>
@@ -414,98 +414,98 @@
 			<xs:enumeration value="B2O"/>
 			<xs:enumeration value="B2B">
 				<xs:annotation>
-					<xs:documentation>Корпоративный сегмент без детализации</xs:documentation>
+					<xs:documentation>РљРѕСЂРїРѕСЂР°С‚РёРІРЅС‹Р№ СЃРµРіРјРµРЅС‚ Р±РµР· РґРµС‚Р°Р»РёР·Р°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="EXTENSION">
 				<xs:annotation>
-					<xs:documentation>Технологический заказ (развитие)</xs:documentation>
+					<xs:documentation>РўРµС…РЅРѕР»РѕРіРёС‡РµСЃРєРёР№ Р·Р°РєР°Р· (СЂР°Р·РІРёС‚РёРµ)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="OrderState">
 		<xs:annotation>
-			<xs:documentation>Статус выполнения запроса</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РїСЂРѕСЃР°</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="RECEIVED">
 				<xs:annotation>
-					<xs:documentation>Заказ получен, обработка не начата</xs:documentation>
+					<xs:documentation>Р—Р°РєР°Р· РїРѕР»СѓС‡РµРЅ, РѕР±СЂР°Р±РѕС‚РєР° РЅРµ РЅР°С‡Р°С‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="ACKNOWLEDGED">
 				<xs:annotation>
-					<xs:documentation>Заказ получен, форматная проверка заказа проведена</xs:documentation>
+					<xs:documentation>Р—Р°РєР°Р· РїРѕР»СѓС‡РµРЅ, С„РѕСЂРјР°С‚РЅР°СЏ РїСЂРѕРІРµСЂРєР° Р·Р°РєР°Р·Р° РїСЂРѕРІРµРґРµРЅР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="REJECTED">
 				<xs:annotation>
-					<xs:documentation>Заказ отвергнут по причине ошибок валидации</xs:documentation>
+					<xs:documentation>Р—Р°РєР°Р· РѕС‚РІРµСЂРіРЅСѓС‚ РїРѕ РїСЂРёС‡РёРЅРµ РѕС€РёР±РѕРє РІР°Р»РёРґР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="INPROGRESS">
 				<xs:annotation>
-					<xs:documentation>Заказ корректен и находится на выполнении</xs:documentation>
+					<xs:documentation>Р—Р°РєР°Р· РєРѕСЂСЂРµРєС‚РµРЅ Рё РЅР°С…РѕРґРёС‚СЃСЏ РЅР° РІС‹РїРѕР»РЅРµРЅРёРё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="AMENDING">
 				<xs:annotation>
-					<xs:documentation>Получен запрос на изменение заказа</xs:documentation>
+					<xs:documentation>РџРѕР»СѓС‡РµРЅ Р·Р°РїСЂРѕСЃ РЅР° РёР·РјРµРЅРµРЅРёРµ Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CANCELLING">
 				<xs:annotation>
-					<xs:documentation>Получен запрос на отмену заказа</xs:documentation>
+					<xs:documentation>РџРѕР»СѓС‡РµРЅ Р·Р°РїСЂРѕСЃ РЅР° РѕС‚РјРµРЅСѓ Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CANCELLED">
 				<xs:annotation>
-					<xs:documentation>Заказ отменен</xs:documentation>
+					<xs:documentation>Р—Р°РєР°Р· РѕС‚РјРµРЅРµРЅ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="COMPLETED">
 				<xs:annotation>
-					<xs:documentation>Выполнение заказа успешно завершено, все компоненты заказа обработаны успешно</xs:documentation>
+					<xs:documentation>Р’С‹РїРѕР»РЅРµРЅРёРµ Р·Р°РєР°Р·Р° СѓСЃРїРµС€РЅРѕ Р·Р°РІРµСЂС€РµРЅРѕ, РІСЃРµ РєРѕРјРїРѕРЅРµРЅС‚С‹ Р·Р°РєР°Р·Р° РѕР±СЂР°Р±РѕС‚Р°РЅС‹ СѓСЃРїРµС€РЅРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FAILED">
 				<xs:annotation>
-					<xs:documentation>Выполнение заказа завершено неуспешно</xs:documentation>
+					<xs:documentation>Р’С‹РїРѕР»РЅРµРЅРёРµ Р·Р°РєР°Р·Р° Р·Р°РІРµСЂС€РµРЅРѕ РЅРµСѓСЃРїРµС€РЅРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="PARTIAL">
 				<xs:annotation>
-					<xs:documentation>Выполнение заказа завершено с успешной обработкой части заказа</xs:documentation>
+					<xs:documentation>Р’С‹РїРѕР»РЅРµРЅРёРµ Р·Р°РєР°Р·Р° Р·Р°РІРµСЂС€РµРЅРѕ СЃ СѓСЃРїРµС€РЅРѕР№ РѕР±СЂР°Р±РѕС‚РєРѕР№ С‡Р°СЃС‚Рё Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="POSTPONED">
 				<xs:annotation>
-					<xs:documentation>Выполнение заказа приостановлено до получения сигнала о продолжении обработки</xs:documentation>
+					<xs:documentation>Р’С‹РїРѕР»РЅРµРЅРёРµ Р·Р°РєР°Р·Р° РїСЂРёРѕСЃС‚Р°РЅРѕРІР»РµРЅРѕ РґРѕ РїРѕР»СѓС‡РµРЅРёСЏ СЃРёРіРЅР°Р»Р° Рѕ РїСЂРѕРґРѕР»Р¶РµРЅРёРё РѕР±СЂР°Р±РѕС‚РєРё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="AttributeStatus">
 		<xs:annotation>
-			<xs:documentation>Статус атрибута</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="AC">
 				<xs:annotation>
-					<xs:documentation>Активное значение атрибута</xs:documentation>
+					<xs:documentation>РђРєС‚РёРІРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CE">
 				<xs:annotation>
-					<xs:documentation>Предыдущее (неактивное) значение атрибута</xs:documentation>
+					<xs:documentation>РџСЂРµРґС‹РґСѓС‰РµРµ (РЅРµР°РєС‚РёРІРЅРѕРµ) Р·РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Attributes">
 		<xs:annotation>
-			<xs:documentation>Список дополнительных атрибутов</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… Р°С‚СЂРёР±СѓС‚РѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="attribute" type="Attribute" minOccurs="0" maxOccurs="unbounded"/>
@@ -513,165 +513,165 @@
 	</xs:complexType>
 	<xs:complexType name="Attribute" mixed="true">
 		<xs:annotation>
-			<xs:documentation>Атрибут</xs:documentation>
+			<xs:documentation>РђС‚СЂРёР±СѓС‚</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:any processContents="lax" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Значение атрибута. Допускается использование сложных типов (xml со своей схемой, см. файл attributes.xsd)</xs:documentation>
+					<xs:documentation>Р—РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°. Р”РѕРїСѓСЃРєР°РµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃР»РѕР¶РЅС‹С… С‚РёРїРѕРІ (xml СЃРѕ СЃРІРѕРµР№ СЃС…РµРјРѕР№, СЃРј. С„Р°Р№Р» attributes.xsd)</xs:documentation>
 				</xs:annotation>
 			</xs:any>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required">
 			<xs:annotation>
-				<xs:documentation>Имя атрибута</xs:documentation>
+				<xs:documentation>РРјСЏ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="status" type="AttributeStatus">
 			<xs:annotation>
-				<xs:documentation>Статус атрибута</xs:documentation>
+				<xs:documentation>РЎС‚Р°С‚СѓСЃ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="isChanged" type="xs:boolean">
 			<xs:annotation>
-				<xs:documentation>Признак изменения атрибута</xs:documentation>
+				<xs:documentation>РџСЂРёР·РЅР°Рє РёР·РјРµРЅРµРЅРёСЏ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="Comments">
 		<xs:annotation>
-			<xs:documentation>Список комментариев к запросу</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РєРѕРјРјРµРЅС‚Р°СЂРёРµРІ Рє Р·Р°РїСЂРѕСЃСѓ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Комментарии к заказу. Допускается использование сложных типов (xml со своей схемой), либо элементы типа tns:Comment</xs:documentation>
+					<xs:documentation>РљРѕРјРјРµРЅС‚Р°СЂРёРё Рє Р·Р°РєР°Р·Сѓ. Р”РѕРїСѓСЃРєР°РµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃР»РѕР¶РЅС‹С… С‚РёРїРѕРІ (xml СЃРѕ СЃРІРѕРµР№ СЃС…РµРјРѕР№), Р»РёР±Рѕ СЌР»РµРјРµРЅС‚С‹ С‚РёРїР° tns:Comment</xs:documentation>
 				</xs:annotation>
 			</xs:any>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="Comment">
 		<xs:annotation>
-			<xs:documentation>Комментарий</xs:documentation>
+			<xs:documentation>РљРѕРјРјРµРЅС‚Р°СЂРёР№</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="date" type="xs:dateTime" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Дата комментария</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РєРѕРјРјРµРЅС‚Р°СЂРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="commenter" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Комментатор</xs:documentation>
+					<xs:documentation>РљРѕРјРјРµРЅС‚Р°С‚РѕСЂ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="text" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Текст комментария</xs:documentation>
+					<xs:documentation>РўРµРєСЃС‚ РєРѕРјРјРµРЅС‚Р°СЂРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="type" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Тип комментария</xs:documentation>
+					<xs:documentation>РўРёРї РєРѕРјРјРµРЅС‚Р°СЂРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
 	<xs:simpleType name="LocationCategory">
 		<xs:annotation>
-			<xs:documentation>Категория, определяющая набор атрибутов, описывающих адрес/местоположение</xs:documentation>
+			<xs:documentation>РљР°С‚РµРіРѕСЂРёСЏ, РѕРїСЂРµРґРµР»СЏСЋС‰Р°СЏ РЅР°Р±РѕСЂ Р°С‚СЂРёР±СѓС‚РѕРІ, РѕРїРёСЃС‹РІР°СЋС‰РёС… Р°РґСЂРµСЃ/РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="STRICT">
 				<xs:annotation>
-					<xs:documentation>Точный адрес</xs:documentation>
+					<xs:documentation>РўРѕС‡РЅС‹Р№ Р°РґСЂРµСЃ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="GEO">
 				<xs:annotation>
-					<xs:documentation>Точные координаты адреса с указанием адресного элемента ориентира</xs:documentation>
+					<xs:documentation>РўРѕС‡РЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ Р°РґСЂРµСЃР° СЃ СѓРєР°Р·Р°РЅРёРµРј Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РѕСЂРёРµРЅС‚РёСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="LANDMARK">
 				<xs:annotation>
-					<xs:documentation>Адресный элемент ориентира с указанием навигации до точного адреса</xs:documentation>
+					<xs:documentation>РђРґСЂРµСЃРЅС‹Р№ СЌР»РµРјРµРЅС‚ РѕСЂРёРµРЅС‚РёСЂР° СЃ СѓРєР°Р·Р°РЅРёРµРј РЅР°РІРёРіР°С†РёРё РґРѕ С‚РѕС‡РЅРѕРіРѕ Р°РґСЂРµСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="LocationRegister">
 		<xs:annotation>
-			<xs:documentation>Справочник справочников идентификаторов адресов</xs:documentation>
+			<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ Р°РґСЂРµСЃРѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="HERMES">
 				<xs:annotation>
-					<xs:documentation>Внутренний справочник СУС Гермес</xs:documentation>
+					<xs:documentation>Р’РЅСѓС‚СЂРµРЅРЅРёР№ СЃРїСЂР°РІРѕС‡РЅРёРє РЎРЈРЎ Р“РµСЂРјРµСЃ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="KLADR">
 				<xs:annotation>
-					<xs:documentation>КЛАДР</xs:documentation>
+					<xs:documentation>РљР›РђР”Р </xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="GID">
 				<xs:annotation>
-					<xs:documentation>ОРПОН</xs:documentation>
+					<xs:documentation>РћР РџРћРќ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="NW_BIS_AIR">
 				<xs:annotation>
-					<xs:documentation>Справочник BIS в МРФ Северо-Запад</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє BIS РІ РњР Р¤ РЎРµРІРµСЂРѕ-Р—Р°РїР°Рґ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="Vlg">
 				<xs:annotation>
-					<xs:documentation>Справочник в МРФ Волга</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РІ РњР Р¤ Р’РѕР»РіР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Location">
 		<xs:annotation>
-			<xs:documentation>Местоположение (адресная характеристика)</xs:documentation>
+			<xs:documentation>РњРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ (Р°РґСЂРµСЃРЅР°СЏ С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРєР°)</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="locationId" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Идентификатор адресного элемента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="locationCategory" type="LocationCategory" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Категория адресного элемента</xs:documentation>
+					<xs:documentation>РљР°С‚РµРіРѕСЂРёСЏ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="locationRegister" type="LocationRegister" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Справочник идентификаторов адресного элемента</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂРѕРІ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="locationAttributes" type="Attributes" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Атрибуты адресного элемента (улица, дом, строение, этаж, квартира и т.п.)</xs:documentation>
+					<xs:documentation>РђС‚СЂРёР±СѓС‚С‹ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° (СѓР»РёС†Р°, РґРѕРј, СЃС‚СЂРѕРµРЅРёРµ, СЌС‚Р°Р¶, РєРІР°СЂС‚РёСЂР° Рё С‚.Рї.)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="OrderParties">
 		<xs:annotation>
-			<xs:documentation>Список связанных объектов, характеризующих запрос</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЃРІСЏР·Р°РЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ, С…Р°СЂР°РєС‚РµСЂРёР·СѓСЋС‰РёС… Р·Р°РїСЂРѕСЃ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:choice minOccurs="0" maxOccurs="unbounded">
 				<xs:element name="orderParty" type="Party">
 					<xs:annotation>
-						<xs:documentation>Объекты, связанные с заказом.</xs:documentation>
+						<xs:documentation>РћР±СЉРµРєС‚С‹, СЃРІСЏР·Р°РЅРЅС‹Рµ СЃ Р·Р°РєР°Р·РѕРј.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="orderAttachment" type="Attachment">
 					<xs:annotation>
-						<xs:documentation>Вложения, связанные с заказом.</xs:documentation>
+						<xs:documentation>Р’Р»РѕР¶РµРЅРёСЏ, СЃРІСЏР·Р°РЅРЅС‹Рµ СЃ Р·Р°РєР°Р·РѕРј.</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
@@ -679,64 +679,64 @@
 	</xs:complexType>
 	<xs:simpleType name="PartyRole">
 		<xs:annotation>
-			<xs:documentation>Категория объекта, переданного с запросом</xs:documentation>
+			<xs:documentation>РљР°С‚РµРіРѕСЂРёСЏ РѕР±СЉРµРєС‚Р°, РїРµСЂРµРґР°РЅРЅРѕРіРѕ СЃ Р·Р°РїСЂРѕСЃРѕРј</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="CLIENT">
 				<xs:annotation>
-					<xs:documentation>Клиент</xs:documentation>
+					<xs:documentation>РљР»РёРµРЅС‚</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="INITIATOR">
 				<xs:annotation>
-					<xs:documentation>Оператор системы-источника запроса, инициатор запроса</xs:documentation>
+					<xs:documentation>РћРїРµСЂР°С‚РѕСЂ СЃРёСЃС‚РµРјС‹-РёСЃС‚РѕС‡РЅРёРєР° Р·Р°РїСЂРѕСЃР°, РёРЅРёС†РёР°С‚РѕСЂ Р·Р°РїСЂРѕСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="SALES">
 				<xs:annotation>
-					<xs:documentation>Менеджер отдела продаж, инициатор продажи</xs:documentation>
+					<xs:documentation>РњРµРЅРµРґР¶РµСЂ РѕС‚РґРµР»Р° РїСЂРѕРґР°Р¶, РёРЅРёС†РёР°С‚РѕСЂ РїСЂРѕРґР°Р¶Рё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="ACCOUNT">
 				<xs:annotation>
-					<xs:documentation>Счет клиента</xs:documentation>
+					<xs:documentation>РЎС‡РµС‚ РєР»РёРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CONTACT">
 				<xs:annotation>
-					<xs:documentation>Контактная информация</xs:documentation>
+					<xs:documentation>РљРѕРЅС‚Р°РєС‚РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="WORKER">
 				<xs:annotation>
-					<xs:documentation>Исполнитель работ</xs:documentation>
+					<xs:documentation>РСЃРїРѕР»РЅРёС‚РµР»СЊ СЂР°Р±РѕС‚</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="KZ">
 				<xs:annotation>
-					<xs:documentation>Клиентская заявка в СУС</xs:documentation>
+					<xs:documentation>РљР»РёРµРЅС‚СЃРєР°СЏ Р·Р°СЏРІРєР° РІ РЎРЈРЎ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="KP">
 				<xs:annotation>
-					<xs:documentation>Клиентский проект в СУС</xs:documentation>
+					<xs:documentation>РљР»РёРµРЅС‚СЃРєРёР№ РїСЂРѕРµРєС‚ РІ РЎРЈРЎ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="SOLUTION">
 				<xs:annotation>
-					<xs:documentation>Техническое решение в СЛТУ</xs:documentation>
+					<xs:documentation>РўРµС…РЅРёС‡РµСЃРєРѕРµ СЂРµС€РµРЅРёРµ РІ РЎР›РўРЈ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="RESERVATION">
 				<xs:annotation>
-					<xs:documentation>Нобер брони линейных данных в СЛТУ под техническое решение</xs:documentation>
+					<xs:documentation>РќРѕР±РµСЂ Р±СЂРѕРЅРё Р»РёРЅРµР№РЅС‹С… РґР°РЅРЅС‹С… РІ РЎР›РўРЈ РїРѕРґ С‚РµС…РЅРёС‡РµСЃРєРѕРµ СЂРµС€РµРЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="Party">
 		<xs:annotation>
-			<xs:documentation>Связанный объект, дополняющий запрос</xs:documentation>
+			<xs:documentation>РЎРІСЏР·Р°РЅРЅС‹Р№ РѕР±СЉРµРєС‚, РґРѕРїРѕР»РЅСЏСЋС‰РёР№ Р·Р°РїСЂРѕСЃ</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="partyRole" type="PartyRole" minOccurs="1" maxOccurs="1"/>
@@ -747,42 +747,42 @@
 	</xs:complexType>
 	<xs:complexType name="Attachment">
 		<xs:annotation>
-			<xs:documentation>Объект вложений, дополняющий запрос</xs:documentation>
+			<xs:documentation>РћР±СЉРµРєС‚ РІР»РѕР¶РµРЅРёР№, РґРѕРїРѕР»РЅСЏСЋС‰РёР№ Р·Р°РїСЂРѕСЃ</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="attachmentType" type="xs:integer" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Тип вложения из справочника мастер-системы управления вложением</xs:documentation>
+					<xs:documentation>РўРёРї РІР»РѕР¶РµРЅРёСЏ РёР· СЃРїСЂР°РІРѕС‡РЅРёРєР° РјР°СЃС‚РµСЂ-СЃРёСЃС‚РµРјС‹ СѓРїСЂР°РІР»РµРЅРёСЏ РІР»РѕР¶РµРЅРёРµРј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="creationDate" type="xs:dateTime" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Дата загрузки вложения в систему управления вложениями</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р·Р°РіСЂСѓР·РєРё РІР»РѕР¶РµРЅРёСЏ РІ СЃРёСЃС‚РµРјСѓ СѓРїСЂР°РІР»РµРЅРёСЏ РІР»РѕР¶РµРЅРёСЏРјРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="author" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Автор вложения</xs:documentation>
+					<xs:documentation>РђРІС‚РѕСЂ РІР»РѕР¶РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="URL" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Ссылка на SFTP-сервер</xs:documentation>
+					<xs:documentation>РЎСЃС‹Р»РєР° РЅР° SFTP-СЃРµСЂРІРµСЂ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="header" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Заголовок вложения</xs:documentation>
+					<xs:documentation>Р—Р°РіРѕР»РѕРІРѕРє РІР»РѕР¶РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="fileName" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Наименование файла</xs:documentation>
+					<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ С„Р°Р№Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="fileExtension" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Расширение файла</xs:documentation>
+					<xs:documentation>Р Р°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
@@ -797,12 +797,12 @@
 		<xs:sequence>
 			<xs:element name="originator" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Система - источник результатов обработки запроса</xs:documentation>
+					<xs:documentation>РЎРёСЃС‚РµРјР° - РёСЃС‚РѕС‡РЅРёРє СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РїСЂРѕСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="receiver" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Система - адресат результатов обработки запроса</xs:documentation>
+					<xs:documentation>РЎРёСЃС‚РµРјР° - Р°РґСЂРµСЃР°С‚ СЂРµР·СѓР»СЊС‚Р°С‚РѕРІ РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РїСЂРѕСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="result" type="Result" minOccurs="1" maxOccurs="1"/>
@@ -810,7 +810,7 @@
 	</xs:complexType>
 	<xs:complexType name="OrderNotifications">
 		<xs:annotation>
-			<xs:documentation>Список оповещений по выполнению запроса</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РѕРїРѕРІРµС‰РµРЅРёР№ РїРѕ РІС‹РїРѕР»РЅРµРЅРёСЋ Р·Р°РїСЂРѕСЃР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="orderNotification" type="OrderNotification" minOccurs="0" maxOccurs="unbounded"/>
@@ -818,7 +818,7 @@
 	</xs:complexType>
 	<xs:complexType name="OrderNotification">
 		<xs:annotation>
-			<xs:documentation>Оповещение по выполнению запроса</xs:documentation>
+			<xs:documentation>РћРїРѕРІРµС‰РµРЅРёРµ РїРѕ РІС‹РїРѕР»РЅРµРЅРёСЋ Р·Р°РїСЂРѕСЃР°</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="notificationTimestamp" type="xs:dateTime" minOccurs="0" maxOccurs="1"/>
@@ -829,145 +829,145 @@
 	</xs:complexType>
 	<xs:complexType name="OrderResult">
 		<xs:annotation>
-			<xs:documentation>Результат выполнения запроса</xs:documentation>
+			<xs:documentation>Р РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РїСЂРѕСЃР°</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="orderResultCode" type="xs:long" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Код результата обработки заказа</xs:documentation>
+					<xs:documentation>РљРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р° РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="orderResultText" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Текстовое описание результата обработки заказа</xs:documentation>
+					<xs:documentation>РўРµРєСЃС‚РѕРІРѕРµ РѕРїРёСЃР°РЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° РѕР±СЂР°Р±РѕС‚РєРё Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
 	<xs:simpleType name="OrderItemAction">
 		<xs:annotation>
-			<xs:documentation>Действие над компонентом заказа</xs:documentation>
+			<xs:documentation>Р”РµР№СЃС‚РІРёРµ РЅР°Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРј Р·Р°РєР°Р·Р°</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="CREATE">
 				<xs:annotation>
-					<xs:documentation>Создание</xs:documentation>
+					<xs:documentation>РЎРѕР·РґР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CHANGE">
 				<xs:annotation>
-					<xs:documentation>Изменение</xs:documentation>
+					<xs:documentation>РР·РјРµРЅРµРЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CEASE">
 				<xs:annotation>
-					<xs:documentation>Отключение</xs:documentation>
+					<xs:documentation>РћС‚РєР»СЋС‡РµРЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="QUERY">
 				<xs:annotation>
-					<xs:documentation>Запрос статуса</xs:documentation>
+					<xs:documentation>Р—Р°РїСЂРѕСЃ СЃС‚Р°С‚СѓСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="SUSPEND">
 				<xs:annotation>
-					<xs:documentation>Добровольная блокировка</xs:documentation>
+					<xs:documentation>Р”РѕР±СЂРѕРІРѕР»СЊРЅР°СЏ Р±Р»РѕРєРёСЂРѕРІРєР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="RESUME">
 				<xs:annotation>
-					<xs:documentation>Добровольная разблокировка</xs:documentation>
+					<xs:documentation>Р”РѕР±СЂРѕРІРѕР»СЊРЅР°СЏ СЂР°Р·Р±Р»РѕРєРёСЂРѕРІРєР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="INFO">
 				<xs:annotation>
-					<xs:documentation>Действие не производится - компонент представлен для информационных целей</xs:documentation>
+					<xs:documentation>Р”РµР№СЃС‚РІРёРµ РЅРµ РїСЂРѕРёР·РІРѕРґРёС‚СЃСЏ - РєРѕРјРїРѕРЅРµРЅС‚ РїСЂРµРґСЃС‚Р°РІР»РµРЅ РґР»СЏ РёРЅС„РѕСЂРјР°С†РёРѕРЅРЅС‹С… С†РµР»РµР№</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="REMOVE">
 				<xs:annotation>
-					<xs:documentation>Исключение компонента из заказа для операции изменения заказа</xs:documentation>
+					<xs:documentation>РСЃРєР»СЋС‡РµРЅРёРµ РєРѕРјРїРѕРЅРµРЅС‚Р° РёР· Р·Р°РєР°Р·Р° РґР»СЏ РѕРїРµСЂР°С†РёРё РёР·РјРµРЅРµРЅРёСЏ Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="MOVE">
 				<xs:annotation>
-					<xs:documentation>Перенос зависимого компонента на другой родительский компонент (при переезде, смене технологии и т.п.)</xs:documentation>
+					<xs:documentation>РџРµСЂРµРЅРѕСЃ Р·Р°РІРёСЃРёРјРѕРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р° РЅР° РґСЂСѓРіРѕР№ СЂРѕРґРёС‚РµР»СЊСЃРєРёР№ РєРѕРјРїРѕРЅРµРЅС‚ (РїСЂРё РїРµСЂРµРµР·РґРµ, СЃРјРµРЅРµ С‚РµС…РЅРѕР»РѕРіРёРё Рё С‚.Рї.)</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FINBLOCK">
 				<xs:annotation>
-					<xs:documentation>Установка финансовой блокировки</xs:documentation>
+					<xs:documentation>РЈСЃС‚Р°РЅРѕРІРєР° С„РёРЅР°РЅСЃРѕРІРѕР№ Р±Р»РѕРєРёСЂРѕРІРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="FINUNBLOCK">
 				<xs:annotation>
-					<xs:documentation>Снятие финансовой блокировки</xs:documentation>
+					<xs:documentation>РЎРЅСЏС‚РёРµ С„РёРЅР°РЅСЃРѕРІРѕР№ Р±Р»РѕРєРёСЂРѕРІРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="OrderItemCategory">
 		<xs:annotation>
-			<xs:documentation>Категория компонента заказа</xs:documentation>
+			<xs:documentation>РљР°С‚РµРіРѕСЂРёСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р°</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="Product">
 				<xs:annotation>
-					<xs:documentation>Комплексная услуга, предоставляемая клиенту</xs:documentation>
+					<xs:documentation>РљРѕРјРїР»РµРєСЃРЅР°СЏ СѓСЃР»СѓРіР°, РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµРјР°СЏ РєР»РёРµРЅС‚Сѓ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CFS">
 				<xs:annotation>
-					<xs:documentation>Атомарная услуга, предоставляемая клиенту</xs:documentation>
+					<xs:documentation>РђС‚РѕРјР°СЂРЅР°СЏ СѓСЃР»СѓРіР°, РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµРјР°СЏ РєР»РёРµРЅС‚Сѓ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CRFS">
 				<xs:annotation>
-					<xs:documentation>Композитная ресурсная услуга</xs:documentation>
+					<xs:documentation>РљРѕРјРїРѕР·РёС‚РЅР°СЏ СЂРµСЃСѓСЂСЃРЅР°СЏ СѓСЃР»СѓРіР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="RFS">
 				<xs:annotation>
-					<xs:documentation>Ресурсная услуга</xs:documentation>
+					<xs:documentation>Р РµСЃСѓСЂСЃРЅР°СЏ СѓСЃР»СѓРіР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="OrderItemState">
 		<xs:annotation>
-			<xs:documentation>Статус выполнения действия над компонентом в рамках выполнения заказа</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ РІС‹РїРѕР»РЅРµРЅРёСЏ РґРµР№СЃС‚РІРёСЏ РЅР°Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРј РІ СЂР°РјРєР°С… РІС‹РїРѕР»РЅРµРЅРёСЏ Р·Р°РєР°Р·Р°</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="INPROGRESS">
 				<xs:annotation>
-					<xs:documentation>Компонент в процессе обработки</xs:documentation>
+					<xs:documentation>РљРѕРјРїРѕРЅРµРЅС‚ РІ РїСЂРѕС†РµСЃСЃРµ РѕР±СЂР°Р±РѕС‚РєРё</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="PENDING">
 				<xs:annotation>
-					<xs:documentation>Компонент в ожидании внешнего события</xs:documentation>
+					<xs:documentation>РљРѕРјРїРѕРЅРµРЅС‚ РІ РѕР¶РёРґР°РЅРёРё РІРЅРµС€РЅРµРіРѕ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="COMPLETED">
 				<xs:annotation>
-					<xs:documentation>Компонент успешно обработан</xs:documentation>
+					<xs:documentation>РљРѕРјРїРѕРЅРµРЅС‚ СѓСЃРїРµС€РЅРѕ РѕР±СЂР°Р±РѕС‚Р°РЅ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="CANCELLED">
 				<xs:annotation>
-					<xs:documentation>Компонент отменен</xs:documentation>
+					<xs:documentation>РљРѕРјРїРѕРЅРµРЅС‚ РѕС‚РјРµРЅРµРЅ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="ONHOLD">
 				<xs:annotation>
-					<xs:documentation>Компонент остановлен из-за ошибки и находится в ожидании решения проблемы</xs:documentation>
+					<xs:documentation>РљРѕРјРїРѕРЅРµРЅС‚ РѕСЃС‚Р°РЅРѕРІР»РµРЅ РёР·-Р·Р° РѕС€РёР±РєРё Рё РЅР°С…РѕРґРёС‚СЃСЏ РІ РѕР¶РёРґР°РЅРёРё СЂРµС€РµРЅРёСЏ РїСЂРѕР±Р»РµРјС‹</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:complexType name="InheritableAttributes">
 		<xs:annotation>
-			<xs:documentation>Список атрибутов, имеющих признак наследования по иерархии компонентов заказа</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє Р°С‚СЂРёР±СѓС‚РѕРІ, РёРјРµСЋС‰РёС… РїСЂРёР·РЅР°Рє РЅР°СЃР»РµРґРѕРІР°РЅРёСЏ РїРѕ РёРµСЂР°СЂС…РёРё РєРѕРјРїРѕРЅРµРЅС‚РѕРІ Р·Р°РєР°Р·Р°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="attribute" type="InheritableAttribute" minOccurs="0" maxOccurs="unbounded"/>
@@ -977,90 +977,90 @@
 		<xs:sequence>
 			<xs:any processContents="lax" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Значение атрибута. Допускается использование сложных типов (xml со своей схемой)</xs:documentation>
+					<xs:documentation>Р—РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°. Р”РѕРїСѓСЃРєР°РµС‚СЃСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёРµ СЃР»РѕР¶РЅС‹С… С‚РёРїРѕРІ (xml СЃРѕ СЃРІРѕРµР№ СЃС…РµРјРѕР№)</xs:documentation>
 				</xs:annotation>
 			</xs:any>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string" use="required">
 			<xs:annotation>
-				<xs:documentation>Имя атрибута</xs:documentation>
+				<xs:documentation>РРјСЏ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="status" type="AttributeStatus">
 			<xs:annotation>
-				<xs:documentation>Статус атрибута</xs:documentation>
+				<xs:documentation>РЎС‚Р°С‚СѓСЃ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="isChanged" type="xs:boolean">
 			<xs:annotation>
-				<xs:documentation>Признак изменения атрибута</xs:documentation>
+				<xs:documentation>РџСЂРёР·РЅР°Рє РёР·РјРµРЅРµРЅРёСЏ Р°С‚СЂРёР±СѓС‚Р°</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 		<xs:attribute name="isInheritable" type="xs:string">
 			<xs:annotation>
-				<xs:documentation>Признак наследования значения атрибута дочерними компонентами заказа по отношению oredrItemParentId</xs:documentation>
+				<xs:documentation>РџСЂРёР·РЅР°Рє РЅР°СЃР»РµРґРѕРІР°РЅРёСЏ Р·РЅР°С‡РµРЅРёСЏ Р°С‚СЂРёР±СѓС‚Р° РґРѕС‡РµСЂРЅРёРјРё РєРѕРјРїРѕРЅРµРЅС‚Р°РјРё Р·Р°РєР°Р·Р° РїРѕ РѕС‚РЅРѕС€РµРЅРёСЋ oredrItemParentId</xs:documentation>
 			</xs:annotation>
 		</xs:attribute>
 	</xs:complexType>
 	<xs:complexType name="OrderItemResult">
 		<xs:annotation>
-			<xs:documentation>Результат выполнения действия над компонентом заказа</xs:documentation>
+			<xs:documentation>Р РµР·СѓР»СЊС‚Р°С‚ РІС‹РїРѕР»РЅРµРЅРёСЏ РґРµР№СЃС‚РІРёСЏ РЅР°Рґ РєРѕРјРїРѕРЅРµРЅС‚РѕРј Р·Р°РєР°Р·Р°</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="orderItemResultCode" type="xs:long" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Код результата обработки компонента заказа</xs:documentation>
+					<xs:documentation>РљРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р° РѕР±СЂР°Р±РѕС‚РєРё РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="orderItemResultText" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Текстовое описание результата обработки компонента заказ</xs:documentation>
+					<xs:documentation>РўРµРєСЃС‚РѕРІРѕРµ РѕРїРёСЃР°РЅРёРµ СЂРµР·СѓР»СЊС‚Р°С‚Р° РѕР±СЂР°Р±РѕС‚РєРё РєРѕРјРїРѕРЅРµРЅС‚Р° Р·Р°РєР°Р·</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="OrderItemSpecification">
 		<xs:annotation>
-			<xs:documentation>Спецификация компонента услуги</xs:documentation>
+			<xs:documentation>РЎРїРµС†РёС„РёРєР°С†РёСЏ РєРѕРјРїРѕРЅРµРЅС‚Р° СѓСЃР»СѓРіРё</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="catalogId" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>идентификатор каталога, по которому указывается идентификатор спецификации</xs:documentation>
+					<xs:documentation>РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР°С‚Р°Р»РѕРіР°, РїРѕ РєРѕС‚РѕСЂРѕРјСѓ СѓРєР°Р·С‹РІР°РµС‚СЃСЏ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃРїРµС†РёС„РёРєР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:choice>
 				<xs:element name="specId" type="xs:string" minOccurs="0" maxOccurs="1">
 					<xs:annotation>
-						<xs:documentation>Спецификация сервиса общая для ПАО Ростелеком</xs:documentation>
+						<xs:documentation>РЎРїРµС†РёС„РёРєР°С†РёСЏ СЃРµСЂРІРёСЃР° РѕР±С‰Р°СЏ РґР»СЏ РџРђРћ Р РѕСЃС‚РµР»РµРєРѕРј</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="internalSpecId" type="xs:string" minOccurs="0" maxOccurs="1">
 					<xs:annotation>
-						<xs:documentation>backward compatibility для использования в РФ до введения общего каталога для ПАО Ростелеком (specId) – уникальная ссылка на спецификацию сервиса, определяема системой Fulfillment</xs:documentation>
+						<xs:documentation>backward compatibility РґР»СЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ РІ Р Р¤ РґРѕ РІРІРµРґРµРЅРёСЏ РѕР±С‰РµРіРѕ РєР°С‚Р°Р»РѕРіР° РґР»СЏ РџРђРћ Р РѕСЃС‚РµР»РµРєРѕРј (specId) вЂ“ СѓРЅРёРєР°Р»СЊРЅР°СЏ СЃСЃС‹Р»РєР° РЅР° СЃРїРµС†РёС„РёРєР°С†РёСЋ СЃРµСЂРІРёСЃР°, РѕРїСЂРµРґРµР»СЏРµРјР° СЃРёСЃС‚РµРјРѕР№ Fulfillment</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 				<xs:element name="externalSpecId" type="xs:string" minOccurs="0" maxOccurs="1">
 					<xs:annotation>
-						<xs:documentation>backward compatibility до проработки общего каталога для ПАО Ростелеком – ссылка на спецификацию сервиса в системе-источнике заказа</xs:documentation>
+						<xs:documentation>backward compatibility РґРѕ РїСЂРѕСЂР°Р±РѕС‚РєРё РѕР±С‰РµРіРѕ РєР°С‚Р°Р»РѕРіР° РґР»СЏ РџРђРћ Р РѕСЃС‚РµР»РµРєРѕРј вЂ“ СЃСЃС‹Р»РєР° РЅР° СЃРїРµС†РёС„РёРєР°С†РёСЋ СЃРµСЂРІРёСЃР° РІ СЃРёСЃС‚РµРјРµ-РёСЃС‚РѕС‡РЅРёРєРµ Р·Р°РєР°Р·Р°</xs:documentation>
 					</xs:annotation>
 				</xs:element>
 			</xs:choice>
 			<xs:element name="specVersion" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Версия спецификации</xs:documentation>
+					<xs:documentation>Р’РµСЂСЃРёСЏ СЃРїРµС†РёС„РёРєР°С†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="specName" type="xs:string" minOccurs="0" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Текстовое описание</xs:documentation>
+					<xs:documentation>РўРµРєСЃС‚РѕРІРѕРµ РѕРїРёСЃР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="RTAPIRequest" abstract="true">
 		<xs:annotation>
-			<xs:documentation>Абстрактный базовый тип для структуры запроса</xs:documentation>
+			<xs:documentation>РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ Р±Р°Р·РѕРІС‹Р№ С‚РёРї РґР»СЏ СЃС‚СЂСѓРєС‚СѓСЂС‹ Р·Р°РїСЂРѕСЃР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="originator" type="xs:string"/>
@@ -1069,7 +1069,7 @@
 	</xs:complexType>
 	<xs:complexType name="RTAPIResponse" abstract="true">
 		<xs:annotation>
-			<xs:documentation>Абстрактный базовый тип для структуры ответа на запрос</xs:documentation>
+			<xs:documentation>РђР±СЃС‚СЂР°РєС‚РЅС‹Р№ Р±Р°Р·РѕРІС‹Р№ С‚РёРї РґР»СЏ СЃС‚СЂСѓРєС‚СѓСЂС‹ РѕС‚РІРµС‚Р° РЅР° Р·Р°РїСЂРѕСЃ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="originator" type="xs:string"/>

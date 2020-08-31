@@ -20,7 +20,7 @@
 							<xsl:value-of select="ResultCode"/>
 						</ResultCode>
 						<Message>
-							"Ошибка во входных данных"
+							"РћС€РёР±РєР° РІРѕ РІС…РѕРґРЅС‹С… РґР°РЅРЅС‹С…"
 						</Message>
 					</tns:Fault>
 				</xsl:otherwise>

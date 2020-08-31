@@ -149,8 +149,8 @@
 									<xsl:value-of select="ApprovalDetailing"/>
 								</attribute>
 								<attribute name="UE">RUR</attribute>
-								<!-- ÍÓÌÒÚ‡ÌÚ‡ -->
-								<attribute name="VAT">·ÂÁ Õƒ—</attribute>
+								<!-- –∫–æ–Ω—Å—Ç–∞–Ω—Ç–∞ -->
+								<attribute name="VAT">–±–µ–∑ –ù–î–°</attribute>
 								<attribute name="buildProjectCost">
 									<xsl:value-of select="ProjectCost"/>
 								</attribute>
@@ -269,7 +269,7 @@
 							<partyId>
 								<xsl:value-of select="/submitOrderRequest/CRMCustomer/CUSTOM_ID"/>
 							</partyId>
-							<!--·ÂÂÏ ËÁ  [CUSTOM_ID] => 1313585 ‰Îˇ ÍÎËÂÌÚ‡-->
+							<!--–±–µ—Ä–µ–º –∏–∑  [CUSTOM_ID] => 1313585 –¥–ª—è –∫–ª–∏–µ–Ω—Ç–∞-->
 							<partyName>
 								<xsl:value-of select="/submitOrderRequest/OrderOMSContact/OrderContactPerson"/>
 							</partyName>
@@ -277,11 +277,11 @@
 								<attribute name="phone">
 									<xsl:value-of select="/submitOrderRequest/OrderOMSContact/OrderContactPhone"/>
 								</attribute>
-								<!--·ÂÂÏ ËÁ [OrderContactPhone] => 4444444-->
+								<!--–±–µ—Ä–µ–º –∏–∑ [OrderContactPhone] => 4444444-->
 								<attribute name="email">
 									<xsl:value-of select="/submitOrderRequest/OrderOMSContact/OrderContactEmail"/>
 								</attribute>
-								<!--·ÂÂÏ ËÁ  [OrderContactEmail] => @@@@@@-->
+								<!--–±–µ—Ä–µ–º –∏–∑  [OrderContactEmail] => @@@@@@-->
 							</partyAttributes>
 						</orderParty>
 					</orderParties>
@@ -352,17 +352,17 @@
 										<attribute name="ServiceSpeedValue">
 											<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed"/>
 										</attribute>
-										<!--—ÍÓÓÒÚ¸ ÒÂ‚ËÒ‡, Í·ËÚ/c-->
+										<!--–°–∫–æ—Ä–æ—Å—Ç—å —Å–µ—Ä–≤–∏—Å–∞, –∫–±–∏—Ç/c-->
 										<attribute name="ServiceSpeedMeasure">
 											<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed_SCALE"/>
 										</attribute>
-										<!--≈‰ËÌËˆ˚ ËÁÏÂÂÌËˇ ÒÍÓÓÒÚË-->
+										<!--–ï–¥–∏–Ω–∏—Ü—ã –∏–∑–º–µ—Ä–µ–Ω–∏—è —Å–∫–æ—Ä–æ—Å—Ç–∏-->
 										<attribute name="access_interface">
 											<xsl:value-of select="SrvOMSParam/SRV_CMS_fldPoint2Interface"/>
 										</attribute>
-										<!--»ÌÚÂÙÂÈÒ ÍÎËÂÌÚ‡-->
+										<!--–ò–Ω—Ç–µ—Ä—Ñ–µ–π—Å –∫–ª–∏–µ–Ω—Ç–∞-->
 										<xsl:if test="ServiceType='NETWORK'">
-											<!-- technology lineId , serviceItemId ÌÛÊÌÓ ‚˚‚Ó‰ËÚ¸ ‚ XML, ÚÓÎ¸ÍÓ ‰Îˇ ÛÒÎÛ„Ë ServiceType='NETWORK' -->
+											<!-- technology lineId , serviceItemId –Ω—É–∂–Ω–æ –≤—ã–≤–æ–¥–∏—Ç—å –≤ XML, —Ç–æ–ª—å–∫–æ –¥–ª—è —É—Å–ª—É–≥–∏ ServiceType='NETWORK' -->
 											<attribute name="accountNumber">
 												<xsl:value-of select="SrvOMSParam/SRV_SLTU_ACCOUNTNUMBER"/>
 											</attribute>
@@ -432,50 +432,50 @@
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
 											</attribute>
-											<!-- ·ÂÂÏ ËÁ [SRV_VPN_SUBNET] => 10.0.0.0 -->
+											<!-- –±–µ—Ä–µ–º –∏–∑ [SRV_VPN_SUBNET] => 10.0.0.0 -->
 											<attribute name="cpe_mode">Routing</attribute>
-											<!-- ÔÓ ÛÏÓÎ˜‡ÌË˛ Routing -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='ÒÚ‡ÚË˜ÂÒÍ‡ˇ'">
+											<!-- –ø–æ —É–º–æ–ª—á–∞–Ω–∏—é Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='—Å—Ç–∞—Ç–∏—á–µ—Å–∫–∞—è'">
 												<attribute name="routing_mode">STATIC</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_PKT_ROUTING_TYPE] => ÒÚ‡ÚË˜ÂÒÍ‡ˇ, ÚÓ "routing_mode" = ÕÂÚ,-->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='‰ËÌ‡ÏË˜ÂÒÍ‡ˇ'">
+											<!-- –µ—Å–ª–∏ [SRV_VPN_PKT_ROUTING_TYPE] => —Å—Ç–∞—Ç–∏—á–µ—Å–∫–∞—è, —Ç–æ "routing_mode" = –ù–µ—Ç,-->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='–¥–∏–Ω–∞–º–∏—á–µ—Å–∫–∞—è'">
 												<attribute name="routing_mode">BGP</attribute>
 											</xsl:if>
-											<!--ÂÒÎË [SRV_VPN_PKT_ROUTING_TYPE] => ‰ËÌ‡ÏË˜ÂÒÍ‡ˇ, ÚÓ "routing_mode" = ƒ‡ -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='ÕÂÚ'">
+											<!--–µ—Å–ª–∏ [SRV_VPN_PKT_ROUTING_TYPE] => –¥–∏–Ω–∞–º–∏—á–µ—Å–∫–∞—è, —Ç–æ "routing_mode" = –î–∞ -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='–ù–µ—Ç'">
 												<attribute name="isLocal">false</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ÕÂÚ, ÚÓ as_id = 12389 -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='ƒ‡'">
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –ù–µ—Ç, —Ç–æ as_id = 12389 -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='–î–∞'">
 												<attribute name="isLocal">true</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ƒ‡, ÚÓ as_id = 0 -->
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –î–∞, —Ç–æ as_id = 0 -->
 										</xsl:if>
 										<xsl:if test="ServiceType='VPN_L2'">
 											<attribute name="vpn_type">L2_VPN</attribute>
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
 											</attribute>
-											<!-- ·ÂÂÏ ËÁ [SRV_VPN_SUBNET] => 10.0.0.0 -->
+											<!-- –±–µ—Ä–µ–º –∏–∑ [SRV_VPN_SUBNET] => 10.0.0.0 -->
 											<attribute name="cpe_mode">Routing</attribute>
-											<!-- ÔÓ ÛÏÓÎ˜‡ÌË˛ Routing -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='ÒÚ‡ÚË˜ÂÒÍ‡ˇ'">
+											<!-- –ø–æ —É–º–æ–ª—á–∞–Ω–∏—é Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='—Å—Ç–∞—Ç–∏—á–µ—Å–∫–∞—è'">
 												<attribute name="routing_mode">STATIC</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_PKT_ROUTING_TYPE] => ÒÚ‡ÚË˜ÂÒÍ‡ˇ, ÚÓ "routing_mode" = ÕÂÚ,-->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='‰ËÌ‡ÏË˜ÂÒÍ‡ˇ'">
+											<!-- –µ—Å–ª–∏ [SRV_VPN_PKT_ROUTING_TYPE] => —Å—Ç–∞—Ç–∏—á–µ—Å–∫–∞—è, —Ç–æ "routing_mode" = –ù–µ—Ç,-->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='–¥–∏–Ω–∞–º–∏—á–µ—Å–∫–∞—è'">
 												<attribute name="routing_mode">BGP</attribute>
 											</xsl:if>
-											<!--ÂÒÎË [SRV_VPN_PKT_ROUTING_TYPE] => ‰ËÌ‡ÏË˜ÂÒÍ‡ˇ, ÚÓ "routing_mode" = ƒ‡ -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='ÕÂÚ'">
+											<!--–µ—Å–ª–∏ [SRV_VPN_PKT_ROUTING_TYPE] => –¥–∏–Ω–∞–º–∏—á–µ—Å–∫–∞—è, —Ç–æ "routing_mode" = –î–∞ -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='–ù–µ—Ç'">
 												<attribute name="isLocal">false</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ÕÂÚ, ÚÓ as_id = 12389 -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='ƒ‡'">
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –ù–µ—Ç, —Ç–æ as_id = 12389 -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='–î–∞'">
 												<attribute name="isLocal">true</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ƒ‡, ÚÓ as_id = 0 -->
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –î–∞, —Ç–æ as_id = 0 -->
 										</xsl:if>
 										<xsl:if test="ServiceType='VPLS point'">
 											<attribute name="vpn_type">VPLS</attribute>
@@ -483,66 +483,66 @@
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
 											</attribute>
-											<!-- ·ÂÂÏ ËÁ [SRV_VPN_SUBNET] => 10.0.0.0 -->
+											<!-- –±–µ—Ä–µ–º –∏–∑ [SRV_VPN_SUBNET] => 10.0.0.0 -->
 											<attribute name="cpe_mode">Routing</attribute>
-											<!-- ÔÓ ÛÏÓÎ˜‡ÌË˛ Routing -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='ÒÚ‡ÚË˜ÂÒÍ‡ˇ'">
+											<!-- –ø–æ —É–º–æ–ª—á–∞–Ω–∏—é Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='—Å—Ç–∞—Ç–∏—á–µ—Å–∫–∞—è'">
 												<attribute name="routing_mode">STATIC</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_PKT_ROUTING_TYPE] => ÒÚ‡ÚË˜ÂÒÍ‡ˇ, ÚÓ "routing_mode" = ÕÂÚ,-->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='‰ËÌ‡ÏË˜ÂÒÍ‡ˇ'">
+											<!-- –µ—Å–ª–∏ [SRV_VPN_PKT_ROUTING_TYPE] => —Å—Ç–∞—Ç–∏—á–µ—Å–∫–∞—è, —Ç–æ "routing_mode" = –ù–µ—Ç,-->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='–¥–∏–Ω–∞–º–∏—á–µ—Å–∫–∞—è'">
 												<attribute name="routing_mode">BGP</attribute>
 											</xsl:if>
-											<!--ÂÒÎË [SRV_VPN_PKT_ROUTING_TYPE] => ‰ËÌ‡ÏË˜ÂÒÍ‡ˇ, ÚÓ "routing_mode" = ƒ‡ -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='ÕÂÚ'">
+											<!--–µ—Å–ª–∏ [SRV_VPN_PKT_ROUTING_TYPE] => –¥–∏–Ω–∞–º–∏—á–µ—Å–∫–∞—è, —Ç–æ "routing_mode" = –î–∞ -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='–ù–µ—Ç'">
 												<attribute name="isLocal">false</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ÕÂÚ, ÚÓ as_id = 12389 -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='ƒ‡'">
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –ù–µ—Ç, —Ç–æ as_id = 12389 -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='–î–∞'">
 												<attribute name="isLocal">true</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ƒ‡, ÚÓ as_id = 0 -->
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –î–∞, —Ç–æ as_id = 0 -->
 										</xsl:if>
 										<xsl:if test="ServiceType='cfs_vpn'">
 											<attribute name="vpn_type">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_TYPE"/>
 											</attribute>
-											<!--  “ËÔ VPN ·ÂÂÏ ËÁ [SRV_VPN_TYPE] => VPLS point -->
+											<!--  –¢–∏–ø VPN –±–µ—Ä–µ–º –∏–∑ [SRV_VPN_TYPE] => VPLS point -->
 											<attribute name="vpn_qos">
 												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceQoS"/>
 											</attribute>
-											<!--  Î‡ÒÒ Ó·ÒÎÛÊË‚‡ÌËˇ(QoS) ·ÂÂÏ ËÁ [SRV_CMS_ServiceQoS] => N -->
+											<!-- –ö–ª–∞—Å—Å –æ–±—Å–ª—É–∂–∏–≤–∞–Ω–∏—è(QoS) –±–µ—Ä–µ–º –∏–∑ [SRV_CMS_ServiceQoS] => N -->
 											<attribute name="vpn_topology">
 												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceTopology"/>
 											</attribute>
-											<!-- “ÓÔÓÎÓ„Ëˇ ·ÂÂÏ ËÁ [SRV_CMS_ServiceTopology] => FM VPN (full mesh VPN) -->
+											<!-- –¢–æ–ø–æ–ª–æ–≥–∏—è –±–µ—Ä–µ–º –∏–∑ [SRV_CMS_ServiceTopology] => FM VPN (full mesh VPN) -->
 											<attribute name="vpn_id">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_ID"/>
 											</attribute>
-											<!-- ID VPN ÒÂÚË ·ÂÂÏ ËÁ [SRV_VPN_ID] => ID VPN ÒÂÚË -->
+											<!-- ID VPN —Å–µ—Ç–∏ –±–µ—Ä–µ–º –∏–∑ [SRV_VPN_ID] => ID VPN —Å–µ—Ç–∏ -->
 											<attribute name="vpn_name">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_NAME"/>
 											</attribute>
-											<!-- »Ïˇ VPN ÒÂÚË ·ÂÂÏ ËÁ [SRV_VPN_NAME] => »Ïˇ VPN ÒÂÚË-->
+											<!-- –ò–º—è VPN —Å–µ—Ç–∏ –±–µ—Ä–µ–º –∏–∑ [SRV_VPN_NAME] => –ò–º—è VPN —Å–µ—Ç–∏-->
 											<attribute name="pe_as">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_AS"/>
 											</attribute>
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='ÕÂÚ'">
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='–ù–µ—Ç'">
 												<attribute name="isLocal">false</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ÕÂÚ, ÚÓ as_id = 12389 -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='ƒ‡'">
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –ù–µ—Ç, —Ç–æ as_id = 12389 -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='–î–∞'">
 												<attribute name="isLocal">true</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ƒ‡, ÚÓ as_id = 0 -->
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –î–∞, —Ç–æ as_id = 0 -->
 											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='false'">
 												<attribute name="isLocal">false</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ÕÂÚ, ÚÓ as_id = 12389 -->
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –ù–µ—Ç, —Ç–æ as_id = 12389 -->
 											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='true'">
 												<attribute name="isLocal">true</attribute>
 											</xsl:if>
-											<!-- ÂÒÎË [SRV_VPN_LOCAL_VPN] => ƒ‡, ÚÓ as_id = 0 -->
+											<!-- –µ—Å–ª–∏ [SRV_VPN_LOCAL_VPN] => –î–∞, —Ç–æ as_id = 0 -->
 										</xsl:if>
 									</orderItemAttributes>
 								</orderItem>

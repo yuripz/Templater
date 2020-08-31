@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ass="urn:ru:rt:hrms:assetscost" targetNamespace="urn:ru:rt:hrms:assetscost">
-	<!-- СТОИМОСТЬ АКТИВОВ-->
+	<!-- РЎРўРћРРњРћРЎРўР¬ РђРљРўРР’РћР’-->
 	<xs:complexType name="tAssetsCostList">
 		<xs:annotation>
-			<xs:documentation>Список стоимости актива</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЃС‚РѕРёРјРѕСЃС‚Рё Р°РєС‚РёРІР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="AssetsCost" type="ass:tAssetsCost" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание списка стоимости актива</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃС‚РѕРёРјРѕСЃС‚Рё Р°РєС‚РёРІР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -17,22 +17,22 @@
 		<xs:sequence>
 			<xs:element name="ObjectCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Внешний код объекта</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РєРѕРґ РѕР±СЉРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AssetNumber" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Номер актива R12</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ Р°РєС‚РёРІР° R12</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Cost" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Стоимость актива</xs:documentation>
+					<xs:documentation>РЎС‚РѕРёРјРѕСЃС‚СЊ Р°РєС‚РёРІР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PlacedInServiceDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата ввода в эксплуатацию</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РІРІРѕРґР° РІ СЌРєСЃРїР»СѓР°С‚Р°С†РёСЋ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

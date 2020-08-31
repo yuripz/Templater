@@ -2,86 +2,86 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0">
 	<xs:complexType name="ManageContactsDicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Контакты контрагентов</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРЅС‚Р°РєС‚С‹ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ContactsList" type="tContactsList">
 				<xs:annotation>
-					<xs:documentation>Список контактов контрагента</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє РєРѕРЅС‚Р°РєС‚РѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 		<xs:complexType name="tContactsList">
 		<xs:annotation>
-			<xs:documentation>Список контактов контрагента</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РєРѕРЅС‚Р°РєС‚РѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Contact" type="tContact" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание контакта контрагента</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tContact">
 		<xs:annotation>
-			<xs:documentation>Описание контакта контрагента</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ContactId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контакта контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚Р°РєС‚Р° РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VendorId" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор контрагента</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Name" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Имя контакта  контрагента</xs:documentation>
+					<xs:documentation>РРјСЏ РєРѕРЅС‚Р°РєС‚Р°  РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MiddleName" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Фамилия контакта  контрагента</xs:documentation>
+					<xs:documentation>Р¤Р°РјРёР»РёСЏ РєРѕРЅС‚Р°РєС‚Р°  РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LastName" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Отчество контакта  контрагента</xs:documentation>
+					<xs:documentation>РћС‚С‡РµСЃС‚РІРѕ РєРѕРЅС‚Р°РєС‚Р°  РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Title" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Должность контакта  контрагента</xs:documentation>
+					<xs:documentation>Р”РѕР»Р¶РЅРѕСЃС‚СЊ РєРѕРЅС‚Р°РєС‚Р°  РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Email" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Почта контакта  контрагента</xs:documentation>
+					<xs:documentation>РџРѕС‡С‚Р° РєРѕРЅС‚Р°РєС‚Р°  РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Phone" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Телефон контакта  контрагента</xs:documentation>
+					<xs:documentation>РўРµР»РµС„РѕРЅ РєРѕРЅС‚Р°РєС‚Р°  РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Fax" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Факс контакта  контрагента</xs:documentation>
+					<xs:documentation>Р¤Р°РєСЃ РєРѕРЅС‚Р°РєС‚Р°  РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Срок действия  контакта  контрагента  (по)</xs:documentation>
+					<xs:documentation>РЎСЂРѕРє РґРµР№СЃС‚РІРёСЏ  РєРѕРЅС‚Р°РєС‚Р°  РєРѕРЅС‚СЂР°РіРµРЅС‚Р°  (РїРѕ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -107,17 +107,17 @@
 	</xs:simpleType>
 		<xs:simpleType name="tStatus">
 		<xs:annotation>
-			<xs:documentation>Статус события</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="A">
 				<xs:annotation>
-					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

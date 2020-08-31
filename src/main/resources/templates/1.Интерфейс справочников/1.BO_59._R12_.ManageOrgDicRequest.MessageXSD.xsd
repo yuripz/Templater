@@ -5,12 +5,12 @@
 
 <xs:complexType name="tManageOrgDicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Операционные единицы</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РћРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РµРґРёРЅРёС†С‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperUnitList" type="tOperUnitList">
 				<xs:annotation>
-					<xs:documentation>Список справочников Операционные единицы</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РћРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -20,12 +20,12 @@
 
 <xs:complexType name="tOperUnitList">
 		<xs:annotation>
-			<xs:documentation>Описание списка  справочников ОЕ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР°  СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РћР•</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OperUnit" type="tOperUnit" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Справочник ОЕ</xs:documentation>
+					<xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РћР•</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -34,67 +34,67 @@
 
 <xs:complexType name="tOperUnit">
 		<xs:annotation>
-			<xs:documentation>Описание справочника Коды ТОУ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРґС‹ РўРћРЈ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="OrgId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор Операционной единицы</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РћРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FilialCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код филиала</xs:documentation>
+					<xs:documentation>РљРѕРґ С„РёР»РёР°Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FilialDesc" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Имя филиала</xs:documentation>
+					<xs:documentation>РРјСЏ С„РёР»РёР°Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgType" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Тип операционной единицы</xs:documentation>
+					<xs:documentation>РўРёРї РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgTypeDesc" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Имя типа ОЕ</xs:documentation>
+					<xs:documentation>РРјСЏ С‚РёРїР° РћР•</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MRCode" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Код МакроРегиона</xs:documentation>
+					<xs:documentation>РљРѕРґ РњР°РєСЂРѕР РµРіРёРѕРЅР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MRDesc" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Имя МакроРегиона</xs:documentation>
+					<xs:documentation>РРјСЏ РњР°РєСЂРѕР РµРіРёРѕРЅР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Код Компании</xs:documentation>
+					<xs:documentation>РљРѕРґ РљРѕРјРїР°РЅРёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CompanyDesc" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Имя Компании</xs:documentation>
+					<xs:documentation>РРјСЏ РљРѕРјРїР°РЅРёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StartDateActive" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата активности с</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё СЃ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EndDateActive" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата активности по</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р°РєС‚РёРІРЅРѕСЃС‚Рё РїРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -102,17 +102,17 @@
 
 <xs:simpleType name="tStatus">
 		<xs:annotation>
-			<xs:documentation>Статус события</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="A">
 				<xs:annotation>
-					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -42,7 +42,7 @@
   <wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="ManageContract">
-      <wsdl:documentation>Создание/корректировка рамочного договора</wsdl:documentation>
+      <wsdl:documentation>РЎРѕР·РґР°РЅРёРµ/РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєР° СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:contractaccountingservice:ManageContract"/>
       <wsdl:input name="ManageContractIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -56,7 +56,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageOrderStatus">
-      <wsdl:documentation>Передача статуса заказа (ДС ОФУ)</wsdl:documentation>
+      <wsdl:documentation>РџРµСЂРµРґР°С‡Р° СЃС‚Р°С‚СѓСЃР° Р·Р°РєР°Р·Р° (Р”РЎ РћР¤РЈ)</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:contractaccountingservice:ManageOrderStatus"/>
       <wsdl:input name="ManageOrderStatusIn">
         <soap:header message="tns:Context" part="context" use="literal"/>

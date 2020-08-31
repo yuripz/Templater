@@ -5,24 +5,24 @@
   <xs:element name="ManageOrderStatusRequest" type="tns:ManageOrderStatusRequest"/>
   <xs:complexType name="ManageContractRequest">
     <xs:annotation>
-      <xs:documentation>Запрос создания/корректировки рамочного договора</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРѕР·РґР°РЅРёСЏ/РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєРё СЂР°РјРѕС‡РЅРѕРіРѕ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="FrameContract" type="cnt:tFrameContract">
         <xs:annotation>
-          <xs:documentation>Рамочный договор</xs:documentation>
+          <xs:documentation>Р Р°РјРѕС‡РЅС‹Р№ РґРѕРіРѕРІРѕСЂ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageOrderStatusRequest">
     <xs:annotation>
-      <xs:documentation>Запрос передачи передачи статуса заказа (ДС ОФУ)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРµСЂРµРґР°С‡Рё РїРµСЂРµРґР°С‡Рё СЃС‚Р°С‚СѓСЃР° Р·Р°РєР°Р·Р° (Р”РЎ РћР¤РЈ)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="OrderStatus" type="cnt:tOrderStatus">
         <xs:annotation>
-          <xs:documentation>Статус заказа</xs:documentation>
+          <xs:documentation>РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р°</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

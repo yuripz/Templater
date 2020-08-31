@@ -3,7 +3,7 @@
 	<xsl:template match="/">
    <Confirmation>
     <ResultCode>0</ResultCode>
-    <Message>Ответ Hermes в массиве</Message>
+    <Message>РћС‚РІРµС‚ Hermes РІ РјР°СЃСЃРёРІРµ</Message>
 <DetailList>
 	<xsl:copy-of select="MsgData"/>
 </DetailList>

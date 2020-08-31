@@ -153,13 +153,13 @@
 									</CycleReserve>
 									<xsl:if test="SysOrderNum!=''">
 										<SysOrderNum>
-											<!--Ñèñòåìíûé íîìåð Çàêàçà-íàðÿäà</xs:documentation> -->
+											<!--Ð¡Ð¸ÑÑ‚ÐµÐ¼Ð½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€ Ð—Ð°ÐºÐ°Ð·Ð°-Ð½Ð°Ñ€ÑÐ´Ð°</xs:documentation> -->
 											<xsl:value-of select="SysOrderNum"/>
 										</SysOrderNum>
 									</xsl:if>
 									<xsl:if test="ExtOrderId!=''">
 										<ExtOrderId>
-											<!--Ñèñòåìíûé íîìåð Çàêàçà-íàðÿäà</xs:documentation> -->
+											<!--Ð¡Ð¸ÑÑ‚ÐµÐ¼Ð½Ñ‹Ð¹ Ð½Ð¾Ð¼ÐµÑ€ Ð—Ð°ÐºÐ°Ð·Ð°-Ð½Ð°Ñ€ÑÐ´Ð°</xs:documentation> -->
 											<xsl:value-of select="ExtOrderId"/>
 										</ExtOrderId>
 									</xsl:if>

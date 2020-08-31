@@ -23,228 +23,228 @@
   <xs:element name="ManageLicensesDicRequest" type="tns:ManageLicensesDicRequest"/>
   <xs:complexType name="ManageUnitsDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника ЕИ</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р•Р</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="UnitsList" type="dic:tUnitsList">
         <xs:annotation>
-          <xs:documentation>Список справочников ЕИ</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р•Р</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageInventoryItemDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Позиции</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РџРѕР·РёС†РёРё</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="InventoryItemList" type="dic:tInventoryItemList">
         <xs:annotation>
-          <xs:documentation>Список справочников Позиции</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РџРѕР·РёС†РёРё</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageVendorDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Контрагенты</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="VendorList" type="dic:tVendorList">
         <xs:annotation>
-          <xs:documentation>Список справочников Контрагенты</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageEmployeeDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Сотрудники</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РЎРѕС‚СЂСѓРґРЅРёРєРё</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="EmployeeList" type="dic:tEmployeeList">
         <xs:annotation>
-          <xs:documentation>Список справочников Сотрудники</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РЎРѕС‚СЂСѓРґРЅРёРєРё</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageProjectDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Проекты</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РџСЂРѕРµРєС‚С‹</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="ProjectList" type="dic:tProjectList">
         <xs:annotation>
-          <xs:documentation>Список справочников Проекты</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РџСЂРѕРµРєС‚С‹</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageTaskDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Задачи</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р—Р°РґР°С‡Рё</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="TaskList" type="dic:tTaskList">
         <xs:annotation>
-          <xs:documentation>Список справочников Задачи</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р—Р°РґР°С‡Рё</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageLauncherDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Пусковые очереди</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РџСѓСЃРєРѕРІС‹Рµ РѕС‡РµСЂРµРґРё</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="LauncherList" type="dic:tLauncherList">
         <xs:annotation>
-          <xs:documentation>Список справочников Пусковые очереди</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РџСѓСЃРєРѕРІС‹Рµ РѕС‡РµСЂРµРґРё</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageTOUDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Коды ТОУ</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРґС‹ РўРћРЈ</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="TOUList" type="dic:tTOUList">
         <xs:annotation>
-          <xs:documentation>Список справочников Коды ТОУ</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РљРѕРґС‹ РўРћРЈ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageOrgDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Операционные единицы</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РћРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РµРґРёРЅРёС†С‹</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="OperUnitList" type="dic:tOperUnitList">
         <xs:annotation>
-          <xs:documentation>Список справочников Операционные единицы</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РћРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РµРґРёРЅРёС†С‹</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageOperTypeDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Типы операций</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="OperTypeList" type="dic:tOperTypeList">
         <xs:annotation>
-          <xs:documentation>Список справочников Типы операций</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РўРёРїС‹ РѕРїРµСЂР°С†РёР№</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageOrganizationsDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Организаций</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РћСЂРіР°РЅРёР·Р°С†РёР№</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="OrganizationsList" type="dic:tOrganizationsList">
         <xs:annotation>
-          <xs:documentation>Список справочников Организации</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РћСЂРіР°РЅРёР·Р°С†РёРё</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageSegmentAccountDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Расходные счета – сегмент счет</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ СЃС‡РµС‚</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="SegmentAccountList" type="dic:tSegmentAccountList">
         <xs:annotation>
-          <xs:documentation>Список справочников Расходные счета – сегмент счет</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ СЃС‡РµС‚</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageSegmentCFODicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Расходные счета – сегмент ЦФО</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="SegmentCFOList" type="dic:tSegmentCFOList">
         <xs:annotation>
-          <xs:documentation>Список справочников Расходные счета – сегмент ЦФО</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManagePreciousMetalsDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Драгоценные металлы</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="PreciousMetalsList" type="dic:tPreciousMetalsList">
         <xs:annotation>
-          <xs:documentation>Список справочников Драгоценные металлы</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageCostsTypeDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Виды затрат</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р’РёРґС‹ Р·Р°С‚СЂР°С‚</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CostsArrivalTypeList" type="dic:tCostsArrivalTypeList">
         <xs:annotation>
-          <xs:documentation>Список справочников Виды затрат и поступлений</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р’РёРґС‹ Р·Р°С‚СЂР°С‚ Рё РїРѕСЃС‚СѓРїР»РµРЅРёР№</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageArrivalTypeDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочник Виды затрат</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРє Р’РёРґС‹ Р·Р°С‚СЂР°С‚</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CostsArrivalTypeList" type="dic:tCostsArrivalTypeList">
         <xs:annotation>
-          <xs:documentation>Список справочников Виды затрат и поступлений</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р’РёРґС‹ Р·Р°С‚СЂР°С‚ Рё РїРѕСЃС‚СѓРїР»РµРЅРёР№</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageContractDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Расходные рамочные договоры</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЂР°РјРѕС‡РЅС‹Рµ РґРѕРіРѕРІРѕСЂС‹</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="ContractList" type="dic:tContractList">
         <xs:annotation>
-          <xs:documentation>Список расходных рамочных договоров</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СЂР°СЃС…РѕРґРЅС‹С… СЂР°РјРѕС‡РЅС‹С… РґРѕРіРѕРІРѕСЂРѕРІ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageContactsDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Контакты контрагентов</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРЅС‚Р°РєС‚С‹ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="ContactsList" type="dic:tContactsList">
         <xs:annotation>
-          <xs:documentation>Список контактов контрагента</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє РєРѕРЅС‚Р°РєС‚РѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ManageLicensesDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Лицензии контрагентов</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р›РёС†РµРЅР·РёРё РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="LicensesList" type="dic:tLicensesList">
         <xs:annotation>
-          <xs:documentation>Список лицензий контрагента</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє Р»РёС†РµРЅР·РёР№ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

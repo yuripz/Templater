@@ -6,8 +6,8 @@
       <receiver>HTTP.HRMS</receiver>
       <tns:callbackEndpoints>
       <tns:callbackEndpoint>HRMS</tns:callbackEndpoint>
-            <tns:EndpointAtribute name="place">куда бежать</tns:EndpointAtribute>
-            <tns:EndpointAtribute name="время">когда визжать</tns:EndpointAtribute>      
+            <tns:EndpointAtribute name="place">РєСѓРґР° Р±РµР¶Р°С‚СЊ</tns:EndpointAtribute>
+            <tns:EndpointAtribute name="РІСЂРµРјСЏ">РєРѕРіРґР° РІРёР·Р¶Р°С‚СЊ</tns:EndpointAtribute>      
       </tns:callbackEndpoints>
       <!--<mode>SYNC</mode>-->
       <xsl:for-each select="HTTP_Get_SRV">
@@ -17,8 +17,8 @@
         <order>
           <orderId>
             <xsl:value-of select="Id_Adderss"/></orderId>
-            <OrderAtribute name="place">место встречи</OrderAtribute>
-            <OrderAtribute name="время">время вперед</OrderAtribute>
+            <OrderAtribute name="place">РјРµСЃС‚Рѕ РІСЃС‚СЂРµС‡Рё</OrderAtribute>
+            <OrderAtribute name="РІСЂРµРјСЏ">РІСЂРµРјСЏ РІРїРµСЂРµРґ</OrderAtribute>
           
           <Adderss>
             <xsl:value-of select="Str_Adderss"/>

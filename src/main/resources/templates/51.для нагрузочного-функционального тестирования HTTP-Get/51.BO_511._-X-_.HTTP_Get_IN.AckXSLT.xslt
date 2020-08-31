@@ -5,7 +5,7 @@
 
 <Response>
 	<ResultCode>0</ResultCode>
-	<ResultMessage>прием функционального тестирования HTTP-Get</ResultMessage>
+	<ResultMessage>РїСЂРёРµРј С„СѓРЅРєС†РёРѕРЅР°Р»СЊРЅРѕРіРѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ HTTP-Get</ResultMessage>
 	<PayLoad>
 		<Pay_Id>123456</Pay_Id>
 		<Manager_Id>987654321</Manager_Id>

@@ -15,7 +15,7 @@
 </xsl:when>    
   <xsl:otherwise>
   <ResultCode>-1020304</ResultCode>
-    <Message>Пришло пустое сообщение о сервисах</Message>
+    <Message>РџСЂРёС€Р»Рѕ РїСѓСЃС‚РѕРµ СЃРѕРѕР±С‰РµРЅРёРµ Рѕ СЃРµСЂРІРёСЃР°С…</Message>
   </xsl:otherwise>
  </xsl:choose>
      <Next>RESOUT</Next>

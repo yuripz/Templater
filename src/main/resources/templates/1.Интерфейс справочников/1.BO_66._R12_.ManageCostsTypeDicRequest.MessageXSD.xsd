@@ -4,47 +4,47 @@
 	<xs:element name="ManageCostsTypeDicRequest" type="tManageCostsTypeDicRequest"/>
 	<xs:complexType name="tManageCostsTypeDicRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос синхронизации справочника Виды затрат</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° Р’РёРґС‹ Р·Р°С‚СЂР°С‚</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="CostsArrivalTypeList" type="tCostsArrivalTypeList">
 				<xs:annotation>
-					<xs:documentation>Список справочников Виды затрат и поступлений</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ Р’РёРґС‹ Р·Р°С‚СЂР°С‚ Рё РїРѕСЃС‚СѓРїР»РµРЅРёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!--СПРАВОЧНИКИ ВИДОВ ЗАТРАТ И ПОСТУПЛЕНИЙ-->
+	<!--РЎРџР РђР’РћР§РќРРљР Р’РР”РћР’ Р—РђРўР РђРў Р РџРћРЎРўРЈРџР›Р•РќРР™-->
 	<xs:complexType name="tCostsArrivalTypeList">
 		<xs:annotation>
-			<xs:documentation>Список видов затрат</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РІРёРґРѕРІ Р·Р°С‚СЂР°С‚</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="CostsArrivalType" type="tCostsArrivalType" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание видов затрат и поступлений</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РІРёРґРѕРІ Р·Р°С‚СЂР°С‚ Рё РїРѕСЃС‚СѓРїР»РµРЅРёР№</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tCostsArrivalType">
 		<xs:annotation>
-			<xs:documentation>Описание видов затрат и поступлений</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РІРёРґРѕРІ Р·Р°С‚СЂР°С‚ Рё РїРѕСЃС‚СѓРїР»РµРЅРёР№</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="Cost" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Вид затрат</xs:documentation>
+					<xs:documentation>Р’РёРґ Р·Р°С‚СЂР°С‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Description" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Описание вида затрат</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ РІРёРґР° Р·Р°С‚СЂР°С‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Status" type="tStatus">
 				<xs:annotation>
-					<xs:documentation>Статус события</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -53,17 +53,17 @@
 
 <xs:simpleType name="tStatus">
 		<xs:annotation>
-			<xs:documentation>Статус события</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="A">
 				<xs:annotation>
-					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -3,17 +3,17 @@
            targetNamespace="urn:ru:rt:hrms:common">
   <xs:simpleType name="tStatus">
     <xs:annotation>
-      <xs:documentation>Статус события</xs:documentation>
+      <xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
       <xs:enumeration value="A">
         <xs:annotation>
-          <xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+          <xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
       <xs:enumeration value="D">
         <xs:annotation>
-          <xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+          <xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
         </xs:annotation>
       </xs:enumeration>
     </xs:restriction>

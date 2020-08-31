@@ -1,166 +1,166 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<!-- АКТ НА СПИСАНИЕ ИЗ ВНЕШНЕЙ СИСТЕМЫ-->
+	<!-- РђРљРў РќРђ РЎРџРРЎРђРќРР• РР— Р’РќР•РЁРќР•Р™ РЎРРЎРўР•РњР«-->
 	<xs:complexType name="tExtCancellationDocList">
 		<xs:annotation>
-			<xs:documentation>Список актов на списание из внешней системы</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РёР· РІРЅРµС€РЅРµР№ СЃРёСЃС‚РµРјС‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ExtCancellationDoc" type="tExtCancellationDoc" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Акт на списание из внешней системы</xs:documentation>
+					<xs:documentation>РђРєС‚ РЅР° СЃРїРёСЃР°РЅРёРµ РёР· РІРЅРµС€РЅРµР№ СЃРёСЃС‚РµРјС‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tExtCancellationDoc">
 		<xs:annotation>
-			<xs:documentation>Описание списка актов на списание из внешней системы</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° Р°РєС‚РѕРІ РЅР° СЃРїРёСЃР°РЅРёРµ РёР· РІРЅРµС€РЅРµР№ СЃРёСЃС‚РµРјС‹</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="ExtCostId" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Внешний идентификатор уровня стоимости</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓСЂРѕРІРЅСЏ СЃС‚РѕРёРјРѕСЃС‚Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrderId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор заказа</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtDocId" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Внешний идентификатор первичного документа</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїРµСЂРІРёС‡РЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvLayerId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор уровня стоимости</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓСЂРѕРІРЅСЏ СЃС‚РѕРёРјРѕСЃС‚Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtDocNum" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Номер первичного документа (внешнего)</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ РїРµСЂРІРёС‡РЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° (РІРЅРµС€РЅРµРіРѕ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtDocDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата первичного документа (внешнего)</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РїРµСЂРІРёС‡РЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° (РІРЅРµС€РЅРµРіРѕ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InventoryItemId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Номенклатура ТМЦ</xs:documentation>
+					<xs:documentation>РќРѕРјРµРЅРєР»Р°С‚СѓСЂР° РўРњР¦</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceProjectId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Источник – Проект</xs:documentation>
+					<xs:documentation>РСЃС‚РѕС‡РЅРёРє вЂ“ РџСЂРѕРµРєС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceTaskId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Источник – Задача</xs:documentation>
+					<xs:documentation>РСЃС‚РѕС‡РЅРёРє вЂ“ Р—Р°РґР°С‡Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Проект</xs:documentation>
+					<xs:documentation>РџСЂРѕРµРєС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TaskId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Задача</xs:documentation>
+					<xs:documentation>Р—Р°РґР°С‡Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ObjectCode" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Внешний код объекта</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РєРѕРґ РѕР±СЉРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceSubInventoryCode" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Источник - Склад</xs:documentation>
+					<xs:documentation>РСЃС‚РѕС‡РЅРёРє - РЎРєР»Р°Рґ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceMOL" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Источник - МОЛ</xs:documentation>
+					<xs:documentation>РСЃС‚РѕС‡РЅРёРє - РњРћР›</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SourceContractor" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Источник – Подрядчик</xs:documentation>
+					<xs:documentation>РСЃС‚РѕС‡РЅРёРє вЂ“ РџРѕРґСЂСЏРґС‡РёРє</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SubInventoryCode" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Склад</xs:documentation>
+					<xs:documentation>РЎРєР»Р°Рґ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MOL" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>МОЛ</xs:documentation>
+					<xs:documentation>РњРћР›</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Contractor" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Подрядчик</xs:documentation>
+					<xs:documentation>РџРѕРґСЂСЏРґС‡РёРє</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TransUnit" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>ЕИ</xs:documentation>
+					<xs:documentation>Р•Р</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TransQuantity" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Количество</xs:documentation>
+					<xs:documentation>РљРѕР»РёС‡РµСЃС‚РІРѕ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TransCost" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Цена</xs:documentation>
+					<xs:documentation>Р¦РµРЅР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TransValue" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Стоимость</xs:documentation>
+					<xs:documentation>РЎС‚РѕРёРјРѕСЃС‚СЊ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EqStatus" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Состояние оборудования</xs:documentation>
+					<xs:documentation>РЎРѕСЃС‚РѕСЏРЅРёРµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы  (например, идентификатор филиала)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹  (РЅР°РїСЂРёРјРµСЂ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»РёР°Р»Р°)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TransferOrgId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы  принимающей стороны</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹  РїСЂРёРЅРёРјР°СЋС‰РµР№ СЃС‚РѕСЂРѕРЅС‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TransId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор транзакции выдачи R12</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚СЂР°РЅР·Р°РєС†РёРё РІС‹РґР°С‡Рё R12</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExpenditureType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип расходов</xs:documentation>
+					<xs:documentation>РўРёРї СЂР°СЃС…РѕРґРѕРІ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtSourceLineId" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Идентификатор строки внешнего документа</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃС‚СЂРѕРєРё РІРЅРµС€РЅРµРіРѕ РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="WorkAcc" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Счет вида работ</xs:documentation>
+					<xs:documentation>РЎС‡РµС‚ РІРёРґР° СЂР°Р±РѕС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

@@ -10,52 +10,52 @@
 
     <xs:complexType name="tVendor">
         <xs:annotation>
-            <xs:documentation>Описание справочника Контрагенты</xs:documentation>
+            <xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="OrgId" type="xs:integer">
                 <xs:annotation>
-                    <xs:documentation>Идентификатор операционной единицы  (например, идентификатор филиала)</xs:documentation>
+                    <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹  (РЅР°РїСЂРёРјРµСЂ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»РёР°Р»Р°)</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="VendorId" type="xs:integer">
                 <xs:annotation>
-                    <xs:documentation>Идентификатор контрагента</xs:documentation>
+                    <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="VendorSiteId" type="xs:integer">
                 <xs:annotation>
-                    <xs:documentation>Идентификатор отделения контрагента</xs:documentation>
+                    <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕС‚РґРµР»РµРЅРёСЏ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="VendorName" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>Имя контрагента</xs:documentation>
+                    <xs:documentation>РРјСЏ РєРѕРЅС‚СЂР°РіРµРЅС‚Р°</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="AltNameVendorSite" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>Альтернативное имя отделения поставщика</xs:documentation>
+                    <xs:documentation>РђР»СЊС‚РµСЂРЅР°С‚РёРІРЅРѕРµ РёРјСЏ РѕС‚РґРµР»РµРЅРёСЏ РїРѕСЃС‚Р°РІС‰РёРєР°</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="EndDateActive" type="xs:dateTime">
                 <xs:annotation>
-                    <xs:documentation>Дата действия по</xs:documentation>
+                    <xs:documentation>Р”Р°С‚Р° РґРµР№СЃС‚РІРёСЏ РїРѕ</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="INN" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>ИНН</xs:documentation>
+                    <xs:documentation>РРќРќ</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="KPP" type="xs:string">
                 <xs:annotation>
-                    <xs:documentation>КПП</xs:documentation>
+                    <xs:documentation>РљРџРџ</xs:documentation>
                 </xs:annotation>
             </xs:element>
             <xs:element name="Status" type="tStatus">
                 <xs:annotation>
-                    <xs:documentation>Статус события</xs:documentation>
+                    <xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
                 </xs:annotation>
             </xs:element>
         </xs:sequence>
@@ -63,12 +63,12 @@
   
     <xs:complexType name="tVendorList">
         <xs:annotation>
-            <xs:documentation>Описание списка справочников контрагентов</xs:documentation>
+            <xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ</xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="Vendor" type="tVendor" maxOccurs="unbounded">
                 <xs:annotation>
-                    <xs:documentation>Справочник Контрагенты</xs:documentation>
+                    <xs:documentation>РЎРїСЂР°РІРѕС‡РЅРёРє РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</xs:documentation>
                 </xs:annotation>
             </xs:element>
         </xs:sequence>
@@ -77,12 +77,12 @@
 
 <xs:complexType name="tManageVendorDicRequest">
         <xs:annotation>
-            <xs:documentation>Запрос синхронизации справочника Контрагенты</xs:documentation>
+            <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</xs:documentation>
         </xs:annotation>
         <xs:sequence>
             <xs:element name="VendorList" type="tVendorList">
                 <xs:annotation>
-                    <xs:documentation>Список справочников Контрагенты</xs:documentation>
+                    <xs:documentation>РЎРїРёСЃРѕРє СЃРїСЂР°РІРѕС‡РЅРёРєРѕРІ РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

@@ -6,7 +6,7 @@
    
      <ResultCode><xsl:value-of select="orderResult/orderResultCode"/></ResultCode>
     <Message><xsl:value-of select="orderResult/orderResultText"/></Message>
-<!-- ÀÐÃÓÑ -->
+<!-- ÐÐ Ð“Ð£Ð¡ -->
      <xsl:for-each select="payload">
        <DetailList>
   

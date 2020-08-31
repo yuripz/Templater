@@ -30,7 +30,7 @@
 	<wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 		<wsdl:operation name="ManageAssetsCost">
-			<wsdl:documentation>Передача стоимости актива</wsdl:documentation>
+			<wsdl:documentation>РџРµСЂРµРґР°С‡Р° СЃС‚РѕРёРјРѕСЃС‚Рё Р°РєС‚РёРІР°</wsdl:documentation>
 			<soap:operation soapAction="urn:ru:rt:hrms:assetscostservice:ManageAssetsCost"/>
 			<wsdl:input name="ManageAssetsCostIn">
 				<soap:header message="tns:Context" part="context" use="literal"/>

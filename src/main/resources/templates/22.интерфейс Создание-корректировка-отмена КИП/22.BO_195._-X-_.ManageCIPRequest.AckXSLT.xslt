@@ -4,7 +4,7 @@
 		<xsl:for-each select="ConfirmManageCIPRequest">
 			<Confirmation>
 				<xsl:for-each select="CIPConfirmation">
-					<!-- Ïîäòâåðæäåíèå ÊÈÏ -->
+					<!-- ÐŸÐ¾Ð´Ñ‚Ð²ÐµÑ€Ð¶Ð´ÐµÐ½Ð¸Ðµ ÐšÐ˜ÐŸ -->
 					<ResultCode>
 						<xsl:value-of select="ResultCode"/>
 					</ResultCode>
@@ -12,7 +12,7 @@
 						<xsl:value-of select="Message"/>
 					</Message>
 					<xsl:for-each select="CIPDetailList">
-					<!--  Äåòàëüíàÿ èíôîðìàöèÿ ïî çàãðóçêå ïàêåòà -->
+					<!--  Ð”ÐµÑ‚Ð°Ð»ÑŒÐ½Ð°Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸Ñ Ð¿Ð¾ Ð·Ð°Ð³Ñ€ÑƒÐ·ÐºÐµ Ð¿Ð°ÐºÐµÑ‚Ð° -->
 						 <DetailList> 
 							<xsl:for-each select="CIP">
 								<Detail>

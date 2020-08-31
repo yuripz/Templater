@@ -2,77 +2,77 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ru:rt:hrms:confirmationmessageoutr12"
            xmlns:cnf="urn:ru:rt:hrms:confirmation" targetNamespace="urn:ru:rt:hrms:confirmationmessageoutr12">
   <xs:import namespace="urn:ru:rt:hrms:confirmation" schemaLocation="https://10.32.245.8:7002/HermesSOAPService/SOAPServlet/ConfirmationOutR12Request?xsd=5"/>
-  <!-- СКЛАД-ПОСТУПЛЕНИЯ-->
+  <!-- РЎРљР›РђР”-РџРћРЎРўРЈРџР›Р•РќРРЇ-->
   <xs:element name="ConfirmManageArrivalOnProductRequest" type="tns:ConfirmManageArrivalOnProductRequest"/>
   <xs:element name="ConfirmManageArrivalByPersonRequest" type="tns:ConfirmManageArrivalByPersonRequest"/>
   <xs:complexType name="ConfirmManageArrivalOnProductRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Операция оприходования готовой продукции»</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РћРїРµСЂР°С†РёСЏ РѕРїСЂРёС…РѕРґРѕРІР°РЅРёСЏ РіРѕС‚РѕРІРѕР№ РїСЂРѕРґСѓРєС†РёРёВ»</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="DetailConfirmation" type="cnf:tDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageArrivalByPersonRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Возврат от физ. лица»</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’РѕР·РІСЂР°С‚ РѕС‚ С„РёР·. Р»РёС†Р°В»</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="DetailConfirmation" type="cnf:tDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <!-- ДОГОВОРНОЙ УЧЕТ-->
+  <!-- Р”РћР“РћР’РћР РќРћР™ РЈР§Р•Рў-->
   <xs:element name="ConfirmManageOrderRequest" type="tns:ConfirmManageOrderRequest"/>
   <xs:complexType name="ConfirmManageOrderRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи создания/корректировки заказа (ДС ОФУ)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё СЃРѕР·РґР°РЅРёСЏ/РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєРё Р·Р°РєР°Р·Р° (Р”РЎ РћР¤РЈ)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Confirmation" type="cnf:tConfirmation">
         <xs:annotation>
-          <xs:documentation>Подтверждение</xs:documentation>
+          <xs:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <!-- УЧЕТ АКТОВ ВЫПОЛНЕННЫХ РАБОТ (КРЕДИТОРЫ)-->
+  <!-- РЈР§Р•Рў РђРљРўРћР’ Р’Р«РџРћР›РќР•РќРќР«РҐ Р РђР‘РћРў (РљР Р•Р”РРўРћР Р«)-->
   <xs:element name="ConfirmManageInvoiceRequest" type="tns:ConfirmManageInvoiceRequest"/>
   <xs:complexType name="ConfirmManageInvoiceRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи актов на выполнение работ</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё Р°РєС‚РѕРІ РЅР° РІС‹РїРѕР»РЅРµРЅРёРµ СЂР°Р±РѕС‚</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Confirmation" type="cnf:tConfirmation">
         <xs:annotation>
-          <xs:documentation>Подтверждение</xs:documentation>
+          <xs:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <!-- ВОЗВРАТ ОБОРУДОВАНИЯ ИЗ АРЕНДЫ-->
+  <!-- Р’РћР—Р’Р РђРў РћР‘РћР РЈР”РћР’РђРќРРЇ РР— РђР Р•РќР”Р«-->
   <xs:element name="ConfirmManageCancellationRequest" type="tns:ConfirmManageCancellationRequest"/>
   <xs:complexType name="ConfirmManageCancellationRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения полного/частичного списания ОС для операций возврата из аренды оконечного
-                        оборудования</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРѕР»РЅРѕРіРѕ/С‡Р°СЃС‚РёС‡РЅРѕРіРѕ СЃРїРёСЃР°РЅРёСЏ РћРЎ РґР»СЏ РѕРїРµСЂР°С†РёР№ РІРѕР·РІСЂР°С‚Р° РёР· Р°СЂРµРЅРґС‹ РѕРєРѕРЅРµС‡РЅРѕРіРѕ
+                        РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="DetailConfirmation" type="cnf:tDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <!-- ПЕРЕМЕЩЕНИЕ, СПИСАНИЯ НА СКЛАДЕ-->
+  <!-- РџР•Р Р•РњР•Р©Р•РќРР•, РЎРџРРЎРђРќРРЇ РќРђ РЎРљР›РђР”Р•-->
   <xs:element name="ConfirmManageExtCancellationDocMOLRequest" type="tns:ConfirmManageExtCancellationDocMOLRequest"/>
   <xs:element name="ConfirmManageMaterialExtCancellationDocRequest"
               type="tns:ConfirmManageMaterialExtCancellationDocRequest"/>
@@ -95,147 +95,147 @@
               type="tns:ConfirmManageExtCancellationDocDeliveryInOnMFPRequest"/>
   <xs:complexType name="ConfirmManageExtCancellationDocMOLRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Перемещения между Складскими подразделениями/МОЛами»
-                        (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РџРµСЂРµРјРµС‰РµРЅРёСЏ РјРµР¶РґСѓ РЎРєР»Р°РґСЃРєРёРјРё РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏРјРё/РњРћР›Р°РјРёВ»
+                        (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageMaterialExtCancellationDocRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Списания материалов в производство» (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РЎРїРёСЃР°РЅРёСЏ РјР°С‚РµСЂРёР°Р»РѕРІ РІ РїСЂРѕРёР·РІРѕРґСЃС‚РІРѕВ» (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageDispositionExtCancellationDocRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Утилизация» (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РЈС‚РёР»РёР·Р°С†РёСЏВ» (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageExtCancellationDocProjectRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Перемещения между проектами» (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РџРµСЂРµРјРµС‰РµРЅРёСЏ РјРµР¶РґСѓ РїСЂРѕРµРєС‚Р°РјРёВ» (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageExtCancellationDocTransferAgentRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Передача агенту» (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РџРµСЂРµРґР°С‡Р° Р°РіРµРЅС‚СѓВ» (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageExtCancellationDocReturnFromAgentRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Возврат оборудования от агента» (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’РѕР·РІСЂР°С‚ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ РѕС‚ Р°РіРµРЅС‚Р°В» (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageExtCancellationDocReturnFromContractorRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Возврат от подрядчика» (процесс NC)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’РѕР·РІСЂР°С‚ РѕС‚ РїРѕРґСЂСЏРґС‡РёРєР°В» (РїСЂРѕС†РµСЃСЃ NC)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmCPEManageExtCancellationDocDeliveryInProjectRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Выдача оборудования в проекты» (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’С‹РґР°С‡Р° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ РІ РїСЂРѕРµРєС‚С‹В» (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmNCManageExtCancellationDocDeliveryInProjectRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Выдача оборудования в проекты» (процесс NC)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«Р’С‹РґР°С‡Р° РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ РІ РїСЂРѕРµРєС‚С‹В» (РїСЂРѕС†РµСЃСЃ NC)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageExtCancellationDocSaleRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операций «Продажа абоненту» (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёР№ В«РџСЂРѕРґР°Р¶Р° Р°Р±РѕРЅРµРЅС‚СѓВ» (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="ConfirmManageExtCancellationDocDeliveryInOnMFPRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения операций «Выдача по МФП» (процесс CPE)</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РѕРїРµСЂР°С†РёР№ В«Р’С‹РґР°С‡Р° РїРѕ РњР¤РџВ» (РїСЂРѕС†РµСЃСЃ CPE)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="CancelDocDetailConfirmation" type="cnf:tCancelDocDetailConfirmation">
         <xs:annotation>
-          <xs:documentation>Детализированное подтверждение</xs:documentation>
+          <xs:documentation>Р”РµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅРѕРµ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <!-- ПРОЕКТЫ-->
+  <!-- РџР РћР•РљРўР«-->
   <xs:element name="ConfirmManageProjectTaskRequest" type="tns:ConfirmManageProjectTaskRequest"/>
   <xs:complexType name="ConfirmManageProjectTaskRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи задач с типом Актив</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё Р·Р°РґР°С‡ СЃ С‚РёРїРѕРј РђРєС‚РёРІ</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="ProjectTaskConfirmation" type="cnf:tProjectTaskConfirmation">
         <xs:annotation>
-          <xs:documentation>Подтверждение</xs:documentation>
+          <xs:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -243,12 +243,12 @@
   <xs:element name="ConfirmManageInputOrderRequest" type="tns:ConfirmManageInputOrderRequest"/>
   <xs:complexType name="ConfirmManageInputOrderRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операции Создание карточек приказов о вводе</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёРё РЎРѕР·РґР°РЅРёРµ РєР°СЂС‚РѕС‡РµРє РїСЂРёРєР°Р·РѕРІ Рѕ РІРІРѕРґРµ</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="InputOrderConfirmation" type="cnf:tInputOrderConfirmation">
         <xs:annotation>
-          <xs:documentation>Подтверждение</xs:documentation>
+          <xs:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
@@ -256,12 +256,12 @@
   <xs:element name="ConfirmManageProjectAssetsRequest" type="tns:ConfirmManageProjectAssetsRequest"/>
   <xs:complexType name="ConfirmManageProjectAssetsRequest">
     <xs:annotation>
-      <xs:documentation>Запрос подтверждения передачи операции Создание карточек проектных активов</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ РїРѕРґС‚РІРµСЂР¶РґРµРЅРёСЏ РїРµСЂРµРґР°С‡Рё РѕРїРµСЂР°С†РёРё РЎРѕР·РґР°РЅРёРµ РєР°СЂС‚РѕС‡РµРє РїСЂРѕРµРєС‚РЅС‹С… Р°РєС‚РёРІРѕРІ</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="AssetsConfirmation" type="cnf:tAssetsConfirmation">
         <xs:annotation>
-          <xs:documentation>Подтверждение</xs:documentation>
+          <xs:documentation>РџРѕРґС‚РІРµСЂР¶РґРµРЅРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

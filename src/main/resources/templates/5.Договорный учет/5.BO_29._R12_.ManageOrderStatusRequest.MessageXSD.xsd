@@ -3,120 +3,120 @@
 	<xs:element name="ManageOrderStatusRequest" type="tManageOrderStatusRequest"/>
 	<xs:complexType name="tManageOrderStatusRequest">
 		<xs:annotation>
-			<xs:documentation>Запрос передачи передачи статуса заказа (ДС ОФУ)</xs:documentation>
+			<xs:documentation>Р—Р°РїСЂРѕСЃ РїРµСЂРµРґР°С‡Рё РїРµСЂРµРґР°С‡Рё СЃС‚Р°С‚СѓСЃР° Р·Р°РєР°Р·Р° (Р”РЎ РћР¤РЈ)</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="OrderStatus" type="tOrderStatus">
         <xs:annotation>
-          <xs:documentation>Статус заказа</xs:documentation>
+          <xs:documentation>РЎС‚Р°С‚СѓСЃ Р·Р°РєР°Р·Р°</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <!-- СТАТУС ЗАКАЗА-->
+  <!-- РЎРўРђРўРЈРЎ Р—РђРљРђР—Рђ-->
   <xs:complexType name="tOrderStatus">
     <xs:annotation>
-      <xs:documentation>Описание статуса заказа</xs:documentation>
+      <xs:documentation>РћРїРёСЃР°РЅРёРµ СЃС‚Р°С‚СѓСЃР° Р·Р°РєР°Р·Р°</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="OrderId" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Идентификатор заказа</xs:documentation>
+          <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РєР°Р·Р°</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ExtOrderId" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Внешний идентификатор заказа</xs:documentation>
+          <xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РєР°Р·Р°</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Version" type="xs:decimal">
         <xs:annotation>
-          <xs:documentation>Версия заказа</xs:documentation>
+          <xs:documentation>Р’РµСЂСЃРёСЏ Р·Р°РєР°Р·Р°</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Stage" type="xs:decimal">
         <xs:annotation>
-          <xs:documentation>Версия утверждения</xs:documentation>
+          <xs:documentation>Р’РµСЂСЃРёСЏ СѓС‚РІРµСЂР¶РґРµРЅРёСЏ</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ContractStatus" type="xs:string">
         <xs:annotation>
-          <xs:documentation>Статус утверждения документа</xs:documentation>
+          <xs:documentation>РЎС‚Р°С‚СѓСЃ СѓС‚РІРµСЂР¶РґРµРЅРёСЏ РґРѕРєСѓРјРµРЅС‚Р°</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="OrgId" type="xs:integer">
         <xs:annotation>
-          <xs:documentation>Идентификатор операционной единицы  (например, идентификатор филиала)</xs:documentation>
+          <xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹  (РЅР°РїСЂРёРјРµСЂ, РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С„РёР»РёР°Р»Р°)</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ApproverList" type="tApproverList" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Список утверждающих</xs:documentation>
+          <xs:documentation>РЎРїРёСЃРѕРє СѓС‚РІРµСЂР¶РґР°СЋС‰РёС…</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="InternalDocNum" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Внутренний номер договора</xs:documentation>
+          <xs:documentation>Р’РЅСѓС‚СЂРµРЅРЅРёР№ РЅРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="VendorsDocNum" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Номер договора поставщика</xs:documentation>
+          <xs:documentation>РќРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР° РїРѕСЃС‚Р°РІС‰РёРєР°</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ContractCreateDate" type="nillableDate" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Дата заключения договора</xs:documentation>
+          <xs:documentation>Р”Р°С‚Р° Р·Р°РєР»СЋС‡РµРЅРёСЏ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="DocDv" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Дог. Согласован. Y – если договор\ДСОФУ согласован; N или пусто или тег не передается – если договор\ДСОФУ не согласован и повторная передача внутреннего номера (IntNum) не нужна. Доработка SD0018540051\SUPPORT-659\ERPEXT-47765.</xs:documentation>
+          <xs:documentation>Р”РѕРі. РЎРѕРіР»Р°СЃРѕРІР°РЅ. Y вЂ“ РµСЃР»Рё РґРѕРіРѕРІРѕСЂ\Р”РЎРћР¤РЈ СЃРѕРіР»Р°СЃРѕРІР°РЅ; N РёР»Рё РїСѓСЃС‚Рѕ РёР»Рё С‚РµРі РЅРµ РїРµСЂРµРґР°РµС‚СЃСЏ вЂ“ РµСЃР»Рё РґРѕРіРѕРІРѕСЂ\Р”РЎРћР¤РЈ РЅРµ СЃРѕРіР»Р°СЃРѕРІР°РЅ Рё РїРѕРІС‚РѕСЂРЅР°СЏ РїРµСЂРµРґР°С‡Р° РІРЅСѓС‚СЂРµРЅРЅРµРіРѕ РЅРѕРјРµСЂР° (IntNum) РЅРµ РЅСѓР¶РЅР°. Р”РѕСЂР°Р±РѕС‚РєР° SD0018540051\SUPPORT-659\ERPEXT-47765.</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
-  <!-- СПИСОК УТВЕРЖДАЮЩИХ-->
+  <!-- РЎРџРРЎРћРљ РЈРўР’Р•Р Р–Р”РђР®Р©РРҐ-->
   <xs:complexType name="tApproverList">
     <xs:annotation>
-      <xs:documentation>Список утверждающих</xs:documentation>
+      <xs:documentation>РЎРїРёСЃРѕРє СѓС‚РІРµСЂР¶РґР°СЋС‰РёС…</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Approver" type="tApprover" maxOccurs="unbounded" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Описание списка утверждающих</xs:documentation>
+          <xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СѓС‚РІРµСЂР¶РґР°СЋС‰РёС…</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="tApprover">
     <xs:annotation>
-      <xs:documentation>Утверждающий</xs:documentation>
+      <xs:documentation>РЈС‚РІРµСЂР¶РґР°СЋС‰РёР№</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="Iteration" type="xs:integer" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Шаг</xs:documentation>
+          <xs:documentation>РЁР°Рі</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="Response" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Действие</xs:documentation>
+          <xs:documentation>Р”РµР№СЃС‚РІРёРµ</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ApproverRole" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Роль</xs:documentation>
+          <xs:documentation>Р РѕР»СЊ</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ApproverName" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Утверждающий</xs:documentation>
+          <xs:documentation>РЈС‚РІРµСЂР¶РґР°СЋС‰РёР№</xs:documentation>
         </xs:annotation>
       </xs:element>
       <xs:element name="ApproverComments" type="xs:string" minOccurs="0">
         <xs:annotation>
-          <xs:documentation>Комментарий согласующего</xs:documentation>
+          <xs:documentation>РљРѕРјРјРµРЅС‚Р°СЂРёР№ СЃРѕРіР»Р°СЃСѓСЋС‰РµРіРѕ</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

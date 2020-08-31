@@ -4,12 +4,12 @@ xmlns:cnt="urn:ru:rt:hrms:crmcheckaddress" targetNamespace="urn:ru:rt:hrms:crmch
 	<xs:element name="CheckAddress4OrderRequest" type="tns:tCheckAddress4OrderRequest"/>
 	<xs:complexType name="tCheckAddress4OrderRequest">
 		<xs:annotation>
-			<xs:documentation>ПРОВЕРКА адреса для клиентской заявки из CRM</xs:documentation>
+			<xs:documentation>РџР РћР’Р•Р РљРђ Р°РґСЂРµСЃР° РґР»СЏ РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё РёР· CRM</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="CRMOrderServicesAddr" type="tns:tCRMOrderServicesAddr">
 				<xs:annotation>
-					<xs:documentation>Параметры клиентской заявки</xs:documentation>
+					<xs:documentation>РџР°СЂР°РјРµС‚СЂС‹ РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -17,107 +17,107 @@ xmlns:cnt="urn:ru:rt:hrms:crmcheckaddress" targetNamespace="urn:ru:rt:hrms:crmch
 
 	<xs:complexType name="tCRMOrderServicesAddr">
 		<xs:annotation>
-			<xs:documentation>Описание адреса предостваления услуг</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ Р°РґСЂРµСЃР° РїСЂРµРґРѕСЃС‚РІР°Р»РµРЅРёСЏ СѓСЃР»СѓРі</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="GlobalAddrId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Глобальный идентификатор ОР ПОН адресного объекта. Резерв для будущего использования совместно с отраслевым решением Паспортизация объектов недвижимости</xs:documentation>
+					<xs:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РћР  РџРћРќ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°. Р РµР·РµСЂРІ РґР»СЏ Р±СѓРґСѓС‰РµРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ СЃРѕРІРјРµСЃС‚РЅРѕ СЃ РѕС‚СЂР°СЃР»РµРІС‹Рј СЂРµС€РµРЅРёРµРј РџР°СЃРїРѕСЂС‚РёР·Р°С†РёСЏ РѕР±СЉРµРєС‚РѕРІ РЅРµРґРІРёР¶РёРјРѕСЃС‚Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="KLADRLocalityId" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Идентификатор населенного пункта КЛАДР</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РЅР°СЃРµР»РµРЅРЅРѕРіРѕ РїСѓРЅРєС‚Р° РљР›РђР”Р </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="KLADRStreetId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор улицы КЛАДР</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓР»РёС†С‹ РљР›РђР”Р </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Street" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Название улицы</xs:documentation>
+					<xs:documentation>РќР°Р·РІР°РЅРёРµ СѓР»РёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StreetKind" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип улицы</xs:documentation>
+					<xs:documentation>РўРёРї СѓР»РёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMHouse" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дом (АРМ)</xs:documentation>
+					<xs:documentation>Р”РѕРј (РђР Рњ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMBuiding" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Корпус (АРМ)</xs:documentation>
+					<xs:documentation>РљРѕСЂРїСѓСЃ (РђР Рњ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMFlat" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Квартира/Офис (АРМ)</xs:documentation>
+					<xs:documentation>РљРІР°СЂС‚РёСЂР°/РћС„РёСЃ (РђР Рњ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="House" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дом</xs:documentation>
+					<xs:documentation>Р”РѕРј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HouseLitera" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Литера дома</xs:documentation>
+					<xs:documentation>Р›РёС‚РµСЂР° РґРѕРјР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CornerHouse" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Номер углового дома - номер дома после символа прямой слэш.</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ СѓРіР»РѕРІРѕРіРѕ РґРѕРјР° - РЅРѕРјРµСЂ РґРѕРјР° РїРѕСЃР»Рµ СЃРёРјРІРѕР»Р° РїСЂСЏРјРѕР№ СЃР»СЌС€.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BuildingBlock" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Корпус</xs:documentation>
+					<xs:documentation>РљРѕСЂРїСѓСЃ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BuildingBlockLitera" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Литера корпуса</xs:documentation>
+					<xs:documentation>Р›РёС‚РµСЂР° РєРѕСЂРїСѓСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Building" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Строение</xs:documentation>
+					<xs:documentation>РЎС‚СЂРѕРµРЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BuildingLitera" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Литера строения</xs:documentation>
+					<xs:documentation>Р›РёС‚РµСЂР° СЃС‚СЂРѕРµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Ownership" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Владение</xs:documentation>
+					<xs:documentation>Р’Р»Р°РґРµРЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OwnershipLitera" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Литера владения</xs:documentation>
+					<xs:documentation>Р›РёС‚РµСЂР° РІР»Р°РґРµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddrComment" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Комментарий для адреса точки подключения</xs:documentation>
+					<xs:documentation>РљРѕРјРјРµРЅС‚Р°СЂРёР№ РґР»СЏ Р°РґСЂРµСЃР° С‚РѕС‡РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Latitude" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Широта точки оказания услуги</xs:documentation>
+					<xs:documentation>РЁРёСЂРѕС‚Р° С‚РѕС‡РєРё РѕРєР°Р·Р°РЅРёСЏ СѓСЃР»СѓРіРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Longitude" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Долгота точки оказания услуги</xs:documentation>
+					<xs:documentation>Р”РѕР»РіРѕС‚Р° С‚РѕС‡РєРё РѕРєР°Р·Р°РЅРёСЏ СѓСЃР»СѓРіРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
@@ -125,32 +125,32 @@ xmlns:cnt="urn:ru:rt:hrms:crmcheckaddress" targetNamespace="urn:ru:rt:hrms:crmch
 	<xs:element name="GetDate4OrderRequest" type="tns:tGetDate4OrderRequest"/>
 	<xs:complexType name="tGetDate4OrderRequest">
 		<xs:annotation>
-			<xs:documentation>ПРОВЕРКА контрольных дат проработки для CMS КЦ (SD0010672236)</xs:documentation>
+			<xs:documentation>РџР РћР’Р•Р РљРђ РєРѕРЅС‚СЂРѕР»СЊРЅС‹С… РґР°С‚ РїСЂРѕСЂР°Р±РѕС‚РєРё РґР»СЏ CMS РљР¦ (SD0010672236)</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="SYS_orderId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Номер заказа полученный для клиентской заявки в СУС</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РїРѕР»СѓС‡РµРЅРЅС‹Р№ РґР»СЏ РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё РІ РЎРЈРЎ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="orderId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Номер заказа в CRM</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ Р·Р°РєР°Р·Р° РІ CRM</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="orderType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>тип проверки</xs:documentation>
+					<xs:documentation>С‚РёРї РїСЂРѕРІРµСЂРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="TechCapabilityEx" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Признак</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderCSRFilial" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Подразделение сотрудника, запросившего дату</xs:documentation>
+					<xs:documentation>РџРѕРґСЂР°Р·РґРµР»РµРЅРёРµ СЃРѕС‚СЂСѓРґРЅРёРєР°, Р·Р°РїСЂРѕСЃРёРІС€РµРіРѕ РґР°С‚Сѓ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>

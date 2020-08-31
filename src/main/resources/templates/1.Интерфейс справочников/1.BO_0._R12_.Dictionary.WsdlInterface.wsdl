@@ -181,7 +181,7 @@
   <wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="ManageUnitsDic">
-      <wsdl:documentation>Синхронизация справочника ЕИ</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р•Р</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageUnitsDic"/>
       <wsdl:input name="ManageUnitsDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -195,7 +195,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageInventoryItemDic">
-      <wsdl:documentation>Синхронизация справочника Позиции</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РџРѕР·РёС†РёРё</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageInventoryItemDic"/>
       <wsdl:input name="ManageInventoryItemDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -209,7 +209,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageVendorDic">
-      <wsdl:documentation>Синхронизация справочника Контрагенты</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРЅС‚СЂР°РіРµРЅС‚С‹</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageVendorDic"/>
       <wsdl:input name="ManageVendorDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -223,7 +223,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageEmployeeDic">
-      <wsdl:documentation>Синхронизация справочника Сотрудники</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РЎРѕС‚СЂСѓРґРЅРёРєРё</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageEmployeeDic"/>
       <wsdl:input name="ManageEmployeeDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -237,7 +237,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageProjectDic">
-      <wsdl:documentation>Синхронизация справочника Проекты</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РџСЂРѕРµРєС‚С‹</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageProjectDic"/>
       <wsdl:input name="ManageProjectDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -251,7 +251,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageTaskDic">
-      <wsdl:documentation>Синхронизация справочника Задачи</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р—Р°РґР°С‡Рё</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageTaskDic"/>
       <wsdl:input name="ManageTaskDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -265,7 +265,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageLauncherDic">
-      <wsdl:documentation>Синхронизация справочника Пусковые очереди</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РџСѓСЃРєРѕРІС‹Рµ РѕС‡РµСЂРµРґРё</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageLauncherDic"/>
       <wsdl:input name="ManageLauncherDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -279,7 +279,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageTOUDic">
-      <wsdl:documentation>Синхронизация справочника Коды ТОУ</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРґС‹ РўРћРЈ</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageTOUDic"/>
       <wsdl:input name="ManageTOUDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -293,7 +293,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageOrgDic">
-      <wsdl:documentation>Синхронизация справочника Операционные единицы</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РћРїРµСЂР°С†РёРѕРЅРЅС‹Рµ РµРґРёРЅРёС†С‹</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageOrgDic"/>
       <wsdl:input name="ManageOrgDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -307,7 +307,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageOperTypeDic">
-      <wsdl:documentation>Синхронизация справочника Типы операций</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РўРёРїС‹ РѕРїРµСЂР°С†РёР№</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageOperTypeDic"/>
       <wsdl:input name="ManageOperTypeDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -321,7 +321,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageOrganizationsDic">
-      <wsdl:documentation>Синхронизация справочника Организации</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РћСЂРіР°РЅРёР·Р°С†РёРё</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageOrganizationsDic"/>
       <wsdl:input name="ManageOrganizationsDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -335,7 +335,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageSegmentAccountDic">
-      <wsdl:documentation>Синхронизация справочника Расходные счета – сегмент счет</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ СЃС‡РµС‚</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageSegmentAccountDic"/>
       <wsdl:input name="ManageSegmentAccountDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -349,7 +349,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageSegmentCFODic">
-      <wsdl:documentation>Синхронизация справочника Расходные счета – сегмент ЦФО</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЃС‡РµС‚Р° вЂ“ СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageSegmentCFODic"/>
       <wsdl:input name="ManageSegmentCFODicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -363,7 +363,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManagePreciousMetalsDic">
-      <wsdl:documentation>Синхронизация справочника Драгоценные металлы</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р”СЂР°РіРѕС†РµРЅРЅС‹Рµ РјРµС‚Р°Р»Р»С‹</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManagePreciousMetalsDic"/>
       <wsdl:input name="ManagePreciousMetalsDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -377,7 +377,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageCostsTypeDic">
-      <wsdl:documentation>Синхронизация справочника Виды затрат</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р’РёРґС‹ Р·Р°С‚СЂР°С‚</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageCostsTypeDic"/>
       <wsdl:input name="ManageCostsTypeDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -391,7 +391,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageArrivalTypeDic">
-      <wsdl:documentation>Синхронизация справочника Виды поступлений</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р’РёРґС‹ РїРѕСЃС‚СѓРїР»РµРЅРёР№</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageArrivalTypeDic"/>
       <wsdl:input name="ManageArrivalTypeDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -405,7 +405,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageContractDic">
-      <wsdl:documentation>Синхронизация справочника Расходные рамочные договоры</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р Р°СЃС…РѕРґРЅС‹Рµ СЂР°РјРѕС‡РЅС‹Рµ РґРѕРіРѕРІРѕСЂС‹</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageContractDic"/>
       <wsdl:input name="ManageContractDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -419,7 +419,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageContactsDic">
-      <wsdl:documentation>Синхронизация справочника Контакты контрагентов</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РљРѕРЅС‚Р°РєС‚С‹ РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageContactsDic"/>
       <wsdl:input name="ManageContactsDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>
@@ -433,7 +433,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="ManageLicensesDic">
-      <wsdl:documentation>Синхронизация справочника Лицензии контрагентов</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° Р›РёС†РµРЅР·РёРё РєРѕРЅС‚СЂР°РіРµРЅС‚РѕРІ</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionaryservice:ManageLicensesDic"/>
       <wsdl:input name="ManageLicensesDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>

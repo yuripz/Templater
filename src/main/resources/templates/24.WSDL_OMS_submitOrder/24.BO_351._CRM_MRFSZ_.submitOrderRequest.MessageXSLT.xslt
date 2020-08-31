@@ -139,8 +139,8 @@
 									<xsl:value-of select="ApprovalDetailing"/>
 								</attribute>
 								<attribute name="UE">RUR</attribute>
-								<!-- константа -->
-								<attribute name="VAT">без НДС</attribute>
+								<!-- РєРѕРЅСЃС‚Р°РЅС‚Р° -->
+								<attribute name="VAT">Р±РµР· РќР”РЎ</attribute>
 								<attribute name="buildProjectCost">
 									<xsl:value-of select="ProjectCost"/>
 								</attribute>
@@ -252,7 +252,7 @@
 							<partyId>
 								<xsl:value-of select="/submitOrderRequest/CRMCustomer/CUSTOM_ID"/>
 							</partyId>
-							<!--берем из  [CUSTOM_ID] => 1313585 для клиента-->
+							<!--Р±РµСЂРµРј РёР·  [CUSTOM_ID] => 1313585 РґР»СЏ РєР»РёРµРЅС‚Р°-->
 							<partyName>
 								<xsl:value-of select="/submitOrderRequest/OrderOMSContact/OrderContactPerson"/>
 							</partyName>
@@ -260,11 +260,11 @@
 								<attribute name="phone">
 									<xsl:value-of select="/submitOrderRequest/OrderOMSContact/OrderContactPhone"/>
 								</attribute>
-								<!--берем из [OrderContactPhone] => 4444444-->
+								<!--Р±РµСЂРµРј РёР· [OrderContactPhone] => 4444444-->
 								<attribute name="email">
 									<xsl:value-of select="/submitOrderRequest/OrderOMSContact/OrderContactEmail"/>
 								</attribute>
-								<!--берем из  [OrderContactEmail] => @@@@@@-->
+								<!--Р±РµСЂРµРј РёР·  [OrderContactEmail] => @@@@@@-->
 							</partyAttributes>
 						</orderParty>
 					</orderParties>
@@ -334,18 +334,18 @@
 									<orderItemAttributes>
 										<attribute name="ServiceSpeedValue">
 											<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed"/>
-											<!--Скорость сервиса, кбит/c-->
+											<!--РЎРєРѕСЂРѕСЃС‚СЊ СЃРµСЂРІРёСЃР°, РєР±РёС‚/c-->
 										</attribute>
 										<attribute name="ServiceSpeedMeasure">
 											<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed_SCALE"/>
-											<!--Единицы измерения скорости-->
+											<!--Р•РґРёРЅРёС†С‹ РёР·РјРµСЂРµРЅРёСЏ СЃРєРѕСЂРѕСЃС‚Рё-->
 										</attribute>
 										<attribute name="access_interface">
 											<xsl:value-of select="SrvOMSParam/SRV_CMS_fldPoint2Interface"/>
-											<!--Интерфейс клиента-->
+											<!--РРЅС‚РµСЂС„РµР№СЃ РєР»РёРµРЅС‚Р°-->
 										</attribute>
 										<xsl:if test="ServiceType='NETWORK'">
-											<!-- technology lineId , serviceItemId нужно выводить в XML, только для услуги ServiceType='NETWORK' -->
+											<!-- technology lineId , serviceItemId РЅСѓР¶РЅРѕ РІС‹РІРѕРґРёС‚СЊ РІ XML, С‚РѕР»СЊРєРѕ РґР»СЏ СѓСЃР»СѓРіРё ServiceType='NETWORK' -->
 											<attribute name="accountNumber">
 												<xsl:value-of select="SrvOMSParam/SRV_SLTU_ACCOUNTNUMBER"/>
 											</attribute>
@@ -371,50 +371,50 @@
 											<attribute name="vpn_type">L3_VPN</attribute>
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
-												<!-- берем из [SRV_VPN_SUBNET] => 10.0.0.0 -->
+												<!-- Р±РµСЂРµРј РёР· [SRV_VPN_SUBNET] => 10.0.0.0 -->
 											</attribute>
 											<attribute name="cpe_mode">Routing</attribute>
-											<!-- по умолчанию Routing -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='статическая'">
-												<attribute name="routing_mode">Нет</attribute>
-												<!-- если [SRV_VPN_PKT_ROUTING_TYPE] => статическая, то "routing_mode" = Нет,-->
+											<!-- РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='СЃС‚Р°С‚РёС‡РµСЃРєР°СЏ'">
+												<attribute name="routing_mode">РќРµС‚</attribute>
+												<!-- РµСЃР»Рё [SRV_VPN_PKT_ROUTING_TYPE] => СЃС‚Р°С‚РёС‡РµСЃРєР°СЏ, С‚Рѕ "routing_mode" = РќРµС‚,-->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='динамическая'">
-												<attribute name="routing_mode">Да</attribute>
-												<!--если [SRV_VPN_PKT_ROUTING_TYPE] => динамическая, то "routing_mode" = Да -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='РґРёРЅР°РјРёС‡РµСЃРєР°СЏ'">
+												<attribute name="routing_mode">Р”Р°</attribute>
+												<!--РµСЃР»Рё [SRV_VPN_PKT_ROUTING_TYPE] => РґРёРЅР°РјРёС‡РµСЃРєР°СЏ, С‚Рѕ "routing_mode" = Р”Р° -->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Нет'">
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='РќРµС‚'">
 												<attribute name="as_id">12389</attribute>
-												<!-- если [SRV_VPN_LOCAL_VPN] => Нет, то as_id = 12389 -->
+												<!-- РµСЃР»Рё [SRV_VPN_LOCAL_VPN] => РќРµС‚, С‚Рѕ as_id = 12389 -->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Да'">
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Р”Р°'">
 												<attribute name="as_id">0</attribute>
-												<!-- если [SRV_VPN_LOCAL_VPN] => Да, то as_id = 0 -->
+												<!-- РµСЃР»Рё [SRV_VPN_LOCAL_VPN] => Р”Р°, С‚Рѕ as_id = 0 -->
 											</xsl:if>
 										</xsl:if>
 										<xsl:if test="ServiceType='VPN_L2'">
 											<attribute name="vpn_type">L2_VPN</attribute>
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
-												<!-- берем из [SRV_VPN_SUBNET] => 10.0.0.0 -->
+												<!-- Р±РµСЂРµРј РёР· [SRV_VPN_SUBNET] => 10.0.0.0 -->
 											</attribute>
 											<attribute name="cpe_mode">Routing</attribute>
-											<!-- по умолчанию Routing -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='статическая'">
-												<attribute name="routing_mode">Нет</attribute>
-												<!-- если [SRV_VPN_PKT_ROUTING_TYPE] => статическая, то "routing_mode" = Нет,-->
+											<!-- РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='СЃС‚Р°С‚РёС‡РµСЃРєР°СЏ'">
+												<attribute name="routing_mode">РќРµС‚</attribute>
+												<!-- РµСЃР»Рё [SRV_VPN_PKT_ROUTING_TYPE] => СЃС‚Р°С‚РёС‡РµСЃРєР°СЏ, С‚Рѕ "routing_mode" = РќРµС‚,-->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='динамическая'">
-												<attribute name="routing_mode">Да</attribute>
-												<!--если [SRV_VPN_PKT_ROUTING_TYPE] => динамическая, то "routing_mode" = Да -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='РґРёРЅР°РјРёС‡РµСЃРєР°СЏ'">
+												<attribute name="routing_mode">Р”Р°</attribute>
+												<!--РµСЃР»Рё [SRV_VPN_PKT_ROUTING_TYPE] => РґРёРЅР°РјРёС‡РµСЃРєР°СЏ, С‚Рѕ "routing_mode" = Р”Р° -->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Нет'">
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='РќРµС‚'">
 												<attribute name="as_id">12389</attribute>
-												<!-- если [SRV_VPN_LOCAL_VPN] => Нет, то as_id = 12389 -->
+												<!-- РµСЃР»Рё [SRV_VPN_LOCAL_VPN] => РќРµС‚, С‚Рѕ as_id = 12389 -->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Да'">
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Р”Р°'">
 												<attribute name="as_id">0</attribute>
-												<!-- если [SRV_VPN_LOCAL_VPN] => Да, то as_id = 0 -->
+												<!-- РµСЃР»Рё [SRV_VPN_LOCAL_VPN] => Р”Р°, С‚Рѕ as_id = 0 -->
 											</xsl:if>
 										</xsl:if>
 										<xsl:if test="ServiceType='VPLS point'">
@@ -422,47 +422,47 @@
 											<attribute name="vpn_type">L2_VPN</attribute>
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
-												<!-- берем из [SRV_VPN_SUBNET] => 10.0.0.0 -->
+												<!-- Р±РµСЂРµРј РёР· [SRV_VPN_SUBNET] => 10.0.0.0 -->
 											</attribute>
 											<attribute name="cpe_mode">Routing</attribute>
-											<!-- по умолчанию Routing -->
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='статическая'">
-												<attribute name="routing_mode">Нет</attribute>
-												<!-- если [SRV_VPN_PKT_ROUTING_TYPE] => статическая, то "routing_mode" = Нет,-->
+											<!-- РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='СЃС‚Р°С‚РёС‡РµСЃРєР°СЏ'">
+												<attribute name="routing_mode">РќРµС‚</attribute>
+												<!-- РµСЃР»Рё [SRV_VPN_PKT_ROUTING_TYPE] => СЃС‚Р°С‚РёС‡РµСЃРєР°СЏ, С‚Рѕ "routing_mode" = РќРµС‚,-->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='динамическая'">
-												<attribute name="routing_mode">Да</attribute>
-												<!--если [SRV_VPN_PKT_ROUTING_TYPE] => динамическая, то "routing_mode" = Да -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='РґРёРЅР°РјРёС‡РµСЃРєР°СЏ'">
+												<attribute name="routing_mode">Р”Р°</attribute>
+												<!--РµСЃР»Рё [SRV_VPN_PKT_ROUTING_TYPE] => РґРёРЅР°РјРёС‡РµСЃРєР°СЏ, С‚Рѕ "routing_mode" = Р”Р° -->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Нет'">
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='РќРµС‚'">
 												<attribute name="as_id">12389</attribute>
-												<!-- если [SRV_VPN_LOCAL_VPN] => Нет, то as_id = 12389 -->
+												<!-- РµСЃР»Рё [SRV_VPN_LOCAL_VPN] => РќРµС‚, С‚Рѕ as_id = 12389 -->
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Да'">
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Р”Р°'">
 												<attribute name="as_id">0</attribute>
-												<!-- если [SRV_VPN_LOCAL_VPN] => Да, то as_id = 0 -->
+												<!-- РµСЃР»Рё [SRV_VPN_LOCAL_VPN] => Р”Р°, С‚Рѕ as_id = 0 -->
 											</xsl:if>
 										</xsl:if>
 										<xsl:if test="ServiceType='cfs_vpn'">
 											<attribute name="vpn_type">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_TYPE"/>
-												<!--  Тип VPN берем из [SRV_VPN_TYPE] => VPLS point -->
+												<!--  РўРёРї VPN Р±РµСЂРµРј РёР· [SRV_VPN_TYPE] => VPLS point -->
 											</attribute>
 											<attribute name="vpn_qos">
 												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceQoS"/>
-												<!-- Класс обслуживания(QoS) берем из [SRV_CMS_ServiceQoS] => N -->
+												<!-- РљР»Р°СЃСЃ РѕР±СЃР»СѓР¶РёРІР°РЅРёСЏ(QoS) Р±РµСЂРµРј РёР· [SRV_CMS_ServiceQoS] => N -->
 											</attribute>
 											<attribute name="vpn_topology">
 												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceTopology"/>
-												<!-- Топология берем из [SRV_CMS_ServiceTopology] => FM VPN (full mesh VPN) -->
+												<!-- РўРѕРїРѕР»РѕРіРёСЏ Р±РµСЂРµРј РёР· [SRV_CMS_ServiceTopology] => FM VPN (full mesh VPN) -->
 											</attribute>
 											<attribute name="vpn_id">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_ID"/>
-												<!-- ID VPN сети берем из [SRV_VPN_ID] => ID VPN сети -->
+												<!-- ID VPN СЃРµС‚Рё Р±РµСЂРµРј РёР· [SRV_VPN_ID] => ID VPN СЃРµС‚Рё -->
 											</attribute>
 											<attribute name="vpn_name">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_NAME"/>
-												<!-- Имя VPN сети берем из [SRV_VPN_NAME] => Имя VPN сети-->
+												<!-- РРјСЏ VPN СЃРµС‚Рё Р±РµСЂРµРј РёР· [SRV_VPN_NAME] => РРјСЏ VPN СЃРµС‚Рё-->
 											</attribute>
 											<attribute name="as_id">12389</attribute>
 										</xsl:if>

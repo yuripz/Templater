@@ -3,7 +3,7 @@
   <xsl:template match="/">
    <Confirmation>
     <ResultCode>0</ResultCode>
-    <Message>Ответ check_connectivity_result в массиве</Message>
+    <Message>РћС‚РІРµС‚ check_connectivity_result РІ РјР°СЃСЃРёРІРµ</Message>
        <DetailList>
   <xsl:copy-of select="MsgData"/>
        </DetailList> 

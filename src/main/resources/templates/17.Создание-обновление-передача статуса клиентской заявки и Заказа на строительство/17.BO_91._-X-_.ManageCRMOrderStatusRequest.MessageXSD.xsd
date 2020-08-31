@@ -3,71 +3,71 @@
 	<xs:element name="ManageCRMOrderStatusRequest" type="tManageCRMOrderStatusRequest"/>
 	<xs:complexType name="tManageCRMOrderStatusRequest">
 		<xs:annotation>
-			<xs:documentation>Создание /обновление и передача статуса клиентской заявки из CRM</xs:documentation>
+			<xs:documentation>РЎРѕР·РґР°РЅРёРµ /РѕР±РЅРѕРІР»РµРЅРёРµ Рё РїРµСЂРµРґР°С‡Р° СЃС‚Р°С‚СѓСЃР° РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё РёР· CRM</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="CRMOrder" type="tCRMOrder">
 				<xs:annotation>
-					<xs:documentation>Параметры клиентской заявки</xs:documentation>
+					<xs:documentation>РџР°СЂР°РјРµС‚СЂС‹ РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tCRMOrder">
 		<xs:annotation>
-			<xs:documentation>Входные параметры заявки из CRM</xs:documentation>
+			<xs:documentation>Р’С…РѕРґРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹ Р·Р°СЏРІРєРё РёР· CRM</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="MainCRMOrder" type="tMainCRMOrder">
 				<xs:annotation>
-					<xs:documentation>Параметры клиентской заявки</xs:documentation>
+					<xs:documentation>РџР°СЂР°РјРµС‚СЂС‹ РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderCustomer" type="tCRMOrderCustomer">
 				<xs:annotation>
-					<xs:documentation>Параметры клиента</xs:documentation>
+					<xs:documentation>РџР°СЂР°РјРµС‚СЂС‹ РєР»РёРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderServices" type="tCRMOrderServices">
 				<xs:annotation>
-					<xs:documentation>Параметры подключаемой услуги</xs:documentation>
+					<xs:documentation>РџР°СЂР°РјРµС‚СЂС‹ РїРѕРґРєР»СЋС‡Р°РµРјРѕР№ СѓСЃР»СѓРіРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderServicesAddr" type="tCRMOrderServicesAddr">
 				<xs:annotation>
-					<xs:documentation>Параметры адреса подключения</xs:documentation>
+					<xs:documentation>РџР°СЂР°РјРµС‚СЂС‹ Р°РґСЂРµСЃР° РїРѕРґРєР»СЋС‡РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMCreateOrderDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата поступления заявки</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РїРѕСЃС‚СѓРїР»РµРЅРёСЏ Р·Р°СЏРІРєРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderSender" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Логин пользователя (агента), который отправил заявку на проверку технической возможности (на строительство в Гермес).</xs:documentation>
+					<xs:documentation>Р›РѕРіРёРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (Р°РіРµРЅС‚Р°), РєРѕС‚РѕСЂС‹Р№ РѕС‚РїСЂР°РІРёР» Р·Р°СЏРІРєСѓ РЅР° РїСЂРѕРІРµСЂРєСѓ С‚РµС…РЅРёС‡РµСЃРєРѕР№ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё (РЅР° СЃС‚СЂРѕРёС‚РµР»СЊСЃС‚РІРѕ РІ Р“РµСЂРјРµСЃ).</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tMainCRMOrder">
 		<xs:annotation>
-			<xs:documentation>Описание основных параметров клиентской заявки</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РѕСЃРЅРѕРІРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="CRMRequestId" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Номер заявки в CRM ,уникальный идентификатор клиентской заявки в АРМ «Агент по продажам» (номер договора на подключение) на подключение одной услуги.При обновлении номер не должен меняться.</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ Р·Р°СЏРІРєРё РІ CRM ,СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё РІ РђР Рњ В«РђРіРµРЅС‚ РїРѕ РїСЂРѕРґР°Р¶Р°РјВ» (РЅРѕРјРµСЂ РґРѕРіРѕРІРѕСЂР° РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ) РЅР° РїРѕРґРєР»СЋС‡РµРЅРёРµ РѕРґРЅРѕР№ СѓСЃР»СѓРіРё.РџСЂРё РѕР±РЅРѕРІР»РµРЅРёРё РЅРѕРјРµСЂ РЅРµ РґРѕР»Р¶РµРЅ РјРµРЅСЏС‚СЊСЃСЏ.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderId" type="xs:long" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Уникальный номер Закзаа в CRM «Агент по продажам» (заказ объединяет несколько заявок одного клиента) </xs:documentation>
+					<xs:documentation>РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р—Р°РєР·Р°Р° РІ CRM В«РђРіРµРЅС‚ РїРѕ РїСЂРѕРґР°Р¶Р°РјВ» (Р·Р°РєР°Р· РѕР±СЉРµРґРёРЅСЏРµС‚ РЅРµСЃРєРѕР»СЊРєРѕ Р·Р°СЏРІРѕРє РѕРґРЅРѕРіРѕ РєР»РёРµРЅС‚Р°) </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderOperation" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Действие - возможные значения: Создание; Обновление (изменение параметров услуг по инициативе абонента); Смена статуса</xs:documentation>
+					<xs:documentation>Р”РµР№СЃС‚РІРёРµ - РІРѕР·РјРѕР¶РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ: РЎРѕР·РґР°РЅРёРµ; РћР±РЅРѕРІР»РµРЅРёРµ (РёР·РјРµРЅРµРЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ СѓСЃР»СѓРі РїРѕ РёРЅРёС†РёР°С‚РёРІРµ Р°Р±РѕРЅРµРЅС‚Р°); РЎРјРµРЅР° СЃС‚Р°С‚СѓСЃР°</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -84,7 +84,7 @@
 			</xs:element>
 			<xs:element name="CRMWorkingKind" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Возможные значения:Строительство;Согласование оборудования</xs:documentation>
+					<xs:documentation>Р’РѕР·РјРѕР¶РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ:РЎС‚СЂРѕРёС‚РµР»СЊСЃС‚РІРѕ;РЎРѕРіР»Р°СЃРѕРІР°РЅРёРµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -97,7 +97,7 @@
 			</xs:element>
 			<xs:element name="CRMPriority" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Приоритет: Возможные значения: 0 – низкий (стандартный) приоритет, 1 – высокий приоритет,  -1 - Обращение </xs:documentation>
+					<xs:documentation>РџСЂРёРѕСЂРёС‚РµС‚: Р’РѕР·РјРѕР¶РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ: 0 вЂ“ РЅРёР·РєРёР№ (СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№) РїСЂРёРѕСЂРёС‚РµС‚, 1 вЂ“ РІС‹СЃРѕРєРёР№ РїСЂРёРѕСЂРёС‚РµС‚,  -1 - РћР±СЂР°С‰РµРЅРёРµ </xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:integer">
@@ -109,12 +109,12 @@
 			</xs:element>
 			<xs:element name="CRMOrderDateConnect" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Желаемая клиентом дата подключения</xs:documentation>
+					<xs:documentation>Р–РµР»Р°РµРјР°СЏ РєР»РёРµРЅС‚РѕРј РґР°С‚Р° РїРѕРґРєР»СЋС‡РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderOriginator" type="xs:string" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Логин пользователя (агента), принявшего заявку (может отличаться от пользователя который выполнил смену этапа в АРМ)</xs:documentation>
+					<xs:documentation>Р›РѕРіРёРЅ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (Р°РіРµРЅС‚Р°), РїСЂРёРЅСЏРІС€РµРіРѕ Р·Р°СЏРІРєСѓ (РјРѕР¶РµС‚ РѕС‚Р»РёС‡Р°С‚СЊСЃСЏ РѕС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ РєРѕС‚РѕСЂС‹Р№ РІС‹РїРѕР»РЅРёР» СЃРјРµРЅСѓ СЌС‚Р°РїР° РІ РђР Рњ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderOriginatorEMail" minOccurs="1" maxOccurs="1">
@@ -130,7 +130,7 @@
 			</xs:element>
 			<xs:element name="CRMOrderOriginatorName" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>ФИО пользователя (агента), принявшего заявку</xs:documentation>
+					<xs:documentation>Р¤РРћ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ (Р°РіРµРЅС‚Р°), РїСЂРёРЅСЏРІС€РµРіРѕ Р·Р°СЏРІРєСѓ</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -141,32 +141,32 @@
 			</xs:element>
 			<xs:element name="CRMLinkPersistOrder" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Связанная заявка на постоянное решение. Если Клиентская заявка создается на организацию временного решения, то в поле указывается номер Клиентской заявки АРМ связанного постоянного решения</xs:documentation>
+					<xs:documentation>РЎРІСЏР·Р°РЅРЅР°СЏ Р·Р°СЏРІРєР° РЅР° РїРѕСЃС‚РѕСЏРЅРЅРѕРµ СЂРµС€РµРЅРёРµ. Р•СЃР»Рё РљР»РёРµРЅС‚СЃРєР°СЏ Р·Р°СЏРІРєР° СЃРѕР·РґР°РµС‚СЃСЏ РЅР° РѕСЂРіР°РЅРёР·Р°С†РёСЋ РІСЂРµРјРµРЅРЅРѕРіРѕ СЂРµС€РµРЅРёСЏ, С‚Рѕ РІ РїРѕР»Рµ СѓРєР°Р·С‹РІР°РµС‚СЃСЏ РЅРѕРјРµСЂ РљР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё РђР Рњ СЃРІСЏР·Р°РЅРЅРѕРіРѕ РїРѕСЃС‚РѕСЏРЅРЅРѕРіРѕ СЂРµС€РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CancelReasonOrder" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип причины отмены Клиентской заявки в соответствии</xs:documentation>
+					<xs:documentation>РўРёРї РїСЂРёС‡РёРЅС‹ РѕС‚РјРµРЅС‹ РљР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё РІ СЃРѕРѕС‚РІРµС‚СЃС‚РІРёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GoToCommentOrder" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Вручную введенный пользователем комментарий для перехода на отмену</xs:documentation>
+					<xs:documentation>Р’СЂСѓС‡РЅСѓСЋ РІРІРµРґРµРЅРЅС‹Р№ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј РєРѕРјРјРµРЅС‚Р°СЂРёР№ РґР»СЏ РїРµСЂРµС…РѕРґР° РЅР° РѕС‚РјРµРЅСѓ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderSalesChannel" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Канал продаж</xs:documentation>
+					<xs:documentation>РљР°РЅР°Р» РїСЂРѕРґР°Р¶</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderSalesSubChannel" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дополнительный канал продаж - уточнение</xs:documentation>
+					<xs:documentation>Р”РѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ РєР°РЅР°Р» РїСЂРѕРґР°Р¶ - СѓС‚РѕС‡РЅРµРЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerProjectName" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Наименование проекта - Присвоенный вручную сотрудниками КБ проект (группирующая сущность)</xs:documentation>
+					<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РїСЂРѕРµРєС‚Р° - РџСЂРёСЃРІРѕРµРЅРЅС‹Р№ РІСЂСѓС‡РЅСѓСЋ СЃРѕС‚СЂСѓРґРЅРёРєР°РјРё РљР‘ РїСЂРѕРµРєС‚ (РіСЂСѓРїРїРёСЂСѓСЋС‰Р°СЏ СЃСѓС‰РЅРѕСЃС‚СЊ)</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -177,7 +177,7 @@
 			</xs:element>
 			<xs:element name="CustomerProjectId" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Идентификатор выбранного проекта</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РІС‹Р±СЂР°РЅРЅРѕРіРѕ РїСЂРѕРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -188,236 +188,236 @@
 			</xs:element>
 			<xs:element name="SkipPreCustomerFlag" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Устанавливается в TRUE если для создаваемой заявки не требуется получения утверждения бюджетной оценки из CMS (СУС автоматически трактует бюджетную оценку согласованной и переводит процесс </xs:documentation>
+					<xs:documentation>РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РІ TRUE РµСЃР»Рё РґР»СЏ СЃРѕР·РґР°РІР°РµРјРѕР№ Р·Р°СЏРІРєРё РЅРµ С‚СЂРµР±СѓРµС‚СЃСЏ РїРѕР»СѓС‡РµРЅРёСЏ СѓС‚РІРµСЂР¶РґРµРЅРёСЏ Р±СЋРґР¶РµС‚РЅРѕР№ РѕС†РµРЅРєРё РёР· CMS (РЎРЈРЎ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё С‚СЂР°РєС‚СѓРµС‚ Р±СЋРґР¶РµС‚РЅСѓСЋ РѕС†РµРЅРєСѓ СЃРѕРіР»Р°СЃРѕРІР°РЅРЅРѕР№ Рё РїРµСЂРµРІРѕРґРёС‚ РїСЂРѕС†РµСЃСЃ </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FederalLevelFlag" type="xs:boolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Устанавливается в TRUE если для создаваемой заявки клиент является федеральным (ККФУ)</xs:documentation>
+					<xs:documentation>РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РІ TRUE РµСЃР»Рё РґР»СЏ СЃРѕР·РґР°РІР°РµРјРѕР№ Р·Р°СЏРІРєРё РєР»РёРµРЅС‚ СЏРІР»СЏРµС‚СЃСЏ С„РµРґРµСЂР°Р»СЊРЅС‹Рј (РљРљР¤РЈ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="EstimationDueDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Желаемая дата получения Технического решения</xs:documentation>
+					<xs:documentation>Р–РµР»Р°РµРјР°СЏ РґР°С‚Р° РїРѕР»СѓС‡РµРЅРёСЏ РўРµС…РЅРёС‡РµСЃРєРѕРіРѕ СЂРµС€РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProgramId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Программа
- 005   Последняя миля для КК (развитие В2В)
- 006   Оптика в бизнес-центр (развитие В2В)
- 007   Оптика в ОГВ (развитие В2В)
- 008   Модернизация ЛПУ (внедрение  ИТ) (развитие В2В)
- 036 Миграция клиентов В2В/B2G с меди на оптику (развитие B2B)</xs:documentation>
+					<xs:documentation>РџСЂРѕРіСЂР°РјРјР°
+ 005   РџРѕСЃР»РµРґРЅСЏСЏ РјРёР»СЏ РґР»СЏ РљРљ (СЂР°Р·РІРёС‚РёРµ Р’2Р’)
+ 006   РћРїС‚РёРєР° РІ Р±РёР·РЅРµСЃ-С†РµРЅС‚СЂ (СЂР°Р·РІРёС‚РёРµ Р’2Р’)
+ 007   РћРїС‚РёРєР° РІ РћР“Р’ (СЂР°Р·РІРёС‚РёРµ Р’2Р’)
+ 008   РњРѕРґРµСЂРЅРёР·Р°С†РёСЏ Р›РџРЈ (РІРЅРµРґСЂРµРЅРёРµ  РРў) (СЂР°Р·РІРёС‚РёРµ Р’2Р’)
+ 036 РњРёРіСЂР°С†РёСЏ РєР»РёРµРЅС‚РѕРІ Р’2Р’/B2G СЃ РјРµРґРё РЅР° РѕРїС‚РёРєСѓ (СЂР°Р·РІРёС‚РёРµ B2B)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CFO" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>сегмент ЦФО (существующий справочник СУС)</xs:documentation>
+					<xs:documentation>СЃРµРіРјРµРЅС‚ Р¦Р¤Рћ (СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ СЃРїСЂР°РІРѕС‡РЅРёРє РЎРЈРЎ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ClassCode" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор Класса инвест. проекта (по справочнику R12)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РљР»Р°СЃСЃР° РёРЅРІРµСЃС‚. РїСЂРѕРµРєС‚Р° (РїРѕ СЃРїСЂР°РІРѕС‡РЅРёРєСѓ R12)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип инвест проекта, одно из значений:
-	Линейный;
-	Групповой;
-	Миграция;
-	КИП до 1,5 млн;
-	КИП более 1,5 млн;
-	Проекты ККФУ
+					<xs:documentation>РўРёРї РёРЅРІРµСЃС‚ РїСЂРѕРµРєС‚Р°, РѕРґРЅРѕ РёР· Р·РЅР°С‡РµРЅРёР№:
+	Р›РёРЅРµР№РЅС‹Р№;
+	Р“СЂСѓРїРїРѕРІРѕР№;
+	РњРёРіСЂР°С†РёСЏ;
+	РљРРџ РґРѕ 1,5 РјР»РЅ;
+	РљРРџ Р±РѕР»РµРµ 1,5 РјР»РЅ;
+	РџСЂРѕРµРєС‚С‹ РљРљР¤РЈ
 </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ProjectCode" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Код инвестиционного проекта (ProjectCode) по справочнику R12</xs:documentation>
+					<xs:documentation>РљРѕРґ РёРЅРІРµСЃС‚РёС†РёРѕРЅРЅРѕРіРѕ РїСЂРѕРµРєС‚Р° (ProjectCode) РїРѕ СЃРїСЂР°РІРѕС‡РЅРёРєСѓ R12</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXpower" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Расходы на электроэнергию для узлов доступа, руб.</xs:documentation>
+					<xs:documentation>Р Р°СЃС…РѕРґС‹ РЅР° СЌР»РµРєС‚СЂРѕСЌРЅРµСЂРіРёСЋ РґР»СЏ СѓР·Р»РѕРІ РґРѕСЃС‚СѓРїР°, СЂСѓР±.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXsupport" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Расходы на техническую поддержку, руб.</xs:documentation>
+					<xs:documentation>Р Р°СЃС…РѕРґС‹ РЅР° С‚РµС…РЅРёС‡РµСЃРєСѓСЋ РїРѕРґРґРµСЂР¶РєСѓ, СЂСѓР±.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXagent" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Агентские отчисления, руб</xs:documentation>
+					<xs:documentation>РђРіРµРЅС‚СЃРєРёРµ РѕС‚С‡РёСЃР»РµРЅРёСЏ, СЂСѓР±</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXtemp" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Расходы на организацию временной схемы включения, руб</xs:documentation>
+					<xs:documentation>Р Р°СЃС…РѕРґС‹ РЅР° РѕСЂРіР°РЅРёР·Р°С†РёСЋ РІСЂРµРјРµРЅРЅРѕР№ СЃС…РµРјС‹ РІРєР»СЋС‡РµРЅРёСЏ, СЂСѓР±</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXlastmile_monthly" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Аренда последней мили альтернативного оператора (Ежемесячный платеж), руб</xs:documentation>
+					<xs:documentation>РђСЂРµРЅРґР° РїРѕСЃР»РµРґРЅРµР№ РјРёР»Рё Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅРѕРіРѕ РѕРїРµСЂР°С‚РѕСЂР° (Р•Р¶РµРјРµСЃСЏС‡РЅС‹Р№ РїР»Р°С‚РµР¶), СЂСѓР±</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXlastmile" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Аренда последней мили альтернативного оператора </xs:documentation>
+					<xs:documentation>РђСЂРµРЅРґР° РїРѕСЃР»РµРґРЅРµР№ РјРёР»Рё Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅРѕРіРѕ РѕРїРµСЂР°С‚РѕСЂР° </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXinfra" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Аренда опор/канализации, руб</xs:documentation>
+					<xs:documentation>РђСЂРµРЅРґР° РѕРїРѕСЂ/РєР°РЅР°Р»РёР·Р°С†РёРё, СЂСѓР±</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXother_monthly" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Прочие ежемесячные, руб </xs:documentation>
+					<xs:documentation>РџСЂРѕС‡РёРµ РµР¶РµРјРµСЃСЏС‡РЅС‹Рµ, СЂСѓР± </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXother" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Прочие разовые, руб </xs:documentation>
+					<xs:documentation>РџСЂРѕС‡РёРµ СЂР°Р·РѕРІС‹Рµ, СЂСѓР± </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OPEXreserv" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Отчисления в Резерв Универсального обслуживания </xs:documentation>
+					<xs:documentation>РћС‚С‡РёСЃР»РµРЅРёСЏ РІ Р РµР·РµСЂРІ РЈРЅРёРІРµСЂСЃР°Р»СЊРЅРѕРіРѕ РѕР±СЃР»СѓР¶РёРІР°РЅРёСЏ </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PreSaleFlag" type="nillableBoolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Признак PreSale Устанавливается в «истину» если требуется предварительная проработка ТЭО </xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє PreSale РЈСЃС‚Р°РЅР°РІР»РёРІР°РµС‚СЃСЏ РІ В«РёСЃС‚РёРЅСѓВ» РµСЃР»Рё С‚СЂРµР±СѓРµС‚СЃСЏ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅР°СЏ РїСЂРѕСЂР°Р±РѕС‚РєР° РўР­Рћ </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerProjectType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип проекта b2b, b2o, b2c...</xs:documentation>
+					<xs:documentation>РўРёРї РїСЂРѕРµРєС‚Р° b2b, b2o, b2c...</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerProjectLevel" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>уровень инициатора заявкм. код R12 филиала, например 01000 для для КЦ или 01204 для Карельский филиал ПАО Ростелеком</xs:documentation>
+					<xs:documentation>СѓСЂРѕРІРµРЅСЊ РёРЅРёС†РёР°С‚РѕСЂР° Р·Р°СЏРІРєРј. РєРѕРґ R12 С„РёР»РёР°Р»Р°, РЅР°РїСЂРёРјРµСЂ 01000 РґР»СЏ РґР»СЏ РљР¦ РёР»Рё 01204 РґР»СЏ РљР°СЂРµР»СЊСЃРєРёР№ С„РёР»РёР°Р» РџРђРћ Р РѕСЃС‚РµР»РµРєРѕРј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvestmentType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Вид инвестиций(значения 01/03)</xs:documentation>
+					<xs:documentation>Р’РёРґ РёРЅРІРµСЃС‚РёС†РёР№(Р·РЅР°С‡РµРЅРёСЏ 01/03)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CFOInitiator" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ЦФО источника</xs:documentation>
+					<xs:documentation>Р¦Р¤Рћ РёСЃС‚РѕС‡РЅРёРєР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerProjectSegment" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Сегмент (клиента/проекта )</xs:documentation>
+					<xs:documentation>РЎРµРіРјРµРЅС‚ (РєР»РёРµРЅС‚Р°/РїСЂРѕРµРєС‚Р° )</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ReservProjectCode" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Резервируемый код проекта </xs:documentation>
+					<xs:documentation>Р РµР·РµСЂРІРёСЂСѓРµРјС‹Р№ РєРѕРґ РїСЂРѕРµРєС‚Р° </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="isTempSolution" type="nillableBoolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>признак ВТР(Организация временного технического решения)  </xs:documentation>
+					<xs:documentation>РїСЂРёР·РЅР°Рє Р’РўР (РћСЂРіР°РЅРёР·Р°С†РёСЏ РІСЂРµРјРµРЅРЅРѕРіРѕ С‚РµС…РЅРёС‡РµСЃРєРѕРіРѕ СЂРµС€РµРЅРёСЏ)  </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SpecialProject" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ID группы проектов </xs:documentation>
+					<xs:documentation>ID РіСЂСѓРїРїС‹ РїСЂРѕРµРєС‚РѕРІ </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMProjOrderID" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Уникальный номер заявки массового проекта ( HE-2186 ) </xs:documentation>
+					<xs:documentation>РЈРЅРёРєР°Р»СЊРЅС‹Р№ РЅРѕРјРµСЂ Р·Р°СЏРІРєРё РјР°СЃСЃРѕРІРѕРіРѕ РїСЂРѕРµРєС‚Р° ( HE-2186 ) </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMCommercialProject" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Коммерческие проект  ( HE-2186 ) </xs:documentation>
+					<xs:documentation>РљРѕРјРјРµСЂС‡РµСЃРєРёРµ РїСЂРѕРµРєС‚  ( HE-2186 ) </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderPosition" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Позиция в таблице данных массового проекта  ( HE-2186 ) </xs:documentation>
+					<xs:documentation>РџРѕР·РёС†РёСЏ РІ С‚Р°Р±Р»РёС†Рµ РґР°РЅРЅС‹С… РјР°СЃСЃРѕРІРѕРіРѕ РїСЂРѕРµРєС‚Р°  ( HE-2186 ) </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMCustomerDepartment" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Подразделение клиента (Заказчика) ( HE-2186 ) </xs:documentation>
+					<xs:documentation>РџРѕРґСЂР°Р·РґРµР»РµРЅРёРµ РєР»РёРµРЅС‚Р° (Р—Р°РєР°Р·С‡РёРєР°) ( HE-2186 ) </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMCustomerObject" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Наименование объекта клиента (Заказчика) ( HE-2186 )</xs:documentation>
+					<xs:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РѕР±СЉРµРєС‚Р° РєР»РёРµРЅС‚Р° (Р—Р°РєР°Р·С‡РёРєР°) ( HE-2186 )</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MINICASE_EQUIPMENT" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation> Наименование оборудования, затронутого улучшением (RTK-37)</xs:documentation>
+					<xs:documentation> РќР°РёРјРµРЅРѕРІР°РЅРёРµ РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЏ, Р·Р°С‚СЂРѕРЅСѓС‚РѕРіРѕ СѓР»СѓС‡С€РµРЅРёРµРј (RTK-37)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MINICASE_SLTU_NAME" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation> Имя устройства в СЛТУ (RTK-37)</xs:documentation>
+					<xs:documentation> РРјСЏ СѓСЃС‚СЂРѕР№СЃС‚РІР° РІ РЎР›РўРЈ (RTK-37)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MINICASE_EQUIPMENT_COMMENT" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation> Комментарий к оборудованию (RTK-37)</xs:documentation>
+					<xs:documentation> РљРѕРјРјРµРЅС‚Р°СЂРёР№ Рє РѕР±РѕСЂСѓРґРѕРІР°РЅРёСЋ (RTK-37)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MC_ISSUE_DESCRIPTION" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation> описание проблемы - текст (мемо) (RTK-97)</xs:documentation>
+					<xs:documentation> РѕРїРёСЃР°РЅРёРµ РїСЂРѕР±Р»РµРјС‹ - С‚РµРєСЃС‚ (РјРµРјРѕ) (RTK-97)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MC_OPERATION_TYPE" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>категория проводимых работ - число, выбор из списка dictionary_ex (RTK-97)</xs:documentation>
+					<xs:documentation>РєР°С‚РµРіРѕСЂРёСЏ РїСЂРѕРІРѕРґРёРјС‹С… СЂР°Р±РѕС‚ - С‡РёСЃР»Рѕ, РІС‹Р±РѕСЂ РёР· СЃРїРёСЃРєР° dictionary_ex (RTK-97)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HasAlternativeSolution" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>признак альтернативного оператора (HE-2305)</xs:documentation>
+					<xs:documentation>РїСЂРёР·РЅР°Рє Р°Р»СЊС‚РµСЂРЅР°С‚РёРІРЅРѕРіРѕ РѕРїРµСЂР°С‚РѕСЂР° (HE-2305)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="isMiniCase" type="nillableBoolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>признак МиниКейса (HE-3064) </xs:documentation>
+					<xs:documentation>РїСЂРёР·РЅР°Рє РњРёРЅРёРљРµР№СЃР° (HE-3064) </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ManagerKBPhone" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Контактный телефон менеджера КБ (HE-5093)</xs:documentation>
+					<xs:documentation>РљРѕРЅС‚Р°РєС‚РЅС‹Р№ С‚РµР»РµС„РѕРЅ РјРµРЅРµРґР¶РµСЂР° РљР‘ (HE-5093)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ManagerKBEMail" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Email менеджера КБ (HE-5093)</xs:documentation>
+					<xs:documentation>Email РјРµРЅРµРґР¶РµСЂР° РљР‘ (HE-5093)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UploadId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор процесса массового загрузчика услуг( HE-5834 ) </xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РїСЂРѕС†РµСЃСЃР° РјР°СЃСЃРѕРІРѕРіРѕ Р·Р°РіСЂСѓР·С‡РёРєР° СѓСЃР»СѓРі( HE-5834 ) </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="tCRMOrderCustomer">
 		<xs:annotation>
-			<xs:documentation>Описание основных параметров клиента</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РѕСЃРЅРѕРІРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ РєР»РёРµРЅС‚Р°</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="CustomerName" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Клиент (Название учреждения)</xs:documentation>
+					<xs:documentation>РљР»РёРµРЅС‚ (РќР°Р·РІР°РЅРёРµ СѓС‡СЂРµР¶РґРµРЅРёСЏ)</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -428,22 +428,22 @@
 			</xs:element>
 			<xs:element name="CustomerKPP" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>КПП обособленного подразделения клиента</xs:documentation>
+					<xs:documentation>РљРџРџ РѕР±РѕСЃРѕР±Р»РµРЅРЅРѕРіРѕ РїРѕРґСЂР°Р·РґРµР»РµРЅРёСЏ РєР»РёРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerTaxId" type="tTaxIdRussia" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ИНН клиента</xs:documentation>
+					<xs:documentation>РРќРќ РєР»РёРµРЅС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerContacts" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Контактные данные клиента - Текстовое описание контактной информации по заявке, включая в свободном виде ФИО, телефон, email и т.д.</xs:documentation>
+					<xs:documentation>РљРѕРЅС‚Р°РєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ РєР»РёРµРЅС‚Р° - РўРµРєСЃС‚РѕРІРѕРµ РѕРїРёСЃР°РЅРёРµ РєРѕРЅС‚Р°РєС‚РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РїРѕ Р·Р°СЏРІРєРµ, РІРєР»СЋС‡Р°СЏ РІ СЃРІРѕР±РѕРґРЅРѕРј РІРёРґРµ Р¤РРћ, С‚РµР»РµС„РѕРЅ, email Рё С‚.Рґ.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerPhone" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Телефон - Контактный телефон клиента (добавлено для совместимости интеграции с другими CRM)</xs:documentation>
+					<xs:documentation>РўРµР»РµС„РѕРЅ - РљРѕРЅС‚Р°РєС‚РЅС‹Р№ С‚РµР»РµС„РѕРЅ РєР»РёРµРЅС‚Р° (РґРѕР±Р°РІР»РµРЅРѕ РґР»СЏ СЃРѕРІРјРµСЃС‚РёРјРѕСЃС‚Рё РёРЅС‚РµРіСЂР°С†РёРё СЃ РґСЂСѓРіРёРјРё CRM)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerEMail" type="xs:string" minOccurs="0">
@@ -453,35 +453,35 @@
 			</xs:element>
 			<xs:element name="CustomerContactsName" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ФИО</xs:documentation>
+					<xs:documentation>Р¤РРћ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerComment" type="xs:string" minOccurs="0"/>
 			<xs:element name="CustomerAccount" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>лицевой счет в Биллинге</xs:documentation>
+					<xs:documentation>Р»РёС†РµРІРѕР№ СЃС‡РµС‚ РІ Р‘РёР»Р»РёРЅРіРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="tCRMOrderServices">
 		<xs:annotation>
-			<xs:documentation>Описание основных параметров услуг</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РѕСЃРЅРѕРІРЅС‹С… РїР°СЂР°РјРµС‚СЂРѕРІ СѓСЃР»СѓРі</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="PreferredTechnology" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Предпочтительная технология подключения - Название желаемой абонентом технологии подключения </xs:documentation>
+					<xs:documentation>РџСЂРµРґРїРѕС‡С‚РёС‚РµР»СЊРЅР°СЏ С‚РµС…РЅРѕР»РѕРіРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ - РќР°Р·РІР°РЅРёРµ Р¶РµР»Р°РµРјРѕР№ Р°Р±РѕРЅРµРЅС‚РѕРј С‚РµС…РЅРѕР»РѕРіРёРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PreferredTechnologyID" type="nillableInt" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Код предпочтительной технология подключения</xs:documentation>
+					<xs:documentation>РљРѕРґ РїСЂРµРґРїРѕС‡С‚РёС‚РµР»СЊРЅРѕР№ С‚РµС…РЅРѕР»РѕРіРёСЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceType" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Идентификатор типа подключаемой услуги</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ С‚РёРїР° РїРѕРґРєР»СЋС‡Р°РµРјРѕР№ СѓСЃР»СѓРіРё</xs:documentation>
 				</xs:annotation>
 				<xs:simpleType>
 					<xs:restriction base="xs:string">
@@ -492,37 +492,37 @@
 			</xs:element>
 			<xs:element name="ServiceQty" type="xs:integer" minOccurs="1" maxOccurs="1">
 				<xs:annotation>
-					<xs:documentation>Количество подключаемых заявкой услуг</xs:documentation>
+					<xs:documentation>РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕРґРєР»СЋС‡Р°РµРјС‹С… Р·Р°СЏРІРєРѕР№ СѓСЃР»СѓРі</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServicePlan" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Название выбранного тарифого плана</xs:documentation>
+					<xs:documentation>РќР°Р·РІР°РЅРёРµ РІС‹Р±СЂР°РЅРЅРѕРіРѕ С‚Р°СЂРёС„РѕРіРѕ РїР»Р°РЅР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="MonthRevenue" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Планируемый доход в месяц по тарифам (без НДС), тыс. руб.</xs:documentation>
+					<xs:documentation>РџР»Р°РЅРёСЂСѓРµРјС‹Р№ РґРѕС…РѕРґ РІ РјРµСЃСЏС† РїРѕ С‚Р°СЂРёС„Р°Рј (Р±РµР· РќР”РЎ), С‚С‹СЃ. СЂСѓР±.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SinglePayment" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Планируемый единовременный платеж (без НДС), тыс. руб.</xs:documentation>
+					<xs:documentation>РџР»Р°РЅРёСЂСѓРµРјС‹Р№ РµРґРёРЅРѕРІСЂРµРјРµРЅРЅС‹Р№ РїР»Р°С‚РµР¶ (Р±РµР· РќР”РЎ), С‚С‹СЃ. СЂСѓР±.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Discount" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Скидка в процентах</xs:documentation>
+					<xs:documentation>РЎРєРёРґРєР° РІ РїСЂРѕС†РµРЅС‚Р°С…</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Notes" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Примечание (Ком. блок)</xs:documentation>
+					<xs:documentation>РџСЂРёРјРµС‡Р°РЅРёРµ (РљРѕРј. Р±Р»РѕРє)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BillServiceId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор услуги. Передается при подключении услуги.Указывается идентификатор услуги в Биллинге.</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓСЃР»СѓРіРё. РџРµСЂРµРґР°РµС‚СЃСЏ РїСЂРё РїРѕРґРєР»СЋС‡РµРЅРёРё СѓСЃР»СѓРіРё.РЈРєР°Р·С‹РІР°РµС‚СЃСЏ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓСЃР»СѓРіРё РІ Р‘РёР»Р»РёРЅРіРµ.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceQtyRetained" type="nillableInt" minOccurs="0">
@@ -532,7 +532,7 @@
 			</xs:element>
 			<xs:element name="MonthRevenueRetained" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Определяется автоматически в CRM (сохраненные), согласно выбранному тарифному плану, для тарифов с абонентской платой, или пусто, если тариф не подразумевает абонентскую плату.</xs:documentation>
+					<xs:documentation>РћРїСЂРµРґРµР»СЏРµС‚СЃСЏ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РІ CRM (СЃРѕС…СЂР°РЅРµРЅРЅС‹Рµ), СЃРѕРіР»Р°СЃРЅРѕ РІС‹Р±СЂР°РЅРЅРѕРјСѓ С‚Р°СЂРёС„РЅРѕРјСѓ РїР»Р°РЅСѓ, РґР»СЏ С‚Р°СЂРёС„РѕРІ СЃ Р°Р±РѕРЅРµРЅС‚СЃРєРѕР№ РїР»Р°С‚РѕР№, РёР»Рё РїСѓСЃС‚Рѕ, РµСЃР»Рё С‚Р°СЂРёС„ РЅРµ РїРѕРґСЂР°Р·СѓРјРµРІР°РµС‚ Р°Р±РѕРЅРµРЅС‚СЃРєСѓСЋ РїР»Р°С‚Сѓ.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServicePeriod" type="nillableInt" minOccurs="0">
@@ -542,80 +542,80 @@
 			</xs:element>
 			<xs:element name="ARPUTemp" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Темп уменьшения ARPU в год, %</xs:documentation>
+					<xs:documentation>РўРµРјРї СѓРјРµРЅСЊС€РµРЅРёСЏ ARPU РІ РіРѕРґ, %</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IPPlan" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>IP план</xs:documentation>
+					<xs:documentation>IP РїР»Р°РЅ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VPNParams" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Параметры VPN</xs:documentation>
+					<xs:documentation>РџР°СЂР°РјРµС‚СЂС‹ VPN</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Respons4Admin" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN - Ответственный за администрирование: Ростелеком/МРФ;  Ростелеком/ОЭСПК;  Интегратор;</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN - РћС‚РІРµС‚СЃС‚РІРµРЅРЅС‹Р№ Р·Р° Р°РґРјРёРЅРёСЃС‚СЂРёСЂРѕРІР°РЅРёРµ: Р РѕСЃС‚РµР»РµРєРѕРј/РњР Р¤;  Р РѕСЃС‚РµР»РµРєРѕРј/РћР­РЎРџРљ;  РРЅС‚РµРіСЂР°С‚РѕСЂ;</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IntegratorName" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Название интегратора</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -РќР°Р·РІР°РЅРёРµ РёРЅС‚РµРіСЂР°С‚РѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IntegratorContact" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Контакты интегратора</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -РљРѕРЅС‚Р°РєС‚С‹ РёРЅС‚РµРіСЂР°С‚РѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="UNIDStarCenter" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Центр звезды UNID</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -Р¦РµРЅС‚СЂ Р·РІРµР·РґС‹ UNID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrderStarCenter" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Центр звезды номер заказа</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -Р¦РµРЅС‚СЂ Р·РІРµР·РґС‹ РЅРѕРјРµСЂ Р·Р°РєР°Р·Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CityStarCenter" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Центр звезды город</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -Р¦РµРЅС‚СЂ Р·РІРµР·РґС‹ РіРѕСЂРѕРґ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IsLocalVPN" type="nillableBooleanRu" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Локальный VPN, выбор: 1 - Да ,0 - Нет </xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -Р›РѕРєР°Р»СЊРЅС‹Р№ VPN, РІС‹Р±РѕСЂ: 1 - Р”Р° ,0 - РќРµС‚ </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IsSeparateByService" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Разделять трафик по классам обслуживания: 
-С COS | Да
-Без COS | Нет
-H-QoS | Нет(детализированный)</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -Р Р°Р·РґРµР»СЏС‚СЊ С‚СЂР°С„РёРє РїРѕ РєР»Р°СЃСЃР°Рј РѕР±СЃР»СѓР¶РёРІР°РЅРёСЏ: 
+РЎ COS | Р”Р°
+Р‘РµР· COS | РќРµС‚
+H-QoS | РќРµС‚(РґРµС‚Р°Р»РёР·РёСЂРѕРІР°РЅРЅС‹Р№)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IsSeparateByZone" type="nillableBooleanRu" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Разделять трафик по зонам: Да/нет</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -Р Р°Р·РґРµР»СЏС‚СЊ С‚СЂР°С„РёРє РїРѕ Р·РѕРЅР°Рј: Р”Р°/РЅРµС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SubNet" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Подсеть</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -РџРѕРґСЃРµС‚СЊ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VPNRouting" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>параметр услуги VPN -Маршрутизация пакетов выбор:статическая\динамическая</xs:documentation>
+					<xs:documentation>РїР°СЂР°РјРµС‚СЂ СѓСЃР»СѓРіРё VPN -РњР°СЂС€СЂСѓС‚РёР·Р°С†РёСЏ РїР°РєРµС‚РѕРІ РІС‹Р±РѕСЂ:СЃС‚Р°С‚РёС‡РµСЃРєР°СЏ\РґРёРЅР°РјРёС‡РµСЃРєР°СЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="IPASNetworks" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Автономная система</xs:documentation>
+					<xs:documentation>РђРІС‚РѕРЅРѕРјРЅР°СЏ СЃРёСЃС‚РµРјР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PacketLength" type="xs:string" minOccurs="0">
@@ -625,32 +625,32 @@ H-QoS | Нет(детализированный)</xs:documentation>
 			</xs:element>
 			<xs:element name="QinQ" type="nillableBooleanRu" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Поддержка двойного тегирования – QinQвыбор Да/Нет</xs:documentation>
+					<xs:documentation>РџРѕРґРґРµСЂР¶РєР° РґРІРѕР№РЅРѕРіРѕ С‚РµРіРёСЂРѕРІР°РЅРёСЏ вЂ“ QinQРІС‹Р±РѕСЂ Р”Р°/РќРµС‚</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SpecialReq" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Особые требования к настройке порта</xs:documentation>
+					<xs:documentation>РћСЃРѕР±С‹Рµ С‚СЂРµР±РѕРІР°РЅРёСЏ Рє РЅР°СЃС‚СЂРѕР№РєРµ РїРѕСЂС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VPNNew" type="nillableBoolean" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Признак запроса на создание нового VPN, Чекбокс, значения 0/1</xs:documentation>
+					<xs:documentation>РџСЂРёР·РЅР°Рє Р·Р°РїСЂРѕСЃР° РЅР° СЃРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ VPN, Р§РµРєР±РѕРєСЃ, Р·РЅР°С‡РµРЅРёСЏ 0/1</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LinkedOrderNumber" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Номер связной заявки CMS</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ СЃРІСЏР·РЅРѕР№ Р·Р°СЏРІРєРё CMS</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="RequiredDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Запрашиваемая контрольная дата готовности проработки </xs:documentation>
+					<xs:documentation>Р—Р°РїСЂР°С€РёРІР°РµРјР°СЏ РєРѕРЅС‚СЂРѕР»СЊРЅР°СЏ РґР°С‚Р° РіРѕС‚РѕРІРЅРѕСЃС‚Рё РїСЂРѕСЂР°Р±РѕС‚РєРё </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceSpeedValue" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Скорость канала</xs:documentation>
+					<xs:documentation>РЎРєРѕСЂРѕСЃС‚СЊ РєР°РЅР°Р»Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceSpeedMeasure" type="xs:string" minOccurs="0">
@@ -680,217 +680,217 @@ H-QoS | Нет(детализированный)</xs:documentation>
 			</xs:element>
 			<xs:element name="ServiceLogin" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Login для подсоединения к сети - RTK-236 Заполнение логина МК</xs:documentation>
+					<xs:documentation>Login РґР»СЏ РїРѕРґСЃРѕРµРґРёРЅРµРЅРёСЏ Рє СЃРµС‚Рё - RTK-236 Р—Р°РїРѕР»РЅРµРЅРёРµ Р»РѕРіРёРЅР° РњРљ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SRV_CMS_ServiceSpeed" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Скорость канала HE-2209</xs:documentation>
+					<xs:documentation>РЎРєРѕСЂРѕСЃС‚СЊ РєР°РЅР°Р»Р° HE-2209</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="SRV_CMS_ServiceSpeed_SCALE" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Масштаб скорости канала HE-2209</xs:documentation>
+					<xs:documentation>РњР°СЃС€С‚Р°Р± СЃРєРѕСЂРѕСЃС‚Рё РєР°РЅР°Р»Р° HE-2209</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMOrderDateConnect" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Желаемая клиентом дата подключения</xs:documentation>
+					<xs:documentation>Р–РµР»Р°РµРјР°СЏ РєР»РёРµРЅС‚РѕРј РґР°С‚Р° РїРѕРґРєР»СЋС‡РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRM_ServiceEnd_Date" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата окончание действия услуги</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РѕРєРѕРЅС‡Р°РЅРёРµ РґРµР№СЃС‚РІРёСЏ СѓСЃР»СѓРіРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ServiceQtyOttok" type="nillableDecimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Процент оттока абонбазы</xs:documentation>
+					<xs:documentation>РџСЂРѕС†РµРЅС‚ РѕС‚С‚РѕРєР° Р°Р±РѕРЅР±Р°Р·С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMPaymentDate" type="nillableDate" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата получения единовременного платежа</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РїРѕР»СѓС‡РµРЅРёСЏ РµРґРёРЅРѕРІСЂРµРјРµРЅРЅРѕРіРѕ РїР»Р°С‚РµР¶Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="tCRMOrderServicesAddr">
 		<xs:annotation>
-			<xs:documentation>Описание адреса предостваления услуг</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ Р°РґСЂРµСЃР° РїСЂРµРґРѕСЃС‚РІР°Р»РµРЅРёСЏ СѓСЃР»СѓРі</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="GCTET_MCTET" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ГЦТЭТ/МЦТЭТ (биллинг)- (справочная информация)</xs:documentation>
+					<xs:documentation>Р“Р¦РўР­Рў/РњР¦РўР­Рў (Р±РёР»Р»РёРЅРі)- (СЃРїСЂР°РІРѕС‡РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LTC" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ЛТЦ (биллинг)- (справочная информация)</xs:documentation>
+					<xs:documentation>Р›РўР¦ (Р±РёР»Р»РёРЅРі)- (СЃРїСЂР°РІРѕС‡РЅР°СЏ РёРЅС„РѕСЂРјР°С†РёСЏ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="LocationCategory" type="t_LocationCategory" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Категория, определяющая набор атрибутов, описывающих адрес/местоположение. Если передан GlobalAddrId, пустое значение параметра трактуется как STRICT. Поле не должно передаваться, если не передан GlobalAddrId.</xs:documentation>
+					<xs:documentation>РљР°С‚РµРіРѕСЂРёСЏ, РѕРїСЂРµРґРµР»СЏСЋС‰Р°СЏ РЅР°Р±РѕСЂ Р°С‚СЂРёР±СѓС‚РѕРІ, РѕРїРёСЃС‹РІР°СЋС‰РёС… Р°РґСЂРµСЃ/РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ. Р•СЃР»Рё РїРµСЂРµРґР°РЅ GlobalAddrId, РїСѓСЃС‚РѕРµ Р·РЅР°С‡РµРЅРёРµ РїР°СЂР°РјРµС‚СЂР° С‚СЂР°РєС‚СѓРµС‚СЃСЏ РєР°Рє STRICT. РџРѕР»Рµ РЅРµ РґРѕР»Р¶РЅРѕ РїРµСЂРµРґР°РІР°С‚СЊСЃСЏ, РµСЃР»Рё РЅРµ РїРµСЂРµРґР°РЅ GlobalAddrId.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="GlobalAddrId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Глобальный идентификатор ОР ПОН адресного объекта. Резерв для будущего использования совместно с отраслевым решением Паспортизация объектов недвижимости</xs:documentation>
+					<xs:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РћР  РџРћРќ Р°РґСЂРµСЃРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°. Р РµР·РµСЂРІ РґР»СЏ Р±СѓРґСѓС‰РµРіРѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ СЃРѕРІРјРµСЃС‚РЅРѕ СЃ РѕС‚СЂР°СЃР»РµРІС‹Рј СЂРµС€РµРЅРёРµРј РџР°СЃРїРѕСЂС‚РёР·Р°С†РёСЏ РѕР±СЉРµРєС‚РѕРІ РЅРµРґРІРёР¶РёРјРѕСЃС‚Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMregionID" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор региона АРМ (для возможного анализа в ручном режиме)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЂРµРіРёРѕРЅР° РђР Рњ (РґР»СЏ РІРѕР·РјРѕР¶РЅРѕРіРѕ Р°РЅР°Р»РёР·Р° РІ СЂСѓС‡РЅРѕРј СЂРµР¶РёРјРµ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMTownId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор города АРМ (для возможного анализа в ручном режиме)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РіРѕСЂРѕРґР° РђР Рњ (РґР»СЏ РІРѕР·РјРѕР¶РЅРѕРіРѕ Р°РЅР°Р»РёР·Р° РІ СЂСѓС‡РЅРѕРј СЂРµР¶РёРјРµ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMStreetId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор улицы АРМ (для возможного анализа в ручном режиме)</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓР»РёС†С‹ РђР Рњ (РґР»СЏ РІРѕР·РјРѕР¶РЅРѕРіРѕ Р°РЅР°Р»РёР·Р° РІ СЂСѓС‡РЅРѕРј СЂРµР¶РёРјРµ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="KLADRLocalityId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор населенного пункта КЛАДР</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РЅР°СЃРµР»РµРЅРЅРѕРіРѕ РїСѓРЅРєС‚Р° РљР›РђР”Р </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="KLADRStreetId" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор улицы КЛАДР</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СѓР»РёС†С‹ РљР›РђР”Р </xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Street" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Название улицы</xs:documentation>
+					<xs:documentation>РќР°Р·РІР°РЅРёРµ СѓР»РёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StreetKind" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип улицы</xs:documentation>
+					<xs:documentation>РўРёРї СѓР»РёС†С‹</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMHouse" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дом (АРМ)</xs:documentation>
+					<xs:documentation>Р”РѕРј (РђР Рњ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMBuiding" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Корпус (АРМ)</xs:documentation>
+					<xs:documentation>РљРѕСЂРїСѓСЃ (РђР Рњ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CRMFlat" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Квартира/Офис (АРМ)</xs:documentation>
+					<xs:documentation>РљРІР°СЂС‚РёСЂР°/РћС„РёСЃ (РђР Рњ)</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="House" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дом</xs:documentation>
+					<xs:documentation>Р”РѕРј</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="HouseLitera" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Литера дома</xs:documentation>
+					<xs:documentation>Р›РёС‚РµСЂР° РґРѕРјР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CornerHouse" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Номер углового дома - номер дома после символа прямой слэш.</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ СѓРіР»РѕРІРѕРіРѕ РґРѕРјР° - РЅРѕРјРµСЂ РґРѕРјР° РїРѕСЃР»Рµ СЃРёРјРІРѕР»Р° РїСЂСЏРјРѕР№ СЃР»СЌС€.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BuildingBlock" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Корпус</xs:documentation>
+					<xs:documentation>РљРѕСЂРїСѓСЃ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BuildingBlockLitera" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Литера корпуса</xs:documentation>
+					<xs:documentation>Р›РёС‚РµСЂР° РєРѕСЂРїСѓСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Building" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Строение</xs:documentation>
+					<xs:documentation>РЎС‚СЂРѕРµРЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="BuildingLitera" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Литера строения</xs:documentation>
+					<xs:documentation>Р›РёС‚РµСЂР° СЃС‚СЂРѕРµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Ownership" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Владение</xs:documentation>
+					<xs:documentation>Р’Р»Р°РґРµРЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OwnershipLitera" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Литера владения</xs:documentation>
+					<xs:documentation>Р›РёС‚РµСЂР° РІР»Р°РґРµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddrComment" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Комментарий для адреса точки подключения</xs:documentation>
+					<xs:documentation>РљРѕРјРјРµРЅС‚Р°СЂРёР№ РґР»СЏ Р°РґСЂРµСЃР° С‚РѕС‡РєРё РїРѕРґРєР»СЋС‡РµРЅРёСЏ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Latitude" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Широта точки оказания услуги</xs:documentation>
+					<xs:documentation>РЁРёСЂРѕС‚Р° С‚РѕС‡РєРё РѕРєР°Р·Р°РЅРёСЏ СѓСЃР»СѓРіРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Longitude" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Долгота точки оказания услуги</xs:documentation>
+					<xs:documentation>Р”РѕР»РіРѕС‚Р° С‚РѕС‡РєРё РѕРєР°Р·Р°РЅРёСЏ СѓСЃР»СѓРіРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ATD_Addr_Id" type="xs:decimal" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>для внутренних целей Гермес HERMES_GIS.ATD_ADDRESS.ADDR_ID</xs:documentation>
+					<xs:documentation>РґР»СЏ РІРЅСѓС‚СЂРµРЅРЅРёС… С†РµР»РµР№ Р“РµСЂРјРµСЃ HERMES_GIS.ATD_ADDRESS.ADDR_ID</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CustomerObjectType" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Тип объекта</xs:documentation>
+					<xs:documentation>РўРёРї РѕР±СЉРµРєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="Local_Contact" type="tLocal_Contact" minOccurs="0"/>
 			<xs:element name="needSurvey" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>признак  Требуется прединсталляционное обследование</xs:documentation>
+					<xs:documentation>РїСЂРёР·РЅР°Рє  РўСЂРµР±СѓРµС‚СЃСЏ РїСЂРµРґРёРЅСЃС‚Р°Р»Р»СЏС†РёРѕРЅРЅРѕРµ РѕР±СЃР»РµРґРѕРІР°РЅРёРµ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
 	</xs:complexType>
 	<xs:complexType name="tLocal_Contact">
 		<xs:annotation>
-			<xs:documentation>Описание контакта по адресу при создании клиентской заявки</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ РєРѕРЅС‚Р°РєС‚Р° РїРѕ Р°РґСЂРµСЃСѓ РїСЂРё СЃРѕР·РґР°РЅРёРё РєР»РёРµРЅС‚СЃРєРѕР№ Р·Р°СЏРІРєРё</xs:documentation>
 		</xs:annotation>
 		<xs:all>
 			<xs:element name="AddrContacts" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Контактные данные по адресу  - Текстовое описание контактной информации по заявке, включая в свободном виде ФИО, телефон, email и т.д.</xs:documentation>
+					<xs:documentation>РљРѕРЅС‚Р°РєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ РїРѕ Р°РґСЂРµСЃСѓ  - РўРµРєСЃС‚РѕРІРѕРµ РѕРїРёСЃР°РЅРёРµ РєРѕРЅС‚Р°РєС‚РЅРѕР№ РёРЅС„РѕСЂРјР°С†РёРё РїРѕ Р·Р°СЏРІРєРµ, РІРєР»СЋС‡Р°СЏ РІ СЃРІРѕР±РѕРґРЅРѕРј РІРёРґРµ Р¤РРћ, С‚РµР»РµС„РѕРЅ, email Рё С‚.Рґ.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddrPhone" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Телефон - Контактный телефон по адресу</xs:documentation>
+					<xs:documentation>РўРµР»РµС„РѕРЅ - РљРѕРЅС‚Р°РєС‚РЅС‹Р№ С‚РµР»РµС„РѕРЅ РїРѕ Р°РґСЂРµСЃСѓ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddrEMail" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>EMail контактного лица по адресу</xs:documentation>
+					<xs:documentation>EMail РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р° РїРѕ Р°РґСЂРµСЃСѓ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="AddrContactsName" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>ФИО контактного лица по адресу</xs:documentation>
+					<xs:documentation>Р¤РРћ РєРѕРЅС‚Р°РєС‚РЅРѕРіРѕ Р»РёС†Р° РїРѕ Р°РґСЂРµСЃСѓ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:all>
@@ -917,7 +917,7 @@ H-QoS | Нет(детализированный)</xs:documentation>
 	</xs:simpleType>
 	<xs:simpleType name="tKPP">
 		<xs:annotation>
-			<xs:documentation>Код причины постановки на учет (КПП)</xs:documentation>
+			<xs:documentation>РљРѕРґ РїСЂРёС‡РёРЅС‹ РїРѕСЃС‚Р°РЅРѕРІРєРё РЅР° СѓС‡РµС‚ (РљРџРџ)</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:length value="9"/>
@@ -947,7 +947,7 @@ H-QoS | Нет(детализированный)</xs:documentation>
 	</xs:simpleType>
 	<xs:simpleType name="tBooleanRu">
 		<xs:restriction base="xs:string">
-			<xs:pattern value="0|1|Да|Нет"/>
+			<xs:pattern value="0|1|Р”Р°|РќРµС‚"/>
 		</xs:restriction>
 	</xs:simpleType>
 	<xs:simpleType name="nillableBooleanRu">
@@ -955,22 +955,22 @@ H-QoS | Нет(детализированный)</xs:documentation>
 	</xs:simpleType>
 	<xs:simpleType name="t_LocationCategory">
 		<xs:annotation>
-			<xs:documentation>Категория, определяющая набор атрибутов, описывающих адрес/местоположение</xs:documentation>
+			<xs:documentation>РљР°С‚РµРіРѕСЂРёСЏ, РѕРїСЂРµРґРµР»СЏСЋС‰Р°СЏ РЅР°Р±РѕСЂ Р°С‚СЂРёР±СѓС‚РѕРІ, РѕРїРёСЃС‹РІР°СЋС‰РёС… Р°РґСЂРµСЃ/РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёРµ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="STRICT">
 				<xs:annotation>
-					<xs:documentation>Точный адрес</xs:documentation>
+					<xs:documentation>РўРѕС‡РЅС‹Р№ Р°РґСЂРµСЃ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="GEO">
 				<xs:annotation>
-					<xs:documentation>Точные координаты адреса с указанием адресного элемента ориентира</xs:documentation>
+					<xs:documentation>РўРѕС‡РЅС‹Рµ РєРѕРѕСЂРґРёРЅР°С‚С‹ Р°РґСЂРµСЃР° СЃ СѓРєР°Р·Р°РЅРёРµРј Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РѕСЂРёРµРЅС‚РёСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="LANDMARK">
 				<xs:annotation>
-					<xs:documentation>Адресный элемент ориентира с указанием навигации до точного адреса</xs:documentation>
+					<xs:documentation>РђРґСЂРµСЃРЅС‹Р№ СЌР»РµРјРµРЅС‚ РѕСЂРёРµРЅС‚РёСЂР° СЃ СѓРєР°Р·Р°РЅРёРµРј РЅР°РІРёРіР°С†РёРё РґРѕ С‚РѕС‡РЅРѕРіРѕ Р°РґСЂРµСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -34,7 +34,7 @@
 	<wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
 		<wsdl:operation name="ManageContractPayment">
-			<wsdl:documentation>Передача оплаты по договору</wsdl:documentation>
+			<wsdl:documentation>РџРµСЂРµРґР°С‡Р° РѕРїР»Р°С‚С‹ РїРѕ РґРѕРіРѕРІРѕСЂСѓ</wsdl:documentation>
 			<soap:operation soapAction="urn:ru:rt:hrms:contractpaymentservice:ManageContractPayment"/>
 			<wsdl:input name="ManageContractPaymentIn">
 				<soap:header message="tns:Context" part="context" use="literal"/>

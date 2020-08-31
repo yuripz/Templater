@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:ru:rt:hrms:contractpayment" targetNamespace="urn:ru:rt:hrms:contractpayment">
-	<!-- ИНТЕРФЕЙС ПЕРЕДАЧА ОПЛАТЫ ПО ДОГОВОРУ-->
-	<!-- ДЕЙСТВИЯ ПО ДОГОВОРУ-->
+	<!-- РРќРўР•Р Р¤Р•Р™РЎ РџР•Р Р•Р”РђР§Рђ РћРџР›РђРўР« РџРћ Р”РћР“РћР’РћР РЈ-->
+	<!-- Р”Р•Р™РЎРўР’РРЇ РџРћ Р”РћР“РћР’РћР РЈ-->
 	<xs:complexType name="tStageFactList">
 		<xs:annotation>
-			<xs:documentation>Список действий договора</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє РґРµР№СЃС‚РІРёР№ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="StageFact" type="tns:tStageFact" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Описание списка действий договора</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° РґРµР№СЃС‚РІРёР№ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
@@ -18,57 +18,57 @@
 		<xs:sequence>
 			<xs:element name="HeaderId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор договора</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРіРѕРІРѕСЂР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CycleId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор этапа. Для аванса</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЌС‚Р°РїР°. Р”Р»СЏ Р°РІР°РЅСЃР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="StageId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор действия исполнения. Для расчета</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРµР№СЃС‚РІРёСЏ РёСЃРїРѕР»РЅРµРЅРёСЏ. Р”Р»СЏ СЂР°СЃС‡РµС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FactDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата передачи</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РїРµСЂРµРґР°С‡Рё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FactAmount" type="xs:decimal">
 				<xs:annotation>
-					<xs:documentation>Сумма с НДС</xs:documentation>
+					<xs:documentation>РЎСѓРјРјР° СЃ РќР”РЎ</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="FactType" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Тип передаваемого факта</xs:documentation>
+					<xs:documentation>РўРёРї РїРµСЂРµРґР°РІР°РµРјРѕРіРѕ С„Р°РєС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvoiceNum" type="xs:string" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Номер акта/накладной. Для расчета</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ Р°РєС‚Р°/РЅР°РєР»Р°РґРЅРѕР№. Р”Р»СЏ СЂР°СЃС‡РµС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvoiceId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор счета-фактуры. Для расчета</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ СЃС‡РµС‚Р°-С„Р°РєС‚СѓСЂС‹. Р”Р»СЏ СЂР°СЃС‡РµС‚Р°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtInvoiceId" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Идентификатор, полученный из СУС при формировании ССФ. Для расчета, кроме случаев оплаты по ССФ, созданному сразу вручную в r12 без КС-2</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ, РїРѕР»СѓС‡РµРЅРЅС‹Р№ РёР· РЎРЈРЎ РїСЂРё С„РѕСЂРјРёСЂРѕРІР°РЅРёРё РЎРЎР¤. Р”Р»СЏ СЂР°СЃС‡РµС‚Р°, РєСЂРѕРјРµ СЃР»СѓС‡Р°РµРІ РѕРїР»Р°С‚С‹ РїРѕ РЎРЎР¤, СЃРѕР·РґР°РЅРЅРѕРјСѓ СЃСЂР°Р·Сѓ РІСЂСѓС‡РЅСѓСЋ РІ r12 Р±РµР· РљРЎ-2</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PaymentNum" type="xs:integer" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>омер платежного поручения. Не заполняется в случае корректировок</xs:documentation>
+					<xs:documentation>РѕРјРµСЂ РїР»Р°С‚РµР¶РЅРѕРіРѕ РїРѕСЂСѓС‡РµРЅРёСЏ. РќРµ Р·Р°РїРѕР»РЅСЏРµС‚СЃСЏ РІ СЃР»СѓС‡Р°Рµ РєРѕСЂСЂРµРєС‚РёСЂРѕРІРѕРє</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="PaymentDate" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата платежного поручения. Не заполняется в случае корректировок</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° РїР»Р°С‚РµР¶РЅРѕРіРѕ РїРѕСЂСѓС‡РµРЅРёСЏ. РќРµ Р·Р°РїРѕР»РЅСЏРµС‚СЃСЏ РІ СЃР»СѓС‡Р°Рµ РєРѕСЂСЂРµРєС‚РёСЂРѕРІРѕРє</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>

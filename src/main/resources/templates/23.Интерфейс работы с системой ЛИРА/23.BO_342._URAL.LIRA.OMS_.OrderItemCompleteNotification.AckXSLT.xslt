@@ -12,7 +12,7 @@
 				<Result>
    <DATA><FIELDS>   
    <ERR>30201</ERR>
-   <MES>Ошибка при вызове сервиса в Гермес</MES>
+   <MES>РћС€РёР±РєР° РїСЂРё РІС‹Р·РѕРІРµ СЃРµСЂРІРёСЃР° РІ Р“РµСЂРјРµСЃ</MES>
    </FIELDS></DATA>
 					<Next>ERRIN</Next>
 				</Result>

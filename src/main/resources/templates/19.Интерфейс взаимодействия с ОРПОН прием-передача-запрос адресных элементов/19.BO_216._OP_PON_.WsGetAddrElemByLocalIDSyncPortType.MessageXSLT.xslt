@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/">
 		<ws:AddressElementLocalIDData xmlns:ws="http://www.informatica.com/dis/ws/ws_">
-			<!-- äëÿ ïîëó÷åíèÿ ÃÈÄ by ËÈÄ -->
+			<!-- Ð´Ð»Ñ Ð¿Ð¾Ð»ÑƒÑ‡ÐµÐ½Ð¸Ñ Ð“Ð˜Ð” by Ð›Ð˜Ð” -->
 			<xsl:for-each select="AddressElementLocalIDData">
 				<xsl:for-each select="AddressElementLocalIDGroup">
 					<ws:AddressElementLocalIDGroup>

@@ -3,12 +3,12 @@
   <xs:element name="ManageNaturalIndexesDicRequest" type="tns:ManageNaturalIndexesDicRequest"/>
   <xs:complexType name="ManageNaturalIndexesDicRequest">
     <xs:annotation>
-      <xs:documentation>Запрос синхронизации справочника Натуральные показатели</xs:documentation>
+      <xs:documentation>Р—Р°РїСЂРѕСЃ СЃРёРЅС…СЂРѕРЅРёР·Р°С†РёРё СЃРїСЂР°РІРѕС‡РЅРёРєР° РќР°С‚СѓСЂР°Р»СЊРЅС‹Рµ РїРѕРєР°Р·Р°С‚РµР»Рё</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="NaturalIndexesList" type="dic:tNaturalIndexesList">
         <xs:annotation>
-          <xs:documentation>Описание списка натуральных показателей</xs:documentation>
+          <xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° РЅР°С‚СѓСЂР°Р»СЊРЅС‹С… РїРѕРєР°Р·Р°С‚РµР»РµР№</xs:documentation>
         </xs:annotation>
       </xs:element>
     </xs:sequence>

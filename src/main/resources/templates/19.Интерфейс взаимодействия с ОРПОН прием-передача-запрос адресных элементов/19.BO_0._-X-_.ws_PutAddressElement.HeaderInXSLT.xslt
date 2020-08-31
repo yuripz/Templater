@@ -12,7 +12,7 @@
 						<BusOperationId>201</BusOperationId>
 					</Context>
 				</xsl:for-each>
-				<!-- AddressList ïåðåäà÷à àäðåñíûõ ýëåìåíòîâ-->
+				<!-- AddressList Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‡Ð° Ð°Ð´Ñ€ÐµÑÐ½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²-->
 				<xsl:for-each select="AddressElementTypeData">
 					<Context>
 						<EventInitiator>OP_PON</EventInitiator>
@@ -22,7 +22,7 @@
 						<BusOperationId>204</BusOperationId>
 					</Context>
 				</xsl:for-each>
-				<!-- AddressElementTypeData Òèïû àäðåñíûõ ýëåìåíòîâ-->
+				<!-- AddressElementTypeData Ð¢Ð¸Ð¿Ñ‹ Ð°Ð´Ñ€ÐµÑÐ½Ñ‹Ñ… ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ð¾Ð²-->
 				<xsl:for-each select="EstStatData">
 					<Context>
 						<EventInitiator>OP_PON</EventInitiator>
@@ -32,7 +32,7 @@
 						<BusOperationId>205</BusOperationId>
 					</Context>
 				</xsl:for-each>
-				<!-- EstStatData Ïðèçíàêè âëàäåíèÿ -->
+				<!-- EstStatData ÐŸÑ€Ð¸Ð·Ð½Ð°ÐºÐ¸ Ð²Ð»Ð°Ð´ÐµÐ½Ð¸Ñ -->
 				<xsl:for-each select="StrStatData">
 					<Context>
 						<EventInitiator>OP_PON</EventInitiator>
@@ -42,7 +42,7 @@
 						<BusOperationId>206</BusOperationId>
 					</Context>
 				</xsl:for-each>
-				<!-- StrStatData Ïðèçíàêè ñòðîåíèÿ -->
+				<!-- StrStatData ÐŸÑ€Ð¸Ð·Ð½Ð°ÐºÐ¸ ÑÑ‚Ñ€Ð¾ÐµÐ½Ð¸Ñ -->
 				<xsl:for-each select="PutManagementCompanyRequest">
 					<Context>
 						<EventInitiator>OP_PON</EventInitiator>

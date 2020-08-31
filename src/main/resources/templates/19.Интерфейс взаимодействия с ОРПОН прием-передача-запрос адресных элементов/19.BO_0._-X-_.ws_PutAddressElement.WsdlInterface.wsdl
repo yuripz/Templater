@@ -10,51 +10,51 @@
                 targetNamespace="http://www.informatica.com/dis/ws/ws_" elementFormDefault="qualified">
       <xsd:element name="PutAddressElement">
         <xsd:annotation>
-          <xsd:documentation>Элемент "Группа адресов"</xsd:documentation>
+          <xsd:documentation>Р­Р»РµРјРµРЅС‚ "Р“СЂСѓРїРїР° Р°РґСЂРµСЃРѕРІ"</xsd:documentation>
         </xsd:annotation>
         <xsd:complexType>
           <xsd:sequence>
             <xsd:element name="Address" minOccurs="0" maxOccurs="unbounded">
               <xsd:annotation>
-                <xsd:documentation>Элемент "Адрес" (множ-ный, обяз-ный)</xsd:documentation>
+                <xsd:documentation>Р­Р»РµРјРµРЅС‚ "РђРґСЂРµСЃ" (РјРЅРѕР¶-РЅС‹Р№, РѕР±СЏР·-РЅС‹Р№)</xsd:documentation>
               </xsd:annotation>
               <xsd:complexType>
                 <xsd:sequence>
                   <xsd:element name="AddrElement" minOccurs="0" maxOccurs="unbounded">
                     <xsd:annotation>
-                      <xsd:documentation>Элемент "Адресный элемент" (множ-ный, необяз-ный)</xsd:documentation>
+                      <xsd:documentation>Р­Р»РµРјРµРЅС‚ "РђРґСЂРµСЃРЅС‹Р№ СЌР»РµРјРµРЅС‚" (РјРЅРѕР¶-РЅС‹Р№, РЅРµРѕР±СЏР·-РЅС‹Р№)</xsd:documentation>
                     </xsd:annotation>
                     <xsd:complexType>
                       <xsd:sequence>
                         <xsd:element name="GlobalID" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Глобальный уникальный идентификатор адресного элемента</xsd:documentation>
+                            <xsd:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="TypeID" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>ИД типа адресного элемента</xsd:documentation>
+                            <xsd:documentation>РР” С‚РёРїР° Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="Level" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Уровень адресного элемента в иерархии адреса</xsd:documentation>
+                            <xsd:documentation>РЈСЂРѕРІРµРЅСЊ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РёРµСЂР°СЂС…РёРё Р°РґСЂРµСЃР°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="Name" type="xsd:string" minOccurs="0"/>
                         <xsd:element name="ParentId" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Ссылка на GlobalId родительского адресного элемента</xsd:documentation>
+                            <xsd:documentation>РЎСЃС‹Р»РєР° РЅР° GlobalId СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="ParentLevel" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Уровень родительского элемента в общей структуре адреса</xsd:documentation>
+                            <xsd:documentation>РЈСЂРѕРІРµРЅСЊ СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РѕР±С‰РµР№ СЃС‚СЂСѓРєС‚СѓСЂРµ Р°РґСЂРµСЃР°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="PostalCode" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Почтовый индекс</xsd:documentation>
+                            <xsd:documentation>РџРѕС‡С‚РѕРІС‹Р№ РёРЅРґРµРєСЃ</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="OKATO" type="xsd:string" minOccurs="0"/>
@@ -64,12 +64,12 @@
                         <xsd:element name="LastUpdateDate" type="xsd:dateTime"/>
                         <xsd:element name="ActualStatus" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Статус актуальности элемента</xsd:documentation>
+                            <xsd:documentation>РЎС‚Р°С‚СѓСЃ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="TimeZone" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Часовой пояс адресного элемента</xsd:documentation>
+                            <xsd:documentation>Р§Р°СЃРѕРІРѕР№ РїРѕСЏСЃ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="AdditionalParent" minOccurs="0" maxOccurs="unbounded">
@@ -85,53 +85,53 @@
                   </xsd:element>
                   <xsd:element name="House" minOccurs="0" maxOccurs="unbounded">
                     <xsd:annotation>
-                      <xsd:documentation>Элемент "Дом"</xsd:documentation>
+                      <xsd:documentation>Р­Р»РµРјРµРЅС‚ "Р”РѕРј"</xsd:documentation>
                     </xsd:annotation>
                     <xsd:complexType>
                       <xsd:sequence>
                         <xsd:element name="GlobalID" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Глобальный уникальный идентификатор дома (адреса в ЕАК)</xsd:documentation>
+                            <xsd:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РґРѕРјР° (Р°РґСЂРµСЃР° РІ Р•РђРљ)</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="PostalCode" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Почтовый индекс</xsd:documentation>
+                            <xsd:documentation>РџРѕС‡С‚РѕРІС‹Р№ РёРЅРґРµРєСЃ</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="EstateType" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Признак владения</xsd:documentation>
+                            <xsd:documentation>РџСЂРёР·РЅР°Рє РІР»Р°РґРµРЅРёСЏ</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="ParentId" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Ссылка на GlobalId родительского адресного элемента</xsd:documentation>
+                            <xsd:documentation>РЎСЃС‹Р»РєР° РЅР° GlobalId СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="ParentLevel" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Уровень родительского элемента в общей структуре адреса</xsd:documentation>
+                            <xsd:documentation>РЈСЂРѕРІРµРЅСЊ СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РѕР±С‰РµР№ СЃС‚СЂСѓРєС‚СѓСЂРµ Р°РґСЂРµСЃР°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="HouseNumber" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Номер Дома</xsd:documentation>
+                            <xsd:documentation>РќРѕРјРµСЂ Р”РѕРјР°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="HousingNumber" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Корпус</xsd:documentation>
+                            <xsd:documentation>РљРѕСЂРїСѓСЃ</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="BuildingNumber" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Номер строения</xsd:documentation>
+                            <xsd:documentation>РќРѕРјРµСЂ СЃС‚СЂРѕРµРЅРёСЏ</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="BuildingType" type="xsd:string" minOccurs="0">
                           <xsd:annotation>
-                            <xsd:documentation>Признак строения</xsd:documentation>
+                            <xsd:documentation>РџСЂРёР·РЅР°Рє СЃС‚СЂРѕРµРЅРёСЏ</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="OKATO" type="xsd:string" minOccurs="0"/>
@@ -140,7 +140,7 @@
                         <xsd:element name="LastUpdateDate" type="xsd:dateTime"/>
                         <xsd:element name="ActualStatus" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Статус актуальности дома (адреса)</xsd:documentation>
+                            <xsd:documentation>РЎС‚Р°С‚СѓСЃ Р°РєС‚СѓР°Р»СЊРЅРѕСЃС‚Рё РґРѕРјР° (Р°РґСЂРµСЃР°)</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="AdditionalParent" minOccurs="0" maxOccurs="unbounded">
@@ -164,25 +164,25 @@
                   </xsd:element>
                   <xsd:element name="Landmark" minOccurs="0" maxOccurs="unbounded">
                     <xsd:annotation>
-                      <xsd:documentation>Элемент "Место расположения"</xsd:documentation>
+                      <xsd:documentation>Р­Р»РµРјРµРЅС‚ "РњРµСЃС‚Рѕ СЂР°СЃРїРѕР»РѕР¶РµРЅРёСЏ"</xsd:documentation>
                     </xsd:annotation>
                     <xsd:complexType>
                       <xsd:sequence>
                         <xsd:element name="GlobalID" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Глобальный уникальный идентификатор местоположения (адреса в ЕАК)</xsd:documentation>
+                            <xsd:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РјРµСЃС‚РѕРїРѕР»РѕР¶РµРЅРёСЏ (Р°РґСЂРµСЃР° РІ Р•РђРљ)</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="PostalCode" type="xsd:string" minOccurs="0"/>
                         <xsd:element name="Location" type="xsd:string" minOccurs="0"/>
                         <xsd:element name="ParentId" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Ссылка на GlobalId родительского адресного элемента</xsd:documentation>
+                            <xsd:documentation>РЎСЃС‹Р»РєР° РЅР° GlobalId СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="ParentLevel" type="xsd:string">
                           <xsd:annotation>
-                            <xsd:documentation>Уровень родительского элемента в общей структуре адреса</xsd:documentation>
+                            <xsd:documentation>РЈСЂРѕРІРµРЅСЊ СЂРѕРґРёС‚РµР»СЊСЃРєРѕРіРѕ СЌР»РµРјРµРЅС‚Р° РІ РѕР±С‰РµР№ СЃС‚СЂСѓРєС‚СѓСЂРµ Р°РґСЂРµСЃР°</xsd:documentation>
                           </xsd:annotation>
                         </xsd:element>
                         <xsd:element name="OKATO" type="xsd:string" minOccurs="0"/>
@@ -210,47 +210,47 @@
       </xsd:element>
       <xsd:element name="AddressListResponse">
         <xsd:annotation>
-          <xsd:documentation>Элемент "Ответ веб-сервиса"</xsd:documentation>
+          <xsd:documentation>Р­Р»РµРјРµРЅС‚ "РћС‚РІРµС‚ РІРµР±-СЃРµСЂРІРёСЃР°"</xsd:documentation>
         </xsd:annotation>
         <xsd:complexType>
           <xsd:sequence>
             <xsd:choice>
               <xsd:element name="ResultCode" type="xsd:string">
                 <xsd:annotation>
-                  <xsd:documentation>Код результата обращения к веб-сервису (0 - успешно, 1 - ошибка)</xsd:documentation>
+                  <xsd:documentation>РљРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р° РѕР±СЂР°С‰РµРЅРёСЏ Рє РІРµР±-СЃРµСЂРІРёСЃСѓ (0 - СѓСЃРїРµС€РЅРѕ, 1 - РѕС€РёР±РєР°)</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element name="ResultMessage" type="xsd:string">
                 <xsd:annotation>
-                  <xsd:documentation>Сообщение о статусе обращения к веб-сервису</xsd:documentation>
+                  <xsd:documentation>РЎРѕРѕР±С‰РµРЅРёРµ Рѕ СЃС‚Р°С‚СѓСЃРµ РѕР±СЂР°С‰РµРЅРёСЏ Рє РІРµР±-СЃРµСЂРІРёСЃСѓ</xsd:documentation>
                 </xsd:annotation>
               </xsd:element>
               <xsd:element name="AddrElementErrorGroup" maxOccurs="unbounded">
                 <xsd:annotation>
-                  <xsd:documentation>Элемент "Ошибка передачи адресного элемента"</xsd:documentation>
+                  <xsd:documentation>Р­Р»РµРјРµРЅС‚ "РћС€РёР±РєР° РїРµСЂРµРґР°С‡Рё Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°"</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                   <xsd:sequence>
                     <xsd:element name="GlobalID" type="xsd:string">
                       <xsd:annotation>
-                        <xsd:documentation>Глобальный уникальный идентификатор адресного элемента</xsd:documentation>
+                        <xsd:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                       </xsd:annotation>
                     </xsd:element>
                     <xsd:element name="AddrElementLevel" type="xsd:string">
                       <xsd:annotation>
-                        <xsd:documentation>Уровень адресного элемента. Атрибут обязательный, т.к. каждый адр.элемент идентифицируется по паре Global_ID,Level</xsd:documentation>
+                        <xsd:documentation>РЈСЂРѕРІРµРЅСЊ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°. РђС‚СЂРёР±СѓС‚ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№, С‚.Рє. РєР°Р¶РґС‹Р№ Р°РґСЂ.СЌР»РµРјРµРЅС‚ РёРґРµРЅС‚РёС„РёС†РёСЂСѓРµС‚СЃСЏ РїРѕ РїР°СЂРµ Global_ID,Level</xsd:documentation>
                       </xsd:annotation>
                     </xsd:element>
                     <xsd:element name="LocalID" type="xsd:string" minOccurs="0"/>
                     <xsd:element name="SystemCode" type="xsd:string"/>
                     <xsd:element name="ErrorCode" type="xsd:string">
                       <xsd:annotation>
-                        <xsd:documentation>Код ошибки</xsd:documentation>
+                        <xsd:documentation>РљРѕРґ РѕС€РёР±РєРё</xsd:documentation>
                       </xsd:annotation>
                     </xsd:element>
                     <xsd:element name="Description" type="xsd:string" minOccurs="0">
                       <xsd:annotation>
-                        <xsd:documentation>Описание ошибки</xsd:documentation>
+                        <xsd:documentation>РћРїРёСЃР°РЅРёРµ РѕС€РёР±РєРё</xsd:documentation>
                       </xsd:annotation>
                     </xsd:element>
                   </xsd:sequence>
@@ -258,18 +258,18 @@
               </xsd:element>
               <xsd:element name="LocalIDGroup" maxOccurs="unbounded">
                 <xsd:annotation>
-                  <xsd:documentation>Элемент "Данные локального идентификатора"</xsd:documentation>
+                  <xsd:documentation>Р­Р»РµРјРµРЅС‚ "Р”Р°РЅРЅС‹Рµ Р»РѕРєР°Р»СЊРЅРѕРіРѕ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂР°"</xsd:documentation>
                 </xsd:annotation>
                 <xsd:complexType>
                   <xsd:sequence>
                     <xsd:element name="GlobalID" type="xsd:string">
                       <xsd:annotation>
-                        <xsd:documentation>Глобальный уникальный идентификатор адресного элемента</xsd:documentation>
+                        <xsd:documentation>Р“Р»РѕР±Р°Р»СЊРЅС‹Р№ СѓРЅРёРєР°Р»СЊРЅС‹Р№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р°РґСЂРµСЃРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                       </xsd:annotation>
                     </xsd:element>
                     <xsd:element name="AddrElementLevel" type="xsd:string">
                       <xsd:annotation>
-                        <xsd:documentation>Уровень адр.элемента</xsd:documentation>
+                        <xsd:documentation>РЈСЂРѕРІРµРЅСЊ Р°РґСЂ.СЌР»РµРјРµРЅС‚Р°</xsd:documentation>
                       </xsd:annotation>
                     </xsd:element>
                     <xsd:element name="SystemCode" type="xsd:string"/>
@@ -283,7 +283,7 @@
       </xsd:element>
       <xsd:element name="ErrorField" type="xsd:string">
         <xsd:annotation>
-          <xsd:documentation>Наименование поля содержащее некорректные данные</xsd:documentation>
+          <xsd:documentation>РќР°РёРјРµРЅРѕРІР°РЅРёРµ РїРѕР»СЏ СЃРѕРґРµСЂР¶Р°С‰РµРµ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ РґР°РЅРЅС‹Рµ</xsd:documentation>
         </xsd:annotation>
       </xsd:element>
     </xsd:schema>
@@ -299,7 +299,7 @@
   </wsdl:message>
   <wsdl:portType name="ws_PutAddrElementPortType">
     <wsdl:operation name="PutAddressElement">
-      <wsdl:documentation>Метод передачи адресных элементов</wsdl:documentation>
+      <wsdl:documentation>РњРµС‚РѕРґ РїРµСЂРµРґР°С‡Рё Р°РґСЂРµСЃРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ</wsdl:documentation>
       <wsdl:input name="PutAddrElement_Input" message="tns:AddressGroup"></wsdl:input>
       <wsdl:output name="PutAddrElement_Output" message="tns:AddressGroupResponse"></wsdl:output>
       <wsdl:fault name="PutAddrElement_Fault" message="tns:FaultMessage"/>
@@ -321,7 +321,7 @@
     </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="ws_PutAddressElement">
-    <wsdl:documentation>Сервис передачи адресных элементов</wsdl:documentation>
+    <wsdl:documentation>РЎРµСЂРІРёСЃ РїРµСЂРµРґР°С‡Рё Р°РґСЂРµСЃРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ</wsdl:documentation>
     <wsdl:port name="ws_PutAddressElement" binding="tns:ws_PutAddrElementBinding">
       <soap:address location="http://10.32.245.8:7001/HermesSOAPService/SOAPServlet/ws_PutAddressElement"/>
     </wsdl:port>

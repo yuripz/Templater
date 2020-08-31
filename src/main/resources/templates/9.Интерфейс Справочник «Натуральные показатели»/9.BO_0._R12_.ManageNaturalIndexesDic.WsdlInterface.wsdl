@@ -29,7 +29,7 @@
   <wsdl:binding name="HRMSBinding" type="tns:HRMSPortType">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="ManageNaturalIndexesDic">
-      <wsdl:documentation>Синхронизация справочника Натуральные показатели</wsdl:documentation>
+      <wsdl:documentation>РЎРёРЅС…СЂРѕРЅРёР·Р°С†РёСЏ СЃРїСЂР°РІРѕС‡РЅРёРєР° РќР°С‚СѓСЂР°Р»СЊРЅС‹Рµ РїРѕРєР°Р·Р°С‚РµР»Рё</wsdl:documentation>
       <soap:operation soapAction="urn:ru:rt:hrms:dictionarynaturalindexesservice:ManageNaturalIndexesDic"/>
       <wsdl:input name="ManageNaturalIndexesDicIn">
         <soap:header message="tns:Context" part="context" use="literal"/>

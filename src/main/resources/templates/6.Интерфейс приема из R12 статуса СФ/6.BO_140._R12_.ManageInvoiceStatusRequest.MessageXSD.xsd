@@ -3,89 +3,89 @@
 	<xs:element name="ManageInvoiceStatusRequest" type="ManageInvoiceStatusRequest"/>
 	<xs:complexType name="ManageInvoiceStatusRequest">
 		<xs:annotation>
-			<xs:documentation>Передача статуса СФ</xs:documentation>
+			<xs:documentation>РџРµСЂРµРґР°С‡Р° СЃС‚Р°С‚СѓСЃР° РЎР¤</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="InvoiceStatusList" type="tInvoiceStatusList">
 				<xs:annotation>
-					<xs:documentation>Список статусов СФ</xs:documentation>
+					<xs:documentation>РЎРїРёСЃРѕРє СЃС‚Р°С‚СѓСЃРѕРІ РЎР¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
-	<!-- Статус СФ-->
+	<!-- РЎС‚Р°С‚СѓСЃ РЎР¤-->
 	<xs:complexType name="tInvoiceStatusList">
 		<xs:annotation>
-			<xs:documentation>Список статусов СФ</xs:documentation>
+			<xs:documentation>РЎРїРёСЃРѕРє СЃС‚Р°С‚СѓСЃРѕРІ РЎР¤</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="InvoiceStatus" type="tInvoiceStatus" maxOccurs="unbounded">
 				<xs:annotation>
-					<xs:documentation>Статусы СФ</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃС‹ РЎР¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:complexType name="tInvoiceStatus">
 		<xs:annotation>
-			<xs:documentation>Описание списка  статусов СФ</xs:documentation>
+			<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР°  СЃС‚Р°С‚СѓСЃРѕРІ РЎР¤</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="InvoiceId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор заголовка СФ</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ Р·Р°РіРѕР»РѕРІРєР° РЎР¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvoiceNum" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Номер СФ</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ РЎР¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="VoucherNum" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Номер квитанции</xs:documentation>
+					<xs:documentation>РќРѕРјРµСЂ РєРІРёС‚Р°РЅС†РёРё</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvoiceDate" type="xs:dateTime" minOccurs="0">
 				<xs:annotation>
-					<xs:documentation>Дата ГК СФ</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р° Р“Рљ РЎР¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="ExtInvoiceId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Внешний идентификатор КС-2</xs:documentation>
+					<xs:documentation>Р’РЅРµС€РЅРёР№ РёРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РљРЎ-2</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="OrgId" type="xs:integer">
 				<xs:annotation>
-					<xs:documentation>Идентификатор операционной единицы СФ</xs:documentation>
+					<xs:documentation>РРґРµРЅС‚РёС„РёРєР°С‚РѕСЂ РѕРїРµСЂР°С†РёРѕРЅРЅРѕР№ РµРґРёРЅРёС†С‹ РЎР¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="InvoiceStatus" type="xs:string">
 				<xs:annotation>
-					<xs:documentation>Статус СФ.</xs:documentation>
+					<xs:documentation>РЎС‚Р°С‚СѓСЃ РЎР¤.</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 			<xs:element name="CreateDate" type="xs:dateTime">
 				<xs:annotation>
-					<xs:documentation>Дата/время изменения статуса СФ</xs:documentation>
+					<xs:documentation>Р”Р°С‚Р°/РІСЂРµРјСЏ РёР·РјРµРЅРµРЅРёСЏ СЃС‚Р°С‚СѓСЃР° РЎР¤</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
 	</xs:complexType>
 	<xs:simpleType name="tStatus">
 		<xs:annotation>
-			<xs:documentation>Статус события</xs:documentation>
+			<xs:documentation>РЎС‚Р°С‚СѓСЃ СЃРѕР±С‹С‚РёСЏ</xs:documentation>
 		</xs:annotation>
 		<xs:restriction base="xs:string">
 			<xs:enumeration value="A">
 				<xs:annotation>
-					<xs:documentation>Активировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 			<xs:enumeration value="D">
 				<xs:annotation>
-					<xs:documentation>Деактивировать значение на стороне приемнике</xs:documentation>
+					<xs:documentation>Р”РµР°РєС‚РёРІРёСЂРѕРІР°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РЅР° СЃС‚РѕСЂРѕРЅРµ РїСЂРёРµРјРЅРёРєРµ</xs:documentation>
 				</xs:annotation>
 			</xs:enumeration>
 		</xs:restriction>

@@ -5,12 +5,12 @@
 	<xs:element name="ManageAssetsCostRequest" type="tns:ManageAssetsCostRequest"/>
 	<xs:complexType name="ManageAssetsCostRequest">
 		<xs:annotation>
-			<xs:documentation>Передача стоимости активов</xs:documentation>
+			<xs:documentation>РџРµСЂРµРґР°С‡Р° СЃС‚РѕРёРјРѕСЃС‚Рё Р°РєС‚РёРІРѕРІ</xs:documentation>
 		</xs:annotation>
 		<xs:sequence>
 			<xs:element name="AssetsCostList" type="ass:tAssetsCostList">
 				<xs:annotation>
-					<xs:documentation>Описание списка стоимости актива</xs:documentation>
+					<xs:documentation>РћРїРёСЃР°РЅРёРµ СЃРїРёСЃРєР° СЃС‚РѕРёРјРѕСЃС‚Рё Р°РєС‚РёРІР°</xs:documentation>
 				</xs:annotation>
 			</xs:element>
 		</xs:sequence>
