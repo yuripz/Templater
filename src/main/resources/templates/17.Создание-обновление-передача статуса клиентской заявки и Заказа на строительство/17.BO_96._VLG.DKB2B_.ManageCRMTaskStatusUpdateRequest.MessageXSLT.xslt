@@ -231,6 +231,9 @@
 												<attribute name="installationCost">
 													<xsl:value-of select="/CRMTaskStatusUpdate/OpexInstallCost"/>
 												</attribute>
+												<attribute name="onNetComplexOption">
+													<xsl:if test="OPPTVCAP_TYPE='NEIGHBOR_DEVELOPMENT'">possible</xsl:if>
+												</attribute>
 											</partyAttributes>
 										</orderParty>
 									</xsl:if>
@@ -340,6 +343,9 @@
 									</attribute>
 									<attribute name="ROI">
 										<xsl:value-of select="/CRMTaskStatusUpdate/SYSProjectAnalytics/ProjectPaybackPeriod"/>
+									</attribute>
+									<attribute name="onNetComplexOption">
+										<xsl:value-of select="/CRMTaskStatusUpdate/onNetComplexOption"/>
 									</attribute>
 								</partyAttributes>
 							</orderParty>

@@ -1,5 +1,3 @@
-ExecMode=synchron
-MsgStream=4
 MsgDirect=RESOUT
 ExeMetod=web-rest
 ExeProfile=queue

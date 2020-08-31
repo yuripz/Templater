@@ -19,35 +19,34 @@
 				</requestId>
 				<wfmRequest>
 					<orderId>
-						<xsl:value-of select="OrderOMSId"/>
+						<!--<xsl:value-of select="OrderOMSId"/>-->
+						<xsl:value-of select="kzOrderId"/>
 					</orderId>
 					<orderDate>
 						<xsl:value-of select="OrderOMSParam/CRMCreateDate_atom"/>
 					</orderDate>
-					<branch><xsl:value-of select="MRFFilialCode"/></branch>
-					<affiliate><xsl:value-of select="RegionalFilial"/></affiliate>
+					<branch>
+						<xsl:value-of select="MRFFilialCode"/>
+					</branch>
+					<affiliate>
+						<xsl:value-of select="RegionalFilial"/>
+					</affiliate>
 					<appointmentType>SURVEY</appointmentType>
-					<appointmentStatus>PLANNED</appointmentStatus>
+					<appointmentStatus>POSTPONED</appointmentStatus>
 					<readinessStatus>NOT_READY_TO_EXECUTE</readinessStatus>
 					<xsl:if test="CRMRequestIdList/CRMRequest[1]/SrvOMSParam/SRV_DT_START_atom">
 						<intervalStartDate>
 							<xsl:value-of select="CRMRequestIdList/CRMRequest[1]/SrvOMSParam/SRV_DT_START_atom"/>
 						</intervalStartDate>
 					</xsl:if>
-					<!--<intervalEndDate><xsl:value-of select="TechSolLifetime"/></intervalEndDate>-->
 					<orderComments>
-						<Comment>
-							<xsl:if test="hermesOMSPrevComment!=''">
+						<comment>
+							<xsl:if test="SurveyComment">
 								<text>
-									<xsl:value-of select="hermesOMSPrevComment"/>
+									<xsl:value-of select="SurveyComment"/>
 								</text>
 							</xsl:if>
-							<xsl:if test="hermesOMSPrevComment=''">
-								<text>
-									<xsl:value-of select="SYSOrderStage"/>
-								</text>
-							</xsl:if>
-						</Comment>
+						</comment>
 					</orderComments>
 					<location>
 						<locationId>
@@ -56,29 +55,12 @@
 						<locationCategory>STRICT</locationCategory>
 						<locationRegister>GID</locationRegister>
 						<locationAttributes>
-							<attribute name="locationPremises"/>
-							<xsl:value-of select="/submitOrderRequest/SYSOrderServicesAddr/ExtOffice"/>
+							<attribute name="locationPremises">
+								<xsl:value-of select="/submitOrderRequest/SYSOrderServicesAddr/ExtOffice"/>
+							</attribute>
 						</locationAttributes>
 					</location>
 					<orderParties>
-						<orderParty>
-							<partyRole>KZ</partyRole>
-							<partyId>
-								<!--<xsl:value-of select="OrderOMSId"/>-->
-								<xsl:value-of select="/submitOrderRequest/kzOrderId"/>
-							</partyId>
-							<partyAttributes>
-								<attribute name="stage">
-									<xsl:value-of select="SYSOrderStage"/>
-								</attribute>
-								<attribute name="reason">
-									<xsl:value-of select="CancelReason"/>
-								</attribute>
-								<attribute name="comment">
-									<xsl:value-of select="HrmsSYSOrderComment"/>
-								</attribute>
-							</partyAttributes>
-						</orderParty>
 						<orderParty>
 							<partyRole>WORKER</partyRole>
 							<partyId>
@@ -98,115 +80,6 @@
 							<partyId>
 								<xsl:value-of select="OrderOMSParam/CRMOrderCSR"/>
 							</partyId>
-						</orderParty>
-						<orderParty>
-							<partyRole>SOLUTION</partyRole>
-							<partyId>
-								<xsl:value-of select="OrderOMSId"/>
-							</partyId>
-							<partyAttributes>
-								<attribute name="projectId">
-									<xsl:value-of select="ProjectSolution"/>
-								</attribute>
-								<attribute name="technology">
-									<xsl:value-of select="/submitOrderRequest/Technology"/>
-								</attribute>
-								<attribute name="connectionType">
-									<xsl:if test="/submitOrderRequest/TVready=''">OffNet</xsl:if>
-									<xsl:if test="/submitOrderRequest/TVready!=''">OnNet</xsl:if>
-								</attribute>
-								<attribute name="solutionLifetime">
-									<xsl:value-of select="TechSolLifetime"/>
-								</attribute>
-								<attribute name="implementationPeriod">
-									<xsl:value-of select="ImplPeriod"/>
-								</attribute>
-								<attribute name="approvalDetailing">
-									<xsl:value-of select="ApprovalDetailing"/>
-								</attribute>
-								<attribute name="UE">RUR</attribute>
-								<!-- константа -->
-								<attribute name="VAT">без НДС</attribute>
-								<attribute name="buildProjectCost">
-									<xsl:value-of select="ProjectCost"/>
-								</attribute>
-								<attribute name="installationCost">
-									<xsl:value-of select="SMRCost"/>
-								</attribute>
-								<attribute name="equipmentCost">
-									<xsl:value-of select="EquipmentCost"/>
-								</attribute>
-								<attribute name="equipmentName">
-									<xsl:value-of select="EquipmentName"/>
-								</attribute>
-								<attribute name="inCanalization">
-									<xsl:value-of select="InCanalization"/>
-								</attribute>
-								<attribute name="airCable">
-									<xsl:value-of select="AirCable"/>
-								</attribute>
-								<attribute name="groundCable">
-									<xsl:value-of select="GroundCable"/>
-								</attribute>
-								<attribute name="needHole">
-									<xsl:if test="BuildCanalization='0'">false</xsl:if>
-									<xsl:if test="BuildCanalization!='0'">true</xsl:if>
-								</attribute>
-								<attribute name="buildCanalization">
-									<xsl:value-of select="BuildCanalization"/>
-								</attribute>
-								<attribute name="capability">
-									<xsl:choose>
-										<xsl:when test="/CRMTaskStatusUpdate/NoTB!=''">0</xsl:when>
-										<xsl:otherwise>1</xsl:otherwise>
-									</xsl:choose>
-								</attribute>
-								<attribute name="fldHrmsExtraPaysMethod">
-									<xsl:value-of select="WorkMethod"/>
-								</attribute>
-								<attribute name="fldHrmsExtraPaysExecutor">
-									<xsl:value-of select="Contractor"/>
-								</attribute>
-								<attribute name="buildingState">
-									<xsl:value-of select="OrderOMSPTV/buildingState"/>
-								</attribute>
-								<attribute name="point1Name">
-									<xsl:value-of select="Point1Name"/>
-								</attribute>
-								<attribute name="point1Address">
-									<xsl:value-of select="Point1Address"/>
-								</attribute>
-								<attribute name="point1Interface">
-									<xsl:value-of select="Point1Interface"/>
-								</attribute>
-								<attribute name="point1Equipment">
-									<xsl:value-of select="Point1Equipment"/>
-								</attribute>
-								<attribute name="point3Name">
-									<xsl:value-of select="Point3Name"/>
-								</attribute>
-								<attribute name="point3Address">
-									<xsl:value-of select="Point3Address"/>
-								</attribute>
-								<attribute name="point3Interface">
-									<xsl:value-of select="Point3Interface"/>
-								</attribute>
-								<attribute name="point3Equipment">
-									<xsl:value-of select="Point3Equipment"/>
-								</attribute>
-								<attribute name="point2LInchOrgMethod">
-									<xsl:value-of select="Point2LInchOrgMethod"/>
-								</attribute>
-								<attribute name="lMCrossing">
-									<xsl:value-of select="fldLMCrossing"/>
-								</attribute>
-								<attribute name="lMOrgLevel">
-									<xsl:value-of select="fldLMOrgLevel"/>
-								</attribute>
-								<attribute name="networkPath">
-									<xsl:value-of select="fldNetworkPath"/>
-								</attribute>
-							</partyAttributes>
 						</orderParty>
 						<orderParty>
 							<partyRole>CLIENT</partyRole>
@@ -304,38 +177,21 @@
 											<xsl:value-of select="ServiceName"/>
 										</specName>
 									</orderItemSpecification>
-									<xsl:if test="ServiceType='NETWORK'">
-										<xsl:if test="SrvOMSParam/SRV_SLTU_RESERVE_NUM !=''">
-											<orderItemParties>
-												<orderParty>
-													<partyRole>RESERVATION</partyRole>
-													<partyId>
-														<xsl:value-of select="SrvOMSParam/SRV_SLTU_RESERVE"/>
-													</partyId>
-													<partyName>ResourceBooking</partyName>
-													<partyAttributes>
-														<attribute name="reservationNumber">
-															<xsl:value-of select="SrvOMSParam/SRV_SLTU_RESERVE_NUM"/>
-														</attribute>
-														<attribute name="reservationId">
-															<xsl:value-of select="SrvOMSParam/SRV_SLTU_RESERVE"/>
-														</attribute>
-													</partyAttributes>
-												</orderParty>
-											</orderItemParties>
-										</xsl:if>
-										<!-- test="SrvOMSParam/SRV_SLTU_RESERVE_NUM !=''"-->
-									</xsl:if>
-									<!--<orderItemComments/>-->
-									<!--<orderItemReservationId/>-->
 									<orderItemAttributes>
-										<attribute name="ServiceSpeedValue">
-											<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed"/>
-										</attribute>
-										<!--Скорость сервиса, кбит/c-->
-										<attribute name="ServiceSpeedMeasure">
-											<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed_SCALE"/>
-										</attribute>
+										<xsl:if test="SrvOMSParam/SRV_CMS_ServiceSpeed">
+											<xsl:variable name="originator" select="SrvOMSParam/SRV_CMS_ServiceSpeed"/>
+											<attribute name="bandwidth">
+												<xsl:value-of select="format-number($originator, '##')"/>
+												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed_SCALE_dict"/>
+											</attribute>
+											<attribute name="ServiceSpeedValue">
+												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed"/>
+											</attribute>
+											<!--Скорость сервиса, кбит/c-->
+											<attribute name="ServiceSpeedMeasure">
+												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceSpeed_SCALE"/>
+											</attribute>
+										</xsl:if>
 										<!--Единицы измерения скорости-->
 										<attribute name="access_interface">
 											<xsl:value-of select="SrvOMSParam/SRV_CMS_fldPoint2Interface"/>
@@ -345,6 +201,18 @@
 											<!-- technology lineId , serviceItemId нужно выводить в XML, только для услуги ServiceType='NETWORK' -->
 											<attribute name="accountNumber">
 												<xsl:value-of select="SrvOMSParam/SRV_SLTU_ACCOUNTNUMBER"/>
+											</attribute>
+											<attribute name="reservationNumber">
+												<xsl:value-of select="SrvOMSParam/SRV_SLTU_RESERVE_NUM"/>
+											</attribute>
+											<attribute name="reservationId">
+												<xsl:value-of select="SrvOMSParam/SRV_SLTU_RESERVE"/>
+											</attribute>
+											<attribute name="serviceItemId">
+												<xsl:value-of select="SrvOMSParam/SRV_SLTU_SERVICE_ID"/>
+											</attribute>
+											<attribute name="technology">
+												<xsl:value-of select="/submitOrderRequest/Technology"/>
 											</attribute>
 											<attribute name="lineId">
 												<xsl:value-of select="SrvOMSParam/SRV_LINE_NUMBER"/>
@@ -357,12 +225,6 @@
 													<xsl:value-of select="SrvOMSParam/SRV_SLTU_SERVICE_ID"/>
 												</attribute>
 											</xsl:if> -->
-											<attribute name="serviceItemId">
-												<xsl:value-of select="SrvOMSParam/SRV_SLTU_SERVICE_ID"/>
-											</attribute>
-											<attribute name="technology">
-												<xsl:value-of select="/submitOrderRequest/Technology"/>
-											</attribute>
 										</xsl:if>
 										<xsl:if test="ServiceType='IP_address'">
 											<attribute name="service_qty">1</attribute>
@@ -528,8 +390,6 @@
 											<!-- если [SRV_VPN_LOCAL_VPN] => Да, то as_id = 0 -->
 										</xsl:if>
 									</orderItemAttributes>
-									<orderItemParties>
-									</orderItemParties>
 									<orderItemAction>
 										<xsl:value-of select="orderItemAction"/>
 									</orderItemAction>

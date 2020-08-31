@@ -1,4 +1,4 @@
-shortRetryCount=9
+shortRetryCount=10
 shortRetryInterval=3
 longRetryCount=2
-longRetryInterval=15
+longRetryInterval=45

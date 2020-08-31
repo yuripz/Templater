@@ -337,7 +337,7 @@
 									</orderItemAttributes>	
 									<xsl:if test="SrvOMSParam/SRV_SLTU_RESERVE_NUM!=''">
 										<orderItemParties>
-											<orderItemParty>
+											<orderParty>
 												<partyRole>RESERVATION</partyRole>
 												<partyId><xsl:value-of select="SrvOMSParam/SRV_SLTU_RESERVE"/></partyId>
 												<partyAttributes>
@@ -348,7 +348,7 @@
 														<xsl:value-of select="SrvOMSParam/SRV_SLTU_RESERVE_NUM"/>
 													</attribute>
 												</partyAttributes>
-											</orderItemParty>
+											</orderParty>
 										</orderItemParties>
 									</xsl:if>
 									

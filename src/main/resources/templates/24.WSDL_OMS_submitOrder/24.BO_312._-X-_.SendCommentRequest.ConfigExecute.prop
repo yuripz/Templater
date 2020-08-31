@@ -7,3 +7,4 @@ host=hermes:8080
 user=Podkolzin_JuA
 pswd=Podkolzin_JuA
 url=/integrationApi/get_comment_request
+debug=off

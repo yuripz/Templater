@@ -39,7 +39,7 @@
 									</tryBookResourcesForInstallation>
 								</Body>
 							</xsl:when>
-							<xsl:when test="$originator= 'tryСancelResourcesBooking' ">
+							<xsl:when test="$originator= 'tryCancelResourcesBooking' ">
 								<Header>
 									<Context>
 										<EventInitiator>HTTP.HRMS</EventInitiator>
@@ -50,9 +50,9 @@
 									</Context>
 								</Header>
 								<Body>
-									<tryСancelResourcesBooking>
+									<tryРЎancelResourcesBooking>
 										<xsl:copy-of select="/Envelope/Body/Parametrs"/>
-									</tryСancelResourcesBooking>
+									</tryРЎancelResourcesBooking>
 								</Body>
 							</xsl:when>
 							<xsl:when test="$originator= 'tryCheckClientActiveServices' ">
@@ -70,7 +70,39 @@
 										<xsl:copy-of select="/Envelope/Body/Parametrs"/>
 									</tryCheckClientActiveServices>
 								</Body>
-							</xsl:when>														
+							</xsl:when>
+							<xsl:when test="$originator= 'tryLastBookingRequestStatus' ">
+								<Header>
+									<Context>
+										<EventInitiator>HTTP.HRMS</EventInitiator>
+										<EventKey>-1</EventKey>
+										<Source>HTTP.HRMS</Source>
+										<Destination>HRMS</Destination>
+										<BusOperationId>155</BusOperationId>
+									</Context>
+								</Header>
+								<Body>
+									<tryCheckAccessCapability>
+										<xsl:copy-of select="/Envelope/Body/Parametrs"/>
+									</tryCheckAccessCapability>
+								</Body>
+							</xsl:when>
+							<xsl:when test="$originator= 'tryLastBookingCancelRequestStatus' ">
+								<Header>
+									<Context>
+										<EventInitiator>HTTP.HRMS</EventInitiator>
+										<EventKey>-1</EventKey>
+										<Source>HTTP.HRMS</Source>
+										<Destination>HRMS</Destination>
+										<BusOperationId>156</BusOperationId>
+									</Context>
+								</Header>
+								<Body>
+									<tryCheckAccessCapability>
+										<xsl:copy-of select="/Envelope/Body/Parametrs"/>
+									</tryCheckAccessCapability>
+								</Body>
+							</xsl:when>							
 							<xsl:otherwise>
 								<Header>
 									<Context>
