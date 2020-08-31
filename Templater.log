@@ -1,0 +1,4 @@
+2020-08-31 14:02:00.852  INFO 24428 --- [main] r.h.msgbus.TemplaterApplicationTests     : Starting TemplaterApplicationTests on DESKTOP-99E1KI4 with PID 24428 (started by HP-830-G6 in C:\#_Integration_\Templater)
+2020-08-31 14:02:00.853  INFO 24428 --- [main] r.h.msgbus.TemplaterApplicationTests     : No active profile set, falling back to default profiles: default
+2020-08-31 14:02:01.623  INFO 24428 --- [main] r.h.msgbus.TemplaterApplicationTests     : Started TemplaterApplicationTests in 1.023 seconds (JVM running for 1.829)
+2020-08-31 14:02:01.624  INFO 24428 --- [main] ru.hermes.msgbus.TemplaterApplication    : Hellow for TemplaterApplication 

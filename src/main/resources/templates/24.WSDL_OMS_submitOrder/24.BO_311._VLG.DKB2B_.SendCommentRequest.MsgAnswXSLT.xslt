@@ -9,7 +9,7 @@
 						<Text>
 							<xsl:copy-of select="/SendCommentResponse"/>
 						</Text>
-						<Next>RESOUT</Next>
+						<Next>DELOUT</Next>
 					</Result>
 				</xsl:when>
 				<xsl:otherwise>

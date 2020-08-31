@@ -2,3 +2,4 @@ url=/rt-gate/NetkDevProjectWebService/NetDevProjectWebService
 host=http://URAL.ARGUS:80
 timeout_read=300
 timeout_conn=15
+debug=on

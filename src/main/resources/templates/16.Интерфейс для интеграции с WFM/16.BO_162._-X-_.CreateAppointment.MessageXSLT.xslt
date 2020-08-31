@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 	<xsl:template match="/">
-		<tns:submitOrderRequest xmlns:tns="http://oms.rt.ru/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+		<tns:createAppointmentRequest xmlns:tns="http://oms.rt.ru/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 			<xsl:if test="/submitOrderRequest/MsgDirection_Cod!= 'CMS.KKFU'">
 				<originator>HRMS</originator>
 			</xsl:if>
@@ -10,70 +10,31 @@
 					<xsl:value-of select="/submitOrderRequest/MsgDirection_Cod"/>
 				</originator>
 			</xsl:if>
-			<receiver>VLG.DKB2B</receiver>
+			<receiver>SZ.WFMARGUS</receiver>
 			<callbackEndpoint>HRMS</callbackEndpoint>
 			<!--<mode>SYNC</mode>-->
 			<xsl:for-each select="submitOrderRequest">
 				<requestId>
 					<xsl:value-of select="QueueId"/>
 				</requestId>
-				<order>
+				<wfmRequest>
 					<orderId>
 						<xsl:value-of select="OrderOMSId"/>
 					</orderId>
-					<!--<orderType><xsl:value-of select="CRMRequestStatus"/></orderType>-->
-					<xsl:variable name="orderStateF" select="CRMRequestStatus"/>
-					<xsl:choose>
-						<xsl:when test="$orderStateF= 'PREPROVIDE' ">
-							<orderType>PREPROVIDE</orderType>
-						</xsl:when>
-						<xsl:when test="$orderStateF= 'PROVIDE' ">
-							<orderType>PROVIDE</orderType>
-						</xsl:when>
-						<xsl:otherwise>
-							<orderType>INPROGRESS</orderType>
-						</xsl:otherwise>
-					</xsl:choose>
-					<!--<orderParentId>String</orderParentId>-->
-					<orderPriority>
-						<xsl:value-of select="OrderPriority"/>
-					</orderPriority>
-					<!--		<orderCategory>KKFU</orderCategory>
-		<orderChannel>String</orderChannel>
-		<branch>String</branch>
-		<affiliate>String</affiliate>
--->
-					<orderAttributes>
-						<attribute name="orderOMSId">
-							<!--	<xsl:if test="CRMRequestStatus= 'PROVIDE'"> -->
-							<xsl:value-of select="/submitOrderRequest/hermesOMSParam/ExternalOrderID"/>
-							<!-- </xsl:if> -->
-						</attribute>
-						<attribute name="CustomerProjectName">
-							<xsl:value-of select="OrderOMSParam/CRMPromotionID"/>
-						</attribute>
-						<attribute name="CustomerProjectId">
-							<xsl:value-of select="OrderOMSParam/PromoOrderID"/>
-						</attribute>
-						<attribute name="ServiceBillingSystem">
-							<xsl:value-of select="OrderOMSParam/ServiceBillingSystem"/>
-						</attribute>
-						<xsl:if test="/submitOrderRequest/MsgDirection_Cod= 'CMS.KKFU'">
-							<attribute name="LastMileRTC_CMS">
-								<xsl:value-of select="/submitOrderRequest/CRMOrderId"/>
-							</attribute>
-						</xsl:if>
-						<attribute name="OrderCSRFilial">
-							<xsl:value-of select="/submitOrderRequest/OrderOMSParam/CRMOriginatorLevelR12"/>
-						</attribute>
-					</orderAttributes>
 					<orderDate>
-						<xsl:value-of select="CRMCreateDate"/>
+						<xsl:value-of select="OrderOMSParam/CRMCreateDate_atom"/>
 					</orderDate>
-					<!--		<orderRequestedStartDate>2001-12-17T09:30:47Z</orderRequestedStartDate>-->
-					<orderRequiredDate>
-						<xsl:value-of select="TechSolLifetime"/>
-					</orderRequiredDate>
+					<branch><xsl:value-of select="MRFFilialCode"/></branch>
+					<affiliate><xsl:value-of select="RegionalFilial"/></affiliate>
+					<appointmentType>SURVEY</appointmentType>
+					<appointmentStatus>PLANNED</appointmentStatus>
+					<readinessStatus>NOT_READY_TO_EXECUTE</readinessStatus>
+					<xsl:if test="CRMRequestIdList/CRMRequest[1]/SrvOMSParam/SRV_DT_START_atom">
+						<intervalStartDate>
+							<xsl:value-of select="CRMRequestIdList/CRMRequest[1]/SrvOMSParam/SRV_DT_START_atom"/>
+						</intervalStartDate>
+					</xsl:if>
+					<!--<intervalEndDate><xsl:value-of select="TechSolLifetime"/></intervalEndDate>-->
 					<orderComments>
 						<Comment>
 							<xsl:if test="hermesOMSPrevComment!=''">
@@ -88,6 +49,17 @@
 							</xsl:if>
 						</Comment>
 					</orderComments>
+					<location>
+						<locationId>
+							<xsl:value-of select="/submitOrderRequest/SYSOrderServicesAddr/GID"/>
+						</locationId>
+						<locationCategory>STRICT</locationCategory>
+						<locationRegister>GID</locationRegister>
+						<locationAttributes>
+							<attribute name="locationPremises"/>
+							<xsl:value-of select="/submitOrderRequest/SYSOrderServicesAddr/ExtOffice"/>
+						</locationAttributes>
+					</location>
 					<orderParties>
 						<orderParty>
 							<partyRole>KZ</partyRole>
@@ -289,6 +261,28 @@
 							</partyAttributes>
 						</orderParty>
 					</orderParties>
+					<attributes>
+						<attribute name="orderOMSId">
+							<xsl:value-of select="/submitOrderRequest/hermesOMSParam/ExternalOrderID"/>
+						</attribute>
+						<attribute name="CustomerProjectName">
+							<xsl:value-of select="OrderOMSParam/CRMPromotionID"/>
+						</attribute>
+						<attribute name="CustomerProjectId">
+							<xsl:value-of select="OrderOMSParam/PromoOrderID"/>
+						</attribute>
+						<attribute name="ServiceBillingSystem">
+							<xsl:value-of select="OrderOMSParam/ServiceBillingSystem"/>
+						</attribute>
+						<xsl:if test="/submitOrderRequest/MsgDirection_Cod= 'CMS.KKFU'">
+							<attribute name="LastMileRTC_CMS">
+								<xsl:value-of select="/submitOrderRequest/CRMOrderId"/>
+							</attribute>
+						</xsl:if>
+						<attribute name="OrderCSRFilial">
+							<xsl:value-of select="/submitOrderRequest/OrderOMSParam/CRMOriginatorLevelR12"/>
+						</attribute>
+					</attributes>
 					<xsl:for-each select="CRMRequestIdList">
 						<orderItems>
 							<xsl:for-each select="CRMRequest">
@@ -296,17 +290,10 @@
 									<orderItemId>
 										<xsl:value-of select="CSERVICE_ID"/>
 									</orderItemId>
-									<orderItemAction>
+									<orderItemState>
 										<xsl:value-of select="orderItemAction"/>
-									</orderItemAction>
-									<orderItemCategory>CFS</orderItemCategory>
-									<orderItemParentId/>
-									<orderItemParentInstanceId/>
-									<orderItemRequiredDate>
-										<xsl:value-of select="SrvOMSParam/SRV_DT_START"/>
-									</orderItemRequiredDate>
-									<!--				<ServiceType>
-				<xsl:value-of select="ServiceType"/></ServiceType>-->
+									</orderItemState>
+									<orderItemInstanceId>CFS</orderItemInstanceId>
 									<orderItemSpecification>
 										<catalogId>SC</catalogId>
 										<specId>
@@ -318,17 +305,6 @@
 										</specName>
 									</orderItemSpecification>
 									<xsl:if test="ServiceType='NETWORK'">
-										<orderItemLocation>
-											<locationId>
-												<xsl:value-of select="/submitOrderRequest/SYSOrderServicesAddr/GID"/>
-											</locationId>
-											<locationCategory>STRICT</locationCategory>
-											<locationRegister>GID</locationRegister>
-											<locationAttributes>
-												<attribute name="locationPremises"/>
-												<xsl:value-of select="/submitOrderRequest/SYSOrderServicesAddr/ExtOffice"/>
-											</locationAttributes>
-										</orderItemLocation>
 										<xsl:if test="SrvOMSParam/SRV_SLTU_RESERVE_NUM !=''">
 											<orderItemParties>
 												<orderParty>
@@ -350,7 +326,7 @@
 										</xsl:if>
 										<!-- test="SrvOMSParam/SRV_SLTU_RESERVE_NUM !=''"-->
 									</xsl:if>
-									<orderItemComments/>
+									<!--<orderItemComments/>-->
 									<!--<orderItemReservationId/>-->
 									<orderItemAttributes>
 										<attribute name="ServiceSpeedValue">
@@ -373,9 +349,9 @@
 											<attribute name="lineId">
 												<xsl:value-of select="SrvOMSParam/SRV_LINE_NUMBER"/>
 											</attribute>
-											<!--		<xsl:if test="(not(SrvOMSParam/SRV_SLTU_SERVICE_ID)) or SrvOMSParam/SRV_SLTU_SERVICE_ID=''">
+											<!--	<xsl:if test="(not(SrvOMSParam/SRV_SLTU_SERVICE_ID)) or SrvOMSParam/SRV_SLTU_SERVICE_ID=''">
 												<attribute name="serviceItemId">000000</attribute>
-											</xsl:if> 
+											</xsl:if>
 											<xsl:if test="SrvOMSParam/SRV_SLTU_SERVICE_ID!=''">
 												<attribute name="serviceItemId">
 													<xsl:value-of select="SrvOMSParam/SRV_SLTU_SERVICE_ID"/>
@@ -439,142 +415,76 @@
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
 											</attribute>
-											<attribute name="vpn_node_name">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_NAME"/>
-											</attribute>
-											<xsl:if test="(not(SrvOMSParam/SRV_VPN_NODE_TYPE)) or SrvOMSParam/SRV_VPN_NODE_TYPE=''">
-												<attribute name="vpn_node_type">P2P</attribute>
+											<!-- берем из [SRV_VPN_SUBNET] => 10.0.0.0 -->
+											<attribute name="cpe_mode">Routing</attribute>
+											<!-- по умолчанию Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='статическая'">
+												<attribute name="routing_mode">STATIC</attribute>
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_NODE_TYPE!=''">
-												<attribute name="vpn_node_type">
-													<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_TYPE"/>
-												</attribute>
+											<!-- если [SRV_VPN_PKT_ROUTING_TYPE] => статическая, то "routing_mode" = Нет,-->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='динамическая'">
+												<attribute name="routing_mode">BGP</attribute>
 											</xsl:if>
-											<attribute name="routing_mode">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE"/>
-											</attribute>
-											<attribute name="vpn_qos">
-												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceQoS"/>
-											</attribute>
-											<attribute name="vpn_node_cos">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_COS"/>
-											</attribute>
-											<attribute name="primary_or_redoundant">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_ROLE"/>
-											</attribute>
-											<attribute name="if_ip">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
-											</attribute>
-											<attribute name="ce_ip">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_CEIP"/>
-											</attribute>
-											<attribute name="external_as">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_EXT_AS"/>
-											</attribute>
-											<attribute name="qinq">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_QINQ"/>
-											</attribute>
-											<attribute name="ip_prefix">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_PREFIX_IP"/>
-											</attribute>
-											<attribute name="mtu">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_MTU"/>
-											</attribute>
+											<!--если [SRV_VPN_PKT_ROUTING_TYPE] => динамическая, то "routing_mode" = Да -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Нет'">
+												<attribute name="isLocal">false</attribute>
+											</xsl:if>
+											<!-- если [SRV_VPN_LOCAL_VPN] => Нет, то as_id = 12389 -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Да'">
+												<attribute name="isLocal">true</attribute>
+											</xsl:if>
+											<!-- если [SRV_VPN_LOCAL_VPN] => Да, то as_id = 0 -->
 										</xsl:if>
 										<xsl:if test="ServiceType='VPN_L2'">
 											<attribute name="vpn_type">L2_VPN</attribute>
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
 											</attribute>
-											<attribute name="vpn_node_name">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_NAME"/>
-											</attribute>
-											<xsl:if test="(not(SrvOMSParam/SRV_VPN_NODE_TYPE)) or SrvOMSParam/SRV_VPN_NODE_TYPE=''">
-												<attribute name="vpn_node_type">P2P</attribute>
+											<!-- берем из [SRV_VPN_SUBNET] => 10.0.0.0 -->
+											<attribute name="cpe_mode">Routing</attribute>
+											<!-- по умолчанию Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='статическая'">
+												<attribute name="routing_mode">STATIC</attribute>
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_NODE_TYPE!=''">
-												<attribute name="vpn_node_type">
-													<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_TYPE"/>
-												</attribute>
+											<!-- если [SRV_VPN_PKT_ROUTING_TYPE] => статическая, то "routing_mode" = Нет,-->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='динамическая'">
+												<attribute name="routing_mode">BGP</attribute>
 											</xsl:if>
-											<attribute name="routing_mode">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE"/>
-											</attribute>
-											<attribute name="vpn_qos">
-												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceQoS"/>
-											</attribute>
-											<attribute name="vpn_node_cos">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_COS"/>
-											</attribute>
-											<attribute name="primary_or_redoundant">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_ROLE"/>
-											</attribute>
-											<attribute name="if_ip">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
-											</attribute>
-											<attribute name="ce_ip">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_CEIP"/>
-											</attribute>
-											<attribute name="external_as">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_EXT_AS"/>
-											</attribute>
-											<attribute name="qinq">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_QINQ"/>
-											</attribute>
-											<attribute name="ip_prefix">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_PREFIX_IP"/>
-											</attribute>
-											<attribute name="mtu">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_MTU"/>
-											</attribute>
+											<!--если [SRV_VPN_PKT_ROUTING_TYPE] => динамическая, то "routing_mode" = Да -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Нет'">
+												<attribute name="isLocal">false</attribute>
+											</xsl:if>
+											<!-- если [SRV_VPN_LOCAL_VPN] => Нет, то as_id = 12389 -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Да'">
+												<attribute name="isLocal">true</attribute>
+											</xsl:if>
+											<!-- если [SRV_VPN_LOCAL_VPN] => Да, то as_id = 0 -->
 										</xsl:if>
 										<xsl:if test="ServiceType='VPLS point'">
 											<attribute name="vpn_type">VPLS</attribute>
-											
+											<attribute name="vpn_type">L2_VPN</attribute>
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
 											</attribute>
-											<attribute name="vpn_node_name">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_NAME"/>
-											</attribute>
-											<xsl:if test="(not(SrvOMSParam/SRV_VPN_NODE_TYPE)) or SrvOMSParam/SRV_VPN_NODE_TYPE=''">
-												<attribute name="vpn_node_type">P2P</attribute>
+											<!-- берем из [SRV_VPN_SUBNET] => 10.0.0.0 -->
+											<attribute name="cpe_mode">Routing</attribute>
+											<!-- по умолчанию Routing -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='статическая'">
+												<attribute name="routing_mode">STATIC</attribute>
 											</xsl:if>
-											<xsl:if test="SrvOMSParam/SRV_VPN_NODE_TYPE!=''">
-												<attribute name="vpn_node_type">
-													<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_TYPE"/>
-												</attribute>
+											<!-- если [SRV_VPN_PKT_ROUTING_TYPE] => статическая, то "routing_mode" = Нет,-->
+											<xsl:if test="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE='динамическая'">
+												<attribute name="routing_mode">BGP</attribute>
 											</xsl:if>
-											<attribute name="routing_mode">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_PKT_ROUTING_TYPE"/>
-											</attribute>
-											<attribute name="vpn_qos">
-												<xsl:value-of select="SrvOMSParam/SRV_CMS_ServiceQoS"/>
-											</attribute>
-											<attribute name="vpn_node_cos">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_COS"/>
-											</attribute>
-											<attribute name="primary_or_redoundant">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_NODE_ROLE"/>
-											</attribute>
-											<attribute name="if_ip">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
-											</attribute>
-											<attribute name="ce_ip">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_CEIP"/>
-											</attribute>
-											<attribute name="external_as">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_EXT_AS"/>
-											</attribute>
-											<attribute name="qinq">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_QINQ"/>
-											</attribute>
-											<attribute name="ip_prefix">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_PREFIX_IP"/>
-											</attribute>
-											<attribute name="mtu">
-												<xsl:value-of select="SrvOMSParam/SRV_VPN_MTU"/>
-											</attribute>
+											<!--если [SRV_VPN_PKT_ROUTING_TYPE] => динамическая, то "routing_mode" = Да -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Нет'">
+												<attribute name="isLocal">false</attribute>
+											</xsl:if>
+											<!-- если [SRV_VPN_LOCAL_VPN] => Нет, то as_id = 12389 -->
+											<xsl:if test="SrvOMSParam/SRV_VPN_LOCAL_VPN='Да'">
+												<attribute name="isLocal">true</attribute>
+											</xsl:if>
+											<!-- если [SRV_VPN_LOCAL_VPN] => Да, то as_id = 0 -->
 										</xsl:if>
 										<xsl:if test="ServiceType='cfs_vpn'">
 											<attribute name="vpn_type">
@@ -618,13 +528,20 @@
 											<!-- если [SRV_VPN_LOCAL_VPN] => Да, то as_id = 0 -->
 										</xsl:if>
 									</orderItemAttributes>
+									<orderItemParties>
+									</orderItemParties>
+									<orderItemAction>
+										<xsl:value-of select="orderItemAction"/>
+									</orderItemAction>
+									<orderItemResult/>
+									<orderItemReferences/>
 								</orderItem>
 							</xsl:for-each>
 						</orderItems>
 					</xsl:for-each>
 					<!--		<orderAppointmentId>String</orderAppointmentId>-->
-				</order>
+				</wfmRequest>
 			</xsl:for-each>
-		</tns:submitOrderRequest>
+		</tns:createAppointmentRequest>
 	</xsl:template>
 </xsl:stylesheet>

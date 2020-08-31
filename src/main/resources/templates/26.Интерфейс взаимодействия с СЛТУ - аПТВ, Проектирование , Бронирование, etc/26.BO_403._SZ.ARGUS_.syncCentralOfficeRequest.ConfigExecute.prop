@@ -1,5 +1,5 @@
 url=/rt-gate/NetworkCapabilityWebService/NetworkCapabilityWebService
-host=10.160.16.126:8080
+host=http://sz.argus:80
 MsgStream=4
 timeout_read=6000
 timeout_conn=15

@@ -62,16 +62,16 @@
 					</orderRequiredDate>
 					<orderComments>
 						<Comment>
- <xsl:if test="GoToCommentOrder!=''">
-    <text>
-      <xsl:value-of select="GoToCommentOrder"/>
-    </text>
-  </xsl:if>
-  <xsl:if test="GoToCommentOrder=''">
-    <text>
-      <xsl:value-of select="SYSOrderStage"/>
-    </text>
-  </xsl:if>
+							<xsl:if test="hermesOMSPrevComment!=''">
+								<text>
+									<xsl:value-of select="hermesOMSPrevComment"/>
+								</text>
+							</xsl:if>
+							<xsl:if test="hermesOMSPrevComment=''">
+								<text>
+									<xsl:value-of select="SYSOrderStage"/>
+								</text>
+							</xsl:if>
 						</Comment>
 					</orderComments>
 					<orderParties>
@@ -244,7 +244,8 @@
 									<xsl:value-of select="/submitOrderRequest/CRMCustomer/CUSTOM_CONTACT_PHONE"/>
 								</attribute>
 								<attribute name="CustomerEmail">
-									<xsl:value-of select="/submitOrderRequest/CRMCustomer/CUSTOM_CONTACT_EMAIL"/></attribute>
+									<xsl:value-of select="/submitOrderRequest/CRMCustomer/CUSTOM_CONTACT_EMAIL"/>
+								</attribute>
 							</partyAttributes>
 						</orderParty>
 						<orderParty>
@@ -419,7 +420,7 @@
 										</xsl:if>
 										<xsl:if test="ServiceType='VPLS point'">
 											<attribute name="vpn_type">VPLS</attribute>
-											<attribute name="vpn_type">L2_VPN</attribute>
+											
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
 												<!-- берем из [SRV_VPN_SUBNET] => 10.0.0.0 -->

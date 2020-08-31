@@ -3,4 +3,4 @@ host=http://VLG.DKB2B:80
 timeout_read=60
 timeout_conn=5
 MsgStream=19
-debug=full
+debug=on

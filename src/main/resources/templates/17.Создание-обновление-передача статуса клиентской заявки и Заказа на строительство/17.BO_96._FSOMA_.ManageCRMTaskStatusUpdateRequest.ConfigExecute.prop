@@ -1,0 +1,5 @@
+url=/HERMES.FFASYNCAPI.FSOMWebService/OMSOrderNotificationWebService
+host=10.42.110.112:8080
+timeout_read=33
+timeout_conn=4
+debug=on

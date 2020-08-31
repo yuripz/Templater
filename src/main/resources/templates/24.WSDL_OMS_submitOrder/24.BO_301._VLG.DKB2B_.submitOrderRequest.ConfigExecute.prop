@@ -7,3 +7,4 @@ host=sus:80
 user=dbilling
 pswd=Sda73XzpVd
 url=/LoadCRM.phtml
+debug=on

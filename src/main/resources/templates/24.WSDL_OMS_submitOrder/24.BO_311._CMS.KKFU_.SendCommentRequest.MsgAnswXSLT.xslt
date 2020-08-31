@@ -7,7 +7,7 @@
 					<Result>
 						<Cod>0</Cod>
 						<Text>Success</Text>
-						<Next>RESOUT</Next>
+						<Next>DELOUT</Next>
 					</Result>
 				</xsl:when>
 				<xsl:otherwise>

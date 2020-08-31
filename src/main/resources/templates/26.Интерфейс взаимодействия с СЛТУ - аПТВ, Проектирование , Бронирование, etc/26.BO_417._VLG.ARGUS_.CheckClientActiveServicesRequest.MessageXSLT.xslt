@@ -41,7 +41,7 @@
 							</xsl:for-each>
 							<!-- targetLocation-->
 						</proj:targetLocation>
-						<xsl:for-each select="client">
+					<!--	<xsl:for-each select="client">
 							<proj:client>
 								<partyRole>CLIENT</partyRole>
 								<partyId>
@@ -51,7 +51,7 @@
 									<xsl:value-of select="partyName"/>
 								</partyName>
 							</proj:client>
-						</xsl:for-each>
+						</xsl:for-each> -->
 						<!-- client -->
 					</xsl:for-each>
 					<!-- payload -->

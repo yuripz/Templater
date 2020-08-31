@@ -254,6 +254,15 @@
 												<xsl:value-of select="RegCountry"/>
 											</RegCountry>
 										</xsl:if>
+                                            <LineAmountWOTax>
+                                                <xsl:value-of select="LineAmountWOTax"/>
+                                            </LineAmountWOTax>
+                                            <Region>
+                                                <xsl:value-of select="Region"/>
+                                            </Region>
+                                            <DistrictSettliment>
+                                                <xsl:value-of select="DistrictSettliment"/>
+                                            </DistrictSettliment>
 									</ContractSpecifics>
 								</xsl:for-each>
 								<!-- ContractSpecifics -->
@@ -303,6 +312,7 @@
 						</xsl:for-each>
 						<!--AttachmentList -->
 					</xsl:if>
+                    <DocDv><xsl:value-of select="DocDv"/></DocDv>
 				</CycleOrder>
 			</xsl:for-each>
 			<!-- CycleOrder -->

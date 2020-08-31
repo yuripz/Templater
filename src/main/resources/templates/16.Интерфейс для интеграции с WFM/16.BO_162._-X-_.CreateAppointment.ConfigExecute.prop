@@ -1,0 +1,6 @@
+url=/rt-gate/FulfillmentHermesWebService/FulfillmentHermesWebServiceImpl
+host=http://10.160.16.126:8080
+timeout_read=400
+timeout_conn=15
+debug=on
+SOAPAction="http://oms.rt.ru/WFMWebServicePortType/createAppointmentRequest"

@@ -74,12 +74,12 @@
 					</orderRequiredDate>
 					<orderComments>
 						<Comment>
-							<xsl:if test="GoToCommentOrder!=''">
+							<xsl:if test="hermesOMSPrevComment!=''">
 								<text>
-									<xsl:value-of select="GoToCommentOrder"/>
+									<xsl:value-of select="hermesOMSPrevComment"/>
 								</text>
 							</xsl:if>
-							<xsl:if test="GoToCommentOrder=''">
+							<xsl:if test="hermesOMSPrevComment=''">
 								<text>
 									<xsl:value-of select="SYSOrderStage"/>
 								</text>
@@ -371,14 +371,17 @@
 											<attribute name="lineId">
 												<xsl:value-of select="SrvOMSParam/SRV_LINE_NUMBER"/>
 											</attribute>
-											<xsl:if test="(not(SrvOMSParam/SRV_SLTU_SERVICE_ID)) or SrvOMSParam/SRV_SLTU_SERVICE_ID=''">
+											<!--	<xsl:if test="(not(SrvOMSParam/SRV_SLTU_SERVICE_ID)) or SrvOMSParam/SRV_SLTU_SERVICE_ID=''">
 												<attribute name="serviceItemId">000000</attribute>
 											</xsl:if>
 											<xsl:if test="SrvOMSParam/SRV_SLTU_SERVICE_ID!=''">
 												<attribute name="serviceItemId">
 													<xsl:value-of select="SrvOMSParam/SRV_SLTU_SERVICE_ID"/>
 												</attribute>
-											</xsl:if>
+											</xsl:if> -->
+											<attribute name="serviceItemId">
+												<xsl:value-of select="SrvOMSParam/SRV_SLTU_SERVICE_ID"/>
+											</attribute>
 											<attribute name="technology">
 												<xsl:value-of select="/submitOrderRequest/Technology"/>
 											</attribute>
@@ -481,7 +484,7 @@
 										</xsl:if>
 										<xsl:if test="ServiceType='VPLS point'">
 											<attribute name="vpn_type">VPLS</attribute>
-											<attribute name="vpn_type">L2_VPN</attribute>
+											
 											<attribute name="sub_net">
 												<xsl:value-of select="SrvOMSParam/SRV_VPN_SUBNET"/>
 											</attribute>

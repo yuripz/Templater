@@ -57,8 +57,20 @@
 							<notificationTimestamp>
 								<xsl:value-of select="ChangeStatusDate"/>
 							</notificationTimestamp>
-							<notificationStatus>SYSOrderStageCode<xsl:value-of select="SYSOrderStageCode"/>: <xsl:value-of select="SYSOrderStage"/>
-							</notificationStatus>
+							<xsl:variable name="SurveyStateF" select="SurveyState"/>
+							<xsl:choose>
+								<xsl:when test="$SurveyStateF= 'SURVEY' ">
+									<notificationStatus>SURVEY</notificationStatus>
+								</xsl:when>
+								<xsl:when test="$SurveyStateF= 'COMPLETE' ">
+									<notificationStatus>COMPLETE</notificationStatus>
+								</xsl:when>
+								<xsl:otherwise>
+									<notificationStatus>SYSOrderStageCode<xsl:value-of select="SYSOrderStageCode"/>: <xsl:value-of select="SYSOrderStage"/>
+									</notificationStatus>
+								</xsl:otherwise>
+							</xsl:choose>
+							<notificationText>
 								<xsl:value-of select="StatusSYSUsrName"/>
 								<xsl:value-of select="StatusSYSUsrEMail"/>
 							</notificationText>
@@ -83,9 +95,20 @@
 								<xsl:value-of select="OrderOMSId"/>
 							</partyId>
 							<partyAttributes>
-								<attribute name="stage">
-									<xsl:value-of select="SYSOrderStage"/>
-								</attribute>
+								<xsl:variable name="SurveyStateF" select="SurveyState"/>
+								<xsl:choose>
+									<xsl:when test="$SurveyStateF= 'SURVEY' ">
+										<attribute name="stage">Проведение обследования для формирования технического решения</attribute>
+									</xsl:when>
+									<xsl:when test="$SurveyStateF= 'COMPLETE' ">
+										<attribute name="stage">Возвращение в работу</attribute>
+									</xsl:when>
+									<xsl:otherwise>
+										<attribute name="stage">
+											<xsl:value-of select="SYSOrderStage"/>
+										</attribute>
+									</xsl:otherwise>
+								</xsl:choose>
 								<attribute name="reason">
 									<xsl:value-of select="CancelReason"/>
 								</attribute>
