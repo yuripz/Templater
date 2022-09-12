@@ -8,8 +8,8 @@
         <version>2.6.11</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>ru.hermes</groupId>
-    <artifactId>templater</artifactId>
+    <groupId>net.msgbus</groupId>
+    <artifactId>Templater</artifactId>
     <version>0.0.4m-SNAPSHOT</version>
     <name>templater</name>
     <description>Save templates from DB</description>
