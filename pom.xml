@@ -91,19 +91,21 @@
 
 
         <dependency>
-            <groupId>com.oracle</groupId>
-            <artifactId>ojdbc8</artifactId>
-            <version>12.1.0.2</version>
-            <scope>system</scope>
-            <systemPath>C:/#_Integration_/ojdbc8-full/ojdbc8.jar</systemPath>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.4.2</version>
         </dependency>
 
         <dependency>
-            <groupId>com.oracle</groupId>
+            <groupId>com.oracle.database.jdbc</groupId>
+            <artifactId>ojdbc11</artifactId>
+            <version>21.6.0.0.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.oracle.database.nls</groupId>
             <artifactId>orai18n</artifactId>
-            <version>12.1.0.2</version>
-            <scope>system</scope>
-            <systemPath>C:/#_Integration_/ojdbc8-full/orai18n.jar</systemPath>
+            <version>19.3.0.0</version>
         </dependency>
 
         <dependency>
