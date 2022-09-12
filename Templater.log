@@ -9,3 +9,7 @@
 2022-09-12 06:57:16.105  INFO 2040 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [ru.hermes.msgbus.TemplaterApplicationTests], using SpringBootContextLoader
 2022-09-12 06:57:16.106  INFO 2040 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [ru.hermes.msgbus.TemplaterApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
 2022-09-12 06:57:16.106  INFO 2040 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [ru.hermes.msgbus.TemplaterApplicationTests]: TemplaterApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2022-09-12 06:59:31.948  INFO 54432 --- [main] n.p.msgbus.TemplaterApplicationTests     : Starting TemplaterApplicationTests using Java 17.0.2 on DESKTOP-99E1KI4 with PID 54432 (started by HP-830-G6 in C:\#_Integration_\-_Templater)
+2022-09-12 06:59:31.950  INFO 54432 --- [main] n.p.msgbus.TemplaterApplicationTests     : No active profile set, falling back to 1 default profile: "default"
+2022-09-12 06:59:32.702  INFO 54432 --- [main] n.p.msgbus.TemplaterApplicationTests     : Started TemplaterApplicationTests in 1.001 seconds (JVM running for 1.724)
+2022-09-12 06:59:32.704  INFO 54432 --- [main] n.plumbing.msgbus.TemplaterApplication   : Hellow for TemplaterApplication 
