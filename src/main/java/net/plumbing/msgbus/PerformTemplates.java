@@ -25,7 +25,7 @@ public class PerformTemplates {
     private static Logger PerformTemplates_Log = LoggerFactory.getLogger(PerformTemplates.class);;
 
 
-    public static Integer Processing( Logger MessegeSend_Log ){
+    public static Integer Processing( String HrmsSchema, Logger MessegeSend_Log ){
         int MessageTemplateVOkey=-1;
 
         String File_separator="/";
@@ -144,14 +144,14 @@ public class PerformTemplates {
                 }
                 else {
                     //MessegeSend_Log.warn("Формируем SQLDMLcommand для MessageType_Key[" + MessageType_Key + "] Нашли из( " + Interface_Id + "," + Operation_Id + ")" );
-                    String SQLDMLcommand = MakeDBupdates.Processing_MessageType(MessegeSend_Log, MessageType_Key);
+                    String SQLDMLcommand = MakeDBupdates.Processing_MessageType(HrmsSchema, MessegeSend_Log, MessageType_Key);
                     MessegeSend_Log.warn("SQLDMLcommand, пишем [" + fileNamePath + "SQL" + "]=>(" + SQLDMLcommand + ")" );
                     writeUsingOutputStream(SQLDMLcommand,
                             fileNamePath + "SQL",
                             time
                     );
                 }
-                String SQLinsertMessageTemplate = MakeDBupdates.Processing_MessageTemplate(MessegeSend_Log, messageTemplateVO);
+                String SQLinsertMessageTemplate = MakeDBupdates.Processing_MessageTemplate(HrmsSchema, MessegeSend_Log, messageTemplateVO);
                 writeUsingOutputStream(SQLinsertMessageTemplate,
                         preFileName + "SQL",
                         time
@@ -204,38 +204,6 @@ public class PerformTemplates {
         Path somePath = Paths.get( fullFilePath ) ;
         boolean isWindows = System.getProperty("os.name")
                 .toLowerCase().startsWith("windows");
-/*
-        if ((isWindows) && (false)) {
-            Process os_process = null;
-            try {
-                if ( isWindows ) {
-                    PerformTemplates_Log.info("exec for:'" + String.format("cmd /c dir \"" + fullFilePath + "\" /tc") + "'");
-                    os_process = Runtime.getRuntime()
-                            .exec(String.format("cmd /c dir \"" + fullFilePath + "\" /tc"));
-                } else {
-                    os_process = Runtime.getRuntime()
-                            .exec(String.format("sh -c ls %s", fullFilePath));
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-                PerformTemplates_Log.error("Runtime.getRuntime for:'" + fullFilePath + "' failed:" + e.getMessage());
-            }
-            Process process = os_process;
-            try {
-                StreamGobbler streamGobbler =
-                        new StreamGobbler(process.getInputStream(), PerformTemplates_Log::error);
-                //        System.out::println );
-                Executors.newSingleThreadExecutor().submit(streamGobbler);
-                int exitCode = process.waitFor();
-                assert exitCode == 0;
-            } catch (java.lang.InterruptedException e) {
-                e.printStackTrace();
-                PerformTemplates_Log.error("Runtime.getRuntime for:'" + fullFilePath + "' failed:" + e.getMessage());
-            }
-
-        }
-        else
-            */
         // System.out.println(output);
         try {
             //if (!isWindows)

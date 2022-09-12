@@ -7,7 +7,7 @@ import net.plumbing.msgbus.model.MessageTypeVO;
 
 public class MakeDBupdates {
 
-    public static int Processing_MessageTypes( Logger MessegeSend_Log ) {
+    public static int Processing_MessageTypes( String HrmsSchema, Logger MessegeSend_Log ) {
         int MessageTemplateVOkey = -1;
         for (int i = 0; i < MessageType.AllMessageType.size(); i++) {
             MessageTypeVO messageTypeVO = MessageType.AllMessageType.get(i);
@@ -43,7 +43,7 @@ update  MESSAGE_TYPES set
   last_update_dt =sysdate
   where   interface_id =1001 and  operation_id= 1
              */
-            String SQLinsert= "insert into MESSAGE_TYPES (\n" +
+            String SQLinsert= "insert into " + HrmsSchema + ".MESSAGE_TYPES (\n" +
                     "  interface_id   ," +
                     "  operation_id  ," +
                     "  msg_type    ," +
@@ -70,7 +70,7 @@ update  MESSAGE_TYPES set
                     messageTypeVO.getMax_Retry_Time() + "," +
                     " sysdate );" ;
 
-            String SQLupdate="update  MESSAGE_TYPES set\n" +
+            String SQLupdate="update " + HrmsSchema + ". MESSAGE_TYPES set\n" +
                     "  msg_type  = '" + messageTypeVO.getMsg_Type() + ",'" +
                     "  msg_type_own  ='" + messageTypeVO.getMsg_Type_own() + "'," +
                     "  msg_typedesc  ='" + messageTypeVO.getMsg_TypeDesc() + "'," +
@@ -93,13 +93,13 @@ update  MESSAGE_TYPES set
 return MessageType.AllMessageType.size();
     }
 
-    public static String Processing_MessageType( Logger MessegeSend_Log, int MessageTypeVOkey ) {
+    public static String Processing_MessageType( String HrmsSchema, Logger MessegeSend_Log, int MessageTypeVOkey ) {
 
         MessegeSend_Log.warn("MessageTypeVOkey=" + MessageTypeVOkey );
             MessageTypeVO messageTypeVO = MessageType.AllMessageType.get(MessageTypeVOkey);
             if (messageTypeVO == null ) return ";";
 
-            String SQLinsert= "insert into artx_proj.MESSAGE_TYPES (\n" +
+            String SQLinsert= "insert into " + HrmsSchema + ".MESSAGE_TYPES (\n" +
                     "  interface_id   ," +
                     "  operation_id  ," +
                     "  msg_type    ," +
@@ -126,7 +126,7 @@ return MessageType.AllMessageType.size();
                     messageTypeVO.getMax_Retry_Time() + "," +
                     " sysdate ) \n;\n" ;
 
-            String SQLupdate="update artx_proj.MESSAGE_TYPES set\n" +
+            String SQLupdate="update " + HrmsSchema + ".MESSAGE_TYPES set\n" +
                     "  msg_type  = '" + messageTypeVO.getMsg_Type() + "'," +
                     "  msg_type_own  ='" + messageTypeVO.getMsg_Type_own() + "'," +
                     "  msg_typedesc  ='" + messageTypeVO.getMsg_TypeDesc() + "'," +
@@ -148,11 +148,11 @@ return MessageType.AllMessageType.size();
         return nulableSQLinsert + nulableSQLupdate;
     }
 
-    public static String Processing_MessageTemplate( Logger MessegeSend_Log , MessageTemplateVO messageTemplateVO) {
+    public static String Processing_MessageTemplate( String HrmsSchema, Logger MessegeSend_Log , MessageTemplateVO messageTemplateVO) {
 
        // MessageTemplateVO messageTemplateVO = MessageTemplate.AllMessageTemplate.get(MessageTemplateVOkey );
         if (messageTemplateVO == null ) return ";";
-        String SQLinsert= "insert into artx_proj.Message_Templates (\n" +
+        String SQLinsert= "insert into " + HrmsSchema + ".Message_Templates (\n" +
                 "Template_Id, " +
                 "Interface_Id, " +
                 "Operation_Id, " +

@@ -90,7 +90,7 @@ if ( Target_Connection == null ) {
 
         InitMessageRepository.SelectMsgTypes( AppThead_log );
         AppThead_log.info("keysAllMessageType: " + MessageType.AllMessageType.get(0).getMsg_TypeDesc() );
-        MakeDBupdates.Processing_MessageTypes(AppThead_log);
+        MakeDBupdates.Processing_MessageTypes( HrmsSchema, AppThead_log);
 
         InitMessageRepository.SelectMsgTemplates( AppThead_log );
         AppThead_log.info("keysAllMessageTemplates: " + MessageTemplate.AllMessageTemplate.get(0).getTemplate_name() );
@@ -101,7 +101,7 @@ if ( Target_Connection == null ) {
         // DataAccess.InitDate.setTime( CurrentTime );
         // AppThead_log.info(" New InitDate=" +  DataAccess.dateFormat.format( DataAccess.InitDate ) );
 
-        PerformTemplates.Processing( AppThead_log );
+        PerformTemplates.Processing( HrmsSchema, AppThead_log );
 
         return;
 
