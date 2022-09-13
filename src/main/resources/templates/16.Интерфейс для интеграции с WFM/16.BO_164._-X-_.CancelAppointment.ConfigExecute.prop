@@ -1,6 +1,0 @@
-url=/rt-gate/WFMWebService/WFMWebServiceImpl
-host=http://10.160.16.142:8080
-timeout_read=120
-timeout_conn=15
-debug=on
-SOAPAction=""

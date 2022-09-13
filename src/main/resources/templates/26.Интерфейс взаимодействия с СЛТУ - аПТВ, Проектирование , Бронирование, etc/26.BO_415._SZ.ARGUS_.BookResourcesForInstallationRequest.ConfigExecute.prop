@@ -1,5 +1,0 @@
-timeout_read=300
-timeout_conn=15
-MsgStream=34
-url=/rt-gate/NetkDevProjectWebService/NetDevProjectWebService
-host=http://SZ.ARGUS:80

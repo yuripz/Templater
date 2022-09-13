@@ -1,8 +1,0 @@
-encoding_out=windows-1251
-encoding_in=windows-1251
-WebMetod=post
-timeout_read=330
-timeout_conn=15
-host=10.184.93.47:80
-url=/csp/gts_train/GTS.espo.cls
-debug=on

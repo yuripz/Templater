@@ -1,6 +1,0 @@
-url=/API/WebService?Action=http://etc.ru/WebService/PutXml
-host=https://test.erus.ru:443
-timeout_read=90
-timeout_conn=5
-d_ebug=full
-MsgStream=12

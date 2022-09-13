@@ -1,4 +1,0 @@
-url=/rt-gate/NetworkCapabilityWebService/NetworkCapabilityWebService
-host=http://south.argus:80
-timeout_read=900
-timeout_conn=15

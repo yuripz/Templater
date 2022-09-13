@@ -1,8 +1,0 @@
-xxxencoding_out=windows-1251
-xxxencoding_in=windows-1251
-SOAPAction=""
-url=/csp/gts_train/OMSOrderNotificationWebService.Service.OMSOrderNotificationWebServicePort.cls
-host=ural.lira:80
-timeout_read=30
-timeout_conn=5
-debug=on

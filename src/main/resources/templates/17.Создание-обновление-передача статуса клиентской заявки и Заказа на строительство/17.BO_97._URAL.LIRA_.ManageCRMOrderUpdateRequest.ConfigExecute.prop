@@ -1,5 +1,0 @@
-url=/HermesSOAPService/SOAPServlet/unManageCRM
-host=http://msgbus:7001
-SOAPAction=""
-timeout_read=30
-timeout_conn=5

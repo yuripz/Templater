@@ -1,6 +1,0 @@
-url=/rt-gate/NetworkCapabilityWebService/NetworkCapabilityWebService
-host=http://VLG.ARGUS:80
-MsgStream=4
-timeout_read=300
-timeout_conn=15
-debug=on

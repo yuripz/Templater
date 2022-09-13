@@ -1,6 +1,0 @@
-url=/s1wsp/services/wsprovider/OMSOrderNotificationWebService
-host=http://CRM.SOUTH.ARM:80
-MsgStream=5
-timeout_read=30
-timeout_conn=5
-debug=on

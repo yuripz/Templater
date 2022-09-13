@@ -1,7 +1,0 @@
-url=/integration/wservice.nsf/WebServiceCMS?OpenWebService
-oldhost=http://wsi02.ks.rt.ru:80
-host=http://CMS.KKFU:80
-MsgStream=3
-timeout_read=30
-timeout_conn=5
-debug=on

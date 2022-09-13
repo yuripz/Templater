@@ -1,4 +1,0 @@
-debug=on
-noSOAPAction=http://nri.rt.ru/ProjectProposalSevice/ProjectProposalSevice/ProjectStatusNotification
-host=http://nri.sibir.tgrad
-url=/DatumNode/DatumNode.svc/a?action=http://nri.rt.ru/ProjectProposalSevice/ProjectProposalSevice/ProjectStatusNotification

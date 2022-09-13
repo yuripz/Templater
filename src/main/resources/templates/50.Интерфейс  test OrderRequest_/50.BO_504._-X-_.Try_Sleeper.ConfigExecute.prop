@@ -1,8 +1,0 @@
-timeout_read=3
-timeout_conn=2
-MsgStream=47
-encoding_out=UTF-8
-encoding_in=UTF-8
-WebMetod=get
-host=https://srm.paradit.ru:443
-url=/HermesSOAPService/GetHttpRequest/Try_Sleep

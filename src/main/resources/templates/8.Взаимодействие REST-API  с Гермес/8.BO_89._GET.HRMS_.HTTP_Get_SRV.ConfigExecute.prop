@@ -1,9 +1,0 @@
-encoding_out=UTF-8
-encoding_in=UTF-8
-WebMetod=get
-host=http://10.242.9.70:7001
-url=//HermesSOAPService/GetHttpRequest/HTTP_Get_SRV
-shortRetryCount=1
-longRetryCount=0
-timeout_read=30
-timeout_conn=5

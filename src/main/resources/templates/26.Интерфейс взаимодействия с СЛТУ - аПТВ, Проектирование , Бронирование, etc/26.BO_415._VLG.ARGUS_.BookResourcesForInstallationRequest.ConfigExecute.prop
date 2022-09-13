@@ -1,5 +1,0 @@
-url=/rt-gate/NetkDevProjectWebService/NetDevProjectWebService
-host=http://vlg.argus:80
-timeout_read=600
-timeout_conn=15
-debug=on

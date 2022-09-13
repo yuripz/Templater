@@ -1,5 +1,0 @@
-encoding_out=UTF-8
-encoding_in=UTF-8
-WebMetod=get
-host=api.megaindex.com:80
-url=/scanning/google_position

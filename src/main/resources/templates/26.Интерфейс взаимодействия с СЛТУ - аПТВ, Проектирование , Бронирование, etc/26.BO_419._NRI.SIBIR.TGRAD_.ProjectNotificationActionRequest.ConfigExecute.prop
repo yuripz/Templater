@@ -1,5 +1,0 @@
-debug=on
-noSOAPAction=http://nri.rt.ru/ProjectProposalSevice/ProjectProposalSevice/ProjectStatusNotification
-host=http://10.143.75.83:80
-url=/DatumNode/DatumNode.svc/a?action=http://nri.rt.ru/ProjectProposalSevice/ProjectProposalSevice/ProjectStatusNotification
-remurl=/DatumNode/DatumNode.svc/a

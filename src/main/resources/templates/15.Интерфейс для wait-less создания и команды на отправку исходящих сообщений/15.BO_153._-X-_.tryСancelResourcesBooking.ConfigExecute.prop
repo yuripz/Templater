@@ -1,5 +1,0 @@
-ExecMode=synchron
-MsgStream=4
-MsgDirect=IN
-ExeMetod=java-class
-ExeProfile=queue

@@ -1,8 +1,0 @@
-url=/DatumNode/DatumNode.svc/a?action=http://nri.rt.ru/NetworkCapability/NetworkCapabilityApi/syncCentralOffice
-host=http://10.143.75.83:80
-ExecMode=synchron
-MsgStream=2
-ExeMetod=java-class
-ExeProfile=queue
-class=ru.artx.common.bus.dao.SpecialExecuteDAO
-jndi_conn=jdbc/HermesMainVirt

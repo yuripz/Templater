@@ -1,5 +1,0 @@
-encoding_out=UTF-8
-encoding_in=UTF-8
-WebMetod=post
-host=https://russiansentimentanalyzer.p.mashape.com:443
-url=/rsa/sentiment/polarity/json/

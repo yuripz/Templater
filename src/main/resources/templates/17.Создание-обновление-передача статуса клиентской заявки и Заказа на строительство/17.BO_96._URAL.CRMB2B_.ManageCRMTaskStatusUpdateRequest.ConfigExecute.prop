@@ -1,6 +1,0 @@
-url=/camel/hermes/notify
-host=http://URAL.CRMB2B:80
-timeout_read=30
-timeout_conn=5
-debug=on
-MsgStream=1

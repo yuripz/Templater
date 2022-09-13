@@ -1,8 +1,0 @@
-url=/xml-interface
-remurl=/s1wsp/services/wsprovider/hermes_s1test   
-oldhost=http://10.160.2.48:7778
-host=http://VLG.DKB2B:80
-MsgStream=5
-timeout_read=90
-timeout_conn=5
-debug=on

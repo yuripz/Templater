@@ -1,7 +1,0 @@
-url=/HermesSOAPService/SOAPServlet/unManageCRM
-host=http://10.242.9.70:7001
-timeout_read=30
-timeout_conn=5
-SOAPAction=""
-MsgStream=7
-debug=on

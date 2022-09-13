@@ -1,8 +1,0 @@
-encoding_out=UTF-8
-encoding_in=UTF-8
-WebMetod=get
-old_host=10.32.245.7:8080
-host=https://10.242.9.69:443
-user=dbilling
-pswd=Sda73XzpVd
-url=/express_ptv/check_connectivity_result/parsed

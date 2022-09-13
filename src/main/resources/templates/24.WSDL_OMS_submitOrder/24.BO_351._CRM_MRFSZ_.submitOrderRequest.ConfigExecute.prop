@@ -1,7 +1,0 @@
-url=/OSS/OMSWebService
-oldhost=http://10.160.2.48:7778
-host=http://10.160.16.66:8080
-MsgStream=5
-timeout_read=30
-timeout_conn=5
-debug=on
