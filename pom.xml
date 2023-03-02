@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.11</version>
+        <version>2.7.9</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>net.msgbus</groupId>
     <artifactId>Templater</artifactId>
-    <version>0.0.4m-SNAPSHOT</version>
+    <version>0.0.4n-SNAPSHOT</version>
     <name>templater</name>
     <description>Save templates from DB</description>
 
@@ -53,13 +53,13 @@
             <version>1.2.0</version>
         </dependency>
 
-        <!--- ru.hermes.msgbus.ws.legacy -->
+        <!--- ru.hermes.msgbus.ws.legacy
         <dependency>
             <groupId>wsdl4j</groupId>
             <artifactId>wsdl4j</artifactId>
             <version>1.6.3</version>
         </dependency>
-
+-->
         <!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans ?????????
         <dependency>
             <groupId>org.apache.xmlbeans</groupId>
@@ -93,7 +93,7 @@
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.4.2</version>
+            <version>42.4.3</version>
         </dependency>
 
         <dependency>
@@ -102,7 +102,6 @@
             <version>21.6.0.0.1</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/com.oracle.database.nls/orai18n -->
         <dependency>
             <groupId>com.oracle.database.nls</groupId>
             <artifactId>orai18n</artifactId>

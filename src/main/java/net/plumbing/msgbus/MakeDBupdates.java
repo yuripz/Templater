@@ -68,7 +68,7 @@ update  MESSAGE_TYPES set
                     messageTypeVO.getURL_SOAP_Ack() + "'," +
                     messageTypeVO.getMax_Retry_Count() + "," +
                     messageTypeVO.getMax_Retry_Time() + "," +
-                    " sysdate );" ;
+                    " current_timestamp );" ;
 
             String SQLupdate="update " + HrmsSchema + ". MESSAGE_TYPES set\n" +
                     "  msg_type  = '" + messageTypeVO.getMsg_Type() + ",'" +
@@ -124,7 +124,7 @@ return MessageType.AllMessageType.size();
                     messageTypeVO.getURL_SOAP_Ack() + "'," +
                     messageTypeVO.getMax_Retry_Count() + "," +
                     messageTypeVO.getMax_Retry_Time() + "," +
-                    " sysdate ) \n;\n" ;
+                    " current_timestamp ) \n;\n" ;
 
             String SQLupdate="update " + HrmsSchema + ".MESSAGE_TYPES set\n" +
                     "  msg_type  = '" + messageTypeVO.getMsg_Type() + "'," +
@@ -136,7 +136,7 @@ return MessageType.AllMessageType.size();
                     "  url_soap_ack  = '" + messageTypeVO.getURL_SOAP_Ack() + "'," +
                     "  max_retry_count = " + messageTypeVO.getMax_Retry_Count() + "," +
                     "  max_retry_time  = " + messageTypeVO.getMax_Retry_Time() + "," +
-                    "  last_update_dt =sysdate\n" +
+                    "  last_update_dt = current_timestamp\n" +
                     "  where   interface_id=" + messageTypeVO.getInterface_Id() + " and  operation_id=" + messageTypeVO.getOperation_Id() + " \n;";
 
             ;
@@ -165,7 +165,7 @@ return MessageType.AllMessageType.size();
                 "Src_Subcod, " +
                 "Dst_Subcod, " +
                 "Lastmaker, " +
-                "Lastdate)\n select max(Template_Id)+1, " +
+                "Lastdate) select max(Template_Id)+1, " +
                 // messageTemplateVO.getTemplate_Id() + ", " +
                 messageTemplateVO.getInterface_Id() + ", " +
                 messageTemplateVO.getOperation_Id() + ", '" +
@@ -178,7 +178,7 @@ return MessageType.AllMessageType.size();
                 messageTemplateVO.getSrc_SubCod() + "', '" +
                 messageTemplateVO.getDst_SubCod() + "', '" +
                 messageTemplateVO.getLastMaker() + "', " +
-                " sysdate\n from artx_proj.Message_Templates;" ;
+                " current_timestamp from artx_proj.Message_Templates;" ;
         //String SQLupdate="";
         String nulableSQLinsert = SQLinsert.replace("'null'", "NULL");
         MessegeSend_Log.info(nulableSQLinsert);
