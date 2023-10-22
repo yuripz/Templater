@@ -5,12 +5,12 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.7.9</version>
+        <version>2.7.16</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>net.msgbus</groupId>
     <artifactId>Templater</artifactId>
-    <version>0.0.4n-SNAPSHOT</version>
+    <version>0.0.4p-SNAPSHOT</version>
     <name>templater</name>
     <description>Save templates from DB</description>
 
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>xalan</groupId>
             <artifactId>xalan</artifactId>
-            <version>2.7.2</version>
+            <version>2.7.3</version>
         </dependency>
 
         <dependency>
@@ -132,7 +132,7 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.6.11</version>
+                <version>2.7.16</version>
 
                 <configuration>
                     <executable>true</executable>
