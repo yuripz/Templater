@@ -99,19 +99,19 @@ return MessageType.AllMessageType.size();
             MessageTypeVO messageTypeVO = MessageType.AllMessageType.get(MessageTypeVOkey);
             if (messageTypeVO == null ) return ";";
 
-            String SQLinsert= "insert into " + HrmsSchema + ".MESSAGE_TYPES (\n" +
-                    "  interface_id   ," +
-                    "  operation_id  ," +
-                    "  msg_type    ," +
-                    "  msg_type_own  ," +
-                    "  msg_typedesc  ," +
-                    "  msg_direction  ," +
-                    "  msg_handler   ," +
-                    "  url_soap_send  ," +
-                    "  url_soap_ack    ," +
-                    "  max_retry_count ," +
-                    "  max_retry_time  ," +
-                    "  last_update_dt ) \n" +
+            String SQLinsert= "insert into " + HrmsSchema + ".MESSAGE_TYPES (" +
+                    " interface_id," +
+                    " operation_id," +
+                    " msg_type," +
+                    " msg_type_own," +
+                    " msg_typedesc," +
+                    " msg_direction," +
+                    " msg_handler," +
+                    " url_soap_send," +
+                    " url_soap_ack," +
+                    " max_retry_count," +
+                    " max_retry_time," +
+                    " last_update_dt ) " +
                     "values (" +
                     messageTypeVO.getInterface_Id() + "," +
                     messageTypeVO.getOperation_Id() + ",'" +
@@ -124,7 +124,7 @@ return MessageType.AllMessageType.size();
                     messageTypeVO.getURL_SOAP_Ack() + "'," +
                     messageTypeVO.getMax_Retry_Count() + "," +
                     messageTypeVO.getMax_Retry_Time() + "," +
-                    " current_timestamp ) \n;\n" ;
+                    " current_timestamp ) ;\n\n" ;
 
             String SQLupdate="update " + HrmsSchema + ".MESSAGE_TYPES set\n" +
                     "  msg_type  = '" + messageTypeVO.getMsg_Type() + "'," +

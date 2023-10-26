@@ -7,7 +7,7 @@ import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 
-import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Autowired;
 
 public  class DataAccess {
 
@@ -15,7 +15,7 @@ public  class DataAccess {
     public  static Date InitDate;
     public static DateFormat dateFormat;
 
-    @Autowired
+   // @Autowired
     /*
     static JdbcTemplate jdbcTemplate;
     static DriverManagerDataSource dataSource;
