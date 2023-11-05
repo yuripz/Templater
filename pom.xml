@@ -10,7 +10,7 @@
     </parent>
     <groupId>net.msgbus</groupId>
     <artifactId>Templater</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.51-SNAPSHOT</version>
     <name>templater</name>
     <description>Save templates from DB</description>
 
