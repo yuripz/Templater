@@ -68,7 +68,7 @@ public class MakeDBupdates {
             MessageTypeVO messageTypeVO = MessageType.AllMessageType.get(MessageTypeVOkey);
             if (messageTypeVO == null ) return ";";
 
-            String SQLinsert= "put into " + HrmsSchema + ".MESSAGE_TYPES (" +
+            String SQLinsert= "insert into " + HrmsSchema + ".MESSAGE_TYPES (" +
                     " interface_id," +
                     " operation_id," +
                     " msg_type," +

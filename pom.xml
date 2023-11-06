@@ -10,7 +10,7 @@
     </parent>
     <groupId>net.msgbus</groupId>
     <artifactId>Templater</artifactId>
-    <version>0.0.51-SNAPSHOT</version>
+    <version>0.0.51d-SNAPSHOT</version>
     <name>templater</name>
     <description>Save templates from DB</description>
 
@@ -128,6 +128,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <version>3.1.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>17</source>
+                    <target>17</target>
+                </configuration>
             </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
